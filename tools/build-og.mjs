@@ -137,3 +137,41 @@ execFileSync(chrome, [
 ])
 
 console.log(`Wrote ${out}  (${openings} openings, ${board.swept} employers, ${universities} universities)`)
+
+/* ---------------------------------------------------------------- favicons */
+
+/* Same portrait, cropped to a circle for the browser tab. The source headshot
+   is framed head-and-shoulders, which reads as an indistinct blob at 32px, so
+   zoom in on the face rather than using the whole frame. */
+const icon = (size) => `<!doctype html>
+<html><head><meta charset="utf-8"><style>
+  * { margin: 0; padding: 0; }
+  html, body { width: ${size}px; height: ${size}px; background: transparent; }
+  .ring {
+    width: ${size}px; height: ${size}px; border-radius: 50%; overflow: hidden;
+    background: #fbfaf8;
+  }
+  .ring img {
+    width: 142%; height: 142%; object-fit: cover;
+    object-position: 50% 24%; margin: -21% 0 0 -21%;
+  }
+</style></head>
+<body><div class="ring"><img src="${portrait}" alt=""></div></body></html>`
+
+for (const size of [32, 180]) {
+  const iconPage = join(stage, `icon-${size}.html`)
+  writeFileSync(iconPage, icon(size))
+  const iconOut = join(root, `favicon-${size}.png`)
+  execFileSync(chrome, [
+    '--headless',
+    '--disable-gpu',
+    '--hide-scrollbars',
+    '--force-color-profile=srgb',
+    '--default-background-color=00000000',   // transparent corners outside the circle
+    '--virtual-time-budget=2000',
+    `--window-size=${size},${size}`,
+    `--screenshot=${iconOut}`,
+    `file://${iconPage.replace(/\\/g, '/')}`,
+  ])
+  console.log(`Wrote ${iconOut}`)
+}
