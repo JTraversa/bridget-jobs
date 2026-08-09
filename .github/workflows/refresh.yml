@@ -1,0 +1,80 @@
+name: Refresh job board
+
+# Re-runs the ATS sweep and commits jobs.json when the results change.
+# Manual runs: Actions tab -> Refresh job board -> Run workflow.
+on:
+  schedule:
+    - cron: '0 11 * * *'   # 11:00 UTC daily, ~7am ET
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-board
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45   # Workday tenants cap at 20 results/request and throttle paging
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Record current job count
+        id: before
+        run: |
+          echo "count=$(python -c "import json; print(len(json.load(open('jobs.json'))['jobs']))")" >> "$GITHUB_OUTPUT"
+
+      - name: Run sweep
+        working-directory: tools
+        run: python sweep.py
+
+      - name: Sanity check before committing
+        env:
+          BEFORE: ${{ steps.before.outputs.count }}
+        run: |
+          python - <<'PY'
+          import json, os, sys
+
+          before = int(os.environ["BEFORE"])
+          data = json.load(open("jobs.json"))
+          after = len(data["jobs"])
+          print(f"jobs: {before} -> {after}  (swept {data['swept']} of {data['targets']} employers)")
+
+          # A run where most feeds time out or start blocking the runner's IP would
+          # otherwise commit a near-empty board over a good one. Refuse instead.
+          if after < 40:
+              sys.exit(f"refusing to commit: only {after} jobs, feeds probably failed")
+          if before and after < before * 0.5:
+              sys.exit(f"refusing to commit: {after} is less than half of {before}")
+          if data["swept"] < data["targets"] * 0.5:
+              sys.exit(f"refusing to commit: only {data['swept']} of {data['targets']} employers responded")
+          PY
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          if git diff --quiet -- jobs.json; then
+            echo "jobs.json unchanged, nothing to commit"
+          else
+            git add jobs.json
+            git commit -m "Refresh job board ($(date -u +%Y-%m-%d))"
+            git push
+          fi
+
+      # If the repo is linked to Vercel's GitHub integration, the push above already
+      # triggers a deploy and this step is unnecessary. If you deploy with the CLI
+      # instead, create a Vercel Deploy Hook and add it as the VERCEL_DEPLOY_HOOK
+      # repository secret to enable this.
+      - name: Trigger Vercel deploy
+        if: ${{ env.HOOK != '' }}
+        env:
+          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        run: curl -fsSL -X POST "$HOOK"

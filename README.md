@@ -33,6 +33,21 @@ request and throttle fast paging. It rewrites `../jobs.json`, then redeploy.
 **The deployed board is a snapshot, not a live feed.** Postings close. Re-running
 the sweep and redeploying is the only thing that updates it.
 
+### Automatic refresh
+
+`.github/workflows/refresh.yml` runs the sweep daily at 11:00 UTC and commits
+`jobs.json` when it changes, as `github-actions[bot]`. Run it on demand from the
+Actions tab (**Refresh job board → Run workflow**).
+
+It refuses to commit a result that looks broken — fewer than 40 jobs, less than
+half the previous count, or under half the employers responding — so one bad
+network day cannot replace a good board with an empty one. The run fails loudly
+instead.
+
+If the repo is linked to Vercel's GitHub integration, that commit redeploys the
+site on its own. If you deploy from the CLI instead, create a Vercel Deploy Hook
+and add it as a `VERCEL_DEPLOY_HOOK` repository secret; the last step picks it up.
+
 ## Deploying
 
 ```bash
@@ -44,6 +59,24 @@ Zero config: Vercel detects a static site, serves `index.html` from the root, an
 
 Note the URL is unlisted, not private. `vercel.json` sets `X-Robots-Tag: noindex,
 nofollow` so it stays out of search engines, but anyone with the link can open it.
+
+## Social preview
+
+`og.png` is generated, not hand-drawn, so its numbers stay true:
+
+```bash
+node tools/build-og.mjs      # reads jobs.json, renders og.png via headless Chrome
+```
+
+Re-run it after a big sweep if you want the card's counts to match the board.
+No npm dependency; set `CHROME_PATH` if Chrome isn't found automatically.
+
+**After the first deploy, check the domain.** `og:image` and `og:url` in
+`index.html` are absolute (social crawlers require it) and currently assume
+`https://bridget-jobs.vercel.app`. If Vercel assigns something else, update both.
+
+Test the card with LinkedIn's [Post Inspector](https://www.linkedin.com/post-inspector/).
+LinkedIn caches aggressively, so inspect before sharing rather than after.
 
 ## Adding an employer
 

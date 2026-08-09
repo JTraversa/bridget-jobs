@@ -6,7 +6,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Research Jobs Board</title>
   <meta name="description" content="Open research roles pulled from employer job feeds, plus a ranked list of where to look.">
-  <meta name="robots" content="noindex, nofollow">
+
+  <!-- noindex keeps this out of search results. Social crawlers (LinkedIn, Slack,
+       iMessage) read the og: tags below and generally still render a card, but
+       "nofollow" is deliberately omitted because some of them treat it as a
+       hard stop. If a preview refuses to render, this line is the first suspect. -->
+  <meta name="robots" content="noindex">
+
+  <!-- Social preview. og:image and og:url MUST be absolute; update the domain
+       below once after the first Vercel deploy if it differs. -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Research Jobs Board">
+  <meta property="og:title" content="Soon to be unemployed? Absolutely Fucked?">
+  <meta property="og:description" content="I hope this might help a smidge. 456 open research roles, already filtered, from 56 employer job feeds across 27 universities and 17 metros.">
+  <meta property="og:url" content="https://bridget-jobs.vercel.app/">
+  <meta property="og:image" content="https://bridget-jobs.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Soon to be unemployed? Absolutely Fucked? 456 open roles, 56 employers, 27 universities, 17 metros.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Soon to be unemployed? Absolutely Fucked?">
+  <meta name="twitter:description" content="I hope this might help a smidge. 456 open research roles, already filtered.">
+  <meta name="twitter:image" content="https://bridget-jobs.vercel.app/og.png">
 
   <style>
     :root {
