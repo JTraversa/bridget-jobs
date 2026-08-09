@@ -4,11 +4,7 @@
     {
       "source": "/(.*)",
       "headers": [
-        {
-          "key": "X-Robots-Tag",
-          "comment": "noindex only. 'nofollow' is omitted on purpose: some social crawlers treat it as a reason to skip fetching the og: tags, which would kill the link preview.",
-          "value": "noindex"
-        }
+        { "key": "X-Robots-Tag", "value": "noindex" }
       ]
     }
   ]
