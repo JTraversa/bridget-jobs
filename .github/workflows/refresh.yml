@@ -19,6 +19,13 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 45   # Workday tenants cap at 20 results/request and throttle paging
 
+    # Job-level so the deploy step's `if` can see it. A step's own env block is
+    # not in scope for that step's `if`, and `secrets` is never in scope there,
+    # so checking it any other way silently evaluates to false and the step
+    # never runs.
+    env:
+      HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+
     steps:
       - uses: actions/checkout@v4
 
@@ -57,14 +64,53 @@ jobs:
               sys.exit(f"refusing to commit: only {data['swept']} of {data['targets']} employers responded")
           PY
 
+      # jobs.json carries a "generated" timestamp that changes on every run, so a
+      # plain `git diff` is always dirty and would commit daily no-op churn.
+      # Compare the actual content instead and discard a run that changed nothing.
+      - name: Discard run if only the timestamp moved
+        id: changed
+        run: |
+          python - <<'PY'
+          import json, os, subprocess
+
+          def meaningful(raw):
+              d = json.loads(raw)
+              d.pop("generated", None)
+              return d
+
+          new = meaningful(open("jobs.json", encoding="utf-8").read())
+          old_raw = subprocess.run(["git", "show", "HEAD:jobs.json"],
+                                   capture_output=True, text=True).stdout
+          same = bool(old_raw) and meaningful(old_raw) == new
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"changed={'false' if same else 'true'}\n")
+          print("no substantive change" if same else "board changed")
+          PY
+          if [ "$(git diff --quiet -- jobs.json; echo $?)" != "0" ] && \
+             [ "${{ steps.changed.outputs.changed }}" = "false" ]; then
+            git checkout -- jobs.json
+          fi
+
+      # og.png bakes the counts into the image, so it goes stale unless it is
+      # rebuilt alongside the data. ubuntu-latest ships Chrome. Never fail the
+      # run over the social card.
+      - name: Rebuild social card
+        if: steps.changed.outputs.changed == 'true'
+        continue-on-error: true
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+        run: node tools/build-og.mjs
+
       - name: Commit if changed
+        if: steps.changed.outputs.changed == 'true'
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          if git diff --quiet -- jobs.json; then
-            echo "jobs.json unchanged, nothing to commit"
+          git add jobs.json og.png favicon-32.png favicon-180.png
+          if git diff --cached --quiet; then
+            echo "nothing staged"
           else
-            git add jobs.json
             git commit -m "Refresh job board ($(date -u +%Y-%m-%d))"
             git push
           fi
@@ -74,7 +120,5 @@ jobs:
       # instead, create a Vercel Deploy Hook and add it as the VERCEL_DEPLOY_HOOK
       # repository secret to enable this.
       - name: Trigger Vercel deploy
-        if: ${{ env.HOOK != '' }}
-        env:
-          HOOK: ${{ secrets.VERCEL_DEPLOY_HOOK }}
+        if: env.HOOK != '' && steps.changed.outputs.changed == 'true'
         run: curl -fsSL -X POST "$HOOK"
