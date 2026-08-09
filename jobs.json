@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-09 07:26 UTC",
+ "generated": "2026-08-09 11:26 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -12,14 +12,14 @@
    "n": 65
   },
   {
-   "code": "BAL",
-   "label": "Baltimore",
-   "n": 57
-  },
-  {
    "code": "PHL",
    "label": "Philadelphia area",
    "n": 53
+  },
+  {
+   "code": "BAL",
+   "label": "Baltimore",
+   "n": 34
   },
   {
    "code": "RDU",
@@ -34,7 +34,7 @@
   {
    "code": "DC",
    "label": "Washington DC metro",
-   "n": 19
+   "n": 16
   },
   {
    "code": "BOS",
@@ -72,11 +72,6 @@
    "n": 3
   },
   {
-   "code": "CHI",
-   "label": "Chicago",
-   "n": 2
-  },
-  {
    "code": "WMB",
    "label": "Williamsburg VA",
    "n": 2
@@ -84,6 +79,11 @@
   {
    "code": "AUS",
    "label": "Austin TX",
+   "n": 1
+  },
+  {
+   "code": "CHI",
+   "label": "Chicago",
    "n": 1
   },
   {
@@ -102,7 +102,7 @@
    "n": 3
   }
  ],
- "openings": 456,
+ "openings": 417,
  "universities": 27,
  "swept": 56,
  "targets": 76,
@@ -735,7 +735,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914666259",
-   "count": 2
+   "count": 1
   },
   {
    "score": 2,
@@ -807,27 +807,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914211117",
-   "count": 3
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Clinical Research Coordinator (Oncology)",
-   "location": "Washington, DC, United States +1 more",
-   "states": [
-    "DC",
-    "MD"
-   ],
-   "metros": [
-    "DC",
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913856556",
-   "count": 3
+   "count": 1
   },
   {
    "score": 2,
@@ -851,42 +831,6 @@
    "score": 2,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Clinical Research Coordinator (Psychiatry and Behavioral Sciences)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913873740",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Clinical Research Coordinator (Pulmonary)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913658644",
-   "count": 2
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Clinical Research Coordinator (Research Administration)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -899,7 +843,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914148297",
-   "count": 3
+   "count": 1
   },
   {
    "score": 2,
@@ -989,60 +933,6 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914140417",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Sr. Clinical Research Coordinator (\tDivision of Cardiology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913439338",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Sr. Clinical Research Coordinator (Oncology)",
-   "location": "Washington, DC, United States",
-   "states": [
-    "DC"
-   ],
-   "metros": [
-    "DC"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913225858",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Sr. Clinical Research Coordinator (Pulmonary)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913630817",
    "count": 1
   },
   {
@@ -3320,78 +3210,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Clinical Research Assistant (Pulmonary)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913484833",
-   "count": 3
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Clinical Research Assistant II (Health, Behavior and Society)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133911899546",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Clinical Research Assistant II (Pulmonary)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913658647",
-   "count": 2
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Clinical Research Assistant II - Bangor, ME (DOM Infectious Disease)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913586332",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Clinical Research Manager (SOM Pediatric Endocrinology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3404,24 +3222,6 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914710767",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Core Facility Research Specialist II (Molecular Microbiology & Immunology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912606043",
    "count": 1
   },
   {
@@ -3464,42 +3264,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Assistant (Computer Science)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913710422",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant (DOM - Bay Infectious Disease)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913471245",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Research Assistant (Data Science and Artificial Intelligence)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3530,7 +3294,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914505411",
-   "count": 2
+   "count": 1
   },
   {
    "score": 1,
@@ -3608,24 +3372,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Assistant (KSAS - Cognitive Science)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913687529",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Research Assistant (Neurology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3638,62 +3384,24 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133915014649",
-   "count": 3
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant (Pediatrics)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912822153",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant (Research Administration)",
-   "location": "Poplar, MT, United States, Fort Peck, MT, USA +1 more",
-   "states": [
-    "MT",
-    "DC"
-   ],
-   "metros": [
-    "USOTHER",
-    "DC"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133914974472",
    "count": 2
   },
   {
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Assistant (SOM, Pediatric Adolescent Medicine)",
-   "location": "Baltimore, MD, United States",
+   "title": "Research Assistant (Research Administration)",
+   "location": "Poplar, MT, United States, Fort Peck, MT, USA",
    "states": [
-    "MD"
+    "MT"
    ],
    "metros": [
-    "BAL"
+    "USOTHER"
    ],
    "remote": false,
    "intl": false,
    "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133911307451",
+   "url": "https://hiring.jhu.edu/careers/job/1133914974472",
    "count": 1
   },
   {
@@ -3718,44 +3426,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Assistant - Chicago based (HPM - Center for Gun Violence Solutions)",
-   "location": "Baltimore, MD, United States, Chicago, IL",
-   "states": [
-    "MD",
-    "IL"
-   ],
-   "metros": [
-    "BAL",
-    "CHI"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913854275",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant,  Data Core",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912871356",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Research Assistant, DSMB Unit (Neurology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3774,24 +3444,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Assistant, Data Core (Neurology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912571121",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Research Specialist (Anesthesiology & Critical Care Medicine)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3804,24 +3456,6 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914747645",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Specialist (Division of Cardiology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913586334",
    "count": 1
   },
   {
@@ -3882,24 +3516,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Research Specialist (Otolaryngology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913252801",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Research Specialist (Pediatrics)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3912,24 +3528,6 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914281364",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Specialist (Urology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912428427",
    "count": 1
   },
   {
@@ -3972,24 +3570,6 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
-   "title": "Sr. Clinical Research Manager (Neurology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913942249",
-   "count": 2
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
    "title": "Sr. Research Assistant (KSAS - Cognitive Science)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -4002,24 +3582,6 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914974442",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Sr. Research Specialist (Cell Biology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912283786",
    "count": 1
   },
   {
