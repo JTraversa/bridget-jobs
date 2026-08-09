@@ -593,6 +593,9 @@ def main():
         payload = {
             "generated": datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M UTC"),
             "locations": facet,
+            "openings": sum(r.get("count", 1) for r in rows),
+            "universities": sum(1 for t in targets
+                                if t.get("branch") == "university" and t.get("careers_url")),
             "swept": sum(1 for t in targets if t.get("careers_url")),
             "targets": len(targets),
             "manual": [

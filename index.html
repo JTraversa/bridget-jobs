@@ -278,19 +278,112 @@
       header.top { padding-top: 32px; }
     }
 
-    /* ---------- hero card ---------- */
+    /* ---------- hero ---------- */
 
-    /* Same image the link preview uses, so the page and the shared card agree.
-       It is a light-background render, so it keeps a hairline border in dark
-       mode rather than floating as a bright slab. */
-    .hero-card {
-      display: block;
-      width: 100%;
-      height: auto;
-      border-radius: var(--radius);
+    .hero {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 22px 40px;
+      background: var(--surface);
       border: 1px solid var(--border);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
+      padding: 34px 38px 28px;
       margin-bottom: 26px;
+    }
+
+    .hero::after {
+      content: '';
+      position: absolute;
+      right: -170px;
+      top: -190px;
+      width: 460px;
+      height: 460px;
+      border-radius: 50%;
+      background: radial-gradient(circle, color-mix(in srgb, var(--accent) 12%, transparent), transparent 70%);
+      pointer-events: none;
+    }
+
+    .hero-copy, .hero-portrait { position: relative; z-index: 1; }
+
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0;
+      font-size: 12.5px;
+      font-weight: 700;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--accent);
+    }
+    .hero-eyebrow i { width: 28px; height: 3px; border-radius: 2px; background: var(--accent); }
+
+    .hero-title {
+      margin: 14px 0 0;
+      font-size: clamp(28px, 5.2vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -.03em;
+      font-weight: 700;
+      text-wrap: balance;
+    }
+    .hero-title em { font-style: normal; color: var(--accent); }
+
+    .hero-sub { margin: 14px 0 0; font-size: clamp(16px, 2.2vw, 19px); }
+    .hero-sub2 { margin: 6px 0 0; font-size: 15px; color: var(--muted); }
+    .hero-sub2 b { color: var(--accent); }
+
+    .hero-portrait { text-align: center; width: 172px; }
+    .hero-portrait img {
+      width: 148px;
+      height: 148px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--surface);
+      box-shadow: 0 8px 26px rgba(28, 27, 25, .18);
+    }
+
+    .hero-tag {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      background: var(--text);
+      color: var(--bg);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .hero-facts {
+      grid-column: 1 / -1;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px 44px;
+      margin: 6px 0 0;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+    }
+    .hero-facts dt {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      color: var(--muted);
+      font-weight: 700;
+      margin-bottom: 2px;
+    }
+    .hero-facts dd { margin: 0; font-size: 27px; font-weight: 700; letter-spacing: -.02em; }
+
+    @media (max-width: 620px) {
+      .hero { grid-template-columns: 1fr; padding: 26px 22px 22px; }
+      .hero-portrait { width: auto; text-align: left; }
+      .hero-portrait img { width: 104px; height: 104px; }
+      .hero-facts { gap: 12px 28px; }
+      .hero-facts dd { font-size: 22px; }
     }
 
     /* ---------- tabs ---------- */
@@ -377,8 +470,28 @@
       <h1>Job Search Master List</h1>
     </header>
 
-    <img class="hero-card" src="og.png" width="1200" height="630"
-      alt="Soon to be unemployed? Absolutely Fucked? I hope this might help a smidge. 456 open research roles, already filtered, across 56 employers, 27 universities and 17 metros.">
+    <!-- Same content as og.png, but live: it reflows, respects dark mode, and
+         takes its numbers from jobs.json instead of a baked-in render. -->
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="hero-eyebrow"><i></i>A gentle intervention</p>
+        <p class="hero-title">Soon to be unemployed?<br><em>Absolutely Fucked?</em></p>
+        <p class="hero-sub">I hope this might help a smidge</p>
+        <p class="hero-sub2"><b id="heroOpenings">&hellip;</b> open research roles, already filtered</p>
+      </div>
+
+      <div class="hero-portrait">
+        <img src="portrait.jpg" width="244" height="244" alt="Bridget">
+        <span class="hero-tag">Status: unemployed</span>
+      </div>
+
+      <dl class="hero-facts">
+        <div><dt>Open roles</dt><dd id="heroRoles">&hellip;</dd></div>
+        <div><dt>Employers</dt><dd id="heroEmployers">&hellip;</dd></div>
+        <div><dt>Universities</dt><dd id="heroUnis">&hellip;</dd></div>
+        <div><dt>Metros</dt><dd id="heroMetros">&hellip;</dd></div>
+      </dl>
+    </section>
 
     <nav class="tabs">
       <button id="tab-jobs" aria-selected="true">Open roles <span class="n" id="tabcount"></span></button>
@@ -1138,6 +1251,25 @@
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(function (d) {
           jobs = d.jobs || [];
+
+          // Hero counts come from the same feed, so the headline can never
+          // disagree with the board underneath it.
+          var openings = d.openings != null
+            ? d.openings
+            : jobs.reduce(function (n, j) { return n + (j.count || 1); }, 0);
+          var realMetros = (d.locations || []).filter(function (L) {
+            return ['REMOTE', 'INTL', 'USOTHER'].indexOf(L.code) === -1;
+          }).length;
+          var set = function (id, v) {
+            var el = document.getElementById(id);
+            if (el) el.textContent = v;
+          };
+          set('heroOpenings', openings);
+          set('heroRoles', openings);
+          set('heroEmployers', d.swept);
+          set('heroUnis', d.universities != null ? d.universities : '-');
+          set('heroMetros', realMetros);
+
           meta.innerHTML = '<strong>' + jobs.length + ' open roles</strong> pulled from ' + d.swept +
             ' employer job feeds · updated ' + esc(d.generated) +
             ' · ' + d.manual.length + ' more employers need checking by hand (below)';
