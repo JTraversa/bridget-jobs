@@ -88,9 +88,8 @@
     /* ---------- header ---------- */
 
     header.top {
-      padding: 56px 0 28px;
-      border-bottom: 1px solid var(--border);
-      margin-bottom: 28px;
+      padding: 48px 0 20px;
+      margin-bottom: 0;
     }
 
     h1 {
@@ -273,6 +272,21 @@
       header.top { padding-top: 32px; }
     }
 
+    /* ---------- hero card ---------- */
+
+    /* Same image the link preview uses, so the page and the shared card agree.
+       It is a light-background render, so it keeps a hairline border in dark
+       mode rather than floating as a bright slab. */
+    .hero-card {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      margin-bottom: 26px;
+    }
+
     /* ---------- tabs ---------- */
 
     nav.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
@@ -356,6 +370,9 @@
     <header class="top">
       <h1>Job Search Master List</h1>
     </header>
+
+    <img class="hero-card" src="og.png" width="1200" height="630"
+      alt="Soon to be unemployed? Absolutely Fucked? I hope this might help a smidge. 456 open research roles, already filtered, across 56 employers, 27 universities and 17 metros.">
 
     <nav class="tabs">
       <button id="tab-jobs" aria-selected="true">Open roles <span class="n" id="tabcount"></span></button>
