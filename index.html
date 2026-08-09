@@ -1,0 +1,1120 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Jobs Board</title>
+  <meta name="description" content="Open research roles pulled from employer job feeds, plus a ranked list of where to look.">
+  <meta name="robots" content="noindex, nofollow">
+
+  <style>
+    :root {
+      --bg: #fbfaf8;
+      --surface: #ffffff;
+      --surface-2: #f4f2ee;
+      --text: #1c1b19;
+      --muted: #6d6a63;
+      --border: #e6e3dc;
+      --accent: #1f6f5c;
+      --accent-soft: #e3f0ec;
+      --t1: #1f6f5c;
+      --t2: #8a6d1f;
+      --t3: #6d6a63;
+      --laneA: #2b5f9e;
+      --laneB: #1f6f5c;
+      --laneC: #96541f;
+      --skip: #9a3b3b;
+      --radius: 10px;
+      --shadow: 0 1px 2px rgba(28, 27, 25, .05), 0 4px 12px rgba(28, 27, 25, .04);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #16161a;
+        --surface: #1d1e23;
+        --surface-2: #24262c;
+        --text: #e8e6e1;
+        --muted: #9c988f;
+        --border: #32343b;
+        --accent: #57b89c;
+        --accent-soft: #1c332d;
+        --t1: #57b89c;
+        --t2: #cfa94b;
+        --t3: #9c988f;
+        --laneA: #6fa5e0;
+        --laneB: #57b89c;
+        --laneC: #d69a5f;
+        --skip: #d97b7b;
+        --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 4px 14px rgba(0, 0, 0, .25);
+      }
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 16px/1.6 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: 940px; margin: 0 auto; padding: 0 20px 80px; }
+
+    /* ---------- header ---------- */
+
+    header.top {
+      padding: 56px 0 28px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 28px;
+    }
+
+    h1 {
+      font-size: clamp(28px, 5vw, 40px);
+      line-height: 1.15;
+      margin: 0 0 12px;
+      letter-spacing: -.02em;
+    }
+
+    /* ---------- controls ---------- */
+
+    .controls {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: color-mix(in srgb, var(--bg) 92%, transparent);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+      padding: 12px 0;
+      margin-bottom: 28px;
+    }
+
+    .filter-row { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; }
+    .group { display: flex; align-items: center; gap: 7px; flex-wrap: wrap; }
+    .group > .label { font-size: 12px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+
+    button.chip {
+      font: inherit;
+      font-size: 13px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--muted);
+      cursor: pointer;
+      transition: .15s;
+    }
+
+    button.chip:hover { border-color: var(--accent); color: var(--text); }
+
+    button.chip[aria-pressed="true"] {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    @media (prefers-color-scheme: dark) {
+      button.chip[aria-pressed="true"] { color: #10231e; }
+    }
+
+    .progress-wrap { display: flex; align-items: center; gap: 10px; margin-top: 12px; font-size: 13px; color: var(--muted); }
+    .bar { flex: 1; height: 6px; background: var(--surface-2); border-radius: 999px; overflow: hidden; }
+    .bar > i { display: block; height: 100%; width: 0%; background: var(--accent); transition: width .25s; }
+
+    button.reset {
+      font: inherit; font-size: 12px; background: none; border: none;
+      color: var(--muted); text-decoration: underline; cursor: pointer; padding: 0;
+    }
+    button.reset:hover { color: var(--text); }
+
+    /* ---------- sections ---------- */
+
+    section { margin-bottom: 44px; scroll-margin-top: 90px; }
+
+    h2 {
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: var(--muted);
+      margin: 0 0 6px;
+      font-weight: 700;
+    }
+
+    .section-title { font-size: 24px; margin: 0 0 6px; letter-spacing: -.015em; }
+    .section-sub { color: var(--muted); font-size: 15px; margin: 0 0 20px; max-width: 66ch; }
+
+    /* ---------- source cards ---------- */
+
+    .source {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--t3);
+      border-radius: var(--radius);
+      padding: 16px 18px;
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .source[data-tier="1"] { border-left-color: var(--t1); }
+    .source[data-tier="2"] { border-left-color: var(--t2); }
+    .source[data-tier="3"] { border-left-color: var(--t3); }
+    .source.skip { border-left-color: var(--skip); }
+    .source.hidden { display: none; }
+
+    .src-head { display: flex; gap: 12px; align-items: flex-start; }
+
+    .src-head input[type=checkbox] {
+      width: 18px; height: 18px; margin: 4px 0 0; flex: none;
+      accent-color: var(--accent); cursor: pointer;
+    }
+
+    .src-title { flex: 1; min-width: 0; }
+    .src-title h3 { margin: 0 0 4px; font-size: 17px; letter-spacing: -.01em; }
+    .src-title h3 .num { color: var(--muted); font-weight: 400; margin-right: 6px; }
+
+    .source.done .src-title h3 { opacity: .5; text-decoration: line-through; }
+
+    .badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 8px; }
+
+    .badge {
+      font-size: 11px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+      padding: 2px 8px; border-radius: 5px; border: 1px solid currentColor;
+    }
+
+    .b-t1 { color: var(--t1); } .b-t2 { color: var(--t2); } .b-t3 { color: var(--t3); }
+    .b-A { color: var(--laneA); } .b-B { color: var(--laneB); } .b-C { color: var(--laneC); }
+    .b-skip { color: var(--skip); }
+
+    .note { color: var(--muted); font-size: 14.5px; margin: 0; }
+    .note strong { color: var(--text); }
+
+    a { color: var(--accent); text-decoration-thickness: 1px; text-underline-offset: 2px; }
+    a:hover { text-decoration-thickness: 2px; }
+
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: .88em; background: var(--surface-2);
+      padding: 1px 5px; border-radius: 4px; word-break: break-all;
+    }
+
+    /* ---------- org table ---------- */
+
+    .table-scroll { overflow-x: auto; margin-top: 12px; }
+    table { border-collapse: collapse; width: 100%; font-size: 14.5px; min-width: 520px; }
+    th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    th { font-size: 11px; text-transform: uppercase; letter-spacing: .07em; color: var(--muted); }
+    tbody tr:hover { background: var(--surface-2); }
+    td:first-child { font-weight: 600; white-space: nowrap; }
+
+    /* ---------- search strings ---------- */
+
+    .lane-block {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 16px 18px; margin-bottom: 14px; box-shadow: var(--shadow);
+    }
+
+    .lane-head { display: flex; align-items: center; gap: 10px; justify-content: space-between; margin-bottom: 4px; }
+    .lane-head h3 { margin: 0; font-size: 16px; }
+
+    button.copy {
+      font: inherit; font-size: 12px; padding: 4px 11px; border-radius: 6px;
+      border: 1px solid var(--border); background: var(--surface-2);
+      color: var(--muted); cursor: pointer; flex: none;
+    }
+    button.copy:hover { border-color: var(--accent); color: var(--accent); }
+    button.copy.ok { color: var(--accent); border-color: var(--accent); }
+
+    .terms { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
+    .term { font-size: 13px; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 3px 9px; }
+
+    /* ---------- generic prose blocks ---------- */
+
+    .panel {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 18px 20px; box-shadow: var(--shadow);
+    }
+    .panel + .panel { margin-top: 12px; }
+    .panel h3 { margin: 0 0 8px; font-size: 16px; }
+    .panel p:last-child { margin-bottom: 0; }
+    .panel ul { margin: 0; padding-left: 20px; }
+    .panel li { margin-bottom: 8px; }
+    .panel li:last-child { margin-bottom: 0; }
+
+    .empty { display: none; color: var(--muted); font-style: italic; padding: 20px 0; }
+
+    footer { border-top: 1px solid var(--border); padding-top: 20px; color: var(--muted); font-size: 13.5px; }
+
+    @media (max-width: 560px) {
+      header.top { padding-top: 32px; }
+    }
+
+    /* ---------- tabs ---------- */
+
+    nav.tabs { display: flex; gap: 4px; border-bottom: 1px solid var(--border); margin-bottom: 24px; }
+
+    nav.tabs button {
+      font: inherit; font-size: 15px; font-weight: 600;
+      background: none; border: none; border-bottom: 2px solid transparent;
+      color: var(--muted); padding: 10px 16px; cursor: pointer; margin-bottom: -1px;
+    }
+    nav.tabs button:hover { color: var(--text); }
+    nav.tabs button[aria-selected="true"] { color: var(--accent); border-bottom-color: var(--accent); }
+    nav.tabs .n { font-weight: 400; opacity: .7; }
+
+    .view[hidden] { display: none; }
+
+    /* ---------- job board ---------- */
+
+    .board-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 8px; }
+
+    input.search {
+      font: inherit; font-size: 15px; flex: 1 1 260px; min-width: 0;
+      padding: 9px 13px; border-radius: 8px;
+      border: 1px solid var(--border); background: var(--surface); color: var(--text);
+    }
+    input.search:focus { outline: 2px solid var(--accent); outline-offset: -1px; border-color: transparent; }
+
+    select.loc-select {
+      font: inherit; font-size: 13px; padding: 5px 10px; border-radius: 999px;
+      border: 1px solid var(--border); background: var(--surface);
+      color: var(--text); cursor: pointer; max-width: 230px;
+    }
+    select.loc-select:hover { border-color: var(--accent); }
+
+    .meta-line { font-size: 13px; color: var(--muted); margin: 0 0 20px; }
+
+    .job {
+      display: block; text-decoration: none; color: inherit;
+      background: var(--surface); border: 1px solid var(--border);
+      border-left: 3px solid var(--t3);
+      border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
+      box-shadow: var(--shadow); transition: .14s;
+    }
+    .job:hover { border-color: var(--accent); border-left-color: var(--accent); transform: translateY(-1px); }
+    .job[data-score="2"] { border-left-color: var(--t1); }
+    .job[hidden] { display: none; }
+
+    .job-top { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
+    .job-title { font-size: 16.5px; font-weight: 600; letter-spacing: -.01em; }
+    .job-emp { font-size: 14px; color: var(--accent); font-weight: 600; }
+    .job-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); }
+    .dot { opacity: .5; }
+
+    .pill {
+      font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
+      padding: 2px 7px; border-radius: 4px; border: 1px solid currentColor;
+    }
+    .p-strong { color: var(--t1); }
+    .p-maybe { color: var(--t2); }
+    .p-remote { color: var(--laneA); }
+
+    .manual-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
+
+    .manual-item {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 8px; padding: 10px 12px; font-size: 13.5px;
+    }
+    .manual-item b { display: block; margin-bottom: 2px; }
+    .manual-item span { color: var(--muted); font-size: 12.5px; word-break: break-word; }
+
+    .warn {
+      background: var(--accent-soft); border: 1px solid var(--accent);
+      border-radius: var(--radius); padding: 14px 16px; font-size: 14.5px; margin-bottom: 22px;
+    }
+    .warn b { display: block; margin-bottom: 4px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+
+    <header class="top">
+      <h1>Job Search Master List</h1>
+    </header>
+
+    <nav class="tabs">
+      <button id="tab-jobs" aria-selected="true">Open roles <span class="n" id="tabcount"></span></button>
+      <button id="tab-guide" aria-selected="false">Where to look</button>
+    </nav>
+
+    <!-- ============ VIEW: JOB BOARD ============ -->
+    <div class="view" id="view-jobs">
+
+      <div class="board-controls">
+        <input class="search" id="q" type="search" placeholder="Search title, employer or location…" autocomplete="off">
+        <button class="chip" data-jf="lane" data-v="all" aria-pressed="true">All lanes</button>
+        <button class="chip" data-jf="lane" data-v="A" aria-pressed="false">A · ResearchOps &amp; UXR</button>
+        <button class="chip" data-jf="lane" data-v="B" aria-pressed="false">B · Applied research</button>
+        <button class="chip" data-jf="lane" data-v="C" aria-pressed="false">C · Clinical</button>
+        <button class="chip" data-jf="strong" data-v="1" aria-pressed="false">Strong only</button>
+        <button class="chip" data-jf="remote" data-v="1" aria-pressed="false">Remote only</button>
+        <select class="loc-select" id="loc"><option value="all">All locations</option></select>
+      </div>
+      <p class="meta-line" id="boardmeta">Loading…</p>
+
+      <div id="joblist"></div>
+      <p class="empty" id="jobempty">No roles match that filter.</p>
+
+      <section id="manual" style="margin-top:44px">
+        <h2>Not covered above</h2>
+        <p class="section-title">Check these by hand</p>
+        <p class="section-sub">
+          These employers run custom career portals with no machine-readable feed, so they cannot be pulled
+          automatically. Several of them are the <strong>best-fit employers on the whole list</strong>, so this
+          section is not optional.
+        </p>
+        <div class="manual-grid" id="manuallist"></div>
+      </section>
+    </div>
+
+    <!-- ============ VIEW: GUIDANCE ============ -->
+    <div class="view" id="view-guide" hidden>
+
+    <div class="controls">
+      <div class="filter-row">
+        <div class="group">
+          <span class="label">Tier</span>
+          <button class="chip" data-f="tier" data-v="all" aria-pressed="true">All</button>
+          <button class="chip" data-f="tier" data-v="1" aria-pressed="false">1 · Weekly</button>
+          <button class="chip" data-f="tier" data-v="2" aria-pressed="false">2 · Biweekly</button>
+          <button class="chip" data-f="tier" data-v="3" aria-pressed="false">3 · Monthly</button>
+        </div>
+        <div class="group">
+          <span class="label">Lane</span>
+          <button class="chip" data-f="lane" data-v="all" aria-pressed="true">All</button>
+          <button class="chip" data-f="lane" data-v="A" aria-pressed="false">A · ResearchOps &amp; UXR</button>
+          <button class="chip" data-f="lane" data-v="B" aria-pressed="false">B · Applied research</button>
+          <button class="chip" data-f="lane" data-v="C" aria-pressed="false">C · Clinical reg ops</button>
+        </div>
+      </div>
+      <div class="progress-wrap">
+        <span id="count">0 of 0 checked</span>
+        <span class="bar"><i id="barfill"></i></span>
+        <button class="reset" id="reset">reset</button>
+      </div>
+    </div>
+
+    <!-- ============ HOW TO WORK THIS ============ -->
+    <section id="how">
+      <h2>Start here</h2>
+      <p class="section-title">How to work this</p>
+      <div class="panel">
+        <ul>
+          <li><strong>Do not browse. Set alerts.</strong> Every Tier 1 and most Tier 2 sources support saved searches or email alerts. Browsing burns hours and finds less.</li>
+          <li><strong>Budget about 90 minutes a week.</strong> Roughly 45 minutes on Tier 1, 30 on whatever Tier 2 is due, 15 on outreach.</li>
+          <li><strong>Track applications in a sheet</strong> with date, employer, title, lane, link, status, follow-up date. Fifteen open applications with no tracker becomes chaos fast.</li>
+          <li><strong>Apply within 72 hours where you can.</strong> At the research shops especially, reqs are often filled first-good-candidate rather than best-of-full-pool.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ TIER 1 ============ -->
+    <section id="tier1">
+      <h2>Tier 1</h2>
+      <p class="section-title">Check weekly</p>
+      <p class="section-sub">The highest ratio of roles you could actually get to listings you have to read.</p>
+
+      <div class="source" data-tier="1" data-lane="B" data-id="s1">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">1.</span>The applied research shops, direct</h3>
+            <div class="badges"><span class="badge b-t1">Tier 1</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              The single highest-density source. These organizations do the work you do now, hire into titles
+              you qualify for, treat a master's as the credential gate rather than a stretch, and several are
+              strongly remote-friendly. Most sit in the DC corridor, so relocating stays optional.
+            </p>
+            <div class="table-scroll">
+              <table>
+                <thead><tr><th>Organization</th><th>Base</th><th>Where to look</th></tr></thead>
+                <tbody>
+                  <tr><td>Westat</td><td>Rockville MD</td><td><a href="https://westat-jobs.westat.com/jobs.cfm" target="_blank" rel="noopener">westat-jobs.westat.com</a> · closest single match to your current job</td></tr>
+                  <tr><td>Mathematica</td><td>DC + Princeton</td><td><a href="https://careers.mathematica.org/search-jobs" target="_blank" rel="noopener">careers.mathematica.org</a> · strong remote posture</td></tr>
+                  <tr><td>Abt Global</td><td>Rockville MD</td><td><a href="https://www.abtglobal.com/careers" target="_blank" rel="noopener">abtglobal.com/careers</a> · many US roles fully remote</td></tr>
+                  <tr><td>AIR</td><td>Arlington VA</td><td><a href="https://job-boards.greenhouse.io/americaninstitutesforresearch" target="_blank" rel="noopener">Greenhouse board</a> · explicitly a behavioral science org</td></tr>
+                  <tr><td>RTI International</td><td>RTP + DC</td><td><a href="https://job-boards.greenhouse.io/rti" target="_blank" rel="noopener">Greenhouse board</a></td></tr>
+                  <tr><td>NORC</td><td>Chicago + DC</td><td><a href="https://norc.jobs.net/jobs" target="_blank" rel="noopener">norc.jobs.net</a></td></tr>
+                  <tr><td>Urban Institute</td><td>DC</td><td><a href="https://urban.wd1.myworkdayjobs.com/Urban-Careers" target="_blank" rel="noopener">Workday board</a></td></tr>
+                  <tr><td>ICF</td><td>Fairfax VA</td><td><a href="https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site" target="_blank" rel="noopener">Workday board</a> · behavioral &amp; social science federal work</td></tr>
+                  <tr><td>MDRC</td><td>NYC + Oakland</td><td><a href="https://www.mdrc.org/about/careers" target="_blank" rel="noopener">mdrc.org careers</a></td></tr>
+                  <tr><td>RAND</td><td>Arlington + Santa Monica</td><td><a href="https://rand.wd5.myworkdayjobs.com/External_Career_Site" target="_blank" rel="noopener">Workday board</a> · skews senior, check anyway</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="1" data-lane="A" data-id="s2">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">2.</span>The Ultimate UX Research Job Board</h3>
+            <div class="badges"><span class="badge b-t1">Tier 1</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              Maintained by User Interviews, remote-focused, last refreshed July 2026.
+              <strong>The best single curated list for the ResearchOps and UXR lane</strong>, and it is free.
+              Check it before any generic job site.
+              <br><a href="https://www.userinterviews.com/blog/the-ultimate-remote-ux-research-job-board" target="_blank" rel="noopener">userinterviews.com/blog/the-ultimate-remote-ux-research-job-board</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="1" data-lane="A B C" data-id="s3">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">3.</span>LinkedIn, saved-search alerts only</h3>
+            <div class="badges"><span class="badge b-t1">Tier 1</span><span class="badge b-A">A</span><span class="badge b-B">B</span><span class="badge b-C">C</span></div>
+            <p class="note">
+              Set four or five saved searches from the strings below, alerts on daily. This is where industry and
+              staff roles surface first, and your Meta and UMD connections mean <strong>referral paths show up
+              here that show up nowhere else</strong>. Do not browse the feed.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="1" data-lane="A" data-id="s4">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">4.</span>Big tech, direct</h3>
+            <div class="badges"><span class="badge b-t1">Tier 1</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              <strong>Meta first</strong>, since you are an alum and a returning contractor is a materially easier
+              hire than a cold one. All four run proprietary career sites, so they have to be checked directly.
+              <br>
+              <a href="https://www.metacareers.com/jobs" target="_blank" rel="noopener">Meta</a> ·
+              <a href="https://www.google.com/about/careers/applications/jobs/results" target="_blank" rel="noopener">Google</a> ·
+              <a href="https://jobs.careers.microsoft.com/global/en/search" target="_blank" rel="noopener">Microsoft</a> ·
+              <a href="https://www.amazon.jobs/en/search" target="_blank" rel="noopener">Amazon</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIER 2 ============ -->
+    <section id="tier2">
+      <h2>Tier 2</h2>
+      <p class="section-title">Check every two weeks</p>
+      <p class="section-sub">Lower volume, but the relevance per listing is high and the applicant pools are small.</p>
+
+      <div class="source" data-tier="2" data-lane="B" data-id="s5">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">5.</span>AAPOR Career Center, plus DC-AAPOR</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              The professional association for survey and public opinion research, roughly 2,000 members across
+              academia, government, nonprofits and industry. Low volume, very high relevance.
+              <strong>The DC chapter runs its own local board</strong>, unusually well targeted for someone in
+              Northern Virginia and almost unknown outside the field.
+              <br>
+              <a href="https://aapor.org/archives/aapor-career-center/" target="_blank" rel="noopener">National career center</a> ·
+              <a href="https://dc-aapor.org/job-postings/browse-job-postings/" target="_blank" rel="noopener">DC-AAPOR job postings</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="2" data-lane="A" data-id="s6">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">6.</span>HFES Job Board</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              Human Factors and Ergonomics Society. In here specifically because
+              <strong>Human Factors is one of your top endorsed skills</strong>, carried over from Meta. This is
+              where human factors roles concentrate and the applicant pools stay small.
+              <br><a href="https://jobs.hfes.org/" target="_blank" rel="noopener">jobs.hfes.org</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="2" data-lane="B" data-id="s7">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">7.</span>Market research and consumer insights</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              Your Smith School work is consumer behavior, which is a direct credential here.
+              <br>
+              <a href="https://www.greenbook.org/insights/insights-careers" target="_blank" rel="noopener">GreenBook Insights Careers</a> ·
+              <a href="https://www.quirks.com/" target="_blank" rel="noopener">Quirk's</a> ·
+              <a href="https://www.insightsassociation.org/" target="_blank" rel="noopener">Insights Association</a> ·
+              <a href="https://insightscareernetwork.org/" target="_blank" rel="noopener">Insights Career Network</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="2" data-lane="B" data-id="s8">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">8.</span>Higher ed, if staying in academia is acceptable</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              Only worth it for a better institution, better pay, or a title bump. Same work, known quantity.
+              HERC is free and syndicates directly from member institutions' HR systems.
+              <br>
+              <a href="https://www.hercjobs.org/" target="_blank" rel="noopener">HERC</a> ·
+              <a href="https://www.higheredjobs.com/" target="_blank" rel="noopener">HigherEdJobs</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="2" data-lane="B" data-id="s9">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">9.</span>Federal and federal-adjacent</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              <strong>Census Bureau, BLS and NCES are among the largest survey research employers in the
+              country</strong> and a natural fit for a behavioral or survey background. Separately, the
+              <strong>Office of Evaluation Sciences</strong> at GSA is the federal applied behavioral science
+              team in DC, which is your current job pointed at policy instead of a business school. Small team,
+              posts rarely, worth a standing alert.
+              <br>
+              <a href="https://www.usajobs.gov/" target="_blank" rel="noopener">USAJOBS</a> ·
+              <a href="https://oes.gsa.gov/" target="_blank" rel="noopener">oes.gsa.gov</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="2" data-lane="B" data-id="s10">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">10.</span>Behavioral science shops, direct</h3>
+            <div class="badges"><span class="badge b-t2">Tier 2</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              Small teams, so they post infrequently and never syndicate. Check the careers pages directly.
+              <br>
+              <a href="https://www.bi.team/careers/" target="_blank" rel="noopener">Behavioural Insights Team</a> ·
+              <a href="https://www.ideas42.org/careers/" target="_blank" rel="noopener">ideas42</a> ·
+              <a href="https://irrationallabs.com/" target="_blank" rel="noopener">Irrational Labs</a> ·
+              Center for Advanced Hindsight / Common Cents Lab (Duke)
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TIER 3 ============ -->
+    <section id="tier3">
+      <h2>Tier 3</h2>
+      <p class="section-title">Monthly, or situational</p>
+      <p class="section-sub">Real but thin. Worth a pass once a month rather than a weekly habit.</p>
+
+      <div class="source" data-tier="3" data-lane="A" data-id="s11">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">11.</span>Research tooling companies</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              Companies that sell research infrastructure hire research coordinators and ResearchOps people by
+              those exact titles, and most are remote-first. <strong>Prolific is worth a specific look</strong>,
+              it runs academic participant panels, which is your exact world commercialized.
+              <br>
+              <a href="https://www.userinterviews.com/careers" target="_blank" rel="noopener">User Interviews</a> ·
+              <a href="https://job-boards.greenhouse.io/prolific" target="_blank" rel="noopener">Prolific</a> ·
+              <a href="https://job-boards.greenhouse.io/dscout" target="_blank" rel="noopener">Dscout</a> ·
+              <a href="https://www.usertesting.com/company/careers" target="_blank" rel="noopener">UserTesting</a> ·
+              <a href="https://job-boards.greenhouse.io/qualtrics" target="_blank" rel="noopener">Qualtrics</a> ·
+              <a href="https://sago.com/en/careers/" target="_blank" rel="noopener">Sago</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="B" data-id="s12">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">12.</span>Nonprofit and mission research</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              <a href="https://www.idealist.org/" target="_blank" rel="noopener">Idealist</a> is the main board.
+              Also PATH, FHI 360 and Population Council if global health interests you.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="C" data-id="s13">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">13.</span>The clinical regulatory return path</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-C">Lane C</span></div>
+            <p class="note">
+              Only if you want it. Your year at TRI doing eTMF and document review is a real credential that does
+              not expire quickly, and <strong>this lane pays well</strong>. Target employers: Emmes (Rockville),
+              Technical Resources International (Bethesda, warm re-entry), and the NIH support contractors.
+              <br>
+              <a href="https://careers.acrpnet.org/" target="_blank" rel="noopener">ACRP</a> ·
+              <a href="https://www.centerwatch.com/" target="_blank" rel="noopener">CenterWatch</a> ·
+              <a href="https://www.pharmiweb.jobs/" target="_blank" rel="noopener">PharmiWeb.jobs</a> ·
+              <a href="https://www.biospace.com/jobs" target="_blank" rel="noopener">BioSpace</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="A" data-id="s14">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">14.</span>Tech-specific aggregators</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              Only if Lane A becomes the primary focus.
+              <a href="https://builtin.com/jobs" target="_blank" rel="noopener">Built In</a> ·
+              <a href="https://wellfound.com/jobs" target="_blank" rel="noopener">Wellfound</a> ·
+              <a href="https://uiuxjobsboard.com/" target="_blank" rel="noopener">UI/UX Jobs Board</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="B" data-id="s15">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">15.</span>Decision science community channels</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-B">Lane B</span></div>
+            <p class="note">
+              No formal board, but jobs circulate through the SJDM quarterly newsletter, the jdm-society mailing
+              list (open to read and post), and Decision Science News. Low volume, but
+              <strong>these are the roles nobody else sees</strong>.
+              <br>
+              <a href="https://sjdm.org/newsletters/" target="_blank" rel="noopener">SJDM newsletters</a> ·
+              <a href="https://www.decisionsciencenews.com/?cat=9" target="_blank" rel="noopener">Decision Science News jobs</a>
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="A" data-id="s16">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">16.</span>ResearchOps Community</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-A">Lane A</span></div>
+            <p class="note">
+              Slack-based community founded in 2018, practitioners in 100+ countries. Not really a job board,
+              more <strong>where ReOps roles get mentioned before they are posted</strong>. Worth joining for the
+              network rather than the listings.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source" data-tier="3" data-lane="A B C" data-id="s17">
+        <div class="src-head">
+          <input type="checkbox">
+          <div class="src-title">
+            <h3><span class="num">17.</span>UMD internal and alumni channels</h3>
+            <div class="badges"><span class="badge b-t3">Tier 3</span><span class="badge b-A">A</span><span class="badge b-B">B</span><span class="badge b-C">C</span></div>
+            <p class="note">
+              You are current staff and a UMBC alum. Internal transfer boards, Smith School career services and
+              Handshake alumni access are all cheap to check and occasionally surface things that never go public.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <p class="empty" id="empty">Nothing matches those filters.</p>
+    </section>
+
+    <!-- ============ SKIP ============ -->
+    <section id="skip">
+      <h2>Save your time</h2>
+      <p class="section-title">Worth deliberately skipping</p>
+      <p class="section-sub">Knowing what not to do protects the 90 minutes.</p>
+
+      <div class="source skip">
+        <div class="src-head">
+          <div class="src-title">
+            <h3>ORISE / Zintellect federal fellowships</h3>
+            <div class="badges"><span class="badge b-skip">Skip</span></div>
+            <p class="note">Stipend appointments with no benefits progression, aimed at people with no work history. At five years plus a master's, this is a step down.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source skip">
+        <div class="src-head">
+          <div class="src-title">
+            <h3>FlexJobs</h3>
+            <div class="badges"><span class="badge b-skip">Skip</span></div>
+            <p class="note">Paid subscription, and most of what it lists is aggregated from sources on this page that are free.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source skip">
+        <div class="src-head">
+          <div class="src-title">
+            <h3>Browsing Indeed or Glassdoor</h3>
+            <div class="badges"><span class="badge b-skip">Skip</span></div>
+            <p class="note">Saved-search alerts only. For these titles the signal-to-noise is bad enough that manual browsing is a poor use of the time.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="source skip">
+        <div class="src-head">
+          <div class="src-title">
+            <h3>Academic postdoc boards</h3>
+            <div class="badges"><span class="badge b-skip">Skip</span></div>
+            <p class="note">Wrong track. This is staff-research experience, not faculty-track.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SEARCH STRINGS ============ -->
+    <section id="strings">
+      <h2>Copy these</h2>
+      <p class="section-title">Search strings</p>
+      <p class="section-sub">Use across every board. Keep the lanes in separate searches, do not mix them into one.</p>
+
+      <div class="lane-block">
+        <div class="lane-head">
+          <h3>Lane A · ResearchOps and UXR</h3>
+          <button class="copy" data-copy="research operations, researchops, reops, research ops manager, research operations coordinator, research program manager, participant recruitment, panel manager, ux researcher, user researcher, ux research coordinator, human factors specialist">Copy</button>
+        </div>
+        <p class="note">Your differentiated angle, and the one most people with this background never think to search.</p>
+        <div class="terms">
+          <span class="term">research operations</span><span class="term">researchops</span><span class="term">reops</span>
+          <span class="term">research ops manager</span><span class="term">research operations coordinator</span>
+          <span class="term">research program manager</span><span class="term">participant recruitment</span>
+          <span class="term">panel manager</span><span class="term">ux researcher</span><span class="term">user researcher</span>
+          <span class="term">ux research coordinator</span><span class="term">human factors specialist</span>
+        </div>
+      </div>
+
+      <div class="lane-block">
+        <div class="lane-head">
+          <h3>Lane B · Applied and survey research</h3>
+          <button class="copy" data-copy="research associate, research analyst, survey research associate, research coordinator, study coordinator, behavioral researcher, behavioral scientist, decision scientist, research specialist, evaluation associate, consumer insights analyst">Copy</button>
+        </div>
+        <p class="note">Highest volume, and the best geographic fit given the DC concentration.</p>
+        <div class="terms">
+          <span class="term">research associate</span><span class="term">research analyst</span>
+          <span class="term">survey research associate</span><span class="term">research coordinator</span>
+          <span class="term">study coordinator</span><span class="term">behavioral researcher</span>
+          <span class="term">behavioral scientist</span><span class="term">decision scientist</span>
+          <span class="term">research specialist</span><span class="term">evaluation associate</span>
+          <span class="term">consumer insights analyst</span>
+        </div>
+      </div>
+
+      <div class="lane-block">
+        <div class="lane-head">
+          <h3>Lane C · Clinical regulatory ops</h3>
+          <button class="copy" data-copy="regulatory operations, regulatory affairs associate, etmf, trial master file, clinical research coordinator, clinical trial assistant, clinical document specialist">Copy</button>
+        </div>
+        <p class="note">Only if you want this path. The TRI credential is real and does not expire quickly.</p>
+        <div class="terms">
+          <span class="term">regulatory operations</span><span class="term">regulatory affairs associate</span>
+          <span class="term">eTMF</span><span class="term">trial master file</span>
+          <span class="term">clinical research coordinator</span><span class="term">clinical trial assistant</span>
+          <span class="term">clinical document specialist</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RESUMES ============ -->
+    <section id="resumes">
+      <h2>Positioning</h2>
+      <p class="section-title">Three résumés, not one</p>
+      <p class="section-sub">The lanes want different framing. A single generic résumé underperforms in all three. Same facts throughout, different order and emphasis.</p>
+
+      <div class="panel">
+        <h3>Lane A · ResearchOps and UXR</h3>
+        <p class="note">Lead with <strong>Meta</strong>. Reframe the UMD role as research operations: participant pipeline, RA team management, scheduling, tooling, data quality.</p>
+      </div>
+      <div class="panel">
+        <h3>Lane B · Applied and survey research</h3>
+        <p class="note">Lead with <strong>UMD Smith</strong> as experimental behavioral research: design, execution, coding and analysis, plus conference presentation. Master's front and center.</p>
+      </div>
+      <div class="panel">
+        <h3>Lane C · Clinical regulatory ops</h3>
+        <p class="note">Lead with <strong>TRI</strong>: eTMF, document review, regulatory compliance.</p>
+      </div>
+    </section>
+
+    <!-- ============ NETWORK ============ -->
+    <section id="network">
+      <h2>Highest leverage</h2>
+      <p class="section-title">Network, which outperforms all of the above</p>
+      <div class="panel">
+        <ul>
+          <li><strong>Smith School faculty</strong> whose studies you run. They place students into industry and consulting constantly, and they are the warmest referral source available.</li>
+          <li><strong>Meta.</strong> A contractor who returns is a much easier hire than a stranger.</li>
+          <li><strong>DC-AAPOR</strong> runs local events. For someone in Northern Virginia aiming at survey research, showing up in person is disproportionately effective relative to the effort.</li>
+        </ul>
+      </div>
+    </section>
+
+    </div><!-- /view-guide -->
+
+    <footer>
+      <p>
+        Ranked by fit density per hour, not by prestige. Checkboxes save to this browser only, so use the same
+        device and the list remembers where you were.
+      </p>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var KEY = 'jsml.checked.v1';
+      var sources = Array.prototype.slice.call(document.querySelectorAll('.source[data-id]'));
+      var filters = { tier: 'all', lane: 'all' };
+
+      function load() {
+        try { return JSON.parse(localStorage.getItem(KEY)) || {}; } catch (e) { return {}; }
+      }
+      function save(s) {
+        try { localStorage.setItem(KEY, JSON.stringify(s)); } catch (e) { /* private mode */ }
+      }
+
+      var state = load();
+
+      function paint() {
+        var visible = 0, done = 0;
+        sources.forEach(function (el) {
+          var tierOk = filters.tier === 'all' || el.dataset.tier === filters.tier;
+          var laneOk = filters.lane === 'all' ||
+            el.dataset.lane.split(' ').indexOf(filters.lane) !== -1;
+          var show = tierOk && laneOk;
+          el.classList.toggle('hidden', !show);
+          if (show) {
+            visible++;
+            if (state[el.dataset.id]) done++;
+          }
+        });
+        document.getElementById('empty').style.display = visible ? 'none' : 'block';
+        document.getElementById('count').textContent = done + ' of ' + visible + ' checked';
+        document.getElementById('barfill').style.width = visible ? (done / visible * 100) + '%' : '0%';
+      }
+
+      sources.forEach(function (el) {
+        var box = el.querySelector('input[type=checkbox]');
+        if (!box) return;
+        box.checked = !!state[el.dataset.id];
+        el.classList.toggle('done', box.checked);
+        box.addEventListener('change', function () {
+          state[el.dataset.id] = box.checked;
+          if (!box.checked) delete state[el.dataset.id];
+          el.classList.toggle('done', box.checked);
+          save(state);
+          paint();
+        });
+      });
+
+      document.querySelectorAll('button.chip').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var f = btn.dataset.f;
+          filters[f] = btn.dataset.v;
+          document.querySelectorAll('button.chip[data-f="' + f + '"]').forEach(function (b) {
+            b.setAttribute('aria-pressed', String(b === btn));
+          });
+          paint();
+        });
+      });
+
+      document.getElementById('reset').addEventListener('click', function () {
+        state = {};
+        save(state);
+        sources.forEach(function (el) {
+          var b = el.querySelector('input[type=checkbox]');
+          if (b) b.checked = false;
+          el.classList.remove('done');
+        });
+        paint();
+      });
+
+      document.querySelectorAll('button.copy').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var text = btn.dataset.copy;
+          var done = function () {
+            var old = btn.textContent;
+            btn.textContent = 'Copied';
+            btn.classList.add('ok');
+            setTimeout(function () { btn.textContent = old; btn.classList.remove('ok'); }, 1400);
+          };
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(text).then(done, function () { });
+          } else {
+            var ta = document.createElement('textarea');
+            ta.value = text; document.body.appendChild(ta); ta.select();
+            try { document.execCommand('copy'); done(); } catch (e) { }
+            document.body.removeChild(ta);
+          }
+        });
+      });
+
+      paint();
+    })();
+
+    /* ---------------- tabs ---------------- */
+    (function () {
+      var tabs = [
+        { btn: document.getElementById('tab-jobs'), view: document.getElementById('view-jobs') },
+        { btn: document.getElementById('tab-guide'), view: document.getElementById('view-guide') }
+      ];
+      tabs.forEach(function (t) {
+        t.btn.addEventListener('click', function () {
+          tabs.forEach(function (o) {
+            var on = o === t;
+            o.btn.setAttribute('aria-selected', String(on));
+            o.view.hidden = !on;
+          });
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      });
+    })();
+
+    /* ---------------- job board ---------------- */
+    (function () {
+      var LANE = {
+        'applied-research': 'B', 'behavioral': 'B',
+        'uxr': 'A', 'research-tooling': 'A', 'clinical-regops': 'C'
+      };
+
+      // University postings do not map to one lane the way an employer does:
+      // the same campus posts clinical coordinator, UX and applied-research
+      // roles side by side, so infer the lane from the title instead.
+      function laneOf(j) {
+        if (j.branch !== 'university') return LANE[j.branch] || 'B';
+        var t = (j.title || '').toLowerCase();
+        if (/clinical|trial|regulatory|patient/.test(t)) return 'C';
+        if (/\bux\b|user research|usability|human factors/.test(t)) return 'A';
+        return 'B';
+      }
+      // Location is resolved in sweep.py (raw strings are far too inconsistent to
+      // parse here). Each job arrives tagged with the metro areas it touches, plus
+      // remote/intl flags, and the dropdown is built from a facet with counts.
+
+      var list = document.getElementById('joblist');
+      var meta = document.getElementById('boardmeta');
+      var empty = document.getElementById('jobempty');
+      var qbox = document.getElementById('q');
+      var jobs = [], f = { lane: 'all', strong: false, remote: false, loc: 'all', q: '' };
+
+      function esc(s) {
+        return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
+          return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c];
+        });
+      }
+
+      function render() {
+        list.innerHTML = jobs.map(function (j, i) {
+          var lane = laneOf(j);
+          var remote = !!j.remote;
+          return '<a class="job" href="' + esc(j.url) + '" target="_blank" rel="noopener"' +
+            ' data-i="' + i + '" data-score="' + j.score + '" data-lane="' + lane + '"' +
+            ' data-remote="' + (remote ? 1 : 0) + '"' +
+            ' data-metros="' + esc((j.metros || []).join(' ')) + '"' +
+            ' data-t="' + esc(((j.title || '') + ' ' + (j.employer || '') + ' ' + (j.location || '')).toLowerCase()) + '">' +
+            '<div class="job-top"><span class="job-title">' + esc(j.title) + '</span>' +
+            '<span class="job-emp">' + esc(j.employer) + '</span>' +
+            (j.count > 1 ? '<span class="job-meta"><span>' + j.count + ' openings</span></span>' : '') +
+            '</div>' +
+            '<div class="job-meta">' +
+            '<span class="pill ' + (j.score === 2 ? 'p-strong">Strong match' : 'p-maybe">Worth a look') + '</span>' +
+            (remote ? '<span class="pill p-remote">Remote</span>' : '') +
+            '<span>Lane ' + lane + '</span><span class="dot">·</span>' +
+            '<span>' + esc(j.location || 'Location not listed') + '</span>' +
+            '</div></a>';
+        }).join('');
+        paint();
+      }
+
+      function paint() {
+        var shown = 0;
+        Array.prototype.forEach.call(list.children, function (el) {
+          var ok = (f.lane === 'all' || el.dataset.lane === f.lane) &&
+            (!f.strong || el.dataset.score === '2') &&
+            (!f.remote || el.dataset.remote === '1') &&
+            (f.loc === 'all' ||
+              el.dataset.metros.split(' ').indexOf(f.loc) !== -1) &&
+            (!f.q || el.dataset.t.indexOf(f.q) !== -1);
+          el.hidden = !ok;
+          if (ok) shown++;
+        });
+        empty.style.display = shown ? 'none' : 'block';
+        document.getElementById('tabcount').textContent = '(' + shown + ')';
+      }
+
+      document.querySelectorAll('button.chip[data-jf]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          var k = btn.dataset.jf;
+          if (k === 'lane') {
+            f.lane = btn.dataset.v;
+            document.querySelectorAll('button.chip[data-jf="lane"]').forEach(function (b) {
+              b.setAttribute('aria-pressed', String(b === btn));
+            });
+          } else {
+            f[k] = !f[k];
+            btn.setAttribute('aria-pressed', String(f[k]));
+          }
+          paint();
+        });
+      });
+
+      qbox.addEventListener('input', function () { f.q = qbox.value.trim().toLowerCase(); paint(); });
+
+      var locSel = document.getElementById('loc');
+      locSel.addEventListener('change', function () { f.loc = locSel.value; paint(); });
+
+      fetch('jobs.json', { cache: 'no-store' })
+        .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+        .then(function (d) {
+          jobs = d.jobs || [];
+          meta.innerHTML = '<strong>' + jobs.length + ' open roles</strong> pulled from ' + d.swept +
+            ' employer job feeds · updated ' + esc(d.generated) +
+            ' · ' + d.manual.length + ' more employers need checking by hand (below)';
+          locSel.innerHTML = '<option value="all">All locations (' + jobs.length + ')</option>' +
+            (d.locations || []).map(function (L) {
+              return '<option value="' + esc(L.code) + '">' + esc(L.label) + ' (' + L.n + ')</option>';
+            }).join('');
+          document.getElementById('manuallist').innerHTML = (d.manual || []).map(function (m) {
+            return '<div class="manual-item"><b>' + esc(m.name) + '</b><span>' + esc(m.portal) + '</span></div>';
+          }).join('');
+          render();
+        })
+        .catch(function (e) {
+          meta.textContent = '';
+          list.innerHTML = '<div class="warn"><b>Could not load jobs.json</b>' +
+            'The board reads a file generated by the sweep script. Run <code>python sweep.py</code> to create it. ' +
+            'If you are opening this page from your filesystem, serve it over http instead, since browsers block ' +
+            'local file reads. (' + esc(e.message) + ')</div>';
+        });
+    })();
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+# sweep byproducts (jobs.json is the real output and IS committed,
+# since the deployed site reads it)
+tools/results.md
+tools/results.csv
+tools/*_hits.json
+tools/*_resolved.json
+tools/ats_discovered.json
+
+# python
+__pycache__/
+*.py[cod]
+
+# vercel
+.vercel
+
+# os
+Thumbs.db
+.DS_Store

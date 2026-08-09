@@ -1,0 +1,518 @@
+[
+  {
+    "branch": "applied-research",
+    "name": "Westat",
+    "careers_url": "",
+    "note": "Rockville MD. Survey/eval research. Closest thing to her current job outside a university.",
+    "portal": "https://westat-jobs.westat.com/jobs.cfm  (custom ColdFusion portal)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "Abt Global",
+    "careers_url": "",
+    "note": "Rockville MD.",
+    "portal": "https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/requisitions  (Oracle Cloud HCM)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "American Institutes for Research (AIR)",
+    "careers_url": "https://job-boards.greenhouse.io/americaninstitutesforresearch",
+    "note": "Arlington VA."
+  },
+  {
+    "branch": "applied-research",
+    "name": "RAND Corporation",
+    "careers_url": "https://rand.wd5.myworkdayjobs.com/External_Career_Site",
+    "note": "Arlington VA + Santa Monica."
+  },
+  {
+    "branch": "applied-research",
+    "name": "Urban Institute",
+    "careers_url": "",
+    "note": "DC.",
+    "portal": "https://urban.wd1.myworkdayjobs.com/Urban-Careers  (Workday UI works in browser, cxs API returns 422 - needs manual check)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "Mathematica",
+    "careers_url": "",
+    "note": "DC + Princeton. Strong remote posture.",
+    "portal": "https://careers.mathematica.org/search-jobs  (Radancy)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "ICF International",
+    "careers_url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site",
+    "note": "Fairfax VA. Behavioral/social science federal contracts."
+  },
+  {
+    "branch": "applied-research",
+    "name": "NORC at the University of Chicago",
+    "careers_url": "",
+    "note": "Chicago HQ + DC office.",
+    "portal": "https://norc.jobs.net/jobs  (CareerBuilder)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "RTI International",
+    "careers_url": "https://job-boards.greenhouse.io/rti",
+    "note": "Research Triangle Park + DC."
+  },
+  {
+    "branch": "applied-research",
+    "name": "MDRC",
+    "careers_url": "",
+    "note": "NYC + Oakland.",
+    "portal": "https://www.mdrc.org/about/careers  (custom)"
+  },
+  {
+    "branch": "behavioral",
+    "name": "Behavioural Insights Team (BIT) North America",
+    "careers_url": "",
+    "note": "The original nudge unit.",
+    "portal": "unresolved - check bi.team/careers"
+  },
+  {
+    "branch": "behavioral",
+    "name": "ideas42",
+    "careers_url": "",
+    "note": "Behavioral design nonprofit, remote-friendly.",
+    "portal": "unresolved - check ideas42.org/careers"
+  },
+  {
+    "branch": "behavioral",
+    "name": "Irrational Labs",
+    "careers_url": "",
+    "note": "Small, behavioral econ consultancy. Her Smith School work is literally this.",
+    "portal": "unresolved - small team, check irrationallabs.com"
+  },
+  {
+    "branch": "behavioral",
+    "name": "Capital One",
+    "careers_url": "",
+    "note": "McLean VA. Large decision-science + behavioral group.",
+    "portal": "https://www.capitalonecareers.com/search-jobs  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Meta",
+    "careers_url": "",
+    "note": "She has Meta on the resume already. Re-entry, not cold entry.",
+    "portal": "https://www.metacareers.com/jobs  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Google",
+    "careers_url": "",
+    "note": "Has a real ResearchOps function.",
+    "portal": "https://www.google.com/about/careers/applications/jobs/results  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Microsoft",
+    "careers_url": "",
+    "note": "",
+    "portal": "https://jobs.careers.microsoft.com/global/en/search  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Amazon",
+    "careers_url": "",
+    "note": "",
+    "portal": "https://www.amazon.jobs/en/search  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Intuit",
+    "careers_url": "",
+    "note": "",
+    "portal": "https://jobs.intuit.com/search-jobs  (proprietary)"
+  },
+  {
+    "branch": "uxr",
+    "name": "Duolingo",
+    "careers_url": "https://job-boards.greenhouse.io/duolingo",
+    "note": "Heavy experimentation culture, behavioral-econ adjacent."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "User Interviews",
+    "careers_url": "",
+    "note": "Sells participant recruitment. Fully remote. Hires research coordinators by that title.",
+    "portal": "unresolved - check userinterviews.com/careers"
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Dscout",
+    "careers_url": "https://job-boards.greenhouse.io/dscout",
+    "note": "Remote-friendly."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "UserTesting",
+    "careers_url": "",
+    "note": "",
+    "portal": "unresolved - check usertesting.com/company/careers"
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Prolific",
+    "careers_url": "https://job-boards.greenhouse.io/prolific",
+    "note": "Academic participant panels. Her exact world, commercialized."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Qualtrics",
+    "careers_url": "https://job-boards.greenhouse.io/qualtrics",
+    "note": ""
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Sago",
+    "careers_url": "",
+    "note": "Market research panels.",
+    "portal": "unresolved - check sago.com/careers"
+  },
+  {
+    "branch": "clinical-regops",
+    "name": "Technical Resources International",
+    "careers_url": "",
+    "note": "Her former employer, Bethesda. Warm re-entry if the regulatory path appeals.",
+    "portal": "unresolved - lever/tri is Toyota Research Institute, NOT this company. Check tri-inc.com or NIH contractor boards."
+  },
+  {
+    "branch": "clinical-regops",
+    "name": "Emmes",
+    "careers_url": "",
+    "note": "Rockville MD. NIH clinical trial support, eTMF-heavy.",
+    "portal": "unresolved - check emmes.com/careers"
+  },
+  {
+    "branch": "applied-research",
+    "name": "Morning Consult",
+    "careers_url": "https://jobs.ashbyhq.com/morningconsult",
+    "note": ""
+  },
+  {
+    "branch": "applied-research",
+    "name": "Gallup",
+    "careers_url": "https://job-boards.greenhouse.io/gallup",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Reddit",
+    "careers_url": "https://job-boards.greenhouse.io/reddit",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Pinterest",
+    "careers_url": "https://job-boards.greenhouse.io/pinterest",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Spotify",
+    "careers_url": "https://jobs.lever.co/spotify",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Figma",
+    "careers_url": "https://job-boards.greenhouse.io/figma",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Notion",
+    "careers_url": "https://jobs.ashbyhq.com/notion",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Discord",
+    "careers_url": "https://job-boards.greenhouse.io/discord",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Dropbox",
+    "careers_url": "https://job-boards.greenhouse.io/dropbox",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Instacart",
+    "careers_url": "https://job-boards.greenhouse.io/instacart",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Databricks",
+    "careers_url": "https://job-boards.greenhouse.io/databricks",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Chime",
+    "careers_url": "https://job-boards.greenhouse.io/chime",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Betterment",
+    "careers_url": "https://job-boards.greenhouse.io/betterment",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Affirm",
+    "careers_url": "https://job-boards.greenhouse.io/affirm",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Robinhood",
+    "careers_url": "https://job-boards.greenhouse.io/robinhood",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Lyra Health",
+    "careers_url": "https://jobs.lever.co/lyrahealth",
+    "note": ""
+  },
+  {
+    "branch": "behavioral",
+    "name": "Omada Health",
+    "careers_url": "https://job-boards.greenhouse.io/omadahealth",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Coursera",
+    "careers_url": "https://job-boards.greenhouse.io/coursera",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Khan Academy",
+    "careers_url": "https://job-boards.greenhouse.io/khanacademy",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Handshake",
+    "careers_url": "https://jobs.ashbyhq.com/handshake",
+    "note": ""
+  },
+  {
+    "branch": "uxr",
+    "name": "Asana",
+    "careers_url": "https://job-boards.greenhouse.io/asana",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Georgetown University",
+    "careers_url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers",
+    "location": "Washington, DC",
+    "note": "121 postings"
+  },
+  {
+    "branch": "university",
+    "name": "University of Maryland (College Park)",
+    "careers_url": "https://umd.wd1.myworkdayjobs.com/UMCP",
+    "location": "College Park, MD",
+    "note": "Her current employer. Internal transfer is the cheapest move available."
+  },
+  {
+    "branch": "university",
+    "name": "George Washington University",
+    "careers_url": "https://www.gwu.jobs/postings/search.atom",
+    "location": "Washington, DC",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "Morgan State University",
+    "careers_url": "https://morgan.peopleadmin.com/postings/search.atom",
+    "location": "Baltimore, MD",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "Marymount University",
+    "careers_url": "https://marymount.wd5.myworkdayjobs.com/Careers",
+    "location": "Arlington, VA",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Fordham University",
+    "careers_url": "https://careers.fordham.edu/postings/search.atom",
+    "location": "New York, NY",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "Villanova University",
+    "careers_url": "https://jobs.villanova.edu/postings/search.atom",
+    "location": "Villanova, PA",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "UNC Chapel Hill",
+    "careers_url": "https://unc.peopleadmin.com/postings/search.atom",
+    "location": "Chapel Hill, NC",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "NC State University",
+    "careers_url": "https://jobs.ncsu.edu/postings/search.atom",
+    "location": "Raleigh, NC",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "University of South Carolina",
+    "careers_url": "https://uscjobs.sc.edu/postings/search.atom",
+    "location": "Columbia, SC",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "Dartmouth College",
+    "careers_url": "https://searchjobs.dartmouth.edu/postings/search.atom",
+    "location": "Hanover, NH",
+    "note": "PeopleAdmin atom feed"
+  },
+  {
+    "branch": "university",
+    "name": "University of Pennsylvania",
+    "careers_url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn",
+    "location": "Philadelphia, PA",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Carnegie Mellon",
+    "careers_url": "https://cmu.wd5.myworkdayjobs.com/CMU",
+    "location": "Pittsburgh, PA",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Brown University",
+    "careers_url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown",
+    "location": "Providence, RI",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Brandeis University",
+    "careers_url": "https://brandeis.wd5.myworkdayjobs.com/Jobs",
+    "location": "Waltham, MA",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "American University",
+    "careers_url": "https://american.wd1.myworkdayjobs.com/AU",
+    "location": "Washington, DC",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Howard University",
+    "careers_url": "https://howard.wd1.myworkdayjobs.com/HU",
+    "location": "Washington, DC",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "William & Mary",
+    "careers_url": "https://williammary.wd12.myworkdayjobs.com/WM",
+    "location": "Williamsburg, VA",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Wake Forest University",
+    "careers_url": "https://wfu.wd1.myworkdayjobs.com/Staff_Career_Website_live",
+    "location": "Winston-Salem, NC",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Clemson University",
+    "careers_url": "https://clemson.wd12.myworkdayjobs.com/Clemson_Careers",
+    "location": "Clemson, SC",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "University of Miami",
+    "careers_url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff",
+    "location": "Coral Gables, FL",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "University of Vermont",
+    "careers_url": "https://www.uvmjobs.com/postings/search.atom",
+    "location": "Burlington, VT",
+    "note": ""
+  },
+  {
+    "branch": "university",
+    "name": "Johns Hopkins University",
+    "ats": "eightfold",
+    "careers_url": "https://hiring.jhu.edu/api/pcsx/search?domain=jhu.edu",
+    "location": "Baltimore, MD",
+    "note": "Eightfold /api/pcsx/search"
+  },
+  {
+    "branch": "university",
+    "name": "Duke University",
+    "ats": "htmljobs",
+    "careers_url": "https://careers.duke.edu/search/?q=research&startrow={page}",
+    "base": "https://careers.duke.edu",
+    "pages": 4,
+    "job_re": "href=\"(/job/[^\"]+)\"[^>]*>\\s*(?:<[^>]+>\\s*)*([^<]{4,120})",
+    "location": "Durham, NC",
+    "note": "SAP SuccessFactors, HTML parse"
+  },
+  {
+    "branch": "university",
+    "name": "Harvard University",
+    "ats": "htmljobs",
+    "careers_url": "https://careers.harvard.edu/jobs?page={page}",
+    "base": "https://careers.harvard.edu",
+    "pages": 6,
+    "job_re": "href=\"(/job/[a-z0-9\\-]*-jid-\\d+)\"[^>]*>\\s*([^<]{4,120})",
+    "location": "Cambridge, MA",
+    "note": "bespoke site, HTML parse"
+  },
+  {
+    "branch": "university",
+    "name": "Rutgers University",
+    "careers_url": "https://jobs.rutgers.edu/postings/search.atom",
+    "location": "New Brunswick, NJ",
+    "note": "PeopleAdmin, 879 postings"
+  },
+  {
+    "branch": "university",
+    "name": "University of Florida",
+    "ats": "htmljobs",
+    "careers_url": "https://explore.jobs.ufl.edu/en-us/listing/",
+    "base": "https://explore.jobs.ufl.edu",
+    "pages": 1,
+    "job_re": "href=\"(/en-us/job/[^\"]+)\"[^>]*>\\s*(?:<[^>]+>\\s*)*([^<]{4,110})",
+    "location": "Gainesville, FL",
+    "note": "custom listing page, first 40 only (JS pagination)"
+  }
+]
