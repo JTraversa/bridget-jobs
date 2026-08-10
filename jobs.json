@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-09 11:26 UTC",
+ "generated": "2026-08-10 11:48 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -9,17 +9,17 @@
   {
    "code": "MIA",
    "label": "South Florida",
-   "n": 65
+   "n": 66
+  },
+  {
+   "code": "BAL",
+   "label": "Baltimore",
+   "n": 57
   },
   {
    "code": "PHL",
    "label": "Philadelphia area",
    "n": 53
-  },
-  {
-   "code": "BAL",
-   "label": "Baltimore",
-   "n": 34
   },
   {
    "code": "RDU",
@@ -34,7 +34,7 @@
   {
    "code": "DC",
    "label": "Washington DC metro",
-   "n": 16
+   "n": 19
   },
   {
    "code": "BOS",
@@ -72,6 +72,11 @@
    "n": 3
   },
   {
+   "code": "CHI",
+   "label": "Chicago",
+   "n": 2
+  },
+  {
    "code": "WMB",
    "label": "Williamsburg VA",
    "n": 2
@@ -79,11 +84,6 @@
   {
    "code": "AUS",
    "label": "Austin TX",
-   "n": 1
-  },
-  {
-   "code": "CHI",
-   "label": "Chicago",
    "n": 1
   },
   {
@@ -102,7 +102,7 @@
    "n": 3
   }
  ],
- "openings": 417,
+ "openings": 457,
  "universities": 27,
  "swept": 56,
  "targets": 76,
@@ -371,7 +371,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/job/Pittsburgh-PA/Research-Associate-II---Robotics-Institute_2024594",
    "count": 2
   },
@@ -389,7 +389,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/job/Pittsburgh-PA/Research-Associate-III---Robotics-Institute_2024839",
    "count": 2
   },
@@ -552,7 +552,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/Pasquerilla-Healthcare-Center-1st-Floor/Clinical-Research-Associate_JR26584",
    "count": 2
   },
@@ -570,7 +570,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/Medical-Center/Clinical-Research-Coordinator_JR26559",
    "count": 1
   },
@@ -588,7 +588,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/Medical-Center/Clinical-Research-Coordinator-1_JR26620",
    "count": 2
   },
@@ -735,7 +735,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914666259",
-   "count": 1
+   "count": 2
   },
   {
    "score": 2,
@@ -807,7 +807,27 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914211117",
-   "count": 1
+   "count": 3
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Coordinator (Oncology)",
+   "location": "Washington, DC, United States +1 more",
+   "states": [
+    "DC",
+    "MD"
+   ],
+   "metros": [
+    "DC",
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913856556",
+   "count": 3
   },
   {
    "score": 2,
@@ -831,6 +851,42 @@
    "score": 2,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Clinical Research Coordinator (Psychiatry and Behavioral Sciences)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913873740",
+   "count": 1
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Coordinator (Pulmonary)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913658644",
+   "count": 2
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Clinical Research Coordinator (Research Administration)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -843,7 +899,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914148297",
-   "count": 1
+   "count": 3
   },
   {
    "score": 2,
@@ -933,6 +989,60 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914140417",
+   "count": 1
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Sr. Clinical Research Coordinator (\tDivision of Cardiology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913439338",
+   "count": 1
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Sr. Clinical Research Coordinator (Oncology)",
+   "location": "Washington, DC, United States",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913225858",
+   "count": 1
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Sr. Clinical Research Coordinator (Pulmonary)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913630817",
    "count": 1
   },
   {
@@ -1138,19 +1248,19 @@
    "employer": "Prolific",
    "branch": "research-tooling",
    "title": "Participant Recruitment Partner/Sourcer",
-   "location": "Mexico ( remote) +1 more",
+   "location": "United States +1 more",
    "states": [
-    "REMOTE",
-    "OTHER"
+    "OTHER",
+    "REMOTE"
    ],
    "metros": [
-    "REMOTE",
-    "USOTHER"
+    "USOTHER",
+    "REMOTE"
    ],
    "remote": true,
-   "intl": true,
-   "posted": "2026-07-15T06:43:36-04:00",
-   "url": "https://job-boards.eu.greenhouse.io/prolific/jobs/4764165101",
+   "intl": false,
+   "posted": "2026-07-15T06:43:35-04:00",
+   "url": "https://job-boards.eu.greenhouse.io/prolific/jobs/4764119101",
    "count": 2
   },
   {
@@ -1491,7 +1601,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-1---Full-Time---Ophthalmology--Bascom-Palmer-Eye-Institute-Miami--FL_R100097270",
    "count": 1
   },
@@ -1545,7 +1655,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-2_R100099479",
    "count": 14
   },
@@ -1581,7 +1691,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-2---CRANE-Lab_R100097925",
    "count": 1
   },
@@ -1599,7 +1709,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-2-Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100096363",
    "count": 1
   },
@@ -1653,7 +1763,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-3---Multiple-Myeloma_R100096964",
    "count": 1
   },
@@ -1707,7 +1817,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Coral-Gables-FL/ECHO-Research-Associate-2_R100096493",
    "count": 1
   },
@@ -1761,7 +1871,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/RESEARCH-ASSOCIATE-1-Myeloma_R100097305-1",
    "count": 1
   },
@@ -1779,7 +1889,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Analyst-2_R100095476",
    "count": 1
   },
@@ -1797,7 +1907,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Analyst-2--Division-of-Infectious-Diseases_R100099568-1",
    "count": 1
   },
@@ -1815,7 +1925,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-1_R100098768",
    "count": 9
   },
@@ -1833,7 +1943,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-1--Neurological-Surgery-_R100099311",
    "count": 1
   },
@@ -1869,7 +1979,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Coral-Gables-FL/Research-Associate-1----Psychology--Part-Time-_R100099914",
    "count": 1
   },
@@ -1959,7 +2069,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Coral-Gables-FL/Research-Associate-1--GAB--A-_R100099098",
    "count": 1
   },
@@ -1977,7 +2087,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Clinical-Research-Coordinator-1_R100095489-1",
    "count": 2
   },
@@ -1995,7 +2105,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-3--SOM--A-_R100098462",
    "count": 3
   },
@@ -2067,7 +2177,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-2---Full-Time---Bascom-Palmer-Eye-Institute-Miami--FL_R100096362",
    "count": 1
   },
@@ -2085,7 +2195,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-2--SOM_R100093866",
    "count": 1
   },
@@ -2139,7 +2249,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-3_R100099561",
    "count": 3
   },
@@ -2157,7 +2267,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-I_R100099719",
    "count": 1
   },
@@ -2175,7 +2285,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Associate-II_R100099224",
    "count": 1
   },
@@ -2211,8 +2321,26 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate---Coral-Reproduction_R100099364",
+   "count": 1
+  },
+  {
+   "score": 2,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Sr. Research Associate 1",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate-1_R100099787",
    "count": 1
   },
   {
@@ -2229,7 +2357,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate-1_R100096648",
    "count": 2
   },
@@ -2265,7 +2393,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate-2_R100094529",
    "count": 1
   },
@@ -2283,7 +2411,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate-3_R100099055",
    "count": 1
   },
@@ -2301,7 +2429,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Sr-Research-Associate-3---Full-Time-Bascom-Palmer-Eye-Institute--Miami--FL-_R100099134-1",
    "count": 1
   },
@@ -2337,7 +2465,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Coordinator_JR00123512-1",
    "count": 1
   },
@@ -2427,7 +2555,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Scheie-Eye-Institute/Clinical-Research-Coordinator-A--Department-of-Ophthalmology-_JR00117229-1",
    "count": 1
   },
@@ -2445,7 +2573,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Coordinator-A_JR00117715-1",
    "count": 1
   },
@@ -2481,7 +2609,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Coordinator-A-B_JR00124575-1",
    "count": 3
   },
@@ -2517,7 +2645,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 27 Days Ago",
+   "posted": "Posted 28 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy---Perinatal-Research-Center-_JR00123015-1",
    "count": 1
   },
@@ -2535,7 +2663,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy-and-Perinatal-Research-Center-_JR00123522-1",
    "count": 1
   },
@@ -2571,7 +2699,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Coordinator-B_JR00123859-1",
    "count": 1
   },
@@ -2661,7 +2789,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Program-Manager_JR00123419",
    "count": 1
   },
@@ -2769,7 +2897,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://williammary.wd12.myworkdayjobs.com/job/Posting-Location---William--Mary/Prospect-Research-Analyst_JR101968",
    "count": 1
   },
@@ -2877,7 +3005,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/job/Pittsburgh-PA/Research-Assistant---Robotics-Institute_2024585",
    "count": 1
   },
@@ -2913,7 +3041,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/job/Pittsburgh-PA/Project-Manager---Health-and-Human-Performance-Lab---Department-of-Psychology--Dietrich-College_2024890",
    "count": 1
   },
@@ -2931,7 +3059,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://clemson.wd12.myworkdayjobs.com/job/-/Research-Assistant_JR-10084",
    "count": 1
   },
@@ -3021,7 +3149,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/Pasquerilla-Healthcare-Center-1st-Floor/Lab-Manager_JR26725",
    "count": 1
   },
@@ -3039,7 +3167,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/St-Marys-4th-Floor/Research-Assistant-2---Part-time---Temporary_JR26782",
    "count": 1
   },
@@ -3057,7 +3185,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/job/Medical-Center/Research-Specialist-3---Medical-Center_JR26474",
    "count": 1
   },
@@ -3210,6 +3338,78 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Clinical Research Assistant (Pulmonary)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913484833",
+   "count": 3
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Assistant II (Health, Behavior and Society)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133911899546",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Assistant II (Pulmonary)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913658647",
+   "count": 2
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Assistant II - Bangor, ME (DOM Infectious Disease)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913586332",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Clinical Research Manager (SOM Pediatric Endocrinology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3222,6 +3422,24 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914710767",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Core Facility Research Specialist II (Molecular Microbiology & Immunology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912606043",
    "count": 1
   },
   {
@@ -3264,6 +3482,42 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Research Assistant (Computer Science)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913710422",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Assistant (DOM - Bay Infectious Disease)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913471245",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Research Assistant (Data Science and Artificial Intelligence)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3294,7 +3548,7 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914505411",
-   "count": 1
+   "count": 2
   },
   {
    "score": 1,
@@ -3372,6 +3626,24 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Research Assistant (KSAS - Cognitive Science)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913687529",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Research Assistant (Neurology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3384,24 +3656,62 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133915014649",
-   "count": 2
+   "count": 3
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Assistant (Pediatrics)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912822153",
+   "count": 1
   },
   {
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
    "title": "Research Assistant (Research Administration)",
-   "location": "Poplar, MT, United States, Fort Peck, MT, USA",
+   "location": "Poplar, MT, United States, Fort Peck, MT, USA +1 more",
    "states": [
-    "MT"
+    "MT",
+    "DC"
    ],
    "metros": [
-    "USOTHER"
+    "USOTHER",
+    "DC"
    ],
    "remote": false,
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914974472",
+   "count": 2
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Assistant (SOM, Pediatric Adolescent Medicine)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133911307451",
    "count": 1
   },
   {
@@ -3426,6 +3736,44 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Research Assistant - Chicago based (HPM - Center for Gun Violence Solutions)",
+   "location": "Baltimore, MD, United States, Chicago, IL",
+   "states": [
+    "MD",
+    "IL"
+   ],
+   "metros": [
+    "BAL",
+    "CHI"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913854275",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Assistant,  Data Core",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912871356",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Research Assistant, DSMB Unit (Neurology)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3444,6 +3792,24 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Research Assistant, Data Core (Neurology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912571121",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Research Specialist (Anesthesiology & Critical Care Medicine)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3456,6 +3822,24 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914747645",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Specialist (Division of Cardiology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913586334",
    "count": 1
   },
   {
@@ -3516,6 +3900,24 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Research Specialist (Otolaryngology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913252801",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Research Specialist (Pediatrics)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3528,6 +3930,24 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914281364",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Research Specialist (Urology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912428427",
    "count": 1
   },
   {
@@ -3570,6 +3990,24 @@
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
+   "title": "Sr. Clinical Research Manager (Neurology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133913942249",
+   "count": 2
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
    "title": "Sr. Research Assistant (KSAS - Cognitive Science)",
    "location": "Baltimore, MD, United States",
    "states": [
@@ -3582,6 +4020,24 @@
    "intl": false,
    "posted": "",
    "url": "https://hiring.jhu.edu/careers/job/1133914974442",
+   "count": 1
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Sr. Research Specialist (Cell Biology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://hiring.jhu.edu/careers/job/1133912283786",
    "count": 1
   },
   {
@@ -3850,7 +4306,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-08T20:31:05-04:00",
+   "posted": "2026-08-09T20:28:25-04:00",
    "url": "https://job-boards.greenhouse.io/reddit/jobs/8022657",
    "count": 1
   },
@@ -4264,7 +4720,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Core-Facility-Research-Specialist-1_R100092666",
    "count": 3
   },
@@ -4336,7 +4792,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Core-Facility-Research-Specialist-3_R100089693",
    "count": 1
   },
@@ -4354,7 +4810,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Core-Facility-Research-Specialist-3--Cancer-Modeling-_R100098016",
    "count": 1
   },
@@ -4408,7 +4864,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Assistant-1--A-_R100096082",
    "count": 1
   },
@@ -4462,7 +4918,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/job/Miami-FL/Research-Assistant-1-Temporary-Bascom-Palmer-Eye-Institute-Miami--FL_R100099060",
    "count": 1
   },
@@ -4534,7 +4990,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/HUP/Clinical-Research-Assistant-A-B_JR00123918-1",
    "count": 1
   },
@@ -4570,7 +5026,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/3600-Civic-Center-Boulevard/Research-Assistant--Temporary-Employee-_JR00119949-1",
    "count": 1
   },
@@ -4588,7 +5044,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Smilow-Center-for-Translational/Research-Manager-D---Rodent-Metabolic-Phenotyping-Core_JR00123153-1",
    "count": 1
   },
@@ -4606,7 +5062,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Levy-Ctr-for-Oral-Health-Rsrch/Research-Specialist_JR00123916",
    "count": 1
   },
@@ -4624,7 +5080,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Biomedical-Research-Building-2/Research-Specialist-A_JR00123473-1",
    "count": 12
   },
@@ -4642,7 +5098,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Stemmler-Hall-Med/Research-Specialist-A--Department-of-Neurosurgery-_JR00122952",
    "count": 1
   },
@@ -4660,7 +5116,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/CHOP/Research-Specialist-A---Laboratory-Technician_JR00118357",
    "count": 1
   },
@@ -4678,7 +5134,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Vet-School-Biomedical-Sciences/Research-Specialist-A-Part-Time_JR00124062-1",
    "count": 1
   },
@@ -4696,7 +5152,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Stellar-Chance-F9/Research-Specialist-A-B_JR00124659-1",
    "count": 3
   },
@@ -4768,7 +5224,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Smilow-Center-for-Translational/Research-Specialist-B-C_JR00123438",
    "count": 1
   },
@@ -4804,7 +5260,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/Medical-School-Johnson-Pavilion/Research-Specialist-C_JR00123378",
    "count": 4
   },
@@ -4876,7 +5332,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/job/3600-Civic-Center-Boulevard---8th-Floor/Temporary-Research-Assistant_JR00124590",
    "count": 1
   },
