@@ -14,7 +14,7 @@ jobs.json       generated data the page fetches at load
 vercel.json     noindex headers
 tools/
   sweep.py      pulls every employer feed -> writes ../jobs.json
-  targets.json  the employer list (76 employers, 56 with machine-readable feeds)
+  targets.json  the employer list (75 employers, 64 with machine-readable feeds)
   discover_ats.py  helper for working out which ATS a new employer uses
 docs/
   where-to-look.md   the ranked source guide, same content as the second tab
@@ -98,10 +98,12 @@ Add an entry to `tools/targets.json`:
   "location": "City, ST" }
 ```
 
-`careers_url` is auto-detected for Workday, Greenhouse, Lever, Ashby and
-PeopleAdmin (`/postings/search.atom`). For anything else, set `"ats"` explicitly
-to `eightfold` or `htmljobs` — see the Johns Hopkins, Duke and Harvard entries for
-worked examples of each.
+`careers_url` is auto-detected for Workday, Greenhouse, Lever, Ashby, Workable
+(`apply.workable.com/{account}`), Oracle Recruiting Cloud (a
+`.../CandidateExperience/en/sites/{site}/requisitions` URL) and PeopleAdmin
+(`/postings/search.atom`). For anything else, set `"ats"` explicitly to
+`eightfold`, `htmljobs`, `amazonjobs` or `radancy` — see the Johns Hopkins,
+Duke, Harvard, Amazon and Intuit entries for worked examples.
 
 `location` is the campus city, used as a fallback when a feed returns a building
 name instead of geography (Brown reports "164 Angell Street", Georgetown reports
@@ -112,9 +114,13 @@ extracts ATS links.
 
 ## Known limits
 
-- **20 of 76 employers have no machine-readable feed** and are listed in the
+- **11 of 75 employers have no machine-readable feed** and are listed in the
   "Check these by hand" section on the page. Several are strong-fit employers
-  (Westat, Mathematica, NORC, Abt), so that section is not optional.
+  (Westat, Mathematica, NORC), so that section is not optional. Westat and NORC
+  are WAF-blocked (503/403 for anything that is not a browser); Mathematica,
+  MDRC, Emmes, Meta, Google and Microsoft are JS-only or custom builds with no
+  reachable feed; ideas42, Irrational Labs and TRI have no ATS board at all.
+  The per-entry `portal` notes in `targets.json` record what was tried.
 - Big research universities post the same requisition many times over, once per
   department. Identical employer+title rows are collapsed into one row carrying an
   "N openings" badge.

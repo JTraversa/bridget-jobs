@@ -4,12 +4,12 @@
     "name": "Westat",
     "careers_url": "",
     "note": "Rockville MD. Survey/eval research. Closest thing to her current job outside a university.",
-    "portal": "https://westat-jobs.westat.com/jobs.cfm  (custom ColdFusion portal)"
+    "portal": "https://westat-jobs.westat.com/jobs.cfm  (custom ColdFusion portal; WAF 503s every non-browser client, so it cannot be swept)"
   },
   {
     "branch": "applied-research",
     "name": "Abt Global",
-    "careers_url": "",
+    "careers_url": "https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/requisitions",
     "note": "Rockville MD.",
     "portal": "https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/requisitions  (Oracle Cloud HCM)"
   },
@@ -28,16 +28,16 @@
   {
     "branch": "applied-research",
     "name": "Urban Institute",
-    "careers_url": "",
-    "note": "DC.",
-    "portal": "https://urban.wd1.myworkdayjobs.com/Urban-Careers  (Workday UI works in browser, cxs API returns 422 - needs manual check)"
+    "careers_url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers",
+    "location": "Washington, DC",
+    "note": "DC. Tenant moved from wd1 to wd115 (the old host now 500s, which was the earlier 422 mystery)."
   },
   {
     "branch": "applied-research",
     "name": "Mathematica",
     "careers_url": "",
     "note": "DC + Princeton. Strong remote posture.",
-    "portal": "https://careers.mathematica.org/search-jobs  (Radancy)"
+    "portal": "https://careers.mathematica.org/search-jobs  (Radancy, but a JS-only build: no server-rendered tiles, empty sitemap, and the results ajax endpoint returns HTML instead of JSON)"
   },
   {
     "branch": "applied-research",
@@ -50,7 +50,7 @@
     "name": "NORC at the University of Chicago",
     "careers_url": "",
     "note": "Chicago HQ + DC office.",
-    "portal": "https://norc.jobs.net/jobs  (CareerBuilder)"
+    "portal": "https://norc.jobs.net/jobs  (CareerBuilder; WAF 403s every non-browser client, so it cannot be swept)"
   },
   {
     "branch": "applied-research",
@@ -68,16 +68,18 @@
   {
     "branch": "behavioral",
     "name": "Behavioural Insights Team (BIT) North America",
-    "careers_url": "",
-    "note": "The original nudge unit.",
-    "portal": "unresolved - check bi.team/careers"
+    "ats": "htmljobs",
+    "careers_url": "https://www.bi.team/about-us/careers/",
+    "base": "https://www.bi.team",
+    "job_re": "<a[^>]+href=\"(https://www\\.bi\\.team/vacancies/[^\"]+)\"[^>]*>([\\s\\S]{0,200}?)</a>",
+    "note": "The original nudge unit. WordPress careers page listing /vacancies/ links."
   },
   {
     "branch": "behavioral",
     "name": "ideas42",
     "careers_url": "",
     "note": "Behavioral design nonprofit, remote-friendly.",
-    "portal": "unresolved - check ideas42.org/careers"
+    "portal": "https://www.ideas42.org/join-our-team/  (their Greenhouse board was taken down - likely no open roles; the page invites resume drops)"
   },
   {
     "branch": "behavioral",
@@ -89,9 +91,9 @@
   {
     "branch": "behavioral",
     "name": "Capital One",
-    "careers_url": "",
-    "note": "McLean VA. Large decision-science + behavioral group.",
-    "portal": "https://www.capitalonecareers.com/search-jobs  (proprietary)"
+    "careers_url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One",
+    "location": "McLean, VA",
+    "note": "McLean VA. Large decision-science + behavioral group. capitalonecareers.com is a Radancy skin over this Workday tenant."
   },
   {
     "branch": "uxr",
@@ -112,34 +114,30 @@
     "name": "Microsoft",
     "careers_url": "",
     "note": "",
-    "portal": "https://jobs.careers.microsoft.com/global/en/search  (proprietary)"
+    "portal": "https://jobs.careers.microsoft.com/global/en/search  (Eightfold under the hood, but a customized build - the standard pcsx endpoint returns HTML, and the old gcsservices API is decommissioned)"
   },
   {
     "branch": "uxr",
     "name": "Amazon",
-    "careers_url": "",
-    "note": "",
-    "portal": "https://www.amazon.jobs/en/search  (proprietary)"
+    "ats": "amazonjobs",
+    "careers_url": "https://www.amazon.jobs/en/search",
+    "location": "Seattle, WA",
+    "note": "Public JSON search endpoint at amazon.jobs/en/search.json."
   },
   {
     "branch": "uxr",
     "name": "Intuit",
-    "careers_url": "",
-    "note": "",
-    "portal": "https://jobs.intuit.com/search-jobs  (proprietary)"
+    "ats": "radancy",
+    "careers_url": "https://jobs.intuit.com/search-jobs",
+    "base": "https://jobs.intuit.com",
+    "location": "Mountain View, CA",
+    "note": "Radancy board; the /search-jobs/results ajax endpoint returns the rendered tiles as JSON."
   },
   {
     "branch": "uxr",
     "name": "Duolingo",
     "careers_url": "https://job-boards.greenhouse.io/duolingo",
     "note": "Heavy experimentation culture, behavioral-econ adjacent."
-  },
-  {
-    "branch": "research-tooling",
-    "name": "User Interviews",
-    "careers_url": "",
-    "note": "Sells participant recruitment. Fully remote. Hires research coordinators by that title.",
-    "portal": "unresolved - check userinterviews.com/careers"
   },
   {
     "branch": "research-tooling",
@@ -150,9 +148,9 @@
   {
     "branch": "research-tooling",
     "name": "UserTesting",
-    "careers_url": "",
-    "note": "",
-    "portal": "unresolved - check usertesting.com/company/careers"
+    "careers_url": "https://usertesting.wd12.myworkdayjobs.com/UserTesting",
+    "location": "San Francisco, CA",
+    "note": "Merged with User Interviews (their old Greenhouse board is gone; userinterviews.com/about now points here), so this one feed covers both."
   },
   {
     "branch": "research-tooling",
@@ -169,23 +167,22 @@
   {
     "branch": "research-tooling",
     "name": "Sago",
-    "careers_url": "",
-    "note": "Market research panels.",
-    "portal": "unresolved - check sago.com/careers"
+    "careers_url": "https://apply.workable.com/sago-group/",
+    "note": "Market research panels. Workable account sago-group (found via the /j/ short links on sago.com/en/careers)."
   },
   {
     "branch": "clinical-regops",
     "name": "Technical Resources International",
     "careers_url": "",
     "note": "Her former employer, Bethesda. Warm re-entry if the regulatory path appeals.",
-    "portal": "unresolved - lever/tri is Toyota Research Institute, NOT this company. Check tri-inc.com or NIH contractor boards."
+    "portal": "https://www.tech-res.com/about-tri/careers.html  (no ATS feed found on the page; lever/tri is Toyota Research Institute, NOT this company)"
   },
   {
     "branch": "clinical-regops",
     "name": "Emmes",
     "careers_url": "",
     "note": "Rockville MD. NIH clinical trial support, eTMF-heavy.",
-    "portal": "unresolved - check emmes.com/careers"
+    "portal": "https://theemmesgroup.com/join-us  (rebranded The Emmes Group; emmes.com/careers redirects there, JS-rendered with no feed found)"
   },
   {
     "branch": "applied-research",

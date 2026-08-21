@@ -20,8 +20,11 @@ Stdlib only, no pip install.
 import argparse
 from datetime import datetime, timezone
 import csv
+import html
 import json
+import os
 import re
+import subprocess
 import sys
 import time
 import urllib.error
@@ -107,6 +110,14 @@ def detect(careers_url):
 
     if "ashbyhq.com" in host and parts:
         return {"ats": "ashby", "token": parts[0]}
+
+    if "apply.workable.com" in host and parts:
+        return {"ats": "workable", "token": parts[0]}
+
+    m = re.match(r"(https://[^/]+\.oraclecloud\.com)/hcmUI/CandidateExperience/[^/]+/sites/([^/?#]+)",
+                 careers_url)
+    if m:
+        return {"ats": "oraclecloud", "base": m.group(1), "site": m.group(2)}
 
     if careers_url.endswith(".atom") or "peopleadmin.com" in host:
         return {"ats": "peopleadmin", "host": host, "url": careers_url}
@@ -246,6 +257,40 @@ def _html(url, timeout=25):
         return r.read().decode("utf-8", "replace")
 
 
+# Same discovery list as tools/build-og.mjs, which pioneered the
+# no-dependency headless-Chrome pattern in this repo.
+CHROME_CANDIDATES = [
+    os.environ.get("CHROME_PATH"),
+    r"C:\Program Files\Google\Chrome\Application\chrome.exe",
+    r"C:\Program Files (x86)\Google\Chrome\Application\chrome.exe",
+    "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+    "/usr/bin/google-chrome",
+    "/usr/bin/chromium-browser",
+    "/usr/bin/chromium",
+]
+
+
+def render_html(url, budget_ms=9000):
+    """Fetch a page through headless Chrome and return the RENDERED DOM.
+    Two problems urllib cannot solve, one tool: a real browser TLS fingerprint
+    gets past the WAFs that 503/403 plain clients (Westat, NORC), and real JS
+    execution renders the boards that ship an empty shell (Mathematica).
+    GitHub Actions runners have Chrome preinstalled; set CHROME_PATH elsewhere.
+    Note a WAF may still block by IP reputation, so a page that renders locally
+    can fail from a datacenter runner - the carry-forward in main() covers that."""
+    chrome = next((p for p in CHROME_CANDIDATES if p and Path(p).exists()), None)
+    if not chrome:
+        raise RuntimeError("Chrome not found; set CHROME_PATH")
+    out = subprocess.run(
+        [chrome, "--headless", "--disable-gpu", "--no-sandbox",
+         f"--virtual-time-budget={budget_ms}", "--dump-dom", url],
+        capture_output=True, timeout=120)
+    dom = out.stdout.decode("utf-8", "replace") if out.stdout else ""
+    if out.returncode != 0 or len(dom) < 500:
+        raise RuntimeError(f"chrome render failed (rc={out.returncode}, {len(dom)} bytes)")
+    return dom
+
+
 def pull_eightfold(t):
     """Eightfold AI (e.g. Johns Hopkins). The documented /api/apply/v2/jobs route
     403s; the one the career site actually calls is /api/pcsx/search, and it needs
@@ -287,18 +332,19 @@ def pull_htmljobs(t):
     Harvard's bespoke site). Pull hrefs matching the target's job-link pattern.
     Brittle by nature: if a school redesigns, its rule here needs updating."""
     rx = re.compile(t["job_re"], re.I)
+    getter = render_html if t.get("render") else _html
     seen, out = set(), []
     for page in range(t.get("pages", 1)):
         u = t["url"].replace("{page}", str(page))
         try:
-            html = _html(u)
+            page_html = getter(u)   # NOT named "html" - that shadows the module
         except Exception:
             break
-        found = rx.findall(html)
+        found = rx.findall(page_html)
         if not found:
             break
         for href, title in found:
-            title = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", title)).strip()
+            title = html.unescape(re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", title)).strip())
             if not title or title.lower() in ("read more", "learn more", "view job"):
                 continue
             full = href if href.startswith("http") else t["base"] + href
@@ -311,6 +357,178 @@ def pull_htmljobs(t):
     return out
 
 
+def pull_amazonjobs(t, _retry=True):
+    """Amazon's public search endpoint (amazon.jobs/en/search.json). The full
+    board is tens of thousands of postings, so query per search term the same
+    way the Workday puller does, and dedupe on job_path."""
+    seen, out = set(), []
+    for term in SEARCH_TERMS:
+        offset = 0
+        for _ in range(3):              # 100 per page; 300 per term is plenty
+            u = ("https://www.amazon.jobs/en/search.json?result_limit=100"
+                 f"&offset={offset}&base_query={urllib.parse.quote(term)}")
+            try:
+                d = fetch(u)
+            except Exception as e:
+                # transient failures here once zeroed out the whole employer,
+                # so retry once with a pause the way the Workday puller does
+                print(f"    ! amazon '{term}' offset {offset} failed ({e}), retrying",
+                      file=sys.stderr)
+                time.sleep(3)
+                try:
+                    d = fetch(u)
+                except Exception as e2:
+                    print(f"    ! gave up on '{term}': {e2}", file=sys.stderr)
+                    break
+            jobs = d.get("jobs") or []
+            if not jobs:
+                if offset == 0:   # a real zero-hit term says hits=0; anything else is throttling
+                    print(f"    ! amazon '{term}': empty page, hits={d.get('hits')!r} "
+                          f"error={d.get('error')!r}", file=sys.stderr)
+                break
+            for j in jobs:
+                path = j.get("job_path", "")
+                if not path or path in seen:
+                    continue
+                seen.add(path)
+                # US only: without this, a Bengaluru posting with no US state
+                # in its location string would fall back to the campus-city
+                # default and masquerade as a Seattle job. Amazon uses 3-letter
+                # ISO codes ("USA", "IND", "GBR").
+                if j.get("country_code") and j["country_code"] not in ("US", "USA"):
+                    continue
+                posted = ""
+                try:    # "May 28, 2026" -> ISO, so the board can parse it
+                    posted = datetime.strptime(
+                        j.get("posted_date", ""), "%B %d, %Y").strftime("%Y-%m-%d")
+                except ValueError:
+                    pass
+                out.append({
+                    "title": j.get("title", ""),
+                    "location": j.get("normalized_location") or j.get("location", ""),
+                    "url": f"https://www.amazon.jobs{path}",
+                    "posted": posted,
+                })
+            offset += len(jobs)
+            if offset >= int(d.get("hits") or 0):
+                break
+            time.sleep(1.2)
+        time.sleep(1.0)
+    # All ten terms coming back empty is throttling, never reality - one
+    # slower second pass usually gets through.
+    if not out and _retry:
+        print("    ! amazon returned nothing across all terms, retrying once", file=sys.stderr)
+        time.sleep(20)
+        return pull_amazonjobs(t, _retry=False)
+    return out
+
+
+def pull_workable(t):
+    """Workable's board API (apply.workable.com/api/v3/accounts/{token}/jobs),
+    paged via the nextPage token."""
+    url = f"https://apply.workable.com/api/v3/accounts/{t['token']}/jobs"
+    out, page_token = [], None
+    for _ in range(10):
+        payload = {"query": "", "location": [], "department": [],
+                   "worktype": [], "remote": []}
+        if page_token:
+            payload["token"] = page_token
+        d = fetch(url, data=payload)
+        for j in d.get("results", []):
+            loc = j.get("location") or {}
+            disp = ", ".join(x for x in (loc.get("city"),
+                                         loc.get("region") or loc.get("country")) if x)
+            if j.get("remote"):
+                disp = ("Remote - " + disp) if disp else "Remote"
+            out.append({
+                "title": j.get("title", ""),
+                "location": disp,
+                "url": f"https://apply.workable.com/{t['token']}/j/{j.get('shortcode', '')}/",
+                "posted": (j.get("published") or "")[:10],
+            })
+        page_token = d.get("nextPage")
+        if not page_token:
+            break
+        time.sleep(0.4)
+    return out
+
+
+def pull_radancy(t):
+    """Radancy-hosted boards (jobs.intuit.com). The search page renders in JS,
+    but its ajax endpoint returns JSON whose `results` field is the rendered
+    HTML, so regex the job tiles out of that. Needs "base" on the target."""
+    base = t["base"]
+    seen, out = set(), []
+    for page in range(1, t.get("pages", 12) + 1):
+        u = (f"{base}/search-jobs/results?ActiveFacetID=0&CurrentPage={page}"
+             "&RecordsPerPage=50&SortCriteria=0&SortDirection=1"
+             "&SearchResultsModuleName=Search+Results"
+             "&SearchFiltersModuleName=Search+Filters")
+        try:
+            d = fetch(u, headers={"X-Requested-With": "XMLHttpRequest"})
+        except Exception:
+            break
+        tiles = d.get("results", "")
+        rows = re.findall(r'<a[^>]+href="(/job/[^"]+)"[^>]*>([\s\S]{0,500}?)</a>', tiles)
+        new = 0
+        for href, inner in rows:
+            if href in seen:
+                continue
+            seen.add(href)
+            new += 1
+            m = re.search(r"<h2[^>]*>([^<]+)</h2>", inner)
+            title = (m.group(1) if m else re.sub(r"<[^>]+>", " ", inner)).strip()
+            lm = re.search(r'location[^>]*>\s*([^<]{2,80})<', inner)
+            out.append({
+                "title": html.unescape(title),
+                "location": lm.group(1).strip() if lm else t.get("location", ""),
+                "url": base + href,
+                "posted": "",
+            })
+        if not new:
+            break
+        time.sleep(0.5)
+    return out
+
+
+def pull_oraclecloud(t):
+    """Oracle Recruiting Cloud (Abt Global). The public REST API keys on a CX_
+    site number that is not in the portal URL, so scrape it off the portal page
+    first. PostedDate arrives ISO. US-only, for the same reason as Amazon: the
+    location strings for international postings carry no US state and would
+    otherwise fall back to the campus city."""
+    base, site = t["base"], t["site"]
+    m = re.search(r"CX_\d+",
+                  _html(f"{base}/hcmUI/CandidateExperience/en/sites/{site}/requisitions"))
+    if not m:
+        return []
+    out, offset = [], 0
+    while offset < 500:
+        u = (f"{base}/hcmRestApi/resources/latest/recruitingCEJobRequisitions"
+             f"?onlyData=true&expand=requisitionList.secondaryLocations"
+             f"&finder=findReqs;siteNumber={m.group(0)},limit=100,offset={offset},"
+             f"sortBy=POSTING_DATES_DESC")
+        d = fetch(u)
+        items = d.get("items") or []
+        reqs = items[0].get("requisitionList", []) if items else []
+        if not reqs:
+            break
+        for q in reqs:
+            if (q.get("PrimaryLocationCountry") or "US") != "US":
+                continue
+            out.append({
+                "title": q.get("Title", ""),
+                "location": q.get("PrimaryLocation", ""),
+                "url": f"{base}/hcmUI/CandidateExperience/en/sites/{site}/job/{q.get('Id')}",
+                "posted": q.get("PostedDate") or "",
+            })
+        offset += len(reqs)
+        if offset >= (items[0].get("TotalJobsCount") or 0):
+            break
+        time.sleep(0.4)
+    return out
+
+
 PULLERS = {
     "workday": pull_workday,
     "greenhouse": pull_greenhouse,
@@ -319,6 +537,10 @@ PULLERS = {
     "peopleadmin": pull_peopleadmin,
     "eightfold": pull_eightfold,
     "htmljobs": pull_htmljobs,
+    "amazonjobs": pull_amazonjobs,
+    "workable": pull_workable,
+    "radancy": pull_radancy,
+    "oraclecloud": pull_oraclecloud,
 }
 
 
@@ -492,7 +714,7 @@ def main():
         # is not self-describing (eightfold, hand-written HTML rules).
         if t.get("ats"):
             info = {"ats": t["ats"], "url": careers, **{k: v for k, v in t.items()
-                                                        if k in ("job_re", "base", "pages")}}
+                                                        if k in ("job_re", "base", "pages", "render")}}
         else:
             info = detect(careers)
         if not info:
