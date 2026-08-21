@@ -162,7 +162,10 @@ def pull_workday(t):
                 out.append({
                     "title": p.get("title", ""),
                     "location": p.get("locationsText", ""),
-                    "url": f"https://{t['host']}{ext}" if ext else "",
+                    # externalPath is site-relative: without the /{site} prefix
+                    # the link 404s (myworkdayjobs.com/job/... treats "job" as a
+                    # tenant site name that does not exist).
+                    "url": f"https://{t['host']}/{t['site']}{ext}" if ext else "",
                     "posted": p.get("postedOn", ""),
                 })
             offset += 20
