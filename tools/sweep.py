@@ -181,12 +181,23 @@ def pull_greenhouse(t):
              "posted": j.get("updated_at", "")} for j in d.get("jobs", [])]
 
 
+def epoch_date(ts, ms=False):
+    """Epoch seconds (or milliseconds) -> 'YYYY-MM-DD', '' if absent or garbage."""
+    if not ts:
+        return ""
+    try:
+        return datetime.fromtimestamp(ts / 1000 if ms else ts,
+                                      timezone.utc).strftime("%Y-%m-%d")
+    except (TypeError, ValueError, OSError, OverflowError):
+        return ""
+
+
 def pull_lever(t):
     d = fetch(f"https://api.lever.co/v0/postings/{t['token']}?mode=json")
     return [{"title": j.get("text", ""),
              "location": (j.get("categories") or {}).get("location", ""),
              "url": j.get("hostedUrl", ""),
-             "posted": ""} for j in d]
+             "posted": epoch_date(j.get("createdAt"), ms=True)} for j in d]
 
 
 def pull_ashby(t):
@@ -256,7 +267,7 @@ def pull_eightfold(t):
                 "title": p.get("name", ""),
                 "location": ", ".join(locs[:2]) if locs else "",
                 "url": f"{ref}/job/{p.get('id')}",
-                "posted": "",
+                "posted": epoch_date(p.get("postedTs") or p.get("creationTs")),
             })
         start += len(pos)
         if total and start >= total:

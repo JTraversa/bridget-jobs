@@ -120,3 +120,9 @@ extracts ATS links.
   "N openings" badge.
 - The `htmljobs` adapter is regex over someone else's markup. It will break when
   those sites are redesigned.
+- **Posting dates are best-effort.** Each card shows an age and the board can
+  sort newest-first, but the date comes in whatever shape the source ATS uses:
+  Workday sends relative strings (anchored on the sweep timestamp, and capped at
+  "30+ days"), Greenhouse sends last-updated rather than first-posted, and the
+  scraped HTML boards (Duke, Harvard) carry no date at all, so those cards show
+  no age and sink to the bottom of the newest-first sort.

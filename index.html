@@ -438,6 +438,9 @@
     .job-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); }
     .dot { opacity: .5; }
 
+    .job-age { margin-left: auto; white-space: nowrap; }
+    .job-age.fresh { color: var(--accent); font-weight: 600; }
+
     .pill {
       font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
       padding: 2px 7px; border-radius: 4px; border: 1px solid currentColor;
@@ -510,6 +513,10 @@
         <button class="chip" data-jf="strong" data-v="1" aria-pressed="false">Strong only</button>
         <button class="chip" data-jf="remote" data-v="1" aria-pressed="false">Remote only</button>
         <select class="loc-select" id="loc"><option value="all">All locations</option></select>
+        <select class="loc-select" id="sort">
+          <option value="match">Sort: best match</option>
+          <option value="new">Sort: newest first</option>
+        </select>
       </div>
       <p class="meta-line" id="boardmeta">Loading…</p>
 
@@ -1179,7 +1186,8 @@
       var meta = document.getElementById('boardmeta');
       var empty = document.getElementById('jobempty');
       var qbox = document.getElementById('q');
-      var jobs = [], f = { lane: 'all', strong: false, remote: false, loc: 'all', q: '' };
+      var jobs = [], view = [],
+        f = { lane: 'all', strong: false, remote: false, loc: 'all', q: '', sort: 'match' };
 
       function esc(s) {
         return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -1187,10 +1195,46 @@
         });
       }
 
+      // "posted" arrives in whatever shape the source ATS uses: Workday sends
+      // relative strings ("Posted 6 Days Ago") that are relative to the SWEEP
+      // time, not to now, so they anchor on the feed's generated stamp; the
+      // others send ISO dates or timestamps. The scraped HTML boards (Duke,
+      // Harvard) carry no date at all, which is why every path here may
+      // return null. "30+" is a floor, not a date, hence the approx flag.
+      function parsePosted(p, genTs) {
+        p = String(p == null ? '' : p).trim();
+        if (!p) return null;
+        var m = /^posted\s+(.+)$/i.exec(p);
+        if (m) {
+          var s = m[1].toLowerCase();
+          if (s === 'today') return { ts: genTs };
+          if (s === 'yesterday') return { ts: genTs - 864e5 };
+          var d = /^(\d+)(\+?)\s+days?\s+ago$/.exec(s);
+          if (d) return { ts: genTs - (+d[1]) * 864e5, approx: d[2] === '+' };
+          return null;
+        }
+        var t = Date.parse(p);
+        return isNaN(t) ? null : { ts: t };
+      }
+
+      function ageOf(j) {
+        if (j._ts == null) return null;
+        var days = Math.max(0, Math.floor((Date.now() - j._ts) / 864e5));
+        if (j._approx) return { label: days + '+ days ago', fresh: false };
+        return {
+          label: days === 0 ? 'today'
+            : days === 1 ? 'yesterday'
+            : days < 30 ? days + ' days ago'
+            : Math.floor(days / 30) + (days < 60 ? ' month ago' : ' months ago'),
+          fresh: days <= 7
+        };
+      }
+
       function render() {
-        list.innerHTML = jobs.map(function (j, i) {
+        list.innerHTML = view.map(function (j, i) {
           var lane = laneOf(j);
           var remote = !!j.remote;
+          var age = ageOf(j);
           return '<a class="job" href="' + esc(j.url) + '" target="_blank" rel="noopener"' +
             ' data-i="' + i + '" data-score="' + j.score + '" data-lane="' + lane + '"' +
             ' data-remote="' + (remote ? 1 : 0) + '"' +
@@ -1205,6 +1249,10 @@
             (remote ? '<span class="pill p-remote">Remote</span>' : '') +
             '<span>Lane ' + lane + '</span><span class="dot">·</span>' +
             '<span>' + esc(j.location || 'Location not listed') + '</span>' +
+            (age ? '<span class="job-age' + (age.fresh ? ' fresh' : '') + '"' +
+              ' title="Posted ' + (j._approx ? 'over 30 days before the last sweep'
+                : new Date(j._ts).toISOString().slice(0, 10)) + '">' +
+              age.label + '</span>' : '') +
             '</div></a>';
         }).join('');
         paint();
@@ -1247,10 +1295,34 @@
       var locSel = document.getElementById('loc');
       locSel.addEventListener('change', function () { f.loc = locSel.value; paint(); });
 
+      // Sorting re-renders rather than toggling, since order lives in the DOM.
+      // Undated jobs sink to the bottom; ties fall back to match quality, and
+      // the sort is stable so the original score/employer order survives them.
+      function applySort() {
+        view = f.sort === 'new'
+          ? jobs.slice().sort(function (a, b) {
+              var ta = a._ts == null ? -1 : a._ts, tb = b._ts == null ? -1 : b._ts;
+              return (tb - ta) || (b.score - a.score);
+            })
+          : jobs;
+        render();
+      }
+
+      var sortSel = document.getElementById('sort');
+      sortSel.addEventListener('change', function () { f.sort = sortSel.value; applySort(); });
+
       fetch('jobs.json', { cache: 'no-store' })
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
         .then(function (d) {
           jobs = d.jobs || [];
+
+          var genTs = Date.parse(String(d.generated || '').replace(' UTC', 'Z').replace(' ', 'T'));
+          if (isNaN(genTs)) genTs = Date.now();
+          jobs.forEach(function (j) {
+            var p = parsePosted(j.posted, genTs);
+            j._ts = p ? p.ts : null;
+            j._approx = !!(p && p.approx);
+          });
 
           // Hero counts come from the same feed, so the headline can never
           // disagree with the board underneath it.
@@ -1280,7 +1352,7 @@
           document.getElementById('manuallist').innerHTML = (d.manual || []).map(function (m) {
             return '<div class="manual-item"><b>' + esc(m.name) + '</b><span>' + esc(m.portal) + '</span></div>';
           }).join('');
-          render();
+          applySort();
         })
         .catch(function (e) {
           meta.textContent = '';
