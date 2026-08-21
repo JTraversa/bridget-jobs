@@ -120,9 +120,16 @@ extracts ATS links.
   "N openings" badge.
 - The `htmljobs` adapter is regex over someone else's markup. It will break when
   those sites are redesigned.
-- **Posting dates are best-effort.** Each card shows an age and the board can
-  sort newest-first, but the date comes in whatever shape the source ATS uses:
-  Workday sends relative strings (anchored on the sweep timestamp, and capped at
-  "30+ days"), Greenhouse sends last-updated rather than first-posted, and the
-  scraped HTML boards (Duke, Harvard) carry no date at all, so those cards show
-  no age and sink to the bottom of the newest-first sort.
+- **Posting dates are best-effort.** Each card shows an age, the board can sort
+  newest-first and filter to "New this week", but the date comes in whatever
+  shape the source ATS uses: Workday sends relative strings (anchored on the
+  sweep timestamp, and capped at "30+ days"), and the scraped HTML boards
+  (Duke, Harvard) carry no date at all. The sweep also stamps every row with a
+  `first_seen` date carried forward across runs, so date-blind sources still
+  get an age ("first appeared on this board") once they have been through two
+  sweeps; rows that predate the tracking stay undated until they close. "New"
+  means new on this board, which also catches an old posting that enters the
+  feed when an employer is added.
+- **Applied / Hide marks live in the browser**, in the same localStorage as the
+  guide tab's checkboxes, keyed by employer+title so they survive re-sweeps.
+  Hidden jobs collapse into an "N hidden" chip; nothing is ever deleted.

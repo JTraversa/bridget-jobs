@@ -439,7 +439,6 @@
     .dot { opacity: .5; }
 
     .job-age { margin-left: auto; white-space: nowrap; }
-    .job-age.fresh { color: var(--accent); font-weight: 600; }
 
     .pill {
       font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
@@ -448,6 +447,32 @@
     .p-strong { color: var(--t1); }
     .p-maybe { color: var(--t2); }
     .p-remote { color: var(--laneA); }
+    .p-new { color: #fff; background: var(--accent); border-color: var(--accent); }
+
+    @media (prefers-color-scheme: dark) {
+      .p-new { color: #10231e; }
+    }
+
+    /* per-card applied / hide marks */
+
+    .job-acts { margin-left: auto; display: flex; gap: 6px; }
+    button.act {
+      font: inherit; font-size: 11px; padding: 2px 9px; border-radius: 999px;
+      border: 1px solid var(--border); background: none; color: var(--muted);
+      cursor: pointer; transition: .15s;
+    }
+    button.act:hover { border-color: var(--accent); color: var(--accent); }
+    .job.applied button.act-applied,
+    .job.user-hidden button.act-hide {
+      background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
+    }
+    @media (prefers-color-scheme: dark) {
+      .job.applied button.act-applied,
+      .job.user-hidden button.act-hide { color: #10231e; }
+    }
+    .job.applied { opacity: .55; }
+    .job.applied .job-title { text-decoration: line-through; }
+    .job.user-hidden { opacity: .55; border-style: dashed; }
 
     .manual-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
 
@@ -512,11 +537,13 @@
         <button class="chip" data-jf="lane" data-v="C" aria-pressed="false">C · Clinical</button>
         <button class="chip" data-jf="strong" data-v="1" aria-pressed="false">Strong only</button>
         <button class="chip" data-jf="remote" data-v="1" aria-pressed="false">Remote only</button>
+        <button class="chip" data-jf="fresh" data-v="1" aria-pressed="false">New this week</button>
         <select class="loc-select" id="loc"><option value="all">All locations</option></select>
         <select class="loc-select" id="sort">
           <option value="match">Sort: best match</option>
           <option value="new">Sort: newest first</option>
         </select>
+        <button class="chip" id="showHidden" aria-pressed="false" hidden></button>
       </div>
       <p class="meta-line" id="boardmeta">Loading…</p>
 
@@ -1044,8 +1071,8 @@
 
     <footer>
       <p>
-        Ranked by fit density per hour, not by prestige. Checkboxes save to this browser only, so use the same
-        device and the list remembers where you were.
+        Ranked by fit density per hour, not by prestige. Checkboxes and the board's Applied / Hide marks save
+        to this browser only, so use the same device and the list remembers where you were.
       </p>
     </footer>
 
@@ -1187,7 +1214,24 @@
       var empty = document.getElementById('jobempty');
       var qbox = document.getElementById('q');
       var jobs = [], view = [],
-        f = { lane: 'all', strong: false, remote: false, loc: 'all', q: '', sort: 'match' };
+        f = { lane: 'all', strong: false, remote: false, fresh: false,
+              loc: 'all', q: '', sort: 'match', showHidden: false };
+
+      // Applied / hidden marks, keyed by employer+title so they survive
+      // re-sweeps (URLs churn when a grouped posting's departments change).
+      // Same localStorage arrangement as the guide tab's checkboxes.
+      var MARKS_KEY = 'jsml.marks.v1';
+      function loadMarks() {
+        try { return JSON.parse(localStorage.getItem(MARKS_KEY)) || {}; } catch (e) { return {}; }
+      }
+      function saveMarks() {
+        try { localStorage.setItem(MARKS_KEY, JSON.stringify(marks)); } catch (e) { /* private mode */ }
+      }
+      var marks = loadMarks();
+
+      function jobKey(j) {
+        return ((j.employer || '') + '|' + (j.title || '')).trim().toLowerCase();
+      }
 
       function esc(s) {
         return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) {
@@ -1217,16 +1261,22 @@
         return isNaN(t) ? null : { ts: t };
       }
 
+      // Age comes from the ATS posting date when there is one, else from the
+      // sweep's first_seen stamp ("first appeared on this board"), which is how
+      // the date-blind scraped boards still get an age. The tooltip says which.
       function ageOf(j) {
-        if (j._ts == null) return null;
-        var days = Math.max(0, Math.floor((Date.now() - j._ts) / 864e5));
-        if (j._approx) return { label: days + '+ days ago', fresh: false };
+        if (j._effTs == null) return null;
+        var days = Math.max(0, Math.floor((Date.now() - j._effTs) / 864e5));
+        var fromSeen = j._ts == null;
+        if (!fromSeen && j._approx)
+          return { label: days + '+ days ago', tip: 'Posted over 30 days before the last sweep' };
+        var d = new Date(j._effTs).toISOString().slice(0, 10);
         return {
           label: days === 0 ? 'today'
             : days === 1 ? 'yesterday'
             : days < 30 ? days + ' days ago'
             : Math.floor(days / 30) + (days < 60 ? ' month ago' : ' months ago'),
-          fresh: days <= 7
+          tip: (fromSeen ? 'First appeared on this board ' : 'Posted ') + d
         };
       }
 
@@ -1237,41 +1287,57 @@
           var age = ageOf(j);
           return '<a class="job" href="' + esc(j.url) + '" target="_blank" rel="noopener"' +
             ' data-i="' + i + '" data-score="' + j.score + '" data-lane="' + lane + '"' +
-            ' data-remote="' + (remote ? 1 : 0) + '"' +
+            ' data-remote="' + (remote ? 1 : 0) + '" data-new="' + (j._new ? 1 : 0) + '"' +
+            ' data-key="' + esc(jobKey(j)) + '"' +
             ' data-metros="' + esc((j.metros || []).join(' ')) + '"' +
             ' data-t="' + esc(((j.title || '') + ' ' + (j.employer || '') + ' ' + (j.location || '')).toLowerCase()) + '">' +
             '<div class="job-top"><span class="job-title">' + esc(j.title) + '</span>' +
             '<span class="job-emp">' + esc(j.employer) + '</span>' +
             (j.count > 1 ? '<span class="job-meta"><span>' + j.count + ' openings</span></span>' : '') +
-            '</div>' +
+            '<span class="job-acts">' +
+            '<button class="act act-applied" data-act="applied">Applied</button>' +
+            '<button class="act act-hide" data-act="hidden">Hide</button>' +
+            '</span></div>' +
             '<div class="job-meta">' +
+            (j._new ? '<span class="pill p-new">New</span>' : '') +
             '<span class="pill ' + (j.score === 2 ? 'p-strong">Strong match' : 'p-maybe">Worth a look') + '</span>' +
             (remote ? '<span class="pill p-remote">Remote</span>' : '') +
             '<span>Lane ' + lane + '</span><span class="dot">·</span>' +
             '<span>' + esc(j.location || 'Location not listed') + '</span>' +
-            (age ? '<span class="job-age' + (age.fresh ? ' fresh' : '') + '"' +
-              ' title="Posted ' + (j._approx ? 'over 30 days before the last sweep'
-                : new Date(j._ts).toISOString().slice(0, 10)) + '">' +
-              age.label + '</span>' : '') +
+            (age ? '<span class="job-age" title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
             '</div></a>';
         }).join('');
         paint();
       }
 
       function paint() {
-        var shown = 0;
+        var shown = 0, hiddenAway = 0;
         Array.prototype.forEach.call(list.children, function (el) {
+          var mark = marks[el.dataset.key];
+          el.classList.toggle('applied', mark === 'applied');
+          el.classList.toggle('user-hidden', mark === 'hidden');
           var ok = (f.lane === 'all' || el.dataset.lane === f.lane) &&
             (!f.strong || el.dataset.score === '2') &&
             (!f.remote || el.dataset.remote === '1') &&
+            (!f.fresh || el.dataset.new === '1') &&
             (f.loc === 'all' ||
               el.dataset.metros.split(' ').indexOf(f.loc) !== -1) &&
             (!f.q || el.dataset.t.indexOf(f.q) !== -1);
+          // Jobs she hid stay out of the way (and out of the count) until the
+          // "hidden" chip reveals them for un-hiding.
+          if (ok && mark === 'hidden') {
+            hiddenAway++;
+            if (!f.showHidden) ok = false;
+          }
           el.hidden = !ok;
-          if (ok) shown++;
+          if (ok && mark !== 'hidden') shown++;
         });
-        empty.style.display = shown ? 'none' : 'block';
+        empty.style.display = (shown || (f.showHidden && hiddenAway)) ? 'none' : 'block';
         document.getElementById('tabcount').textContent = '(' + shown + ')';
+        var hbtn = document.getElementById('showHidden');
+        hbtn.hidden = !hiddenAway;
+        hbtn.textContent = hiddenAway + ' hidden';
+        hbtn.setAttribute('aria-pressed', String(f.showHidden));
       }
 
       document.querySelectorAll('button.chip[data-jf]').forEach(function (btn) {
@@ -1301,7 +1367,7 @@
       function applySort() {
         view = f.sort === 'new'
           ? jobs.slice().sort(function (a, b) {
-              var ta = a._ts == null ? -1 : a._ts, tb = b._ts == null ? -1 : b._ts;
+              var ta = a._effTs == null ? -1 : a._effTs, tb = b._effTs == null ? -1 : b._effTs;
               return (tb - ta) || (b.score - a.score);
             })
           : jobs;
@@ -1310,6 +1376,27 @@
 
       var sortSel = document.getElementById('sort');
       sortSel.addEventListener('change', function () { f.sort = sortSel.value; applySort(); });
+
+      // The card itself is a link, so the mark buttons live inside it and have
+      // to swallow the click. Clicking a mark again clears it; marking a job
+      // applied replaces hidden and vice versa.
+      list.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('button[data-act]') : null;
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation();
+        var key = btn.closest('.job').dataset.key, act = btn.dataset.act;
+        if (marks[key] === act) delete marks[key];
+        else marks[key] = act;
+        saveMarks();
+        paint();
+      });
+
+      var hiddenBtn = document.getElementById('showHidden');
+      hiddenBtn.addEventListener('click', function () {
+        f.showHidden = !f.showHidden;
+        paint();
+      });
 
       fetch('jobs.json', { cache: 'no-store' })
         .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
@@ -1322,6 +1409,14 @@
             var p = parsePosted(j.posted, genTs);
             j._ts = p ? p.ts : null;
             j._approx = !!(p && p.approx);
+            var fs = j.first_seen ? Date.parse(j.first_seen) : NaN;
+            j._seenTs = isNaN(fs) ? null : fs;
+            j._effTs = j._ts != null ? j._ts : j._seenTs;
+            // "New" means new on this board (first_seen) when the sweep tracks
+            // it, falling back to the posting date for rows that predate
+            // first_seen tracking.
+            var newTs = j._seenTs != null ? j._seenTs : j._ts;
+            j._new = newTs != null && !j._approx && (Date.now() - newTs) <= 7 * 864e5;
           });
 
           // Hero counts come from the same feed, so the headline can never

@@ -174,11 +174,14 @@ def pull_workday(t):
 
 
 def pull_greenhouse(t):
+    # first_published is the real posting date; updated_at moves on any edit,
+    # which made months-old postings masquerade as fresh.
     d = fetch(f"https://boards-api.greenhouse.io/v1/boards/{t['token']}/jobs")
     return [{"title": j.get("title", ""),
              "location": (j.get("location") or {}).get("name", ""),
              "url": j.get("absolute_url", ""),
-             "posted": j.get("updated_at", "")} for j in d.get("jobs", [])]
+             "posted": j.get("first_published") or j.get("updated_at", "")}
+            for j in d.get("jobs", [])]
 
 
 def epoch_date(ts, ms=False):
@@ -556,6 +559,26 @@ def main():
         if g["count"] > 1 and len(locs) > 1:
             g["location"] = f"{locs[0]} +{len(locs) - 1} more"
         rows.append(g)
+
+    # "First seen" survives across sweeps: carry the date forward from the
+    # previous jobs.json, stamp today on rows that were not there last time.
+    # Keyed by employer+title (the dedup key) rather than URL, because a grouped
+    # row's representative URL changes when one of its department postings
+    # closes. Rows that predate this tracking keep "" - unknown, but old - so
+    # the board never badges the whole backlog as new on the first run.
+    def seen_key(r):
+        return r["employer"] + "\t" + r["title"].strip().lower()
+    prev_seen = {}
+    try:
+        prev = json.loads((ROOT / "jobs.json").read_text(encoding="utf-8"))
+        for j in prev.get("jobs", []):
+            prev_seen[seen_key(j)] = j.get("first_seen", "")
+    except Exception:
+        pass
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    for r in rows:
+        k = seen_key(r)
+        r["first_seen"] = prev_seen[k] if k in prev_seen else today
 
     rows.sort(key=lambda r: (-r["score"], r["employer"], r["title"]))
 
