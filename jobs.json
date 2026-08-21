@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-20 11:24 UTC",
+ "generated": "2026-08-21 11:23 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -9,17 +9,17 @@
   {
    "code": "MIA",
    "label": "South Florida",
-   "n": 64
+   "n": 65
   },
   {
    "code": "PHL",
    "label": "Philadelphia area",
-   "n": 56
+   "n": 55
   },
   {
    "code": "BAL",
    "label": "Baltimore",
-   "n": 55
+   "n": 54
   },
   {
    "code": "RDU",
@@ -29,7 +29,7 @@
   {
    "code": "DC",
    "label": "Washington DC metro",
-   "n": 27
+   "n": 24
   },
   {
    "code": "NYC",
@@ -37,14 +37,14 @@
    "n": 22
   },
   {
-   "code": "BOS",
-   "label": "Boston area",
-   "n": 8
-  },
-  {
    "code": "PIT",
    "label": "Pittsburgh",
    "n": 8
+  },
+  {
+   "code": "BOS",
+   "label": "Boston area",
+   "n": 6
   },
   {
    "code": "CAE",
@@ -77,11 +77,6 @@
    "n": 1
   },
   {
-   "code": "GNV",
-   "label": "Gainesville FL",
-   "n": 1
-  },
-  {
    "code": "INTL",
    "label": "Outside the US",
    "n": 5
@@ -92,7 +87,7 @@
    "n": 5
   }
  ],
- "openings": 462,
+ "openings": 457,
  "universities": 27,
  "swept": 56,
  "targets": 76,
@@ -213,9 +208,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/John-Carter-Brown-Library/Digital-Research-Associate_REQ210740",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -233,7 +229,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/155-South-Main-Street/Mental-Health-Counselor--Social-Worker-Research-Associate_REQ207288",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -251,7 +248,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/South-Street-Landing/Senior-Research-Analyst_REQ209234",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -267,9 +265,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/164-Angell-Street/Senior-Research-Associate_REQ210729",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -285,9 +284,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate---School-of-Computer-Science---CBD_2024954",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -305,7 +305,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate---School-of-Computer-Science---S3D_2024695",
-   "count": 1
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -321,9 +322,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate-II---Robotics-Institute_2024594",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -339,9 +341,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate-III---Robotics-Institute_2024910",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -358,8 +361,9 @@
    "remote": false,
    "intl": false,
    "posted": "2026-06-29",
-   "url": "https://searchjobs.dartmouth.edu/postings/86340",
-   "count": 2
+   "url": "https://searchjobs.dartmouth.edu/postings/86336",
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -377,7 +381,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.duke.edu/job/Durham-Clinical-Research-Coordinator-NC-27710/1417233900/",
-   "count": 3
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -395,7 +400,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.duke.edu/job/Durham-Lab-Research-Analyst-I-NC-27710/1414702000/",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -412,8 +418,9 @@
    "remote": false,
    "intl": false,
    "posted": "",
-   "url": "https://careers.duke.edu/job/Durham-Lab-Research-Analyst-II-NC-27710/1406846900/",
-   "count": 2
+   "url": "https://careers.duke.edu/job/Durham-Lab-Research-Analyst-II-NC-27710/1421457000/",
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -431,26 +438,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.duke.edu/job/Durham-Policy-Research-Associate-Duke-Margolis-Institute-for-Health-Policy-%28Washington-DC-or-Durham-NC%29-NC-27710/1410200200/",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "Gallup",
-   "branch": "applied-research",
-   "title": "Senior Survey Research Statistician",
-   "location": "Washington, D.C.",
-   "states": [
-    "WA",
-    "DC"
-   ],
-   "metros": [
-    "DC"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "2026-07-29T13:20:39-04:00",
-   "url": "https://job-boards.greenhouse.io/gallup/jobs/4283978009",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -466,9 +455,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-07-29T13:20:39-04:00",
+   "posted": "2026-06-17T14:15:40-04:00",
    "url": "https://job-boards.greenhouse.io/gallup/jobs/4288599009",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -484,27 +474,10 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "2026-07-29T13:20:39-04:00",
+   "posted": "2026-07-20T11:32:30-04:00",
    "url": "https://job-boards.greenhouse.io/gallup/jobs/4323835009",
-   "count": 1
-  },
-  {
-   "score": 2,
-   "employer": "George Washington University",
-   "branch": "university",
-   "title": "Manager, Clinical Research Operations",
-   "location": "Washington, DC",
-   "states": [
-    "DC"
-   ],
-   "metros": [
-    "DC"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "2026-08-11",
-   "url": "https://www.gwu.jobs/postings/127939",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -522,7 +495,8 @@
    "intl": false,
    "posted": "2026-08-12",
    "url": "https://www.gwu.jobs/postings/127969",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -538,9 +512,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Clinical-Research-Associate_JR26584",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -556,9 +531,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Coordinator_JR26559",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -574,9 +550,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Coordinator-1_JR26620",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -592,9 +569,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Main-Campus/Research-Associate--Department-of-Psychology---Georgetown-University-College-of-Arts---Sciences---Part-Time_JR26971",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -610,9 +588,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/125-E-St-NW-7th-Floor/Temporary-Qualitative-Research-Associate--Evidence-for-Justice-Lab---McCourt-School-of-Public-Policy---Georgetown-University_JR26909",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -630,7 +609,8 @@
    "intl": false,
    "posted": "2026-08-12T16:41:30.371+00:00",
    "url": "https://jobs.ashbyhq.com/handshake/bc2767a2-6c19-4fb5-8af6-27a0f67f80ed",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -648,7 +628,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.harvard.edu/job/research-associate-general-in-boston-ma-united-states-jid-1889",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -666,7 +647,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Oddfellows-Building/Prospect-Research-Analyst_JR107991-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -682,9 +664,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/On-Call-Research-Associate_R2602075",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -701,16 +684,17 @@
    ],
    "remote": true,
    "intl": false,
-   "posted": "2026-08-18T13:32:16-04:00",
+   "posted": "2026-05-28T13:25:10-04:00",
    "url": "https://instacart.careers/job/?gh_jid=7963779",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Staff User Researcher - Consumer",
-   "location": "United States - Remote +1 more",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -719,10 +703,11 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": false,
-   "posted": "2026-08-19T09:54:23-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8141481",
-   "count": 2
+   "intl": true,
+   "posted": "2026-08-19T09:32:27-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8141483",
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -738,9 +723,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-10",
    "url": "https://hiring.jhu.edu/careers/job/1133915036603",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Coordinator  (Emergency Medicine)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-20",
+   "url": "https://hiring.jhu.edu/careers/job/1133915238106",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 2,
@@ -756,9 +761,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-24",
    "url": "https://hiring.jhu.edu/careers/job/1133914666259",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -774,9 +780,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-10",
    "url": "https://hiring.jhu.edu/careers/job/1133913287330",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -792,9 +799,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133915016234",
-   "count": 3
+   "posted": "2026-08-20",
+   "url": "https://hiring.jhu.edu/careers/job/1133915242042",
+   "count": 6,
+   "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Coordinator (Emergeny Medicine)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-20",
+   "url": "https://hiring.jhu.edu/careers/job/1133915242051",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 2,
@@ -810,9 +837,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-10",
    "url": "https://hiring.jhu.edu/careers/job/1133914420266",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -828,9 +856,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-09",
    "url": "https://hiring.jhu.edu/careers/job/1133914211117",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -848,9 +877,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-11",
    "url": "https://hiring.jhu.edu/careers/job/1133915067432",
-   "count": 4
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -866,9 +896,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-14",
    "url": "https://hiring.jhu.edu/careers/job/1133914410983",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -884,9 +915,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-29",
    "url": "https://hiring.jhu.edu/careers/job/1133913873740",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -902,9 +934,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-11",
    "url": "https://hiring.jhu.edu/careers/job/1133913658644",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -920,9 +953,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-06",
    "url": "https://hiring.jhu.edu/careers/job/1133914148297",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -938,9 +972,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-17",
    "url": "https://hiring.jhu.edu/careers/job/1133914450981",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -956,9 +991,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-16",
    "url": "https://hiring.jhu.edu/careers/job/1133914397985",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -974,9 +1010,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-13",
    "url": "https://hiring.jhu.edu/careers/job/1133915138322",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -992,9 +1029,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-19",
    "url": "https://hiring.jhu.edu/careers/job/1133915268885",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1010,9 +1048,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-14",
    "url": "https://hiring.jhu.edu/careers/job/1133915119630",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1028,9 +1067,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-13",
    "url": "https://hiring.jhu.edu/careers/job/1133915036601",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1046,9 +1086,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-19",
    "url": "https://hiring.jhu.edu/careers/job/1133915073251",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1064,9 +1105,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-02",
    "url": "https://hiring.jhu.edu/careers/job/1133913439338",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1084,9 +1126,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-12",
    "url": "https://hiring.jhu.edu/careers/job/1133915067441",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1102,9 +1145,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-17",
    "url": "https://hiring.jhu.edu/careers/job/1133913630817",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1122,7 +1166,8 @@
    "intl": false,
    "posted": "2026-08-03",
    "url": "https://morgan.peopleadmin.com/postings/8883",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1140,7 +1185,8 @@
    "intl": false,
    "posted": "2026-08-06",
    "url": "https://jobs.ncsu.edu/postings/233626",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1158,7 +1204,8 @@
    "intl": false,
    "posted": "2026-06-16",
    "url": "https://jobs.ncsu.edu/postings/231776",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1176,7 +1223,8 @@
    "intl": false,
    "posted": "2025-10-23",
    "url": "https://jobs.ncsu.edu/postings/224376",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1194,7 +1242,8 @@
    "intl": false,
    "posted": "2026-06-29",
    "url": "https://jobs.ncsu.edu/postings/232208",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1212,7 +1261,8 @@
    "intl": false,
    "posted": "2026-05-18",
    "url": "https://jobs.ncsu.edu/postings/230760",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1230,7 +1280,8 @@
    "intl": false,
    "posted": "2026-08-03",
    "url": "https://jobs.ncsu.edu/postings/233421",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1248,7 +1299,8 @@
    "intl": false,
    "posted": "2026-06-18T23:23:21.333+00:00",
    "url": "https://jobs.ashbyhq.com/notion/f3faba46-776a-4938-8c9b-5aebb495aa39",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1266,7 +1318,8 @@
    "intl": false,
    "posted": "2026-06-18T23:15:14.006+00:00",
    "url": "https://jobs.ashbyhq.com/notion/0e9114bd-4603-4bdf-a86f-a7a4f390fae8",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1284,7 +1337,8 @@
    "intl": false,
    "posted": "2026-08-11T14:25:44.579+00:00",
    "url": "https://jobs.ashbyhq.com/notion/fb969acc-dcbd-4124-b648-bfbfad7231b3",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1302,9 +1356,10 @@
    ],
    "remote": true,
    "intl": true,
-   "posted": "2026-07-15T06:43:36-04:00",
+   "posted": "2026-01-22T04:14:59-05:00",
    "url": "https://job-boards.eu.greenhouse.io/prolific/jobs/4764165101",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1322,7 +1377,8 @@
    "intl": false,
    "posted": "2026-07-20",
    "url": "https://jobs.rutgers.edu/postings/278960",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1340,7 +1396,8 @@
    "intl": false,
    "posted": "2026-07-06",
    "url": "https://jobs.rutgers.edu/postings/278256",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1358,7 +1415,8 @@
    "intl": false,
    "posted": "2026-07-01",
    "url": "https://jobs.rutgers.edu/postings/278138",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1376,7 +1434,8 @@
    "intl": false,
    "posted": "2026-04-15",
    "url": "https://jobs.rutgers.edu/postings/273018",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1394,7 +1453,8 @@
    "intl": false,
    "posted": "2026-02-25",
    "url": "https://jobs.rutgers.edu/postings/269869",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1412,7 +1472,8 @@
    "intl": false,
    "posted": "2026-08-12",
    "url": "https://jobs.rutgers.edu/postings/279547",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1430,7 +1491,8 @@
    "intl": false,
    "posted": "2026-07-06",
    "url": "https://jobs.rutgers.edu/postings/278291",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1448,7 +1510,8 @@
    "intl": false,
    "posted": "2026-08-18",
    "url": "https://jobs.rutgers.edu/postings/279681",
-   "count": 4
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1466,7 +1529,8 @@
    "intl": false,
    "posted": "2026-05-12",
    "url": "https://jobs.rutgers.edu/postings/274787",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1484,7 +1548,8 @@
    "intl": false,
    "posted": "2026-02-17",
    "url": "https://jobs.rutgers.edu/postings/269359",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1502,7 +1567,8 @@
    "intl": false,
    "posted": "2026-06-12",
    "url": "https://jobs.rutgers.edu/postings/277044",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1520,7 +1586,8 @@
    "intl": false,
    "posted": "2026-08-18",
    "url": "https://unc.peopleadmin.com/postings/324107",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1538,7 +1605,8 @@
    "intl": false,
    "posted": "2026-08-17",
    "url": "https://unc.peopleadmin.com/postings/324032",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1556,7 +1624,8 @@
    "intl": false,
    "posted": "2026-08-19",
    "url": "https://unc.peopleadmin.com/postings/324227",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1574,25 +1643,8 @@
    "intl": false,
    "posted": "2026-08-17",
    "url": "https://unc.peopleadmin.com/postings/324077",
-   "count": 2
-  },
-  {
-   "score": 2,
-   "employer": "University of Florida",
-   "branch": "university",
-   "title": "Research Coordinator I",
-   "location": "Gainesville, FL",
-   "states": [
-    "FL"
-   ],
-   "metros": [
-    "GNV"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://explore.jobs.ufl.edu/en-us/job/540985/research-coordinator-i",
-   "count": 1
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1610,7 +1662,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1_R100084642",
-   "count": 14
+   "count": 14,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1628,7 +1681,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1--A-_R100095127",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1646,7 +1700,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2--A--Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100091961-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1664,7 +1719,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1---Multiple-Myeloma_R100097833",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1682,7 +1738,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1-Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100096965",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1698,9 +1755,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2_R100099479",
-   "count": 14
+   "count": 14,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1716,9 +1774,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2---CRANE-Lab_R100097925",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1736,7 +1795,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2-Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100096363",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1754,7 +1814,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Associate-3_R100097981",
-   "count": 7
+   "count": 7,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1772,7 +1833,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-3--A-_R100096784",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1790,7 +1852,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-3---Multiple-Myeloma_R100096964",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1808,7 +1871,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Support-Specialist_R100096567-1",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1826,7 +1890,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/ECHO-Lab-Sr-Research-Associate-2_R100096513",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1842,9 +1907,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/ECHO-Research-Associate-2_R100096493",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1862,7 +1928,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Lead-Research-Analyst--Ceccarelli-Lab-Cancer-Genomics-_R100084952",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1878,9 +1945,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/RESEARCH-ASSOCIATE-1-Myeloma_R100097305-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Research Analyst 1",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Yesterday",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-1_R100099171",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 2,
@@ -1896,9 +1983,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 22 Days Ago",
+   "posted": "Posted 23 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-2_R100095476",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1914,9 +2002,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-2--Division-of-Infectious-Diseases_R100099568-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1932,9 +2021,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1_R100098768",
-   "count": 7
+   "count": 7,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1950,9 +2040,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 29 Days Ago",
+   "posted": "Posted 30 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1--Neurological-Surgery-_R100099311",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1970,7 +2061,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-Temp_R100088721",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -1986,9 +2078,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1----Pediatrics-_R100100208-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2006,7 +2099,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1---Full-Time-Ophthalmology--BPEI--Miami--FL-_R100097960",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2024,7 +2118,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-1---Psychology_R100097675",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2042,7 +2137,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1--Ophthalmology---Temporary_R100098022",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2058,9 +2154,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1-Full-Time---Ophthalmology--Miami--FL-_R100099725",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2076,9 +2173,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1-Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100095423",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2094,9 +2192,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-1--GAB_R100100199",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2114,7 +2213,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-1--GAB--A-_R100099098",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2130,9 +2230,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 27 Days Ago",
+   "posted": "Posted 28 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1_R100095489-1",
-   "count": 2
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2148,9 +2249,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-3--SOM--A-_R100098462",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2168,7 +2270,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Boca-Raton-FL/Research-Associate-1--SOM--N---A-_R100098310",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2184,9 +2287,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1---Biochem-and-Molecular-Biology-_R100093836",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2202,9 +2306,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2_R100086050",
-   "count": 5
+   "count": 5,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2222,7 +2327,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-1_R100093233",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2238,9 +2344,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM_R100093866",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2258,7 +2365,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM---Infectious-Diseases_R100091663",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2274,9 +2382,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--Petrucelli-Lab_R100093936",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2292,9 +2401,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-3_R100099561",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2310,9 +2420,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2---Full-Time---Bascom-Palmer-Eye-Institute-Miami--FL_R100096362",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2328,9 +2439,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-I_R100099719",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2348,7 +2460,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-II_R100099224",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2366,7 +2479,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Senior-Research-Associate-II_R100095037",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2382,9 +2496,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate---Coral-Reproduction_R100099364",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2400,9 +2515,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-1_R100099787",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2418,9 +2534,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-1_R100096648",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2438,7 +2555,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-2_R100097377",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2454,9 +2572,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-2_R100094529",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2472,9 +2591,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-3_R100099055",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2490,9 +2610,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 27 Days Ago",
+   "posted": "Posted 28 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-3---Full-Time-Bascom-Palmer-Eye-Institute--Miami--FL-_R100099134-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2508,9 +2629,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 29 Days Ago",
+   "posted": "Posted 30 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator_JR00123512-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2528,7 +2650,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Scheie-Eye-Institute/Clinical-Research-Coordinator---Temporary_JR00104875-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2546,25 +2669,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard---4th-Floor/Clinical-Research-Coordinator-A_JR00121734-1",
-   "count": 12
-  },
-  {
-   "score": 2,
-   "employer": "University of Pennsylvania",
-   "branch": "university",
-   "title": "Clinical Research Coordinator A (Department of Neurosurgery)",
-   "location": "Philadelphia, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PHL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-FL15/Clinical-Research-Coordinator-A--Department-of-Neurosurgery-_JR00119534-2",
-   "count": 1
+   "count": 12,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2580,9 +2686,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Scheie-Eye-Institute/Clinical-Research-Coordinator-A--Department-of-Ophthalmology-_JR00117229-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2598,9 +2705,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A_JR00117715-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2618,7 +2726,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-for-Adv-Medicine/Clinical-Research-Coordinator-A---Community-Canvasser--Hybrid-Eligible--Department-of-Dermatology-_JR00120322-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2634,9 +2743,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A-B_JR00124575-1",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2654,7 +2764,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-B_JR00115683-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2672,7 +2783,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy---Perinatal-Research-Center-_JR00123015-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2688,9 +2800,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy-and-Perinatal-Research-Center-_JR00123522-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2708,7 +2821,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/AnatomyChemistry-Building/Clinical-Research-Coordinator-A-B-C_JR00121193-1",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2724,9 +2838,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-B_JR00123913-1",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2744,7 +2859,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-for-Adv-Medicine/Clinical-Research-Coordinator-B-C_JR00116540-1",
-   "count": 4
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2762,7 +2878,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-for-Adv-Medicine/Clinical-Research-Coordinator-B-C--Abramson-Cancer-Center-_JR00102593",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2778,9 +2895,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
-   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard/Clinical-Research-Coordinator-C_JR00124152",
-   "count": 2
+   "posted": "Posted Yesterday",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stellar-Chance-F3/Clinical-Research-Coordinator-C_JR00125717-1",
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2796,9 +2914,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-C--OBGYN---Pregnancy-and-Perinatal-Research-Center-_JR00124683",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2814,9 +2933,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Program-Manager_JR00123419",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2834,7 +2954,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Innovative-Care-Research-Coordinator_JR00119707-2",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2850,9 +2971,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Dinan-Hall/Research-Analyst--Wharton-Leadership-Pillar_JR00125317-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2870,7 +2992,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Penn-Dental-at-Schattner-Center/Research-Program-Manager_JR00117637",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2888,7 +3011,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Temporary---Research-Coordinator_JR00117536",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2906,7 +3030,8 @@
    "intl": false,
    "posted": "2025-10-09",
    "url": "https://uscjobs.sc.edu/postings/196128",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2922,9 +3047,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://williammary.wd12.myworkdayjobs.com/WM/job/Posting-Location---William--Mary/Prospect-Research-Analyst_JR101968",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 2,
@@ -2942,7 +3068,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://williammary.wd12.myworkdayjobs.com/WM/job/Posting-Location---William--Mary/Research-Operations-Coordinator--CAS-_JR101732",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -2958,9 +3085,10 @@
    ],
    "remote": true,
    "intl": false,
-   "posted": "2026-08-12T15:12:11-04:00",
+   "posted": "2026-07-30T13:41:48-04:00",
    "url": "https://job-boards.greenhouse.io/affirm/jobs/7814576003",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -2976,9 +3104,10 @@
    ],
    "remote": true,
    "intl": false,
-   "posted": "2026-08-12T15:12:11-04:00",
+   "posted": "2026-07-29T14:36:12-04:00",
    "url": "https://job-boards.greenhouse.io/affirm/jobs/7819441003",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -2995,9 +3124,10 @@
    ],
    "remote": true,
    "intl": false,
-   "posted": "2026-08-13T13:12:20-04:00",
+   "posted": "2026-08-11T16:40:24-04:00",
    "url": "https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5386250008",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3013,9 +3143,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://brandeis.wd5.myworkdayjobs.com/Jobs/job/Brandeis---Waltham-Campus/Research-Specialist-Cohen-Center_R0010687-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3033,7 +3164,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://brandeis.wd5.myworkdayjobs.com/Jobs/job/Brandeis---Waltham-Campus/Temporary-Research-Assistant_R0013261-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3049,9 +3181,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant---Robotics-Institute_2024585",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3069,7 +3202,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant_2024536",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3085,9 +3219,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Project-Manager---Health-and-Human-Performance-Lab---Department-of-Psychology--Dietrich-College_2024890",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3103,9 +3238,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant---Thiessen-Lab---Dietrich-College_2025002-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3123,7 +3259,8 @@
    "intl": false,
    "posted": "2026-08-06",
    "url": "https://searchjobs.dartmouth.edu/postings/86759",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3141,7 +3278,8 @@
    "intl": false,
    "posted": "2026-07-24",
    "url": "https://searchjobs.dartmouth.edu/postings/86632",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3159,25 +3297,8 @@
    "intl": false,
    "posted": "2026-07-09",
    "url": "https://searchjobs.dartmouth.edu/postings/86439",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Duke University",
-   "branch": "university",
-   "title": "Clinical Research Specialist, Sr.",
-   "location": "Durham, NC",
-   "states": [
-    "NC"
-   ],
-   "metros": [
-    "RDU"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://careers.duke.edu/job/Durham-Clinical-Research-Specialist%2C-Sr_-NC-27710/1415662700/",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3195,7 +3316,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.duke.edu/job/Durham-Duke-Lemur-Center-Research-Manager-NC-27710/1418426100/",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3213,7 +3335,8 @@
    "intl": false,
    "posted": "2026-06-18",
    "url": "https://www.gwu.jobs/postings/126615",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3229,9 +3352,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Lab-Manager_JR26725",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3247,9 +3371,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/2115-Wisconsin-Ave-6th-Floor/Research-Assistant--Thrive-Center-for-Children-and-Families_JR26957",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3265,9 +3390,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/2115-Wisconsin-Ave-6th-Floor/Research-Specialist-2--Thrive-Center-for-Children--Families--and-Communities_JR26959",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3285,7 +3411,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Research-Specialist-3---Medical-Center_JR26474",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3303,7 +3430,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.harvard.edu/job/research-assistant-in-cambridge-ma-united-states-jid-1966",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3321,25 +3449,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.harvard.edu/job/research-assistant-i-lab-in-boston-ma-united-states-jid-1974",
-   "count": 2
-  },
-  {
-   "score": 1,
-   "employer": "Harvard University",
-   "branch": "university",
-   "title": "Research Assistant II Lab",
-   "location": "Cambridge, MA",
-   "states": [
-    "MA"
-   ],
-   "metros": [
-    "BOS"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://careers.harvard.edu/job/research-assistant-ii-lab-in-boston-ma-united-states-jid-1973",
-   "count": 1
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3357,25 +3468,8 @@
    "intl": false,
    "posted": "",
    "url": "https://careers.harvard.edu/job/research-assistant-ii-dna-imaging-in-boston-ma-united-states-jid-1984",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Harvard University",
-   "branch": "university",
-   "title": "Research Assistant IV",
-   "location": "Cambridge, MA",
-   "states": [
-    "MA"
-   ],
-   "metros": [
-    "BOS"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://careers.harvard.edu/job/research-assistant-iv-in-boston-ma-united-states-jid-1986",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3393,7 +3487,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Downing-Hall-College-of-Engineering/Research-Assistant_JR107653-1",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3409,9 +3504,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Seeley-G-Mudd-Building-College-of-Medicine/Research-Assistant-1_JR108511",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3427,9 +3523,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Bilingual-Survey-Interviewer--English-Spanish-_R2602657",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3445,9 +3542,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Lead-Quantitative-and-Qualitative-Researcher--Remote_R2602676",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3463,9 +3561,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Specialist--Physical-Activity--Future-Opportunity-_R2601951",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3481,9 +3580,10 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Brussels-Belgium/Senior-Consultant-in-research--analysis-and-evaluation--gender-equality_R2601073",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3499,9 +3599,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Senior-Economic-Mobility-Research-Specialist_R2602781",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3517,16 +3618,17 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Senior-Economic-Mobility-Research-Specialist---ON-CALL-role--REMOTE-ROLE-_R2602825-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Insights Lead, Instacart Business",
-   "location": "United States - Remote +1 more",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -3535,10 +3637,11 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": false,
-   "posted": "2026-08-18T13:32:16-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8115834",
-   "count": 2
+   "intl": true,
+   "posted": "2026-08-07T18:32:55-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8115836",
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3554,9 +3657,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-02",
    "url": "https://hiring.jhu.edu/careers/job/1133913484833",
-   "count": 2
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3572,9 +3676,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-11",
    "url": "https://hiring.jhu.edu/careers/job/1133915067436",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3590,9 +3695,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-10",
    "url": "https://hiring.jhu.edu/careers/job/1133913658647",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3608,9 +3714,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-23",
    "url": "https://hiring.jhu.edu/careers/job/1133913586332",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3626,9 +3733,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-24",
    "url": "https://hiring.jhu.edu/careers/job/1133914710767",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3644,9 +3752,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-05-05",
    "url": "https://hiring.jhu.edu/careers/job/1133912606043",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3662,9 +3771,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-03",
    "url": "https://hiring.jhu.edu/careers/job/1133914438440",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3680,27 +3790,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-21",
    "url": "https://hiring.jhu.edu/careers/job/1133914601297",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant (Computer Science)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133913710422",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3716,9 +3809,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-14",
    "url": "https://hiring.jhu.edu/careers/job/1133914505402",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3734,9 +3828,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-20",
    "url": "https://hiring.jhu.edu/careers/job/1133914505422",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3752,9 +3847,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-22",
    "url": "https://hiring.jhu.edu/careers/job/1133914568185",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3770,9 +3866,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-10",
    "url": "https://hiring.jhu.edu/careers/job/1133915067433",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3788,9 +3885,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-17",
    "url": "https://hiring.jhu.edu/careers/job/1133915194195",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3806,9 +3904,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-05",
    "url": "https://hiring.jhu.edu/careers/job/1133914992774",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3824,9 +3923,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-12",
    "url": "https://hiring.jhu.edu/careers/job/1133913687529",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3842,31 +3942,31 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-24",
    "url": "https://hiring.jhu.edu/careers/job/1133914586346",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
    "title": "Research Assistant (Research Administration)",
-   "location": "New York, NY, United States, New York, NY, USA +2 more",
+   "location": "New York, NY, United States, New York, NY, USA +1 more",
    "states": [
     "NY",
-    "MT",
-    "DC"
+    "MT"
    ],
    "metros": [
     "NYC",
-    "USOTHER",
-    "DC"
+    "USOTHER"
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-13",
    "url": "https://hiring.jhu.edu/careers/job/1133912409658",
-   "count": 3
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3882,9 +3982,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-07",
    "url": "https://hiring.jhu.edu/careers/job/1133914991211",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3902,9 +4003,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-24",
    "url": "https://hiring.jhu.edu/careers/job/1133913854275",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3920,27 +4022,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-12",
    "url": "https://hiring.jhu.edu/careers/job/1133915067434",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant,  Data Core",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912871356",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3956,27 +4041,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-24",
    "url": "https://hiring.jhu.edu/careers/job/1133914455071",
-   "count": 1
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant, Data Core (Neurology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://hiring.jhu.edu/careers/job/1133912571121",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -3992,9 +4060,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-17",
    "url": "https://hiring.jhu.edu/careers/job/1133913586334",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4010,9 +4079,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-15",
    "url": "https://hiring.jhu.edu/careers/job/1133914490991",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4028,9 +4098,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-16",
    "url": "https://hiring.jhu.edu/careers/job/1133914290265",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4046,9 +4117,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-13",
    "url": "https://hiring.jhu.edu/careers/job/1133915067437",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4064,9 +4136,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-15",
    "url": "https://hiring.jhu.edu/careers/job/1133914395803",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4082,9 +4155,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-05-26",
    "url": "https://hiring.jhu.edu/careers/job/1133913252801",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4100,9 +4174,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-08-14",
    "url": "https://hiring.jhu.edu/careers/job/1133915156057",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4118,9 +4193,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-08",
    "url": "https://hiring.jhu.edu/careers/job/1133914281364",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4136,9 +4212,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-06-30",
    "url": "https://hiring.jhu.edu/careers/job/1133913942249",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4154,9 +4231,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-15",
    "url": "https://hiring.jhu.edu/careers/job/1133914395808",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4172,9 +4250,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "",
+   "posted": "2026-07-22",
    "url": "https://hiring.jhu.edu/careers/job/1133914493358",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4192,7 +4271,8 @@
    "intl": false,
    "posted": "2026-07-28",
    "url": "https://jobs.ncsu.edu/postings/233207",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4210,7 +4290,8 @@
    "intl": false,
    "posted": "2026-08-13",
    "url": "https://jobs.ncsu.edu/postings/233827",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4228,7 +4309,8 @@
    "intl": false,
    "posted": "2026-08-14",
    "url": "https://jobs.ncsu.edu/postings/233851",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4246,7 +4328,8 @@
    "intl": false,
    "posted": "2026-08-07",
    "url": "https://jobs.ncsu.edu/postings/233671",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4264,7 +4347,8 @@
    "intl": false,
    "posted": "2026-07-27",
    "url": "https://jobs.ncsu.edu/postings/233201",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4282,7 +4366,8 @@
    "intl": false,
    "posted": "2026-08-03",
    "url": "https://jobs.ncsu.edu/postings/233476",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4300,7 +4385,8 @@
    "intl": false,
    "posted": "2026-08-17",
    "url": "https://jobs.ncsu.edu/postings/233884",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4318,7 +4404,8 @@
    "intl": false,
    "posted": "2026-06-02",
    "url": "https://jobs.ncsu.edu/postings/231162",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4336,7 +4423,8 @@
    "intl": true,
    "posted": "2026-08-07T16:06:40-04:00",
    "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7678372",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4352,9 +4440,10 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "2026-07-28T16:24:14-04:00",
+   "posted": "2026-06-24T14:20:14-04:00",
    "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7678256",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4374,7 +4463,8 @@
    "intl": false,
    "posted": "2026-08-14T12:46:34-04:00",
    "url": "https://www.pinterestcareers.com/jobs/?gh_jid=7770911",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4392,7 +4482,8 @@
    "intl": false,
    "posted": "",
    "url": "https://rand.wd5.myworkdayjobs.com/External_Career_Site/job/Washington-DC-DC-Metro-Area/Research-Lead----AI-Cyber-Testing---Evaluation_R3122",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4408,9 +4499,10 @@
    ],
    "remote": true,
    "intl": true,
-   "posted": "2026-05-27T08:25:08-04:00",
+   "posted": "2026-05-26T11:33:39-04:00",
    "url": "https://job-boards.greenhouse.io/reddit/jobs/7957771",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4426,9 +4518,10 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "2026-08-06T21:37:57-04:00",
+   "posted": "2026-07-02T16:30:27-04:00",
    "url": "https://job-boards.greenhouse.io/reddit/jobs/8023359",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4444,9 +4537,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-19T20:18:16-04:00",
+   "posted": "2026-07-02T16:17:59-04:00",
    "url": "https://job-boards.greenhouse.io/reddit/jobs/8022657",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4464,7 +4558,8 @@
    "intl": false,
    "posted": "2026-05-06",
    "url": "https://jobs.rutgers.edu/postings/274367",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4482,7 +4577,8 @@
    "intl": false,
    "posted": "2025-12-31",
    "url": "https://jobs.rutgers.edu/postings/266035",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4500,7 +4596,8 @@
    "intl": false,
    "posted": "2026-04-10",
    "url": "https://jobs.rutgers.edu/postings/272795",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4518,7 +4615,8 @@
    "intl": false,
    "posted": "2026-06-03",
    "url": "https://jobs.rutgers.edu/postings/276411",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4536,7 +4634,8 @@
    "intl": false,
    "posted": "2026-07-14",
    "url": "https://jobs.rutgers.edu/postings/278773",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4554,7 +4653,8 @@
    "intl": false,
    "posted": "2026-08-11",
    "url": "https://jobs.rutgers.edu/postings/279517",
-   "count": 6
+   "count": 6,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4572,7 +4672,8 @@
    "intl": false,
    "posted": "2026-08-18",
    "url": "https://jobs.rutgers.edu/postings/279685",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4590,7 +4691,8 @@
    "intl": false,
    "posted": "2026-07-09",
    "url": "https://jobs.rutgers.edu/postings/278470",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4608,7 +4710,8 @@
    "intl": false,
    "posted": "2026-08-07",
    "url": "https://unc.peopleadmin.com/postings/323641",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4624,9 +4727,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-17",
-   "url": "https://unc.peopleadmin.com/postings/324066",
-   "count": 2
+   "posted": "2026-08-07",
+   "url": "https://unc.peopleadmin.com/postings/323687",
+   "count": 1,
+   "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "UNC Chapel Hill",
+   "branch": "university",
+   "title": "Research Study Coordinator",
+   "location": "Chapel Hill, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-20",
+   "url": "https://unc.peopleadmin.com/postings/324299",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 1,
@@ -4644,7 +4767,8 @@
    "intl": false,
    "posted": "2026-08-19",
    "url": "https://unc.peopleadmin.com/postings/324189",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4662,7 +4786,8 @@
    "intl": false,
    "posted": "2026-08-18",
    "url": "https://unc.peopleadmin.com/postings/324102",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4680,7 +4805,8 @@
    "intl": false,
    "posted": "2026-08-19",
    "url": "https://unc.peopleadmin.com/postings/324190",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4698,7 +4824,8 @@
    "intl": false,
    "posted": "2026-08-19",
    "url": "https://unc.peopleadmin.com/postings/324208",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4714,9 +4841,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-11",
-   "url": "https://unc.peopleadmin.com/postings/323825",
-   "count": 2
+   "posted": "2026-08-20",
+   "url": "https://unc.peopleadmin.com/postings/324286",
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4734,7 +4862,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umd.wd1.myworkdayjobs.com/UMCP/job/University-of-Maryland-College-Park/Experimental-Psychologist_JR103950",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4752,7 +4881,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umd.wd1.myworkdayjobs.com/UMCP/job/University-of-Maryland-College-Park/Research-Specialist_JR103870",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4768,9 +4898,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 15 Days Ago",
+   "posted": "Posted 16 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-1_R100092666",
-   "count": 3
+   "count": 3,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4788,7 +4919,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-2_R100097324",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4806,7 +4938,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Animal-Care-Technician---Cancer-Modeling_R100093443",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4824,7 +4957,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-2---Research-Lab_R100097234",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4840,9 +4974,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-3_R100089693",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4858,9 +4993,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 14 Days Ago",
+   "posted": "Posted 15 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-3--Cancer-Modeling-_R100098016",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4878,7 +5014,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant_R100091945",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4896,7 +5033,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1_R100098289",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4912,9 +5050,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
-   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1--A-_R100096082",
-   "count": 1
+   "posted": "Posted Yesterday",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1--A-_R100099329",
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4932,7 +5071,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1--Part-Time-_R100093311",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4950,7 +5090,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Assistant-1---Temporary_R100098632",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4968,7 +5109,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1-Temporary-Bascom-Palmer-Eye-Institute-Miami--FL_R100099060",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -4986,7 +5128,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-3_R100098291",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5004,7 +5147,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Assistant---Hispanic-LGB-Youth---Families_R100091396",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5020,9 +5164,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Assistant-A-B_JR00123918-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5040,7 +5185,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-for-Adv-Medicine/Clinical-Research-Assistant-B_JR00118794-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5056,9 +5202,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Dinan-Hall---4th-Floor/Pre-Doctoral-Research-Specialist--Real-Estate-Center-_JR00124462-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5076,7 +5223,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard/Research-Assistant--Temporary-Employee-_JR00119949-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5092,9 +5240,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Manager-D---Rodent-Metabolic-Phenotyping-Core_JR00123153-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5110,9 +5259,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Levy-Ctr-for-Oral-Health-Rsrch/Research-Specialist_JR00123916",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5128,9 +5278,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A_JR00123473-1",
-   "count": 14
+   "count": 13,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5148,7 +5299,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stemmler-Hall-Med/Research-Specialist-A--Department-of-Neurosurgery-_JR00122952",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5166,7 +5318,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/CHOP/Research-Specialist-A---Laboratory-Technician_JR00118357",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5182,9 +5335,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Vet-School-Biomedical-Sciences/Research-Specialist-A-Part-Time_JR00124062-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5200,9 +5354,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stellar-Chance-F9/Research-Specialist-A-B_JR00124659-1",
-   "count": 4
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5220,7 +5375,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-FL11/Research-Specialist-B_JR00120268",
-   "count": 4
+   "count": 4,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5238,7 +5394,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Med-Sch-Richards-Building---7th-Floor/Research-Specialist-B--Department-of-Neurosurgery-_JR00098453-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5256,7 +5413,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2---12th-Floor/Research-Specialist-B--Department-of-Obstetrics-and-Gynecology-_JR00112802",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5272,9 +5430,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-B-C_JR00123438",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5292,7 +5451,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2---13th-Floor/Research-Specialist-B-C--Department-of-Obstetrics-and-Gynecology-_JR00121861",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5308,9 +5468,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-B-C-D_JR00124498",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5328,7 +5489,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-C_JR00121453-2",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5346,7 +5508,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-C--Department-of-Cancer-Biology-_JR00098258-1",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5364,7 +5527,8 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-D_JR00122770",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5380,9 +5544,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard---8th-Floor/Temporary-Research-Assistant_JR00125547-1",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5400,7 +5565,8 @@
    "intl": false,
    "posted": "2025-10-14",
    "url": "https://uscjobs.sc.edu/postings/196337",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5418,7 +5584,8 @@
    "intl": false,
    "posted": "2025-04-28",
    "url": "https://uscjobs.sc.edu/postings/186545",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5436,7 +5603,8 @@
    "intl": false,
    "posted": "2026-08-14",
    "url": "https://uscjobs.sc.edu/postings/211697",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5454,7 +5622,8 @@
    "intl": false,
    "posted": "2023-12-21",
    "url": "https://uscjobs.sc.edu/postings/161484",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5472,7 +5641,8 @@
    "intl": false,
    "posted": "2026-02-02",
    "url": "https://uscjobs.sc.edu/postings/201905",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5490,7 +5660,8 @@
    "intl": false,
    "posted": "2026-05-05",
    "url": "https://jobs.villanova.edu/postings/34903",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5508,7 +5679,8 @@
    "intl": false,
    "posted": "2026-04-16",
    "url": "https://jobs.villanova.edu/postings/34620",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5526,7 +5698,8 @@
    "intl": false,
    "posted": "2026-03-16",
    "url": "https://jobs.villanova.edu/postings/34133",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5544,7 +5717,8 @@
    "intl": false,
    "posted": "2026-03-16",
    "url": "https://jobs.villanova.edu/postings/34125",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5562,7 +5736,8 @@
    "intl": false,
    "posted": "2026-04-16",
    "url": "https://jobs.villanova.edu/postings/34621",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5580,7 +5755,8 @@
    "intl": false,
    "posted": "2026-08-19",
    "url": "https://jobs.villanova.edu/postings/36077",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5598,7 +5774,8 @@
    "intl": false,
    "posted": "2026-06-15",
    "url": "https://jobs.villanova.edu/postings/35358",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5616,7 +5793,8 @@
    "intl": false,
    "posted": "2026-06-15",
    "url": "https://jobs.villanova.edu/postings/35365",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5634,7 +5812,8 @@
    "intl": false,
    "posted": "2026-08-05",
    "url": "https://jobs.villanova.edu/postings/35936",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5652,7 +5831,8 @@
    "intl": false,
    "posted": "2026-03-16",
    "url": "https://jobs.villanova.edu/postings/34120",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5670,7 +5850,8 @@
    "intl": false,
    "posted": "2026-05-13",
    "url": "https://jobs.villanova.edu/postings/35024",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5688,7 +5869,8 @@
    "intl": false,
    "posted": "2026-04-21",
    "url": "https://jobs.villanova.edu/postings/34712",
-   "count": 1
+   "count": 1,
+   "first_seen": ""
   },
   {
    "score": 1,
@@ -5706,7 +5888,8 @@
    "intl": false,
    "posted": "2026-08-13",
    "url": "https://jobs.villanova.edu/postings/36010",
-   "count": 2
+   "count": 2,
+   "first_seen": ""
   }
  ]
 }
