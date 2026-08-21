@@ -1447,6 +1447,14 @@
           document.getElementById('manuallist').innerHTML = (d.manual || []).map(function (m) {
             return '<div class="manual-item"><b>' + esc(m.name) + '</b><span>' + esc(m.portal) + '</span></div>';
           }).join('');
+          // Browsers restore form state across a reload: the sort select can
+          // come back already reading "newest first" (and the search box can
+          // come back with text) while f still holds the defaults, leaving the
+          // controls lying about the list. Read the DOM before first paint.
+          // The location select needs no sync - rebuilding its options above
+          // just reset it to "all", which matches f.loc.
+          f.sort = sortSel.value;
+          f.q = qbox.value.trim().toLowerCase();
           applySort();
         })
         .catch(function (e) {
