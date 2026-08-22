@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-21 11:23 UTC",
+ "generated": "2026-08-21 16:23 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -9,7 +9,7 @@
   {
    "code": "MIA",
    "label": "South Florida",
-   "n": 65
+   "n": 66
   },
   {
    "code": "PHL",
@@ -22,19 +22,24 @@
    "n": 54
   },
   {
-   "code": "RDU",
-   "label": "Research Triangle NC",
-   "n": 31
-  },
-  {
    "code": "DC",
    "label": "Washington DC metro",
-   "n": 24
+   "n": 40
+  },
+  {
+   "code": "RDU",
+   "label": "Research Triangle NC",
+   "n": 32
   },
   {
    "code": "NYC",
    "label": "New York City area",
-   "n": 22
+   "n": 30
+  },
+  {
+   "code": "SEA",
+   "label": "Seattle",
+   "n": 20
   },
   {
    "code": "PIT",
@@ -54,12 +59,7 @@
   {
    "code": "SFO",
    "label": "SF Bay Area",
-   "n": 5
-  },
-  {
-   "code": "HAN",
-   "label": "Hanover NH",
-   "n": 4
+   "n": 6
   },
   {
    "code": "PVD",
@@ -67,9 +67,19 @@
    "n": 4
   },
   {
+   "code": "HAN",
+   "label": "Hanover NH",
+   "n": 3
+  },
+  {
    "code": "WMB",
    "label": "Williamsburg VA",
    "n": 2
+  },
+  {
+   "code": "AUS",
+   "label": "Austin TX",
+   "n": 1
   },
   {
    "code": "CHI",
@@ -77,70 +87,70 @@
    "n": 1
   },
   {
-   "code": "INTL",
-   "label": "Outside the US",
-   "n": 5
+   "code": "GNV",
+   "label": "Gainesville FL",
+   "n": 1
   },
   {
    "code": "USOTHER",
    "label": "Elsewhere in the US",
-   "n": 5
+   "n": 14
+  },
+  {
+   "code": "INTL",
+   "label": "Outside the US",
+   "n": 6
   }
  ],
- "openings": 457,
+ "openings": 520,
  "universities": 27,
- "swept": 56,
- "targets": 76,
+ "swept": 65,
+ "targets": 75,
  "manual": [
   {
    "name": "Westat",
    "branch": "applied-research",
-   "portal": "https://westat-jobs.westat.com/jobs.cfm  (custom ColdFusion portal)"
-  },
-  {
-   "name": "Abt Global",
-   "branch": "applied-research",
-   "portal": "https://egpy.fa.us2.oraclecloud.com/hcmUI/CandidateExperience/en/sites/JoinAbt/requisitions  (Oracle Cloud HCM)"
-  },
-  {
-   "name": "Urban Institute",
-   "branch": "applied-research",
-   "portal": "https://urban.wd1.myworkdayjobs.com/Urban-Careers  (Workday UI works in browser, cxs API returns 422 - needs manual check)"
+   "portal": "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=82&siteid=5197  (BrassRing; the old westat-jobs.westat.com portal is dead. The SPA's MatchedJobs API 500s without its JS-side session ritual, and headless renders capture the shell before data loads)"
   },
   {
    "name": "Mathematica",
    "branch": "applied-research",
-   "portal": "https://careers.mathematica.org/search-jobs  (Radancy)"
+   "portal": "https://careers.mathematica.org/search-jobs  (Radancy, but a JS-only build: no server-rendered tiles, empty sitemap, the results ajax endpoint returns HTML, and it serves headless Chrome an empty shell)"
   },
   {
    "name": "NORC at the University of Chicago",
    "branch": "applied-research",
-   "portal": "https://norc.jobs.net/jobs  (CareerBuilder)"
+   "portal": "https://norc.jobs.net/jobs  (CareerBuilder; Cloudflare blocks plain clients AND headless Chrome, so it cannot be swept)"
   },
   {
    "name": "MDRC",
    "branch": "applied-research",
-   "portal": "https://www.mdrc.org/about/careers  (custom)"
-  },
-  {
-   "name": "Behavioural Insights Team (BIT) North America",
-   "branch": "behavioral",
-   "portal": "unresolved - check bi.team/careers"
+   "portal": "https://www.mdrc.org/about/careers  (listings live behind a saashr portal that renders only a login page; the careers page is watched for changes instead)",
+   "watch": {
+    "url": "https://www.mdrc.org/about/careers",
+    "hash": "f2e730126ca223b4",
+    "last_changed": ""
+   }
   },
   {
    "name": "ideas42",
    "branch": "behavioral",
-   "portal": "unresolved - check ideas42.org/careers"
+   "portal": "https://www.ideas42.org/join-our-team/  (their Greenhouse board was taken down - likely no open roles; the page is watched for changes)",
+   "watch": {
+    "url": "https://www.ideas42.org/join-our-team/",
+    "hash": "500ba234a645d599",
+    "last_changed": ""
+   }
   },
   {
    "name": "Irrational Labs",
    "branch": "behavioral",
-   "portal": "unresolved - small team, check irrationallabs.com"
-  },
-  {
-   "name": "Capital One",
-   "branch": "behavioral",
-   "portal": "https://www.capitalonecareers.com/search-jobs  (proprietary)"
+   "portal": "https://irrationallabs.com/our-team/careers/  (no ATS; the page is watched for changes)",
+   "watch": {
+    "url": "https://irrationallabs.com/our-team/careers/",
+    "hash": "fa140372a2a5e87a",
+    "last_changed": ""
+   }
   },
   {
    "name": "Meta",
@@ -155,45 +165,191 @@
   {
    "name": "Microsoft",
    "branch": "uxr",
-   "portal": "https://jobs.careers.microsoft.com/global/en/search  (proprietary)"
-  },
-  {
-   "name": "Amazon",
-   "branch": "uxr",
-   "portal": "https://www.amazon.jobs/en/search  (proprietary)"
-  },
-  {
-   "name": "Intuit",
-   "branch": "uxr",
-   "portal": "https://jobs.intuit.com/search-jobs  (proprietary)"
-  },
-  {
-   "name": "User Interviews",
-   "branch": "research-tooling",
-   "portal": "unresolved - check userinterviews.com/careers"
-  },
-  {
-   "name": "UserTesting",
-   "branch": "research-tooling",
-   "portal": "unresolved - check usertesting.com/company/careers"
-  },
-  {
-   "name": "Sago",
-   "branch": "research-tooling",
-   "portal": "unresolved - check sago.com/careers"
+   "portal": "https://jobs.careers.microsoft.com/global/en/search  (Eightfold under the hood, but a customized build - the standard pcsx endpoint returns HTML, and the old gcsservices API is decommissioned)"
   },
   {
    "name": "Technical Resources International",
    "branch": "clinical-regops",
-   "portal": "unresolved - lever/tri is Toyota Research Institute, NOT this company. Check tri-inc.com or NIH contractor boards."
-  },
-  {
-   "name": "Emmes",
-   "branch": "clinical-regops",
-   "portal": "unresolved - check emmes.com/careers"
+   "portal": "https://www.tech-res.com/about-tri/careers.html  (no ATS feed on the page - it is watched for changes; lever/tri is Toyota Research Institute, NOT this company)",
+   "watch": {
+    "url": "https://www.tech-res.com/about-tri/careers.html",
+    "hash": "51f88e5bc40a0ca2",
+    "last_changed": ""
+   }
   }
  ],
  "jobs": [
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Researcher, LATCANZ, Amazon Studios Consumer Insights",
+   "location": "Miami, Florida, USA",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-29",
+   "url": "https://www.amazon.jobs/en/jobs/10487493/researcher-latcanz-amazon-studios-consumer-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Manager, UX Research, Amazon Delivery Experience",
+   "location": "Bellevue, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-15",
+   "url": "https://www.amazon.jobs/en/jobs/10449315/senior-manager-ux-research-amazon-delivery-experience",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior UX Researcher, AWS Marketplace and Partner Services",
+   "location": "Arlington, Virginia, USA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-23",
+   "url": "https://www.amazon.jobs/en/jobs/10482909/senior-ux-researcher-aws-marketplace-and-partner-services",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior UX Researcher, Applied AI Solution",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-20",
+   "url": "https://www.amazon.jobs/en/jobs/10508495/senior-ux-researcher-applied-ai-solution",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior UX Researcher, Fauna",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-15",
+   "url": "https://www.amazon.jobs/en/jobs/10503151/senior-ux-researcher-fauna",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr. Consumer insights manager, XCM, XCM Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-31",
+   "url": "https://www.amazon.jobs/en/jobs/10489317/sr-consumer-insights-manager-xcm-xcm-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr. UX Researcher, AFT - Experience Design",
+   "location": "Austin, Texas, USA",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "AUS"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-11",
+   "url": "https://www.amazon.jobs/en/jobs/10499121/sr-ux-researcher-aft-experience-design",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr. UX Researcher, Amazon Delivery Customer Experiences",
+   "location": "Bellevue, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-30",
+   "url": "https://www.amazon.jobs/en/jobs/10463052/sr-ux-researcher-amazon-delivery-customer-experiences",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "UX Researcher II, Global Procurement Technology",
+   "location": "Bellevue, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-28",
+   "url": "https://www.amazon.jobs/en/jobs/10433838/ux-researcher-ii-global-procurement-technology",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
   {
    "score": 2,
    "employer": "Brown University",
@@ -348,25 +504,6 @@
   },
   {
    "score": 2,
-   "employer": "Dartmouth College",
-   "branch": "university",
-   "title": "Research Coordinator",
-   "location": "Hanover, NH",
-   "states": [
-    "NH"
-   ],
-   "metros": [
-    "HAN"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "2026-06-29",
-   "url": "https://searchjobs.dartmouth.edu/postings/86336",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
    "employer": "Duke University",
    "branch": "university",
    "title": "Clinical Research Coordinator",
@@ -440,6 +577,63 @@
    "url": "https://careers.duke.edu/job/Durham-Policy-Research-Associate-Duke-Margolis-Institute-for-Health-Policy-%28Washington-DC-or-Durham-NC%29-NC-27710/1410200200/",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "Emmes",
+   "branch": "clinical-regops",
+   "title": "Clinical Research Associate II",
+   "location": "Rockville, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://careers.emmes.com/jobs/3371?lang=en-us",
+   "count": 2,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Emmes",
+   "branch": "clinical-regops",
+   "title": "Clinical Research Associate II- Government Sector",
+   "location": "Rockville, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-05",
+   "url": "https://careers.emmes.com/jobs/3443?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Emmes",
+   "branch": "clinical-regops",
+   "title": "Sr. Clinical Research Associate",
+   "location": "Rockville, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://careers.emmes.com/jobs/3372?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 2,
@@ -708,6 +902,44 @@
    "url": "https://instacart.careers/job/?gh_jid=8141483",
    "count": 2,
    "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "Intuit",
+   "branch": "uxr",
+   "title": "Lead Partner Decision Scientist - Credit Karma",
+   "location": "Charlotte, North Carolina",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://jobs.intuit.com/job/charlotte/lead-partner-decision-scientist-credit-karma/27595/98769216048",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
+   "employer": "Intuit",
+   "branch": "uxr",
+   "title": "Senior AI Scientist \u2014 Credit Karma (Partner Decision Science)",
+   "location": "Charlotte, North Carolina",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://jobs.intuit.com/job/charlotte/senior-ai-scientist-credit-karma-partner-decision-science/27595/97881292096",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 2,
@@ -1662,7 +1894,7 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1_R100084642",
-   "count": 14,
+   "count": 13,
    "first_seen": ""
   },
   {
@@ -1757,7 +1989,7 @@
    "intl": false,
    "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2_R100099479",
-   "count": 14,
+   "count": 15,
    "first_seen": ""
   },
   {
@@ -3035,6 +3267,25 @@
   },
   {
    "score": 2,
+   "employer": "Urban Institute",
+   "branch": "applied-research",
+   "title": "Senior Research Associate (Higher Education & Workforce)",
+   "location": "The Urban Institute (DC)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Senior-Research-Associate--Higher-Education---Workforce-_R-801646",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 2,
    "employer": "William & Mary",
    "branch": "university",
    "title": "Prospect Research Analyst",
@@ -3111,6 +3362,538 @@
   },
   {
    "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Applied Scientist, AWS Insights & Optimization",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-09",
+   "url": "https://www.amazon.jobs/en/jobs/10415438/applied-scientist-aws-insights-optimization",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Consultant, Analytics & Insights, Analytics & Insights",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-16",
+   "url": "https://www.amazon.jobs/en/jobs/10476629/consultant-analytics-insights-analytics-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Content Insights & Analytics, Global Film Acquisitions",
+   "location": "Culver City, California, USA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://www.amazon.jobs/en/jobs/10477232/content-insights-analytics-global-film-acquisitions",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Designer, Reputation Marketing & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-10",
+   "url": "https://www.amazon.jobs/en/jobs/10445185/designer-reputation-marketing-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Finance Manager, AI & Automation, Corporate FP&A-Planning & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://www.amazon.jobs/en/jobs/10456914/finance-manager-ai-automation-corporate-fp-a-planning-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Finance Manager, Corporate FP&A-Planning & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-07",
+   "url": "https://www.amazon.jobs/en/jobs/10468093/finance-manager-corporate-fp-a-planning-insights",
+   "count": 2,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Finance Manager, Process Transformation, Corporate FP&A-Planning & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://www.amazon.jobs/en/jobs/10456917/finance-manager-process-transformation-corporate-fp-a-planning-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Finance Manager, Strategic Business Partnering, Corporate FP&A-Planning & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://www.amazon.jobs/en/jobs/10456912/finance-manager-strategic-business-partnering-corporate-fp-a-planning-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "HR Specialist - Research Intelligence & Strategic Insights, ER Strategy, Policy, GOEX",
+   "location": "Arlington, Virginia, USA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-10",
+   "url": "https://www.amazon.jobs/en/jobs/10470967/hr-specialist-research-intelligence-strategic-insights-er-strategy-policy-goex",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Media Manager, Reputation Marketing & Insights",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-04",
+   "url": "https://www.amazon.jobs/en/jobs/10410176/media-manager-reputation-marketing-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Performance Ops Specialist\u00a0II, Delivery Feedback and Insights ",
+   "location": "Nashville, Tennessee, USA",
+   "states": [
+    "TN"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-04-23",
+   "url": "https://www.amazon.jobs/en/jobs/10401388/performance-ops-specialist-ii-delivery-feedback-and-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Product & Customer Experience Insights Manager, Customer Experience and Business Trends ",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-09",
+   "url": "https://www.amazon.jobs/en/jobs/10470185/product-customer-experience-insights-manager-customer-experience-and-business-trends",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Product Manager - Creative, Reputation Marketing & Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-04",
+   "url": "https://www.amazon.jobs/en/jobs/10491998/product-manager-creative-reputation-marketing-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Product Manager III - Tech, Reputation Marketing & Insights",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-21",
+   "url": "https://www.amazon.jobs/en/jobs/10480474/product-manager-iii-tech-reputation-marketing-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Product Manager, Reputation Marketing & Insights",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-08",
+   "url": "https://www.amazon.jobs/en/jobs/10442507/product-manager-reputation-marketing-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Program Manager, Customer Experience and Insights Team",
+   "location": "Hawthorne, California, USA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-06",
+   "url": "https://www.amazon.jobs/en/jobs/10412060/program-manager-customer-experience-and-insights-team",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Program Manager, Global Delivery Feedback and Insights",
+   "location": "Nashville, Tennessee, USA",
+   "states": [
+    "TN"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-13",
+   "url": "https://www.amazon.jobs/en/jobs/10471951/program-manager-global-delivery-feedback-and-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Quality Insights Manager, Ring Blink Customer Support Quality Assurance (CSQA) team",
+   "location": "Hawthorne, California, USA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-02-04",
+   "url": "https://www.amazon.jobs/en/jobs/3174327/quality-insights-manager-ring-blink-customer-support-quality-assurance-csqa-team",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Financial Analyst, Inbound Finance Insights, Analytics and Automation",
+   "location": "Bellevue, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-02-09",
+   "url": "https://www.amazon.jobs/en/jobs/3177398/senior-financial-analyst-inbound-finance-insights-analytics-and-automation",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior PMT-ES, AWS FinOps Agent, AWS Insights and Optimizations",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-06",
+   "url": "https://www.amazon.jobs/en/jobs/10495384/senior-pmt-es-aws-finops-agent-aws-insights-and-optimizations",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Product Manager - Tech, AI Cost Governance, AWS Insights and Optimizations",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-13",
+   "url": "https://www.amazon.jobs/en/jobs/10501144/senior-product-manager-tech-ai-cost-governance-aws-insights-and-optimizations",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Product Manager - Tech, Private Pricing Programs, Analytics & Insights",
+   "location": "Arlington, Virginia, USA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-03-27",
+   "url": "https://www.amazon.jobs/en/jobs/10378323/senior-product-manager-tech-private-pricing-programs-analytics-insights",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Program Manager, Selling Partner Satisfaction & Strategic Insights",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-04-30",
+   "url": "https://www.amazon.jobs/en/jobs/10407813/senior-program-manager-selling-partner-satisfaction-strategic-insights",
+   "count": 2,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Senior Research Scientist, Survey Methods, Amazonian Leadership Experience",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-26",
+   "url": "https://www.amazon.jobs/en/jobs/10430445/senior-research-scientist-survey-methods-amazonian-leadership-experience",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr Manager, PMT-ES, AWS FinOps Agent, AWS Insights and Optimizations",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-14",
+   "url": "https://www.amazon.jobs/en/jobs/10474655/sr-manager-pmt-es-aws-finops-agent-aws-insights-and-optimizations",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr. Cultural Researcher, Futures Insights, Devices Experience Design ",
+   "location": "New York, New York, USA",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-04",
+   "url": "https://www.amazon.jobs/en/jobs/10491875/sr-cultural-researcher-futures-insights-devices-experience-design",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Sr. Product & Customer Experience Insights Manager, Customer Experience and Business Trends",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-18",
+   "url": "https://www.amazon.jobs/en/jobs/10506280/sr-product-customer-experience-insights-manager-customer-experience-and-business-trends",
+   "count": 2,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
+   "title": "Workforce Insights Strategist, Career Choice",
+   "location": "Seattle, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-30",
+   "url": "https://www.amazon.jobs/en/jobs/10462981/workforce-insights-strategist-career-choice",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
    "employer": "American Institutes for Research (AIR)",
    "branch": "applied-research",
    "title": "Research Assistant, Learning Supports",
@@ -3166,6 +3949,215 @@
    "url": "https://brandeis.wd5.myworkdayjobs.com/Jobs/job/Brandeis---Waltham-Campus/Temporary-Research-Assistant_R0013261-1",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Business Manager - Insights & Analytics (ERM)",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 18 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager---Insights---Analytics--ERM-_R248272-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Business Manager - Modeling and Advanced Data Insights",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager---Modeling-and-Advanced-Data-Insights_R247494-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Business Manager, Insights & Strategic Projects | Capital One Business Travel",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 7 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager--Marketing---Best-Customer---Field-Assessment--COBT_R248415-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Capital One Insights Center Communications Lead, Public Affairs Manager",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 16 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Manager--Public-Affairs_R248485-2",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Manager, Quantitative Analysis - Model Risk Office",
+   "location": "New York, NY",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/New-York-NY/Manager--Quantitative-Analysis---Model-Risk-Office_R238220-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Senior Associate, Quantitative Analyst - Commercial Credit Modeling Team",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Associate--Quantitative-Analyst---Commercial-Credit-Modeling-Team_R236369",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Senior Associate, Quantitative Analyst - Model Risk Office",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Yesterday",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Riverwoods-IL/Senior-Associate--Quantitative-Analyst---Model-Risk-Office_R249475-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Senior Business Analyst - Insights & Analytics (ERM)",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 18 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Business-Analyst---Insights---Analytics--ERM-_R248206-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Senior Insights and Outcomes Specialist",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Yesterday",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Nottingham--Eng/Insights-and-Outcomes-Specialist_R246077-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Senior Manager, Quantitative Analysis - Model Risk Office",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Yesterday",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Manager--Quantitative-Analysis---Model-Risk-Office_R249476-1",
+   "count": 2,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Capital One",
+   "branch": "behavioral",
+   "title": "Sr. Risk Associate - Modeling and Advanced Data Insights",
+   "location": "McLean, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 4 Days Ago",
+   "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Richmond-VA/Sr-Risk-Associate---Modeling-and-Advanced-Data-Insights_R247090-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 1,
@@ -3354,44 +4346,6 @@
    "intl": false,
    "posted": "Posted 17 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Lab-Manager_JR26725",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Georgetown University",
-   "branch": "university",
-   "title": "Research Assistant, Thrive Center for Children, Families, and Communities",
-   "location": "2115 Wisconsin Ave 6th Floor",
-   "states": [
-    "WI"
-   ],
-   "metros": [
-    "USOTHER"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 7 Days Ago",
-   "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/2115-Wisconsin-Ave-6th-Floor/Research-Assistant--Thrive-Center-for-Children-and-Families_JR26957",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Georgetown University",
-   "branch": "university",
-   "title": "Research Specialist 2, Thrive Center for Children, Families, and Communities",
-   "location": "2115 Wisconsin Ave 6th Floor",
-   "states": [
-    "WI"
-   ],
-   "metros": [
-    "USOTHER"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 7 Days Ago",
-   "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/2115-Wisconsin-Ave-6th-Floor/Research-Specialist-2--Thrive-Center-for-Children--Families--and-Communities_JR26959",
    "count": 1,
    "first_seen": ""
   },
@@ -3645,6 +4599,25 @@
   },
   {
    "score": 1,
+   "employer": "Intuit",
+   "branch": "uxr",
+   "title": "Consumer Group Expert Services Operations - Insights & Analytics",
+   "location": "Mountain View, CA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "SFO"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://jobs.intuit.com/job/san-diego/consumer-group-expert-services-operations-insights-and-analytics/27595/99196653936",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
    "employer": "Johns Hopkins University",
    "branch": "university",
    "title": "Clinical Research Assistant (Pulmonary)",
@@ -3811,7 +4784,7 @@
    "intl": false,
    "posted": "2026-08-14",
    "url": "https://hiring.jhu.edu/careers/job/1133914505402",
-   "count": 3,
+   "count": 2,
    "first_seen": ""
   },
   {
@@ -4736,6 +5709,25 @@
    "score": 1,
    "employer": "UNC Chapel Hill",
    "branch": "university",
+   "title": "Research Specialist-Sheikh",
+   "location": "Chapel Hill, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-21",
+   "url": "https://unc.peopleadmin.com/postings/324309",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "UNC Chapel Hill",
+   "branch": "university",
    "title": "Research Study Coordinator",
    "location": "Chapel Hill, NC",
    "states": [
@@ -4845,6 +5837,25 @@
    "url": "https://unc.peopleadmin.com/postings/324286",
    "count": 2,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Florida",
+   "branch": "university",
+   "title": "Federal Work Study - Transfer Evaluation Student Assistant (Enrollment Management)",
+   "location": "Gainesville, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "GNV"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "",
+   "url": "https://explore.jobs.ufl.edu/en-us/job/540932/federal-work-study-transfer-evaluation-student-assistant-enrollment-management",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 1,
@@ -5375,7 +6386,7 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-FL11/Research-Specialist-B_JR00120268",
-   "count": 4,
+   "count": 5,
    "first_seen": ""
   },
   {
@@ -5643,6 +6654,82 @@
    "url": "https://uscjobs.sc.edu/postings/201905",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "Urban Institute",
+   "branch": "applied-research",
+   "title": "Research Assistant (Housing and Communities Division)",
+   "location": "The Urban Institute (DC)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 16 Days Ago",
+   "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant--Housing-and-Communities-Division-_R-801650",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Urban Institute",
+   "branch": "applied-research",
+   "title": "Research Assistant (Justice Policy Center)",
+   "location": "The Urban Institute (DC)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 16 Days Ago",
+   "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant--Justice-Policy-Center-_R-801653-1",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "Urban Institute",
+   "branch": "applied-research",
+   "title": "Research Assistant \u2013 Quantitative (Health, Income, and Benefits Policy Division)",
+   "location": "The Urban Institute (DC)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant---Quantitative--Health--Income--and-Benefits-Policy-Division-_R-801655",
+   "count": 1,
+   "first_seen": "2026-08-21"
+  },
+  {
+   "score": 1,
+   "employer": "UserTesting",
+   "branch": "research-tooling",
+   "title": "Insights Partner (French Speaking)",
+   "location": "United Kingdom",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 9 Days Ago",
+   "url": "https://usertesting.wd12.myworkdayjobs.com/UserTesting/job/United-Kingdom/Insights-Partner--French-Speaking-_R-101226",
+   "count": 1,
+   "first_seen": "2026-08-21"
   },
   {
    "score": 1,

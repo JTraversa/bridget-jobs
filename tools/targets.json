@@ -4,7 +4,7 @@
     "name": "Westat",
     "careers_url": "",
     "note": "Rockville MD. Survey/eval research. Closest thing to her current job outside a university.",
-    "portal": "https://westat-jobs.westat.com/jobs.cfm  (custom ColdFusion portal; WAF 503s every non-browser client, so it cannot be swept)"
+    "portal": "https://sjobs.brassring.com/TGnewUI/Search/Home/Home?partnerid=82&siteid=5197  (BrassRing; the old westat-jobs.westat.com portal is dead. The SPA's MatchedJobs API 500s without its JS-side session ritual, and headless renders capture the shell before data loads)"
   },
   {
     "branch": "applied-research",
@@ -37,7 +37,7 @@
     "name": "Mathematica",
     "careers_url": "",
     "note": "DC + Princeton. Strong remote posture.",
-    "portal": "https://careers.mathematica.org/search-jobs  (Radancy, but a JS-only build: no server-rendered tiles, empty sitemap, and the results ajax endpoint returns HTML instead of JSON)"
+    "portal": "https://careers.mathematica.org/search-jobs  (Radancy, but a JS-only build: no server-rendered tiles, empty sitemap, the results ajax endpoint returns HTML, and it serves headless Chrome an empty shell)"
   },
   {
     "branch": "applied-research",
@@ -50,7 +50,7 @@
     "name": "NORC at the University of Chicago",
     "careers_url": "",
     "note": "Chicago HQ + DC office.",
-    "portal": "https://norc.jobs.net/jobs  (CareerBuilder; WAF 403s every non-browser client, so it cannot be swept)"
+    "portal": "https://norc.jobs.net/jobs  (CareerBuilder; Cloudflare blocks plain clients AND headless Chrome, so it cannot be swept)"
   },
   {
     "branch": "applied-research",
@@ -62,8 +62,9 @@
     "branch": "applied-research",
     "name": "MDRC",
     "careers_url": "",
+    "watch_url": "https://www.mdrc.org/about/careers",
     "note": "NYC + Oakland.",
-    "portal": "https://www.mdrc.org/about/careers  (custom)"
+    "portal": "https://www.mdrc.org/about/careers  (listings live behind a saashr portal that renders only a login page; the careers page is watched for changes instead)"
   },
   {
     "branch": "behavioral",
@@ -78,15 +79,17 @@
     "branch": "behavioral",
     "name": "ideas42",
     "careers_url": "",
+    "watch_url": "https://www.ideas42.org/join-our-team/",
     "note": "Behavioral design nonprofit, remote-friendly.",
-    "portal": "https://www.ideas42.org/join-our-team/  (their Greenhouse board was taken down - likely no open roles; the page invites resume drops)"
+    "portal": "https://www.ideas42.org/join-our-team/  (their Greenhouse board was taken down - likely no open roles; the page is watched for changes)"
   },
   {
     "branch": "behavioral",
     "name": "Irrational Labs",
     "careers_url": "",
+    "watch_url": "https://irrationallabs.com/our-team/careers/",
     "note": "Small, behavioral econ consultancy. Her Smith School work is literally this.",
-    "portal": "unresolved - small team, check irrationallabs.com"
+    "portal": "https://irrationallabs.com/our-team/careers/  (no ATS; the page is watched for changes)"
   },
   {
     "branch": "behavioral",
@@ -174,15 +177,18 @@
     "branch": "clinical-regops",
     "name": "Technical Resources International",
     "careers_url": "",
+    "watch_url": "https://www.tech-res.com/about-tri/careers.html",
     "note": "Her former employer, Bethesda. Warm re-entry if the regulatory path appeals.",
-    "portal": "https://www.tech-res.com/about-tri/careers.html  (no ATS feed found on the page; lever/tri is Toyota Research Institute, NOT this company)"
+    "portal": "https://www.tech-res.com/about-tri/careers.html  (no ATS feed on the page - it is watched for changes; lever/tri is Toyota Research Institute, NOT this company)"
   },
   {
     "branch": "clinical-regops",
     "name": "Emmes",
-    "careers_url": "",
-    "note": "Rockville MD. NIH clinical trial support, eTMF-heavy.",
-    "portal": "https://theemmesgroup.com/join-us  (rebranded The Emmes Group; emmes.com/careers redirects there, JS-rendered with no feed found)"
+    "ats": "jibe",
+    "careers_url": "https://careers.emmes.com/uscareers/jobs",
+    "base": "https://careers.emmes.com",
+    "location": "Rockville, MD",
+    "note": "Rockville MD. NIH clinical trial support, eTMF-heavy. Jibe front over iCIMS; /api/jobs is a clean JSON feed."
   },
   {
     "branch": "applied-research",

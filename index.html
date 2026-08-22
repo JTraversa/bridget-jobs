@@ -24,15 +24,15 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Research Jobs Board">
   <meta property="og:title" content="Soon to be unemployed? Absolutely Fucked?">
-  <meta property="og:description" content="I hope this might help a smidge. 517 open research roles, already filtered, from 64 employer job feeds across 27 universities and 16 metros.">
+  <meta property="og:description" content="I hope this might help a smidge. 520 open research roles, already filtered, from 65 employer job feeds across 27 universities and 17 metros.">
   <meta property="og:url" content="https://bridget-jobs.vercel.app/">
   <meta property="og:image" content="https://bridget-jobs.vercel.app/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Soon to be unemployed? Absolutely Fucked? 517 open roles, 64 employers, 27 universities, 16 metros.">
+  <meta property="og:image:alt" content="Soon to be unemployed? Absolutely Fucked? 520 open roles, 65 employers, 27 universities, 17 metros.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soon to be unemployed? Absolutely Fucked?">
-  <meta name="twitter:description" content="I hope this might help a smidge. 517 open research roles, already filtered.">
+  <meta name="twitter:description" content="I hope this might help a smidge. 520 open research roles, already filtered.">
   <meta name="twitter:image" content="https://bridget-jobs.vercel.app/og.png">
 
   <style>
@@ -1445,7 +1445,17 @@
               return '<option value="' + esc(L.code) + '">' + esc(L.label) + ' (' + L.n + ')</option>';
             }).join('');
           document.getElementById('manuallist').innerHTML = (d.manual || []).map(function (m) {
-            return '<div class="manual-item"><b>' + esc(m.name) + '</b><span>' + esc(m.portal) + '</span></div>';
+            // Watched employers get a badge for two weeks after their careers
+            // page changes, so "check by hand" only costs attention when
+            // something actually moved.
+            var badge = '';
+            if (m.watch && m.watch.last_changed) {
+              var wDays = Math.floor((Date.now() - Date.parse(m.watch.last_changed)) / 864e5);
+              if (wDays >= 0 && wDays <= 14)
+                badge = ' <span class="pill p-new" title="Careers page changed ' +
+                  esc(m.watch.last_changed) + '">Page changed</span>';
+            }
+            return '<div class="manual-item"><b>' + esc(m.name) + badge + '</b><span>' + esc(m.portal) + '</span></div>';
           }).join('');
           // Browsers restore form state across a reload: the sort select can
           // come back already reading "newest first" (and the search box can

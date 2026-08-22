@@ -20,6 +20,7 @@ Stdlib only, no pip install.
 import argparse
 from datetime import datetime, timezone
 import csv
+import hashlib
 import html
 import json
 import os
@@ -339,6 +340,8 @@ def pull_htmljobs(t):
         try:
             page_html = getter(u)   # NOT named "html" - that shadows the module
         except Exception:
+            if page == 0:
+                raise   # first page failing = source down; let main() carry prev rows
             break
         found = rx.findall(page_html)
         if not found:
@@ -415,11 +418,14 @@ def pull_amazonjobs(t, _retry=True):
             time.sleep(1.2)
         time.sleep(1.0)
     # All ten terms coming back empty is throttling, never reality - one
-    # slower second pass usually gets through.
+    # slower second pass usually gets through, and if it also comes back dry,
+    # raising lets main() carry the previous sweep's rows forward.
     if not out and _retry:
         print("    ! amazon returned nothing across all terms, retrying once", file=sys.stderr)
         time.sleep(20)
         return pull_amazonjobs(t, _retry=False)
+    if not out:
+        raise RuntimeError("empty across all terms even after retry (throttled?)")
     return out
 
 
@@ -467,6 +473,8 @@ def pull_radancy(t):
         try:
             d = fetch(u, headers={"X-Requested-With": "XMLHttpRequest"})
         except Exception:
+            if page == 1:
+                raise   # first page failing = source down; let main() carry prev rows
             break
         tiles = d.get("results", "")
         rows = re.findall(r'<a[^>]+href="(/job/[^"]+)"[^>]*>([\s\S]{0,500}?)</a>', tiles)
@@ -488,6 +496,38 @@ def pull_radancy(t):
         if not new:
             break
         time.sleep(0.5)
+    return out
+
+
+def pull_jibe(t):
+    """Jibe / iCIMS-Attract career sites (careers.emmes.com): a clean paged
+    JSON API at {base}/api/jobs, 10 per page. US-only, same reasoning as the
+    Amazon puller. Needs "base" on the target."""
+    base = t["base"]
+    out, page, seen_count = [], 1, 0
+    while page < 40:
+        d = fetch(f"{base}/api/jobs?page={page}")
+        jobs = d.get("jobs") or []
+        if not jobs:
+            break
+        seen_count += len(jobs)
+        for w in jobs:
+            j = w.get("data", w)
+            if (j.get("country_code") or "US") != "US":
+                continue
+            loc = (j.get("full_location") or ", ".join(
+                x for x in (j.get("city"), j.get("state")) if x))
+            out.append({
+                "title": j.get("title", ""),
+                # full_location doubles multi-site strings; first segment is enough
+                "location": loc.split(";")[0].strip(),
+                "url": (j.get("meta_data") or {}).get("canonical_url") or j.get("apply_url", ""),
+                "posted": (j.get("posted_date") or j.get("create_date") or "")[:10],
+            })
+        if seen_count >= (d.get("totalCount") or 0):
+            break
+        page += 1
+        time.sleep(0.4)
     return out
 
 
@@ -541,6 +581,7 @@ PULLERS = {
     "workable": pull_workable,
     "radancy": pull_radancy,
     "oraclecloud": pull_oraclecloud,
+    "jibe": pull_jibe,
 }
 
 
@@ -694,6 +735,43 @@ def score(title):
     return 0
 
 
+def page_fingerprint(url):
+    """Text-only hash of a page, so markup noise (nonces, cache-busters) does
+    not read as a content change."""
+    raw = _html(url)
+    text = re.sub(r"<script[\s\S]*?</script>|<style[\s\S]*?</style>", " ", raw)
+    text = re.sub(r"\s+", " ", re.sub(r"<[^>]+>", " ", text)).strip().lower()
+    return hashlib.sha256(text.encode()).hexdigest()[:16]
+
+
+def build_manual(targets, prev_payload, today):
+    """The check-by-hand list. Boardless employers with a watch_url also get a
+    change watch: hash the page each sweep, record when it last changed, and
+    the board badges recently-changed ones - "check by hand weekly" becomes
+    "check when poked"."""
+    prev_watch = {m.get("name"): m.get("watch") or {}
+                  for m in prev_payload.get("manual", [])}
+    out = []
+    for t in targets:
+        if t.get("careers_url") or not t.get("portal"):
+            continue
+        entry = {"name": t["name"], "branch": t.get("branch", ""), "portal": t["portal"]}
+        if t.get("watch_url"):
+            pw = prev_watch.get(t["name"], {})
+            w = {"url": t["watch_url"]}
+            try:
+                w["hash"] = page_fingerprint(t["watch_url"])
+                w["last_changed"] = (today if pw.get("hash") and w["hash"] != pw["hash"]
+                                     else pw.get("last_changed", ""))
+            except Exception as e:
+                print(f"    ! watch fetch failed for {t['name']}: {e}", file=sys.stderr)
+                w["hash"] = pw.get("hash", "")
+                w["last_changed"] = pw.get("last_changed", "")
+            entry["watch"] = w
+        out.append(entry)
+    return out
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--branch", help="only sweep targets in this branch")
@@ -704,7 +782,7 @@ def main():
     if args.branch:
         targets = [t for t in targets if t.get("branch") == args.branch]
 
-    rows, skipped = [], []
+    rows, skipped, failed = [], [], []
     for t in targets:
         name, careers = t["name"], t.get("careers_url", "").strip()
         if not careers:
@@ -731,6 +809,7 @@ def main():
             jobs = PULLERS[info["ats"]](info)
         except Exception as e:
             skipped.append((name, f"fetch failed: {e}"))
+            failed.append(name)
             continue
 
         kept = 0
@@ -785,6 +864,30 @@ def main():
             g["location"] = f"{locs[0]} +{len(locs) - 1} more"
         rows.append(g)
 
+    # The previous sweep's output backs three things below: stale-row
+    # carry-forward, first_seen stamps, and the manual-page change watcher.
+    try:
+        prev_payload = json.loads((ROOT / "jobs.json").read_text(encoding="utf-8"))
+    except Exception:
+        prev_payload = {}
+    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+
+    # A source that errors mid-sweep should not vaporize its listings until it
+    # recovers (browser-tier and WAF-fronted sources especially can fail from
+    # one network but not another). Carry the failed employers' previous rows
+    # forward, marked stale so the data is honest about its age.
+    if failed:
+        failed_set = set(failed)
+        carried = 0
+        for pj in prev_payload.get("jobs", []):
+            if pj.get("employer") in failed_set:
+                pj = dict(pj)
+                pj["stale"] = True
+                rows.append(pj)
+                carried += 1
+        if carried:
+            print(f"  carried {carried} stale rows forward for: {', '.join(sorted(failed_set))}")
+
     # "First seen" survives across sweeps: carry the date forward from the
     # previous jobs.json, stamp today on rows that were not there last time.
     # Keyed by employer+title (the dedup key) rather than URL, because a grouped
@@ -793,14 +896,8 @@ def main():
     # the board never badges the whole backlog as new on the first run.
     def seen_key(r):
         return r["employer"] + "\t" + r["title"].strip().lower()
-    prev_seen = {}
-    try:
-        prev = json.loads((ROOT / "jobs.json").read_text(encoding="utf-8"))
-        for j in prev.get("jobs", []):
-            prev_seen[seen_key(j)] = j.get("first_seen", "")
-    except Exception:
-        pass
-    today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
+    prev_seen = {seen_key(j): j.get("first_seen", "")
+                 for j in prev_payload.get("jobs", [])}
     for r in rows:
         k = seen_key(r)
         r["first_seen"] = prev_seen[k] if k in prev_seen else today
@@ -857,10 +954,7 @@ def main():
                                 if t.get("branch") == "university" and t.get("careers_url")),
             "swept": sum(1 for t in targets if t.get("careers_url")),
             "targets": len(targets),
-            "manual": [
-                {"name": t["name"], "branch": t.get("branch", ""), "portal": t["portal"]}
-                for t in targets if not t.get("careers_url") and t.get("portal")
-            ],
+            "manual": build_manual(targets, prev_payload, today),
             "jobs": rows,
         }
         (ROOT / "jobs.json").write_text(json.dumps(payload, indent=1), encoding="utf-8")

@@ -14,7 +14,7 @@ jobs.json       generated data the page fetches at load
 vercel.json     noindex headers
 tools/
   sweep.py      pulls every employer feed -> writes ../jobs.json
-  targets.json  the employer list (75 employers, 64 with machine-readable feeds)
+  targets.json  the employer list (75 employers, 65 with machine-readable feeds)
   discover_ats.py  helper for working out which ATS a new employer uses
 docs/
   where-to-look.md   the ranked source guide, same content as the second tab
@@ -102,8 +102,10 @@ Add an entry to `tools/targets.json`:
 (`apply.workable.com/{account}`), Oracle Recruiting Cloud (a
 `.../CandidateExperience/en/sites/{site}/requisitions` URL) and PeopleAdmin
 (`/postings/search.atom`). For anything else, set `"ats"` explicitly to
-`eightfold`, `htmljobs`, `amazonjobs` or `radancy` — see the Johns Hopkins,
-Duke, Harvard, Amazon and Intuit entries for worked examples.
+`eightfold`, `htmljobs`, `amazonjobs`, `radancy` or `jibe` — see the Johns
+Hopkins, Duke, Harvard, Amazon, Intuit and Emmes entries for worked examples.
+An employer with no feed at all can still set `"watch_url"` to get its careers
+page change-watched (see ideas42).
 
 `location` is the campus city, used as a fallback when a feed returns a building
 name instead of geography (Brown reports "164 Angell Street", Georgetown reports
@@ -114,13 +116,25 @@ extracts ATS links.
 
 ## Known limits
 
-- **11 of 75 employers have no machine-readable feed** and are listed in the
+- **10 of 75 employers have no machine-readable feed** and are listed in the
   "Check these by hand" section on the page. Several are strong-fit employers
-  (Westat, Mathematica, NORC), so that section is not optional. Westat and NORC
-  are WAF-blocked (503/403 for anything that is not a browser); Mathematica,
-  MDRC, Emmes, Meta, Google and Microsoft are JS-only or custom builds with no
-  reachable feed; ideas42, Irrational Labs and TRI have no ATS board at all.
-  The per-entry `portal` notes in `targets.json` record what was tried.
+  (Westat, Mathematica, NORC), so that section is not optional. Westat's
+  BrassRing SPA, NORC's Cloudflare, and Mathematica's headless-hostile Radancy
+  build resist both plain fetches and rendered Chrome; Meta, Google, Microsoft
+  and MDRC are custom/JS-only with no reachable feed. The per-entry `portal`
+  notes in `targets.json` record exactly what was tried, so nobody re-derives
+  a dead end.
+- **Boardless employers are watched, not scraped.** Targets with a `watch_url`
+  (ideas42, Irrational Labs, TRI, MDRC) get their careers page text hashed
+  each sweep; when the hash moves, the board badges that entry "Page changed"
+  for two weeks. A `render_html()` helper (headless Chrome `--dump-dom`, no
+  dependencies, `render: true` on an `htmljobs` target) exists for
+  WAF-fronted or JS-rendered boards, though every current candidate defeats
+  it in its own way.
+- **A source that errors mid-sweep keeps its previous rows.** Failed employers'
+  listings are carried forward from the last `jobs.json` with `"stale": true`
+  rather than vanishing, so one bad network day (or a WAF that hates the CI
+  runner's IP) cannot silently shrink the board.
 - Big research universities post the same requisition many times over, once per
   department. Identical employer+title rows are collapsed into one row carrying an
   "N openings" badge.
