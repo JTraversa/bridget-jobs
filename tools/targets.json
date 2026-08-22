@@ -67,6 +67,43 @@
     "portal": "https://www.mdrc.org/about/careers  (listings live behind a saashr portal that renders only a login page; the careers page is watched for changes instead)"
   },
   {
+    "branch": "applied-research",
+    "name": "Pew Research Center",
+    "careers_url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal",
+    "location": "Washington, DC",
+    "note": "DC. The Center's own Workday site (CenterExternal); the Trusts post separately on TrustsExternal."
+  },
+  {
+    "branch": "applied-research",
+    "name": "Kantar",
+    "careers_url": "https://kantar.wd3.myworkdayjobs.com/KANTAR",
+    "location": "New York, NY",
+    "note": "Global insights/market research giant; many US roles remote."
+  },
+  {
+    "branch": "applied-research",
+    "name": "Child Trends",
+    "careers_url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=70c1bbee-a65c-4b42-bb04-9dcb8a73868a&ccId=19000101_000001&lang=en_US",
+    "location": "Bethesda, MD",
+    "note": "Bethesda nonprofit child/family research. ADP WorkforceNow; the cid in the URL keys the public JSON API."
+  },
+  {
+    "branch": "applied-research",
+    "name": "Fors Marsh",
+    "careers_url": "",
+    "watch_url": "https://www.forsmarsh.com/join-us/",
+    "note": "Arlington VA applied research firm - survey research + UX, almost exactly her profile. Top-priority manual check.",
+    "portal": "https://www.forsmarsh.com/join-us/  (JS-only page, no ATS signature even rendered; watched for changes)"
+  },
+  {
+    "branch": "applied-research",
+    "name": "SSRS",
+    "careers_url": "",
+    "watch_url": "https://ssrs.com/careers/",
+    "note": "Survey research firm (Glen Mills PA, remote-friendly).",
+    "portal": "https://ssrs.com/careers/  (jobs listed on the page linking to ourcareerpages.com, but link text is just Apply Now - titles are unextractable, so the page is watched for changes)"
+  },
+  {
     "branch": "behavioral",
     "name": "Behavioural Insights Team (BIT) North America",
     "ats": "htmljobs",
@@ -174,6 +211,36 @@
     "note": "Market research panels. Workable account sago-group (found via the /j/ short links on sago.com/en/careers)."
   },
   {
+    "branch": "research-tooling",
+    "name": "Maze",
+    "careers_url": "https://jobs.ashbyhq.com/mazedesign",
+    "note": "Remote-first UX research platform."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Great Question",
+    "careers_url": "https://jobs.ashbyhq.com/greatquestion",
+    "note": "Remote UX research platform."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Rally",
+    "careers_url": "https://jobs.ashbyhq.com/rallyuxr",
+    "note": "UXR CRM (participant recruitment ops), remote. Board currently empty but they hire her exact titles."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Optimal Workshop",
+    "careers_url": "https://optimalworkshop.bamboohr.com/careers",
+    "note": "UX research tooling (NZ HQ, remote roles)."
+  },
+  {
+    "branch": "research-tooling",
+    "name": "Recollective",
+    "careers_url": "https://recollective.bamboohr.com/careers",
+    "note": "Qualitative research platform (Ottawa). Board currently empty."
+  },
+  {
     "branch": "clinical-regops",
     "name": "Technical Resources International",
     "careers_url": "",
@@ -189,6 +256,32 @@
     "base": "https://careers.emmes.com",
     "location": "Rockville, MD",
     "note": "Rockville MD. NIH clinical trial support, eTMF-heavy. Jibe front over iCIMS; /api/jobs is a clean JSON feed."
+  },
+  {
+    "branch": "clinical-regops",
+    "name": "Medpace",
+    "ats": "jibe",
+    "careers_url": "https://careers.medpace.com/jobs",
+    "base": "https://careers.medpace.com",
+    "location": "Cincinnati, OH",
+    "note": "Mid-size CRO, ~780 open reqs. Same Jibe-over-iCIMS front as Emmes; the keyword filter keeps only the relevant slice."
+  },
+  {
+    "branch": "clinical-regops",
+    "name": "Advarra",
+    "careers_url": "https://recruiting.ultipro.com/ADV1023AVR/JobBoard/6051d363-03fe-4650-945e-f836306a8388/",
+    "location": "Columbia, MD",
+    "note": "IRB / clinical research compliance tech, Columbia MD - regulatory-ops adjacent. UKG Pro board."
+  },
+  {
+    "branch": "clinical-regops",
+    "name": "Frederick National Laboratory",
+    "ats": "htmljobs",
+    "careers_url": "https://frederick.cancer.gov/careers/job-opportunities",
+    "base": "",
+    "job_re": "<a[^>]+href=\"(https://leidosbiomed\\.csodfed\\.com/[^\"]+requisition[^\"]+)\"[^>]*>([\\s\\S]{0,200}?)</a>",
+    "location": "Frederick, MD",
+    "note": "NIH-orbit national lab (operated by Leidos Biomedical). Jobs listed server-side on the careers page, linking into Cornerstone."
   },
   {
     "branch": "applied-research",

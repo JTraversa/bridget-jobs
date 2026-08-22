@@ -1,40 +1,40 @@
 {
- "generated": "2026-08-21 16:23 UTC",
+ "generated": "2026-08-22 02:07 UTC",
  "locations": [
   {
    "code": "REMOTE",
    "label": "Remote",
-   "n": 9
+   "n": 10
   },
   {
    "code": "MIA",
    "label": "South Florida",
-   "n": 66
+   "n": 75
   },
   {
    "code": "PHL",
    "label": "Philadelphia area",
-   "n": 55
+   "n": 67
   },
   {
    "code": "BAL",
    "label": "Baltimore",
-   "n": 54
+   "n": 59
   },
   {
    "code": "DC",
    "label": "Washington DC metro",
-   "n": 40
+   "n": 47
   },
   {
    "code": "RDU",
    "label": "Research Triangle NC",
-   "n": 32
+   "n": 36
   },
   {
    "code": "NYC",
    "label": "New York City area",
-   "n": 30
+   "n": 32
   },
   {
    "code": "SEA",
@@ -42,8 +42,18 @@
    "n": 20
   },
   {
+   "code": "DEN",
+   "label": "Denver / Boulder",
+   "n": 8
+  },
+  {
    "code": "PIT",
    "label": "Pittsburgh",
+   "n": 8
+  },
+  {
+   "code": "SFO",
+   "label": "SF Bay Area",
    "n": 8
   },
   {
@@ -54,11 +64,6 @@
   {
    "code": "CAE",
    "label": "Columbia SC",
-   "n": 6
-  },
-  {
-   "code": "SFO",
-   "label": "SF Bay Area",
    "n": 6
   },
   {
@@ -82,8 +87,18 @@
    "n": 1
   },
   {
+   "code": "BTV",
+   "label": "Burlington VT",
+   "n": 1
+  },
+  {
    "code": "CHI",
    "label": "Chicago",
+   "n": 1
+  },
+  {
+   "code": "CLE",
+   "label": "Clemson SC",
    "n": 1
   },
   {
@@ -94,18 +109,18 @@
   {
    "code": "USOTHER",
    "label": "Elsewhere in the US",
-   "n": 14
+   "n": 39
   },
   {
    "code": "INTL",
    "label": "Outside the US",
-   "n": 6
+   "n": 12
   }
  ],
- "openings": 520,
+ "openings": 629,
  "universities": 27,
- "swept": 65,
- "targets": 75,
+ "swept": 76,
+ "targets": 88,
  "manual": [
   {
    "name": "Westat",
@@ -133,6 +148,26 @@
    }
   },
   {
+   "name": "Fors Marsh",
+   "branch": "applied-research",
+   "portal": "https://www.forsmarsh.com/join-us/  (JS-only page, no ATS signature even rendered; watched for changes)",
+   "watch": {
+    "url": "https://www.forsmarsh.com/join-us/",
+    "hash": "709894ca49ce93a5",
+    "last_changed": ""
+   }
+  },
+  {
+   "name": "SSRS",
+   "branch": "applied-research",
+   "portal": "https://ssrs.com/careers/  (jobs listed on the page linking to ourcareerpages.com, but link text is just Apply Now - titles are unextractable, so the page is watched for changes)",
+   "watch": {
+    "url": "https://ssrs.com/careers/",
+    "hash": "3212aefd9af4815d",
+    "last_changed": ""
+   }
+  },
+  {
    "name": "ideas42",
    "branch": "behavioral",
    "portal": "https://www.ideas42.org/join-our-team/  (their Greenhouse board was taken down - likely no open roles; the page is watched for changes)",
@@ -148,8 +183,8 @@
    "portal": "https://irrationallabs.com/our-team/careers/  (no ATS; the page is watched for changes)",
    "watch": {
     "url": "https://irrationallabs.com/our-team/careers/",
-    "hash": "fa140372a2a5e87a",
-    "last_changed": ""
+    "hash": "e9a8e692c5b8b551",
+    "last_changed": "2026-08-22"
    }
   },
   {
@@ -808,25 +843,6 @@
   },
   {
    "score": 2,
-   "employer": "Harvard University",
-   "branch": "university",
-   "title": "Research Associate (General)",
-   "location": "Cambridge, MA",
-   "states": [
-    "MA"
-   ],
-   "metros": [
-    "BOS"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "",
-   "url": "https://careers.harvard.edu/job/research-associate-general-in-boston-ma-united-states-jid-1889",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
    "employer": "Howard University",
    "branch": "university",
    "title": "Prospect Research Analyst",
@@ -865,6 +881,25 @@
   },
   {
    "score": 2,
+   "employer": "ICF International",
+   "branch": "applied-research",
+   "title": "Research Associate, Social Marketing",
+   "location": "Reston, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Associate--Social-Marketing_R2602853",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Senior Marketing Decision Scientist II",
@@ -888,7 +923,7 @@
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Staff User Researcher - Consumer",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
+   "location": "United States - Remote +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -897,9 +932,9 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": true,
-   "posted": "2026-08-19T09:32:27-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8141483",
+   "intl": false,
+   "posted": "2026-08-19T09:32:26-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8141481",
    "count": 2,
    "first_seen": ""
   },
@@ -1384,6 +1419,107 @@
   },
   {
    "score": 2,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Research Associate",
+   "location": "Mandaluyong City, Ortigas Center +1 more",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted Yesterday",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mandaluyong-City-Ortigas-Center/Research-Associate_R102199",
+   "count": 3,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Research Associate - Clinical Research Coordinator Experience",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-10",
+   "url": "https://careers.medpace.com/jobs/11848?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Research Coordinator to Home-Based CRA (Clinical Research Associate)",
+   "location": "Cincinnati, OH +3 more",
+   "states": [
+    "OH",
+    "PA",
+    "MA",
+    "CA"
+   ],
+   "metros": [
+    "USOTHER",
+    "PHL",
+    "BOS",
+    "SFO"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-14",
+   "url": "https://careers.medpace.com/jobs/11847?lang=en-us",
+   "count": 4,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Experienced Clinical Research Associate - Hematology/Oncology",
+   "location": "Charlotte, North Carolina",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-29",
+   "url": "https://careers.medpace.com/jobs/11852?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Experienced Study Start-Up Research Coordinator",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-19",
+   "url": "https://careers.medpace.com/jobs/12369?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
    "employer": "Morgan State University",
    "branch": "university",
    "title": "Project Research Associate",
@@ -1571,6 +1707,44 @@
    "url": "https://jobs.ashbyhq.com/notion/fb969acc-dcbd-4124-b648-bfbfad7231b3",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 2,
+   "employer": "Pew Research Center",
+   "branch": "applied-research",
+   "title": "Research Associate, Race & Ethnicity",
+   "location": "Washington, DC (Pew Research Center)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 17 Days Ago",
+   "url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal/job/Washington-DC-Pew-Research-Center/Research-Associate--Race---Ethnicity_R003246",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 2,
+   "employer": "Pew Research Center",
+   "branch": "applied-research",
+   "title": "Research Associate, Science",
+   "location": "Washington, DC (Pew Research Center)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal/job/Washington-DC-Pew-Research-Center/Research-Associate--Science_R003231",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 2,
@@ -3877,6 +4051,25 @@
    "score": 1,
    "employer": "Amazon",
    "branch": "uxr",
+   "title": "Sr. Regulatory Affairs Specialist , Medical Devices Operational Compliance Center (MD-OCC)",
+   "location": "Sunnyvale, California, USA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "SFO"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-12",
+   "url": "https://www.amazon.jobs/en/jobs/10447690/sr-regulatory-affairs-specialist-medical-devices-operational-compliance-center-md-occ",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
    "title": "Workforce Insights Strategist, Career Choice",
    "location": "Seattle, Washington, USA",
    "states": [
@@ -3911,6 +4104,25 @@
    "url": "https://job-boards.greenhouse.io/americaninstitutesforresearch/jobs/5386250008",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "American University",
+   "branch": "university",
+   "title": "Graduate Research Assistant (Student)",
+   "location": "Main Campus (Washington, DC)",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://american.wd1.myworkdayjobs.com/AU/job/Main-Campus-Washington-DC/Graduate-Research-Assistant--Student-_R4750",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -4237,6 +4449,44 @@
   },
   {
    "score": 1,
+   "employer": "Child Trends",
+   "branch": "applied-research",
+   "title": "Research Scholar/Sr. Research Scholar, Education",
+   "location": "Baltimore, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-28",
+   "url": "https://workforcenow.adp.com/mascsr/default/mdf/recruitment/recruitment.html?cid=70c1bbee-a65c-4b42-bb04-9dcb8a73868a&ccId=19000101_000001&lang=en_US&jobId=9200876795605_1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Clemson University",
+   "branch": "university",
+   "title": "IEA Research Lab Manager",
+   "location": "Clemson, SC",
+   "states": [
+    "SC"
+   ],
+   "metros": [
+    "CLE"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://clemson.wd12.myworkdayjobs.com/Clemson_Careers/job/-/Phlebotomy-Lab-Coordinator_JR-10333-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
    "employer": "Dartmouth College",
    "branch": "university",
    "title": "Gnotobiotic Research Assistant I",
@@ -4353,6 +4603,25 @@
    "score": 1,
    "employer": "Georgetown University",
    "branch": "university",
+   "title": "Research Assistant 2",
+   "location": "Washington, DC",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pre-Clinical-Science-Ground-Floor/Research-Assistant-2_JR27038",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Georgetown University",
+   "branch": "university",
    "title": "Research Specialist 3 - Medical Center",
    "location": "Washington, DC",
    "states": [
@@ -4441,7 +4710,7 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Downing-Hall-College-of-Engineering/Research-Assistant_JR107653-1",
-   "count": 3,
+   "count": 4,
    "first_seen": ""
   },
   {
@@ -4462,6 +4731,25 @@
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Seeley-G-Mudd-Building-College-of-Medicine/Research-Assistant-1_JR108511",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "Howard University",
+   "branch": "university",
+   "title": "Study Coordinator",
+   "location": "Washington DC",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Washington-DC/Study-Coordinator_JR107436-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -4524,6 +4812,25 @@
    "score": 1,
    "employer": "ICF International",
    "branch": "applied-research",
+   "title": "Research Specialist, Social Marketing",
+   "location": "Reston, VA",
+   "states": [
+    "VA"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted Today",
+   "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Specialist--Social-Marketing_R2602854",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "ICF International",
+   "branch": "applied-research",
    "title": "Senior Consultant in research, analysis and evaluation -gender equality",
    "location": "Brussels, Belgium",
    "states": [
@@ -4555,25 +4862,6 @@
    "intl": false,
    "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Senior-Economic-Mobility-Research-Specialist_R2602781",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "ICF International",
-   "branch": "applied-research",
-   "title": "Senior Economic Mobility Research Specialist - ON-CALL role (REMOTE ROLE)",
-   "location": "Reston, VA",
-   "states": [
-    "VA"
-   ],
-   "metros": [
-    "DC"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 3 Days Ago",
-   "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Senior-Economic-Mobility-Research-Specialist---ON-CALL-role--REMOTE-ROLE-_R2602825-1",
    "count": 1,
    "first_seen": ""
   },
@@ -4710,6 +4998,101 @@
    "url": "https://hiring.jhu.edu/careers/job/1133914710767",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Program Specialist (Oncology)",
+   "location": "Washington, DC, United States",
+   "states": [
+    "DC"
+   ],
+   "metros": [
+    "DC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-04",
+   "url": "https://hiring.jhu.edu/careers/job/1133912939771",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Regulatory Specialist (Radiology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-17",
+   "url": "https://hiring.jhu.edu/careers/job/1133915119609",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Supervisor (Neurology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-08",
+   "url": "https://hiring.jhu.edu/careers/job/1133914203679",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Supervisor (Radiology)",
+   "location": "Baltimore, MD, United States",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-17",
+   "url": "https://hiring.jhu.edu/careers/job/1133915119619",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Johns Hopkins University",
+   "branch": "university",
+   "title": "Clinical Research Supervisor (Urology)",
+   "location": "Baltimore, MD, United States, Baltimore, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "BAL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-27",
+   "url": "https://hiring.jhu.edu/careers/job/1133913368445",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -5230,6 +5613,671 @@
   },
   {
    "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Account Manager - Qualitative Research - Mumbai",
+   "location": "Mumbai, The ORB Building",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 14 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mumbai-The-ORB-Building/Account-Manager---Qualitative-Research---Mumbai_R101948",
+   "count": 2,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Associate Research Manager",
+   "location": "Mandaluyong City, Ortigas Center",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 8 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mandaluyong-City-Ortigas-Center/Associate-Research-Manager_R102311-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Qualitative Account Manager",
+   "location": "New York, NY",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 11 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bogot-Edificio-Insignia/Qualitative-Account-Manager_R102132",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Research Manager",
+   "location": "Ho Chi Minh City, Vo Van Tan Street",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 24 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Ho-Chi-Minh-City-Vo-Van-Tan-Street/Research-Manager_R101387-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Senior Research Manager",
+   "location": "Bangalore, Prestige Technology Park",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 14 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bangalore-Prestige-Technology-Park/Senior-Research-Manager_R102203-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Kantar",
+   "branch": "applied-research",
+   "title": "Senior Research Manager - Insights",
+   "location": "Bangkok, Rajanakarn Building",
+   "states": [
+    "INTL"
+   ],
+   "metros": [
+    "INTL"
+   ],
+   "remote": false,
+   "intl": true,
+   "posted": "Posted 7 Days Ago",
+   "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bangkok-Rajanakarn-Building/Research-Manager---Insights_R100065-4",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager  - PhD - Metabolic - Dallas, TX",
+   "location": "Irving (Dallas), Texas",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12000?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Cardiovascular - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12013?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Cardiovascular - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12014?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Gastrointestinal (GI) - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12016?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Gastrointestinal (GI) - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12015?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Immunology - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12017?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Immunology - Dallas",
+   "location": "Irving (Dallas), Texas",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12018?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Immunology - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12019?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Associate Clinical Trial Manager - PhD - Metabolic - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12001?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Research Documentation Administrator (TMF)",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-19",
+   "url": "https://careers.medpace.com/jobs/12561?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Cardiovascular, Renal, Gastrointestinal - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12077?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Cardiovascular, Renal, Gastrointestinal - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12079?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Cincinnati, OH",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12031?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Dallas, TX",
+   "location": "Irving (Dallas), Texas",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12114?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Denver, CO",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12117?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Immunology - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12082?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Immunology - Dallas",
+   "location": "Irving (Dallas), Texas",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12083?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Immunology - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12085?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Infectious Diseases - Cincinnati",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12089?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Infectious Diseases - Dallas",
+   "location": "Irving (Dallas), Texas",
+   "states": [
+    "TX"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12090?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Clinical Trial Project Manager - Infectious Diseases - Denver",
+   "location": "Denver, Colorado",
+   "states": [
+    "CO"
+   ],
+   "metros": [
+    "DEN"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-17",
+   "url": "https://careers.medpace.com/jobs/12093?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Early Career Clinical Research Opportunities",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-06",
+   "url": "https://careers.medpace.com/jobs/12918?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Entry Clinical Trials Feasibility Specialist",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-06",
+   "url": "https://careers.medpace.com/jobs/11871?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Entry Clinical Trials Proposal Writer",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-06",
+   "url": "https://careers.medpace.com/jobs/11872?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Entry-Level Trial Master File (TMF) Specialist",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-19",
+   "url": "https://careers.medpace.com/jobs/12850?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Experienced Clinical Trials Feasibility Coordinator",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-06",
+   "url": "https://careers.medpace.com/jobs/11874?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Experienced Clinical Trials Proposal Writer",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-06",
+   "url": "https://careers.medpace.com/jobs/11875?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "Medpace",
+   "branch": "clinical-regops",
+   "title": "Trial Master File Specialist",
+   "location": "Cincinnati, Ohio",
+   "states": [
+    "OH"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-19",
+   "url": "https://careers.medpace.com/jobs/12392?lang=en-us",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "NC State University",
+   "branch": "university",
+   "title": "Clinical Research Technician \u2013 Small Animal Surgery",
+   "location": "Raleigh, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-04",
+   "url": "https://jobs.ncsu.edu/postings/233524",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
    "employer": "NC State University",
    "branch": "university",
    "title": "Quality Management Research Specialist",
@@ -5270,7 +6318,7 @@
    "score": 1,
    "employer": "NC State University",
    "branch": "university",
-   "title": "Research Specialist",
+   "title": "Research Scholar",
    "location": "Raleigh, NC",
    "states": [
     "NC"
@@ -5280,16 +6328,16 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-14",
-   "url": "https://jobs.ncsu.edu/postings/233851",
+   "posted": "2026-07-10",
+   "url": "https://jobs.ncsu.edu/postings/232618",
    "count": 1,
-   "first_seen": ""
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
    "employer": "NC State University",
    "branch": "university",
-   "title": "Research Specialist - Reddy",
+   "title": "Research Scholar, Metabolomics",
    "location": "Raleigh, NC",
    "states": [
     "NC"
@@ -5299,10 +6347,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-07",
-   "url": "https://jobs.ncsu.edu/postings/233671",
+   "posted": "2026-02-02",
+   "url": "https://jobs.ncsu.edu/postings/227014",
    "count": 1,
-   "first_seen": ""
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "NC State University",
+   "branch": "university",
+   "title": "Research Scholar, Roadway Safety",
+   "location": "Raleigh, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-06-23",
+   "url": "https://jobs.ncsu.edu/postings/232026",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -5322,6 +6389,25 @@
    "url": "https://jobs.ncsu.edu/postings/233201",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "NC State University",
+   "branch": "university",
+   "title": "Senior Research Scholar",
+   "location": "Raleigh, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-19",
+   "url": "https://jobs.ncsu.edu/postings/233989",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -5379,6 +6465,25 @@
    "url": "https://jobs.ncsu.edu/postings/231162",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "Omada Health",
+   "branch": "behavioral",
+   "title": "Senior Clinical Research Scientist",
+   "location": "Remote, USA",
+   "states": [
+    "REMOTE"
+   ],
+   "metros": [
+    "REMOTE"
+   ],
+   "remote": true,
+   "intl": false,
+   "posted": "2026-08-06T18:19:57-04:00",
+   "url": "https://job-boards.greenhouse.io/omadahealth/jobs/8106431",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -5669,6 +6774,25 @@
   },
   {
    "score": 1,
+   "employer": "Spotify",
+   "branch": "uxr",
+   "title": "Product & Regulatory Operations Manager",
+   "location": "New York, NY",
+   "states": [
+    "NY"
+   ],
+   "metros": [
+    "NYC"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-07-27",
+   "url": "https://jobs.lever.co/spotify/1cafb489-9cae-4417-b272-832617484de0",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
    "employer": "UNC Chapel Hill",
    "branch": "university",
    "title": "Clinical Research Assistant",
@@ -5681,10 +6805,29 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-07",
-   "url": "https://unc.peopleadmin.com/postings/323641",
-   "count": 1,
+   "posted": "2026-08-21",
+   "url": "https://unc.peopleadmin.com/postings/324334",
+   "count": 2,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "UNC Chapel Hill",
+   "branch": "university",
+   "title": "Clinician Educator/Clinical Researcher",
+   "location": "Chapel Hill, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-05-13",
+   "url": "https://unc.peopleadmin.com/postings/318515",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -5700,9 +6843,9 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "2026-08-07",
-   "url": "https://unc.peopleadmin.com/postings/323687",
-   "count": 1,
+   "posted": "2026-08-21",
+   "url": "https://unc.peopleadmin.com/postings/324337",
+   "count": 2,
    "first_seen": ""
   },
   {
@@ -5899,6 +7042,102 @@
    "score": 1,
    "employer": "University of Miami",
    "branch": "university",
+   "title": "Clinical Documentation Integrity - Second Level Reviewer",
+   "location": "Coral Gables, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Hialeah-FL/Clinical-Documentation-Specialist-2---Concurrent-Quality-Reviewer---Full-Time_R100079356",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Clinical Research Data Specialist",
+   "location": "Miami, FL +1 more",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA",
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 9 Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Data-Specialist_R100096346",
+   "count": 8,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Clinical Research Data Specialist (A)",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Data-Specialist--A-_R100098320",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Clinical Research Project Manager - Hybrid",
+   "location": "Coral Gables, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 3 Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Hialeah-FL/Clinical-Research-Project-Manager---Hybrid_R100099421-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Clinical Research Safety Associate - Hybrid, Miami FL",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Safety-Associate---Hybrid--Miami-FL_R100098284",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
    "title": "Core Facility Research Specialist 1",
    "location": "Miami, FL",
    "states": [
@@ -6013,6 +7252,25 @@
    "score": 1,
    "employer": "University of Miami",
    "branch": "university",
+   "title": "Project Manager, Clinical Research",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Project-Manager--Clinical-Research_R100099146",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
    "title": "Research Assistant",
    "location": "Miami, FL",
    "states": [
@@ -6032,6 +7290,25 @@
    "score": 1,
    "employer": "University of Miami",
    "branch": "university",
+   "title": "Research Assistant - TMP",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant---TMP_R100078200",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
    "title": "Research Assistant 1",
    "location": "Miami, FL",
    "states": [
@@ -6044,7 +7321,7 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1_R100098289",
-   "count": 1,
+   "count": 3,
    "first_seen": ""
   },
   {
@@ -6146,6 +7423,25 @@
    "score": 1,
    "employer": "University of Miami",
    "branch": "university",
+   "title": "Research Assistant 3 - Clinical Research",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-3---Clinical-Research_R100097446",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
    "title": "Research Assistant \u2013 Hispanic LGB Youth & Families",
    "location": "Coral Gables, FL",
    "states": [
@@ -6160,6 +7456,63 @@
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Assistant---Hispanic-LGB-Youth---Families_R100091396",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
+   "title": "Sylvester Comprehensive Cancer Center Clinical Research Services (CRS)",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Regulatory-Openings-SCCC_R100062688",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Assistant",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Assistant_JR00114340-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Assistant - Temporary",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Scheie-Eye-Institute/Clinical-Research-Assistant---Temporary_JR00116303-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -6198,6 +7551,120 @@
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-for-Adv-Medicine/Clinical-Research-Assistant-B_JR00118794-1",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Project Manager A",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 3 Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/AnatomyChemistry-Building/Clinical-Research-Project-Manager-A_JR00124333-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Project Manager B",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 17 Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Project-Manager-B_JR00124079-1",
+   "count": 2,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Project Manager B (Department of Obstetrics and Gynecology)",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 29 Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-FL3West/Clinical-Research-Project-Manager-B--Department-of-Obstetrics-and-Gynecology-_JR00123514",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Project Manager C",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard/Clinical-Research-Project-Manager-C_JR00118731-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Manager, Clinical Research Finance Operations (Office of Clinical Research)",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Manager--Clinical-Research-Finance-Operations--Office-of-Clinical-Research-_JR00108468-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Part-Time Clinical Research Assistant B",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Part-Time-Clinical-Research-Assistant-B_JR00116292-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -6272,7 +7739,7 @@
    "intl": false,
    "posted": "Posted 17 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Levy-Ctr-for-Oral-Health-Rsrch/Research-Specialist_JR00123916",
-   "count": 1,
+   "count": 3,
    "first_seen": ""
   },
   {
@@ -6291,8 +7758,27 @@
    "intl": false,
    "posted": "Posted 25 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A_JR00123473-1",
-   "count": 13,
+   "count": 18,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Research Specialist A (Department of Gastroenterology)",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2---9th-Floor/Research-Specialist-A--Department-of-Gastroenterology-_JR00103731",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -6312,6 +7798,25 @@
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stemmler-Hall-Med/Research-Specialist-A--Department-of-Neurosurgery-_JR00122952",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Research Specialist A (Department of Pathology and Laboratory Medicine)",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Medical-School-John-Morgan-Bldg/Research-Specialist-A--Department-of-Pathology-and-Laboratory-Medicine-_JR00103265",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -6367,8 +7872,27 @@
    "intl": false,
    "posted": "Posted 14 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stellar-Chance-F9/Research-Specialist-A-B_JR00124659-1",
-   "count": 4,
+   "count": 5,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Research Specialist A/B (Department of Neurosurgery)",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "Posted 30+ Days Ago",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/University-City-One/Research-Specialist-A-B--Department-of-Neurosurgery-_JR00103970-1",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,
@@ -6443,7 +7967,7 @@
    "intl": false,
    "posted": "Posted 29 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-B-C_JR00123438",
-   "count": 1,
+   "count": 2,
    "first_seen": ""
   },
   {
@@ -6538,7 +8062,7 @@
    "intl": false,
    "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-D_JR00122770",
-   "count": 2,
+   "count": 4,
    "first_seen": ""
   },
   {
@@ -6654,6 +8178,25 @@
    "url": "https://uscjobs.sc.edu/postings/201905",
    "count": 1,
    "first_seen": ""
+  },
+  {
+   "score": 1,
+   "employer": "University of Vermont",
+   "branch": "university",
+   "title": "Clinical Research Finance Coordinator",
+   "location": "Burlington, VT",
+   "states": [
+    "VT"
+   ],
+   "metros": [
+    "BTV"
+   ],
+   "remote": false,
+   "intl": false,
+   "posted": "2026-08-10",
+   "url": "https://www.uvmjobs.com/postings/87634",
+   "count": 1,
+   "first_seen": "2026-08-22"
   },
   {
    "score": 1,

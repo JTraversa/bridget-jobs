@@ -50,9 +50,14 @@ TIER1 = [
 ]
 TIER2 = [
     "research assistant", "research specialist", "research manager",
-    "survey", "usability", "insights", "evaluation",
+    "research scholar", "survey", "usability", "insights", "evaluation",
     "study coordinator", "lab manager", "qualitative", "quantitative",
     "psychometric", "data collection", "experimental",
+    # lane C (clinical regulatory ops) - her TRI credential. Added alongside
+    # the CRO feeds (Medpace, Advarra, Emmes, FNL); without these, titles like
+    # "Regulatory Affairs Associate" or "Clinical Trial Assistant" never match.
+    "clinical research", "clinical trial", "regulatory affairs",
+    "regulatory operations", "trial master", "etmf", "clinical document",
 ]
 
 # Titles that match a keyword but are never the right role. Two groups:
@@ -120,6 +125,17 @@ def detect(careers_url):
     if m:
         return {"ats": "oraclecloud", "base": m.group(1), "site": m.group(2)}
 
+    if host.endswith(".bamboohr.com"):
+        return {"ats": "bamboohr", "token": host.split(".")[0]}
+
+    if "recruiting.ultipro.com" in host:
+        return {"ats": "ultipro", "url": careers_url}
+
+    if "workforcenow.adp.com" in host:
+        m = re.search(r"[?&]cid=([0-9a-fA-F\-]+)", careers_url)
+        if m:
+            return {"ats": "adp", "cid": m.group(1)}
+
     if careers_url.endswith(".atom") or "peopleadmin.com" in host:
         return {"ats": "peopleadmin", "host": host, "url": careers_url}
 
@@ -136,6 +152,7 @@ SEARCH_TERMS = [
     "research operations", "user research", "ux research",
     "research coordinator", "research associate", "research analyst",
     "behavioral", "human factors", "survey", "insights",
+    "clinical research", "regulatory",
 ]
 MAX_PAGES = 10  # per search term, 20 per page
 
@@ -499,6 +516,94 @@ def pull_radancy(t):
     return out
 
 
+def pull_bamboohr(t):
+    """BambooHR hosted boards: {company}.bamboohr.com/careers/list is public
+    JSON. No posted date in the feed; first_seen covers recency."""
+    d = fetch(f"https://{t['token']}.bamboohr.com/careers/list")
+    out = []
+    for j in d.get("result", []):
+        loc = j.get("location") if isinstance(j.get("location"), dict) else {}
+        disp = ", ".join(x for x in (loc.get("city"), loc.get("state")) if x)
+        if j.get("isRemote"):
+            disp = ("Remote - " + disp) if disp else "Remote"
+        out.append({
+            "title": j.get("jobOpeningName", ""),
+            "location": disp,
+            "url": f"https://{t['token']}.bamboohr.com/careers/{j.get('id')}",
+            "posted": "",
+        })
+    return out
+
+
+def pull_ultipro(t):
+    """UKG Pro (UltiPro) job boards (Advarra). The board page's own search API:
+    POST LoadSearchResults under the tenant + board GUID from the URL."""
+    m = re.search(r"recruiting\.ultipro\.com/([A-Za-z0-9]+)/JobBoard/([a-f0-9\-]+)", t["url"], re.I)
+    base = f"https://recruiting.ultipro.com/{m.group(1)}/JobBoard/{m.group(2)}"
+    out, skip = [], 0
+    while skip < 500:
+        payload = {"opportunitySearch": {
+                       "Top": 50, "Skip": skip, "QueryString": "",
+                       "OrderBy": [{"Value": "postedDateDesc",
+                                    "PropertyName": "PostedDate", "Ascending": False}],
+                       "Filters": []},
+                   "matchCriteria": {"PreferredJobs": [], "Educations": [],
+                                     "LicenseAndCertifications": [], "Skills": [],
+                                     "hasNoLicenses": False, "SkippedSkills": []}}
+        d = fetch(f"{base}/JobBoardView/LoadSearchResults", data=payload,
+                  headers={"Referer": base + "/"})
+        opps = d.get("opportunities") or []
+        if not opps:
+            break
+        for o in opps:
+            locs = [l.get("LocalizedName") for l in (o.get("Locations") or [])
+                    if l.get("LocalizedName")]
+            out.append({
+                "title": o.get("Title", ""),
+                "location": "; ".join(locs[:2]),
+                "url": f"{base}/OpportunityDetail?opportunityId={o.get('Id')}",
+                "posted": (o.get("PostedDate") or "")[:10],
+            })
+        skip += len(opps)
+        if skip >= (d.get("totalCount") or 0):
+            break
+        time.sleep(0.4)
+    return out
+
+
+def pull_adp(t):
+    """ADP WorkforceNow career centers (Child Trends): public job-requisitions
+    JSON, keyed by the cid from the career-center URL."""
+    out, skip = [], 0
+    while skip < 300:
+        u = ("https://workforcenow.adp.com/mascsr/default/careercenter/public/events/"
+             f"staffing/v1/job-requisitions?cid={t['cid']}&lang=en_US"
+             f"&ccId=19000101_000001&locale=en_US&$top=50&$skip={skip}")
+        d = fetch(u)
+        reqs = d.get("jobRequisitions") or []
+        if not reqs:
+            break
+        for q in reqs:
+            locs = q.get("requisitionLocations") or []
+            addr = (locs[0].get("address") or {}) if locs else {}
+            city = ", ".join(x for x in (
+                addr.get("cityName"),
+                (addr.get("countrySubdivisionLevel1") or {}).get("codeValue")) if x)
+            out.append({
+                "title": q.get("requisitionTitle", ""),
+                "location": city,
+                "url": ("https://workforcenow.adp.com/mascsr/default/mdf/recruitment/"
+                        f"recruitment.html?cid={t['cid']}&ccId=19000101_000001"
+                        f"&lang=en_US&jobId={q.get('itemID')}"),
+                "posted": (q.get("postDate") or "")[:10],
+            })
+        skip += len(reqs)
+        if skip >= int((d.get("meta") or {}).get("totalNumber") or 0):
+            break
+        time.sleep(0.4)
+    return out
+
+
 def pull_jibe(t):
     """Jibe / iCIMS-Attract career sites (careers.emmes.com): a clean paged
     JSON API at {base}/api/jobs, 10 per page. US-only, same reasoning as the
@@ -582,6 +687,9 @@ PULLERS = {
     "radancy": pull_radancy,
     "oraclecloud": pull_oraclecloud,
     "jibe": pull_jibe,
+    "bamboohr": pull_bamboohr,
+    "ultipro": pull_ultipro,
+    "adp": pull_adp,
 }
 
 
@@ -610,7 +718,19 @@ _NONUS_RX = re.compile(
     r"canada|mexico|united kingdom|london|germany|belgium|brussels|spain|madrid|portugal|"
     r"india|bangalore|japan|tokyo|ireland|dublin|france|paris|netherlands|amsterdam|"
     r"australia|singapore|brazil|poland|sweden|israel|switzerland|italy|korea|china|"
-    r"philippines|ontario|quebec|toronto", re.I)
+    r"philippines|ontario|quebec|toronto|"
+    # global-employer feeds (Kantar, Medpace) return city-only strings with no
+    # country name, which would otherwise fall through to the US campus-city
+    # fallback - so the big offshore hub cities are listed explicitly
+    r"manila|mandaluyong|taguig|makati|quezon city|cebu|"
+    r"bengaluru|hyderabad|pune|mumbai|chennai|gurgaon|gurugram|noida|new delhi|kolkata|"
+    r"warsaw|krakow|prague|budapest|bucharest|sofia|vilnius|riga|tallinn|athens|"
+    r"lisbon|porto|stockholm|oslo|copenhagen|helsinki|zurich|geneva|vienna|milan|rome|"
+    r"barcelona|edinburgh|glasgow|manchester, uk|leeds|belfast|"
+    r"sao paulo|bogota|buenos aires|santiago|lima|montevideo|"
+    r"kuala lumpur|bangkok|jakarta|hanoi|ho chi minh|taipei|seoul|hong kong|"
+    r"shanghai|beijing|shenzhen|cairo|nairobi|lagos|johannesburg|dubai|tel aviv|"
+    r"montreal|vancouver|ottawa|mississauga|calgary", re.I)
 
 
 # Metro areas, checked before falling back to a bare state. A state is a poor
