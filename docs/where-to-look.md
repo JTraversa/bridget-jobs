@@ -8,15 +8,6 @@ A ranked list of where to look, built around this profile: BS Psychology, master
 
 ---
 
-## How to work this
-
-- **Do not browse. Set alerts.** Every Tier 1 and most Tier 2 sources support saved searches or email alerts. Browsing burns hours and finds less.
-- **Budget roughly 90 minutes a week**, split: 45 min on Tier 1, 30 min on whatever Tier 2 is due, 15 min on outreach.
-- **Track applications in a simple sheet**: date, employer, title, lane (A/B/C below), link, status, follow-up date. Fifteen open applications with no tracker becomes chaos fast.
-- **Apply within 72 hours of a posting going up** where possible. At the research shops especially, req fill is often first-good-candidate rather than best-of-full-pool.
-
----
-
 ## Tier 1: check weekly
 
 ### 1. The applied research shops, direct on their career pages
