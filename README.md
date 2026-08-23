@@ -1,8 +1,8 @@
 # bridget-jobs
 
 A job board for research roles: open positions pulled directly from employer ATS
-feeds, filterable by lane, metro area and remote status, previewable in place,
-plus a ranked guide to where to look manually.
+feeds, filterable by lane, metro area, remote status, seniority and pay,
+previewable in place, plus a ranked guide to where to look manually.
 
 Static site, no backend, no build step.
 
@@ -36,13 +36,46 @@ list it was before and cards open their posting directly.
 `sweep.py` fills a `desc` field per row. Greenhouse, PeopleAdmin, Ashby, Lever,
 Jibe and Amazon all hand over the posting text in the same request as the
 listing, so those cost nothing. Workday and Eightfold do not, and get one extra
-request per row from `enrich_descriptions()` — which runs *after* the title
-filter and *after* grouping, and reuses the previous sweep's text for rows it
-already knows, so a daily refresh pays only for genuinely new postings. The rest
+request per row from `enrich_bodies()`, which runs *after* the title filter and
+*after* grouping and reuses the previous sweep's result for rows it already
+knows, so a daily refresh pays only for genuinely new postings. The rest
 (the scraped HTML boards, Radancy, ADP, Workable, BambooHR, UKG, Oracle) publish
 no body worth having; those rows say so in the pane rather than showing a blank
 panel. Text is truncated to 1,600 characters and rendered as text, never as
 markup.
+
+## Seniority and pay
+
+Two filters that no feed supports directly, so the sweep derives both.
+
+**Seniority** (`level`) is read off the title by `level_of()`, first matching
+rule wins: an explicit word (senior, sr., lead, manager) beats a level number,
+and a level number beats the role word, so "Sr. Research Associate 1" is senior
+and "Research Assistant 2" is not entry. Roman numerals are matched
+case-sensitively, since a lowercased `i` appears in half the titles on the
+board. A title with no marker at all stays blank rather than being filed under a
+level it might not belong to, so it drops out when a level is selected.
+
+**Pay** (`pay`) is read out of the posting body by `find_pay()`. US pay
+transparency means most of these postings state a range, but in the last
+paragraph, precisely what the 1,600-character preview truncation discards, so
+extraction runs on the full text before `trim()`. A range counts only if a
+pay word sits within 80 characters of it and no disqualifying word does
+(`bonus`, `tuition`, `grant`, `budget`, `relocation`, …), which is what keeps a
+signing bonus or a grant figure out of the salary field. Magnitude alone
+decides hourly versus annual (nobody earns $23 a year or $87,000 an hour), and
+matching on "/hr" would also match the "HR" in half these titles. Hourly rates
+are annualised at 2,080 hours so a single filter can compare them against
+salaries; `min`/`max` are therefore always annual dollars while `label` keeps
+the employer's own units. Ashby is the one feed that publishes pay as a real
+field, so it is preferred over the prose there, and its non-dollar tiers are
+ignored rather than sorted as if the numbers were comparable.
+
+Nothing is ever guessed: a posting with no trustworthy range gets `null`, and
+the pay filter treats unstated as failing, so every option below "Any pay" also
+means "and the pay is published". The floor compares against the **top** of the
+range, so `$100k+` asks "could this pay at least that", not "does it start
+there".
 
 ## Refreshing the data
 
@@ -63,8 +96,8 @@ the sweep and redeploying is the only thing that updates it.
 `jobs.json` when it changes, as `github-actions[bot]`. Run it on demand from the
 Actions tab (**Refresh job board → Run workflow**).
 
-It refuses to commit a result that looks broken — fewer than 40 jobs, less than
-half the previous count, or under half the employers responding — so one bad
+It refuses to commit a result that looks broken (fewer than 40 jobs, less than
+half the previous count, or under half the employers responding), so one bad
 network day cannot replace a good board with an empty one. The run fails loudly
 instead.
 
@@ -100,7 +133,7 @@ script, circle-cropped and zoomed on the face because the full head-and-shoulder
 framing is unreadable at 32px.
 
 **On `vercel.json`:** it is validated against a strict schema, so a header entry
-may contain only `key` and `value`. Do not add a `comment` field — Vercel rejects
+may contain only `key` and `value`. Do not add a `comment` field: Vercel rejects
 the whole deploy. The reason `X-Robots-Tag` is `noindex` and not `noindex,
 nofollow` is that some social crawlers treat `nofollow` as a reason to skip
 fetching the `og:` tags, which would kill the link preview.
@@ -126,7 +159,7 @@ Add an entry to `tools/targets.json`:
 (`apply.workable.com/{account}`), Oracle Recruiting Cloud (a
 `.../CandidateExperience/en/sites/{site}/requisitions` URL) and PeopleAdmin
 (`/postings/search.atom`). For anything else, set `"ats"` explicitly to
-`eightfold`, `htmljobs`, `amazonjobs`, `radancy` or `jibe` — see the Johns
+`eightfold`, `htmljobs`, `amazonjobs`, `radancy` or `jibe`. See the Johns
 Hopkins, Duke, Harvard, Amazon, Intuit and Emmes entries for worked examples.
 BambooHR (`{company}.bamboohr.com`), UKG Pro (`recruiting.ultipro.com/...`)
 and ADP WorkforceNow (a `workforcenow.adp.com/...?cid=...` URL) are also
@@ -180,6 +213,15 @@ extracts ATS links.
   sweeps; rows that predate the tracking stay undated until they close. "New"
   means new on this board, which also catches an old posting that enters the
   feed when an employer is added.
+- **Seniority is inferred, not reported.** No feed publishes a level field, so
+  `level_of()` reads it off the title. It is right on the titles that carry a
+  marker and blank on the ones that do not, which means picking a level drops
+  the unmarked rows rather than guessing at them.
+- **Pay is only as good as the posting.** Roughly half of these employers state
+  a range and the rest do not, so the pay filter is a filter on *published*
+  pay. It also cannot see past the truncation on the feeds with no body at all
+  (the scraped HTML boards, Radancy, ADP), which have no pay for the same
+  reason they have no description.
 - **Applied / Hide marks live in the browser**, in the same localStorage as the
   guide tab's checkboxes, keyed by employer+title so they survive re-sweeps.
   Hidden jobs collapse into an "N hidden" chip; nothing is ever deleted.

@@ -458,7 +458,17 @@
     .job-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); }
     .dot { opacity: .5; }
 
+    /* Separators as ::before on the item that follows, never as their own
+       element: a standalone dot gets left stranded at the end of a wrapped
+       line, and these lines wrap often in a 400px column. */
+    .job-sub > span + span::before,
+    .job-meta > span.job-level::before,
+    .detail-meta > span + span::before {
+      content: "·"; opacity: .5; margin-right: 6px;
+    }
+
     .job-age { margin-left: auto; white-space: nowrap; font-size: 12px; color: var(--muted); padding-top: 3px; }
+    .job-pay { color: var(--text); font-weight: 600; white-space: nowrap; }
 
     .pill {
       font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
@@ -516,6 +526,14 @@
     .detail h3 { font-size: 21px; line-height: 1.25; letter-spacing: -.02em; margin: 0 0 4px; }
     .detail-emp { margin: 0; color: var(--accent); font-weight: 600; font-size: 15px; }
     .detail-meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+    .detail-pay {
+      margin: 14px 0 0; font-size: 19px; font-weight: 700; letter-spacing: -.01em;
+    }
+    .detail-pay span {
+      display: block; font-size: 12px; font-weight: 400; letter-spacing: .04em;
+      text-transform: uppercase; color: var(--muted); margin-top: 2px;
+    }
 
     a.apply {
       display: block; text-align: center; margin-top: 18px;
@@ -614,6 +632,22 @@
         <button class="chip" data-jf="remote" data-v="1" aria-pressed="false">Remote only</button>
         <button class="chip" data-jf="fresh" data-v="1" aria-pressed="false">New this week</button>
         <select class="loc-select" id="loc"><option value="all">All locations</option></select>
+        <select class="loc-select" id="level">
+          <option value="all">All levels</option>
+          <option value="entry">Entry level</option>
+          <option value="mid">Mid level</option>
+          <option value="senior">Senior / lead</option>
+        </select>
+        <!-- Pay is stated by the employer or it is not stated at all, so every
+             option but the first also means "and the pay is published". -->
+        <select class="loc-select" id="pay">
+          <option value="all">Any pay</option>
+          <option value="0">Pay published</option>
+          <option value="60000">$60k+</option>
+          <option value="80000">$80k+</option>
+          <option value="100000">$100k+</option>
+          <option value="120000">$120k+</option>
+        </select>
         <select class="loc-select" id="sort">
           <option value="match">Sort: best match</option>
           <option value="new">Sort: newest first</option>
@@ -1292,7 +1326,10 @@
       var byKey = {}, selKey = null, shownKey = null, shownMark = null;
       var jobs = [], view = [],
         f = { lane: 'all', strong: false, remote: false, fresh: false,
-              loc: 'all', q: '', sort: 'match', showHidden: false };
+              loc: 'all', level: 'all', pay: 'all', q: '', sort: 'match',
+              showHidden: false };
+
+      var LEVEL_LABEL = { entry: 'Entry level', mid: 'Mid level', senior: 'Senior' };
 
       // Applied / hidden marks, keyed by employer+title so they survive
       // re-sweeps (URLs churn when a grouped posting's departments change).
@@ -1365,21 +1402,30 @@
           return '<a class="job" href="' + esc(j.url) + '" target="_blank" rel="noopener"' +
             ' data-i="' + i + '" data-score="' + j.score + '" data-lane="' + lane + '"' +
             ' data-remote="' + (remote ? 1 : 0) + '" data-new="' + (j._new ? 1 : 0) + '"' +
+            ' data-level="' + esc(j.level || '') + '"' +
+            // The top of the stated range: a floor filter asks "could this pay
+            // me at least X", not "does it start there". Empty means unstated,
+            // which is never the same as zero.
+            ' data-pay="' + (j.pay ? j.pay.max : '') + '"' +
             ' data-key="' + esc(jobKey(j)) + '"' +
             ' data-metros="' + esc((j.metros || []).join(' ')) + '"' +
             ' data-t="' + esc(((j.title || '') + ' ' + (j.employer || '') + ' ' + (j.location || '')).toLowerCase()) + '">' +
             '<div class="job-top"><span class="job-title">' + esc(j.title) + '</span>' +
             (age ? '<span class="job-age" title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
             '</div>' +
+            // No literal separators on this line: they are ::before on each
+            // span, so a dot can never be left stranded at a wrap point.
             '<div class="job-sub"><span class="job-emp">' + esc(j.employer) + '</span>' +
-            '<span class="dot">·</span><span>' + esc(j.location || 'Location not listed') + '</span>' +
-            (j.count > 1 ? '<span class="dot">·</span><span>' + j.count + ' openings</span>' : '') +
+            '<span>' + esc(j.location || 'Location not listed') + '</span>' +
+            (j.count > 1 ? '<span>' + j.count + ' openings</span>' : '') +
+            (j.pay ? '<span class="job-pay">' + esc(j.pay.label) + '</span>' : '') +
             '</div>' +
             '<div class="job-meta">' +
             (j._new ? '<span class="pill p-new">New</span>' : '') +
             '<span class="pill ' + (j.score === 2 ? 'p-strong">Strong match' : 'p-maybe">Worth a look') + '</span>' +
             (remote ? '<span class="pill p-remote">Remote</span>' : '') +
             '<span>Lane ' + lane + '</span>' +
+            (j.level ? '<span class="job-level">' + LEVEL_LABEL[j.level] + '</span>' : '') +
             '<span class="job-acts">' +
             '<button class="act act-applied" data-act="applied">Applied</button>' +
             '<button class="act act-hide" data-act="hidden">Hide</button>' +
@@ -1413,10 +1459,15 @@
           '<h3>' + esc(j.title) + '</h3>' +
           '<p class="detail-emp">' + esc(j.employer) + '</p>' +
           '<div class="detail-meta"><span>' + esc(j.location || 'Location not listed') + '</span>' +
-          '<span class="dot">·</span><span>Lane ' + laneOf(j) + '</span>' +
-          (j.count > 1 ? '<span class="dot">·</span><span>' + j.count + ' openings</span>' : '') +
-          (age ? '<span class="dot">·</span><span title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
+          '<span>Lane ' + laneOf(j) + '</span>' +
+          (j.level ? '<span>' + LEVEL_LABEL[j.level] + '</span>' : '') +
+          (j.count > 1 ? '<span>' + j.count + ' openings</span>' : '') +
+          (age ? '<span title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
           '</div>' +
+          // Pay gets its own line rather than a slot in the meta run: it is the
+          // one number worth reading before deciding whether to open the tab.
+          (j.pay ? '<p class="detail-pay">' + esc(j.pay.label) +
+            '<span>as published by the employer</span></p>' : '') +
           '<a class="apply" href="' + esc(j.url) + '" target="_blank" rel="noopener">Open the posting &#8599;</a>' +
           '<div class="detail-acts">' +
           '<button class="act' + (mark === 'applied' ? ' on' : '') + '" data-act="applied">' +
@@ -1454,6 +1505,11 @@
             (!f.fresh || el.dataset.new === '1') &&
             (f.loc === 'all' ||
               el.dataset.metros.split(' ').indexOf(f.loc) !== -1) &&
+            (f.level === 'all' || el.dataset.level === f.level) &&
+            // Every pay option but "all" also requires a published figure, so
+            // an unstated one fails the test rather than passing it by default.
+            (f.pay === 'all' ||
+              (el.dataset.pay !== '' && +el.dataset.pay >= +f.pay)) &&
             (!f.q || el.dataset.t.indexOf(f.q) !== -1);
           // Jobs she hid stay out of the way (and out of the count) until the
           // "hidden" chip reveals them for un-hiding.
@@ -1513,7 +1569,11 @@
       qbox.addEventListener('input', function () { f.q = qbox.value.trim().toLowerCase(); paint(); });
 
       var locSel = document.getElementById('loc');
+      var levelSel = document.getElementById('level');
+      var paySel = document.getElementById('pay');
       locSel.addEventListener('change', function () { f.loc = locSel.value; paint(); });
+      levelSel.addEventListener('change', function () { f.level = levelSel.value; paint(); });
+      paySel.addEventListener('change', function () { f.pay = paySel.value; paint(); });
 
       // Sorting re-renders rather than toggling, since order lives in the DOM.
       // Undated jobs sink to the bottom; ties fall back to match quality, and
@@ -1665,6 +1725,8 @@
           // The location select needs no sync - rebuilding its options above
           // just reset it to "all", which matches f.loc.
           f.sort = sortSel.value;
+          f.level = levelSel.value;
+          f.pay = paySel.value;
           f.q = qbox.value.trim().toLowerCase();
           applySort();
         })

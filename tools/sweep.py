@@ -96,15 +96,15 @@ def fetch(url, data=None, headers=None, timeout=30):
 DESC_LIMIT = 1600   # characters kept per posting
 
 
-def clean_desc(*parts, limit=DESC_LIMIT):
-    """ATS description HTML -> plain text short enough to preview.
+def plain_text(*parts):
+    """ATS description HTML -> plain text, whole thing.
 
     Every feed sends a different flavour of markup (Greenhouse double-escapes
     its HTML, Amazon uses bare <br/>, Workday nests <p style=...>), so the
     approach is deliberately blunt: turn block-level tags into line breaks,
-    drop the rest, unescape twice, then truncate on a sentence or word edge.
-    The board renders the result as text, never as markup, so nothing here is
-    load-bearing for safety - it is purely about readability.
+    drop the rest, unescape twice. The board renders the result as text, never
+    as markup, so nothing here is load-bearing for safety - it is purely about
+    readability.
     """
     raw = "\n\n".join(p for p in parts if p and str(p).strip())
     if not raw:
@@ -120,14 +120,141 @@ def clean_desc(*parts, limit=DESC_LIMIT):
     text = re.sub(r"[ \t]+", " ", text)
     text = re.sub(r" *\n[ \n]*\n[ \n]*", "\n\n", text)   # collapse blank runs
     text = re.sub(r" *\n *", "\n", text).strip()
+    return text
+
+
+def trim(text, limit=DESC_LIMIT):
+    """Cut to preview length on a sentence edge, then a line, then a word."""
     if len(text) <= limit:
         return text
     cut = text[:limit]
-    # prefer to end on a sentence, then a line, then a word
     edge = max(cut.rfind(". "), cut.rfind(".\n"), cut.rfind("\n"))
     if edge < limit * 0.6:
         edge = cut.rfind(" ")
     return cut[:edge].rstrip(" ,;:-") + "…"
+
+
+# ---------------------------------------------------------------------- pay
+
+# A dollar figure, optionally abbreviated ("$120K", "$1.2M").
+_MONEY = r"\$\s?(\d[\d,]*(?:\.\d+)?)\s*([KkMm])?"
+_RANGE = re.compile(_MONEY + r"\s*(?:-|to)\s*" + _MONEY)
+# Words that make a nearby range mean pay, and words that make it mean anything
+# but ("a $2,500 signing bonus", "a $4.5 million grant", "$5,250 tuition").
+_PAY_LABEL = re.compile(r"salary|pay|compensation|wage|hourly|rate|earn|hiring range", re.I)
+_PAY_VETO = re.compile(r"bonus|401|tuition|reimburs|award|grant|budget|relocat|equity|"
+                       r"revenue|scholarship|portfolio|endowment|fee\b|fine|penalt", re.I)
+
+HOURS_PER_YEAR = 2080   # 40h x 52w, the usual US full-time convention
+HOURLY_CEILING = 250    # above this a figure is a salary, below it a rate
+
+
+def _dollars(num, suffix):
+    v = float(num.replace(",", ""))
+    if suffix:
+        v *= 1000 if suffix.lower() == "k" else 1_000_000
+    return v
+
+
+def _money_label(lo, hi, hourly):
+    if hourly:
+        # whole dollars stay whole, cents keep both digits ("$15.40", not "$15.4")
+        fmt = lambda v: "%d" % v if v == int(v) else "%.2f" % v
+        return "$%s - $%s/hr" % (fmt(lo), fmt(hi))
+    k = lambda v: "$%gk" % round(v / 1000)
+    return "%s - %s" % (k(lo), k(hi))
+
+
+def find_pay(text, require_label=True):
+    """Pull a stated pay range out of a full posting body.
+
+    US pay-transparency laws mean most of these postings state a range, but
+    almost always in the last paragraph - which is exactly the part the preview
+    truncation throws away, so this has to run on the whole body before trim().
+
+    Returns min/max as ANNUAL dollars so one filter can compare salaried and
+    hourly postings, with the label kept in the units the employer actually
+    wrote. None when nothing trustworthy is stated: a missing range is normal
+    and must never be guessed at.
+    """
+    if not text:
+        return None
+    flat = re.sub(r"[‐-―−]", "-", text)
+    best = None
+    for m in _RANGE.finditer(flat):
+        before = flat[max(0, m.start() - 80):m.start()]
+        after = flat[m.end():m.end() + 40]
+        if _PAY_VETO.search(before):
+            continue
+        lo, hi = _dollars(m.group(1), m.group(2)), _dollars(m.group(3), m.group(4))
+        if hi < lo:
+            continue
+        # Magnitude decides hourly vs annual, not the surrounding words: nobody
+        # earns $23 a year or $87,000 an hour, and matching on "/hr" would also
+        # match the "HR" in half the job titles on this board.
+        hourly = hi < HOURLY_CEILING
+        a_lo, a_hi = (lo * HOURS_PER_YEAR, hi * HOURS_PER_YEAR) if hourly else (lo, hi)
+        # Anything left outside this band is some other number that happened to
+        # sit in a range: a $5,000 stipend, a $12m contract.
+        if a_hi < 20_000 or a_lo > 1_500_000:
+            continue
+        score = (2 if _PAY_LABEL.search(before) else 0) + (1 if _PAY_LABEL.search(after) else 0)
+        if best is None or score > best[0]:
+            best = (score, {"min": int(a_lo), "max": int(a_hi),
+                            "period": "hour" if hourly else "year",
+                            "label": _money_label(lo, hi, hourly)})
+        if best[0] >= 3:
+            break
+    # In prose an unlabelled range is a coincidence as often as it is pay, so
+    # require one of the two windows to say what the number is. A field that
+    # exists only to hold compensation needs no such proof.
+    if not best or (require_label and best[0] == 0):
+        return None
+    return best[1]
+
+
+def body(*parts):
+    """The two things worth keeping from a posting body, ready to splat into a
+    row: the preview text, and any pay range stated further down than it."""
+    full = plain_text(*parts)
+    return {"desc": trim(full), "pay": find_pay(full)}
+
+
+# ------------------------------------------------------------------- levels
+
+# Ordered: the first rule that matches a title wins. Explicit seniority words
+# beat a level number ("Sr. Research Associate 1" is a senior role), and a level
+# number beats the role word ("Research Assistant 2" is not entry level).
+# Roman numerals must stay case-SENSITIVE: lowercased, the bare "i" and "v" in
+# ordinary words would read as level markers everywhere.
+LEVEL_RULES = [
+    ("senior", re.compile(r"\b(senior|sr\.?|lead|principal|manager|supervisor|head of|chief)\b", re.I)),
+    ("entry", re.compile(r"\b(intern|trainee|junior|jr\.?|entry|student|graduate assistant|early career)\b", re.I)),
+    ("mid", re.compile(r"\bexperienced\b", re.I)),
+    ("senior", re.compile(r"\b(III|IV)\b")),
+    ("senior", re.compile(r"(?<![\w.-])[34]\b")),
+    ("mid", re.compile(r"\bII\b(?!I)")),
+    ("mid", re.compile(r"(?<![\w.-])2\b")),
+    ("entry", re.compile(r"\bI\b(?![IV])")),
+    ("entry", re.compile(r"(?<![\w.-])1\b")),
+    ("mid", re.compile(r"\b(associate|analyst|specialist|coordinator|scientist|scholar|researcher)\b", re.I)),
+    ("entry", re.compile(r"\b(assistant|aide|technician)\b", re.I)),
+]
+
+
+def level_of(title):
+    """entry / mid / senior from the title, or "" when nothing in it says.
+
+    A guess off the title is all that is available - no feed publishes a level
+    field - so anything the rules do not recognise stays blank rather than
+    being filed under a level it might not belong to.
+    """
+    # "Phase 3 Clinical Research Coordinator" is a trial stage, not a job grade.
+    t = re.sub(r"\bphase\s*[0-9IViv]+", " ", title or "", flags=re.I)
+    for name, rx in LEVEL_RULES:
+        if rx.search(t):
+            return name
+    return ""
 
 
 # ---------------------------------------------------------------- ATS parsers
@@ -261,7 +388,7 @@ def pull_greenhouse(t):
              "location": (j.get("location") or {}).get("name", ""),
              "url": j.get("absolute_url", ""),
              "posted": j.get("first_published") or j.get("updated_at", ""),
-             "desc": clean_desc(j.get("content"))}
+             **body(j.get("content"))}
             for j in d.get("jobs", [])]
 
 
@@ -282,17 +409,32 @@ def pull_lever(t):
              "location": (j.get("categories") or {}).get("location", ""),
              "url": j.get("hostedUrl", ""),
              "posted": epoch_date(j.get("createdAt"), ms=True),
-             "desc": clean_desc(j.get("descriptionPlain") or j.get("description"))}
+             **body(j.get("descriptionPlain") or j.get("description"))}
             for j in d]
 
 
+def ashby_body(j):
+    """Ashby is the one feed that publishes pay as a real field rather than a
+    sentence, so prefer that over whatever the regex finds in the prose."""
+    got = body(j.get("descriptionPlain") or j.get("descriptionHtml"))
+    summary = (j.get("compensation") or {}).get("scrapeableCompensationSalarySummary") or ""
+    # Only dollars: the same field carries EUR and GBP tiers, which would sort
+    # into the pay filter as if the numbers were comparable. They are not.
+    if summary.strip().startswith("$"):
+        stated = find_pay(summary, require_label=False)
+        if stated:
+            got["pay"] = stated
+    return got
+
+
 def pull_ashby(t):
-    d = fetch(f"https://api.ashbyhq.com/posting-api/job-board/{t['token']}")
+    d = fetch(f"https://api.ashbyhq.com/posting-api/job-board/{t['token']}"
+              "?includeCompensation=true")
     return [{"title": j.get("title", ""),
              "location": j.get("location", ""),
              "url": j.get("jobUrl", ""),
              "posted": j.get("publishedAt", ""),
-             "desc": clean_desc(j.get("descriptionPlain") or j.get("descriptionHtml"))}
+             **ashby_body(j)}
             for j in d.get("jobs", [])]
 
 
@@ -317,8 +459,7 @@ def pull_peopleadmin(t):
             "location": t.get("location") or dept,
             "url": (link.get("href") if link is not None else "") or e.findtext("a:id", "", ns),
             "posted": (e.findtext("a:published", "", ns) or "")[:10],
-            "desc": clean_desc(e.findtext("a:content", "", ns)
-                               or e.findtext("a:summary", "", ns)),
+            **body(e.findtext("a:content", "", ns) or e.findtext("a:summary", "", ns)),
         })
     return out
 
@@ -491,9 +632,9 @@ def pull_amazonjobs(t, _retry=True):
                     "location": j.get("normalized_location") or j.get("location", ""),
                     "url": f"https://www.amazon.jobs{path}",
                     "posted": posted,
-                    "desc": clean_desc(j.get("description"),
-                                       "Basic qualifications" if j.get("basic_qualifications") else "",
-                                       j.get("basic_qualifications")),
+                    **body(j.get("description"),
+                           "Basic qualifications" if j.get("basic_qualifications") else "",
+                           j.get("basic_qualifications")),
                 })
             offset += len(jobs)
             if offset >= int(d.get("hits") or 0):
@@ -694,8 +835,8 @@ def pull_jibe(t):
                 "location": loc.split(";")[0].strip(),
                 "url": (j.get("meta_data") or {}).get("canonical_url") or j.get("apply_url", ""),
                 "posted": (j.get("posted_date") or j.get("create_date") or "")[:10],
-                "desc": clean_desc(j.get("description"), j.get("responsibilities"),
-                                   j.get("qualifications")),
+                **body(j.get("description"), j.get("responsibilities"),
+                       j.get("qualifications")),
             })
         if seen_count >= (d.get("totalCount") or 0):
             break
@@ -932,23 +1073,29 @@ DETAIL_DESC = {
 MAX_DETAIL_FETCHES = 400   # one request each; bounds a runaway sweep
 
 
-def enrich_descriptions(rows, prev_desc, key_of):
-    """Fill in descriptions for the ATSes that hide them behind a second request.
+def enrich_bodies(rows, prev_rows, key_of):
+    """Fill in the body for the ATSes that hide it behind a second request.
 
     Two things keep this cheap. It runs after the title filter and after
     grouping, so it only ever touches rows that made the board; and it reuses
-    the previous sweep's text for rows it already knows, which means a daily
+    the previous sweep's result for rows it already knows, which means a daily
     refresh pays for the handful of genuinely new postings rather than all of
     them. A posting that fails here simply has no preview text.
+
+    "Reuses the result" has to mean the description AND the pay range together.
+    Pay is read from the full body, which is exactly what is not kept, so a
+    cache hit that restored only the text would leave those rows permanently
+    without pay. A previous row that predates pay extraction has no "pay" key
+    at all, which is the signal to fetch it once more.
     """
     todo = [r for r in rows if not r.get("desc") and r.get("detail")]
     if not todo:
         return
     reused = fetched = 0
     for r in todo:
-        cached = prev_desc.get(key_of(r))
-        if cached:
-            r["desc"] = cached
+        cached = prev_rows.get(key_of(r))
+        if cached and cached.get("desc") and "pay" in cached:
+            r["desc"], r["pay"] = cached["desc"], cached["pay"]
             reused += 1
             continue
         if fetched >= MAX_DETAIL_FETCHES:
@@ -958,12 +1105,12 @@ def enrich_descriptions(rows, prev_desc, key_of):
             continue
         hdrs = {"Referer": r["detail_ref"]} if r.get("detail_ref") else None
         try:
-            r["desc"] = clean_desc(grab(fetch(r["detail"], headers=hdrs, timeout=20)))
+            r.update(body(grab(fetch(r["detail"], headers=hdrs, timeout=20))))
             fetched += 1
         except Exception:
             pass          # no preview text for this one; the link still works
         time.sleep(0.35)  # same courtesy pause the list pagers use
-    print(f"  descriptions: {reused} reused from last sweep, {fetched} fetched "
+    print(f"  bodies: {reused} reused from last sweep, {fetched} fetched "
           f"({len(todo) - reused - fetched} unresolved)")
 
 
@@ -1061,8 +1208,9 @@ def main():
                          "title": j["title"], "location": disp,
                          "states": states, "metros": metros,
                          "remote": remote, "intl": non_us,
+                         "level": level_of(j["title"]),
                          "posted": j["posted"], "url": j["url"],
-                         "desc": j.get("desc", ""),
+                         "desc": j.get("desc", ""), "pay": j.get("pay"),
                          # dropped again after enrich_descriptions(); they exist
                          # only to tell it where to look for a missing body
                          "detail": j.get("detail", ""),
@@ -1090,8 +1238,13 @@ def main():
                 if mt not in g["metros"]:
                     g["metros"].append(mt)
             g["remote"] = g["remote"] or r["remote"]
+            # Departments post the same requisition with different bodies; take
+            # the first one that actually says something rather than the first
+            # one seen. Same for pay, which only some of the copies state.
             if not g.get("desc") and r.get("desc"):
                 g["desc"] = r["desc"]
+            if not g.get("pay") and r.get("pay"):
+                g["pay"] = r["pay"]
         else:
             grouped[key] = {**r, "count": 1, "states": list(r["states"]),
                             "metros": list(r["metros"]),
@@ -1118,13 +1271,13 @@ def main():
     def seen_key(r):
         return r["employer"] + "\t" + r["title"].strip().lower()
 
-    # Preview text for the feeds that withhold it from their list endpoint.
-    # Runs here, after filtering and grouping, so it costs one request per row
-    # that actually reached the board and none at all for rows already known.
-    enrich_descriptions(
-        rows,
-        {seen_key(j): j.get("desc", "") for j in prev_payload.get("jobs", [])},
-        seen_key)
+    # Preview text and pay for the feeds that withhold the body from their list
+    # endpoint. Runs here, after filtering and grouping, so it costs one request
+    # per row that actually reached the board and none at all for rows already
+    # known.
+    enrich_bodies(rows,
+                  {seen_key(j): j for j in prev_payload.get("jobs", [])},
+                  seen_key)
     for r in rows:
         for k in ("detail", "detail_ats", "detail_ref"):
             r.pop(k, None)
@@ -1140,6 +1293,11 @@ def main():
             if pj.get("employer") in failed_set:
                 pj = dict(pj)
                 pj["stale"] = True
+                # A row carried over from before these fields existed would
+                # otherwise be missing them; the level is free to recompute,
+                # the pay is not recoverable without the body.
+                pj["level"] = pj.get("level") or level_of(pj.get("title", ""))
+                pj.setdefault("pay", None)
                 rows.append(pj)
                 carried += 1
         if carried:
