@@ -1,8 +1,8 @@
 # bridget-jobs
 
 A job board for research roles: open positions pulled directly from employer ATS
-feeds, filterable by lane, metro area and remote status, plus a ranked guide to
-where to look manually.
+feeds, filterable by lane, metro area and remote status, previewable in place,
+plus a ranked guide to where to look manually.
 
 Static site, no backend, no build step.
 
@@ -19,6 +19,30 @@ tools/
 docs/
   where-to-look.md   the ranked source guide, same content as the second tab
 ```
+
+## Reading a role without leaving the page
+
+The board is a list beside a preview pane. Clicking a card opens the posting in
+the pane instead of navigating away; the pane holds the title, employer,
+location, age, the same badges the card carries, an **Open the posting** link,
+the Applied / Hide marks, and the posting text where the feed publishes one.
+Arrow keys walk the list, so a whole filtered set can be skimmed without the
+mouse. Ctrl-click, middle-click and "open in new tab" still work, because the
+card is a real link underneath.
+
+Below 900px there is nowhere to put a pane, so the board falls back to the plain
+list it was before and cards open their posting directly.
+
+`sweep.py` fills a `desc` field per row. Greenhouse, PeopleAdmin, Ashby, Lever,
+Jibe and Amazon all hand over the posting text in the same request as the
+listing, so those cost nothing. Workday and Eightfold do not, and get one extra
+request per row from `enrich_descriptions()` — which runs *after* the title
+filter and *after* grouping, and reuses the previous sweep's text for rows it
+already knows, so a daily refresh pays only for genuinely new postings. The rest
+(the scraped HTML boards, Radancy, ADP, Workable, BambooHR, UKG, Oracle) publish
+no body worth having; those rows say so in the pane rather than showing a blank
+panel. Text is truncated to 1,600 characters and rendered as text, never as
+markup.
 
 ## Refreshing the data
 

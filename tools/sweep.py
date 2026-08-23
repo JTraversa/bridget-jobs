@@ -91,6 +91,45 @@ def fetch(url, data=None, headers=None, timeout=30):
         return json.loads(r.read().decode("utf-8", "replace"))
 
 
+# ------------------------------------------------------------- descriptions
+
+DESC_LIMIT = 1600   # characters kept per posting
+
+
+def clean_desc(*parts, limit=DESC_LIMIT):
+    """ATS description HTML -> plain text short enough to preview.
+
+    Every feed sends a different flavour of markup (Greenhouse double-escapes
+    its HTML, Amazon uses bare <br/>, Workday nests <p style=...>), so the
+    approach is deliberately blunt: turn block-level tags into line breaks,
+    drop the rest, unescape twice, then truncate on a sentence or word edge.
+    The board renders the result as text, never as markup, so nothing here is
+    load-bearing for safety - it is purely about readability.
+    """
+    raw = "\n\n".join(p for p in parts if p and str(p).strip())
+    if not raw:
+        return ""
+    text = html.unescape(html.unescape(str(raw)))
+    text = re.sub(r"<(script|style)[\s\S]*?</\1>", " ", text, flags=re.I)
+    text = re.sub(r"<\s*li[^>]*>", "\n- ", text, flags=re.I)
+    text = re.sub(r"<\s*br[^>]*>", "\n", text, flags=re.I)
+    text = re.sub(r"</\s*li\s*>", " ", text, flags=re.I)   # the opening <li> already broke the line
+    text = re.sub(r"</\s*(p|div|ul|ol|h[1-6]|tr|table)\s*>", "\n\n", text, flags=re.I)
+    text = re.sub(r"<[^>]+>", " ", text)
+    text = html.unescape(text).replace(" ", " ").replace("​", "")
+    text = re.sub(r"[ \t]+", " ", text)
+    text = re.sub(r" *\n[ \n]*\n[ \n]*", "\n\n", text)   # collapse blank runs
+    text = re.sub(r" *\n *", "\n", text).strip()
+    if len(text) <= limit:
+        return text
+    cut = text[:limit]
+    # prefer to end on a sentence, then a line, then a word
+    edge = max(cut.rfind(". "), cut.rfind(".\n"), cut.rfind("\n"))
+    if edge < limit * 0.6:
+        edge = cut.rfind(" ")
+    return cut[:edge].rstrip(" ,;:-") + "…"
+
+
 # ---------------------------------------------------------------- ATS parsers
 
 def detect(careers_url):
@@ -196,6 +235,13 @@ def pull_workday(t):
                     # tenant site name that does not exist).
                     "url": f"https://{t['host']}/{t['site']}{ext}" if ext else "",
                     "posted": p.get("postedOn", ""),
+                    # The list response carries no description. The same cxs
+                    # path with the job appended returns one; enrich_descriptions()
+                    # fetches it later, but only for postings that survive the
+                    # title filter and are not already described from last sweep.
+                    "detail": (f"https://{t['host']}/wday/cxs/{t['tenant']}/{t['site']}{ext}"
+                               if ext else ""),
+                    "detail_ats": "workday",
                 })
             offset += 20
             if total and offset >= total:
@@ -208,11 +254,14 @@ def pull_workday(t):
 def pull_greenhouse(t):
     # first_published is the real posting date; updated_at moves on any edit,
     # which made months-old postings masquerade as fresh.
-    d = fetch(f"https://boards-api.greenhouse.io/v1/boards/{t['token']}/jobs")
+    # content=true returns the full posting body in the same request, so the
+    # board's preview pane costs nothing extra here.
+    d = fetch(f"https://boards-api.greenhouse.io/v1/boards/{t['token']}/jobs?content=true")
     return [{"title": j.get("title", ""),
              "location": (j.get("location") or {}).get("name", ""),
              "url": j.get("absolute_url", ""),
-             "posted": j.get("first_published") or j.get("updated_at", "")}
+             "posted": j.get("first_published") or j.get("updated_at", ""),
+             "desc": clean_desc(j.get("content"))}
             for j in d.get("jobs", [])]
 
 
@@ -232,7 +281,9 @@ def pull_lever(t):
     return [{"title": j.get("text", ""),
              "location": (j.get("categories") or {}).get("location", ""),
              "url": j.get("hostedUrl", ""),
-             "posted": epoch_date(j.get("createdAt"), ms=True)} for j in d]
+             "posted": epoch_date(j.get("createdAt"), ms=True),
+             "desc": clean_desc(j.get("descriptionPlain") or j.get("description"))}
+            for j in d]
 
 
 def pull_ashby(t):
@@ -240,13 +291,16 @@ def pull_ashby(t):
     return [{"title": j.get("title", ""),
              "location": j.get("location", ""),
              "url": j.get("jobUrl", ""),
-             "posted": j.get("publishedAt", "")} for j in d.get("jobs", [])]
+             "posted": j.get("publishedAt", ""),
+             "desc": clean_desc(j.get("descriptionPlain") or j.get("descriptionHtml"))}
+            for j in d.get("jobs", [])]
 
 
 def pull_peopleadmin(t):
     """PeopleAdmin (jobs.<university>.edu) publishes an Atom feed at
     /postings/search.atom. Entries carry no location field, only a department in
-    <author>, so the campus location comes from the target entry instead."""
+    <author>, so the campus location comes from the target entry instead.
+    <content> holds the posting summary, which is what the preview pane uses."""
     import xml.etree.ElementTree as ET
     ns = {"a": "http://www.w3.org/2005/Atom"}
     req = urllib.request.Request(t["url"], headers={"User-Agent": UA})
@@ -263,6 +317,8 @@ def pull_peopleadmin(t):
             "location": t.get("location") or dept,
             "url": (link.get("href") if link is not None else "") or e.findtext("a:id", "", ns),
             "posted": (e.findtext("a:published", "", ns) or "")[:10],
+            "desc": clean_desc(e.findtext("a:content", "", ns)
+                               or e.findtext("a:summary", "", ns)),
         })
     return out
 
@@ -330,6 +386,8 @@ def pull_eightfold(t):
             total = d.get("count", 0)
         if not pos:
             break
+        origin = base.split("/api/")[0]
+        domain = urllib.parse.parse_qs(urllib.parse.urlparse(base).query).get("domain", [""])[0]
         for p in pos:
             locs = p.get("locations") or []
             out.append({
@@ -337,6 +395,11 @@ def pull_eightfold(t):
                 "location": ", ".join(locs[:2]) if locs else "",
                 "url": f"{ref}/job/{p.get('id')}",
                 "posted": epoch_date(p.get("postedTs") or p.get("creationTs")),
+                # Search results carry no body; /api/apply/v2/jobs/{id} does.
+                # Fetched later, and only for the postings that survive filtering.
+                "detail": f"{origin}/api/apply/v2/jobs/{p.get('id')}?domain={domain}",
+                "detail_ats": "eightfold",
+                "detail_ref": ref,
             })
         start += len(pos)
         if total and start >= total:
@@ -428,6 +491,9 @@ def pull_amazonjobs(t, _retry=True):
                     "location": j.get("normalized_location") or j.get("location", ""),
                     "url": f"https://www.amazon.jobs{path}",
                     "posted": posted,
+                    "desc": clean_desc(j.get("description"),
+                                       "Basic qualifications" if j.get("basic_qualifications") else "",
+                                       j.get("basic_qualifications")),
                 })
             offset += len(jobs)
             if offset >= int(d.get("hits") or 0):
@@ -628,6 +694,8 @@ def pull_jibe(t):
                 "location": loc.split(";")[0].strip(),
                 "url": (j.get("meta_data") or {}).get("canonical_url") or j.get("apply_url", ""),
                 "posted": (j.get("posted_date") or j.get("create_date") or "")[:10],
+                "desc": clean_desc(j.get("description"), j.get("responsibilities"),
+                                   j.get("qualifications")),
             })
         if seen_count >= (d.get("totalCount") or 0):
             break
@@ -855,6 +923,50 @@ def score(title):
     return 0
 
 
+# Extracts the body out of a single-job detail response, per ATS. Only the
+# feeds whose list endpoint withholds the description need an entry here.
+DETAIL_DESC = {
+    "workday": lambda d: (d.get("jobPostingInfo") or {}).get("jobDescription", ""),
+    "eightfold": lambda d: (d.get("data") or d).get("job_description", ""),
+}
+MAX_DETAIL_FETCHES = 400   # one request each; bounds a runaway sweep
+
+
+def enrich_descriptions(rows, prev_desc, key_of):
+    """Fill in descriptions for the ATSes that hide them behind a second request.
+
+    Two things keep this cheap. It runs after the title filter and after
+    grouping, so it only ever touches rows that made the board; and it reuses
+    the previous sweep's text for rows it already knows, which means a daily
+    refresh pays for the handful of genuinely new postings rather than all of
+    them. A posting that fails here simply has no preview text.
+    """
+    todo = [r for r in rows if not r.get("desc") and r.get("detail")]
+    if not todo:
+        return
+    reused = fetched = 0
+    for r in todo:
+        cached = prev_desc.get(key_of(r))
+        if cached:
+            r["desc"] = cached
+            reused += 1
+            continue
+        if fetched >= MAX_DETAIL_FETCHES:
+            continue
+        grab = DETAIL_DESC.get(r.get("detail_ats"))
+        if not grab:
+            continue
+        hdrs = {"Referer": r["detail_ref"]} if r.get("detail_ref") else None
+        try:
+            r["desc"] = clean_desc(grab(fetch(r["detail"], headers=hdrs, timeout=20)))
+            fetched += 1
+        except Exception:
+            pass          # no preview text for this one; the link still works
+        time.sleep(0.35)  # same courtesy pause the list pagers use
+    print(f"  descriptions: {reused} reused from last sweep, {fetched} fetched "
+          f"({len(todo) - reused - fetched} unresolved)")
+
+
 def page_fingerprint(url):
     """Text-only hash of a page, so markup noise (nonces, cache-busters) does
     not read as a content change."""
@@ -949,7 +1061,13 @@ def main():
                          "title": j["title"], "location": disp,
                          "states": states, "metros": metros,
                          "remote": remote, "intl": non_us,
-                         "posted": j["posted"], "url": j["url"]})
+                         "posted": j["posted"], "url": j["url"],
+                         "desc": j.get("desc", ""),
+                         # dropped again after enrich_descriptions(); they exist
+                         # only to tell it where to look for a missing body
+                         "detail": j.get("detail", ""),
+                         "detail_ats": j.get("detail_ats", ""),
+                         "detail_ref": j.get("detail_ref", "")})
         print(f"    {kept} hits of {len(jobs)} postings")
         time.sleep(0.4)
 
@@ -972,6 +1090,8 @@ def main():
                 if mt not in g["metros"]:
                     g["metros"].append(mt)
             g["remote"] = g["remote"] or r["remote"]
+            if not g.get("desc") and r.get("desc"):
+                g["desc"] = r["desc"]
         else:
             grouped[key] = {**r, "count": 1, "states": list(r["states"]),
                             "metros": list(r["metros"]),
@@ -992,6 +1112,23 @@ def main():
         prev_payload = {}
     today = datetime.now(timezone.utc).strftime("%Y-%m-%d")
 
+    # Keyed by employer+title (the dedup key) rather than URL, because a grouped
+    # row's representative URL changes when one of its department postings
+    # closes. Used for both the description cache and the first_seen stamps.
+    def seen_key(r):
+        return r["employer"] + "\t" + r["title"].strip().lower()
+
+    # Preview text for the feeds that withhold it from their list endpoint.
+    # Runs here, after filtering and grouping, so it costs one request per row
+    # that actually reached the board and none at all for rows already known.
+    enrich_descriptions(
+        rows,
+        {seen_key(j): j.get("desc", "") for j in prev_payload.get("jobs", [])},
+        seen_key)
+    for r in rows:
+        for k in ("detail", "detail_ats", "detail_ref"):
+            r.pop(k, None)
+
     # A source that errors mid-sweep should not vaporize its listings until it
     # recovers (browser-tier and WAF-fronted sources especially can fail from
     # one network but not another). Carry the failed employers' previous rows
@@ -1010,12 +1147,8 @@ def main():
 
     # "First seen" survives across sweeps: carry the date forward from the
     # previous jobs.json, stamp today on rows that were not there last time.
-    # Keyed by employer+title (the dedup key) rather than URL, because a grouped
-    # row's representative URL changes when one of its department postings
-    # closes. Rows that predate this tracking keep "" - unknown, but old - so
-    # the board never badges the whole backlog as new on the first run.
-    def seen_key(r):
-        return r["employer"] + "\t" + r["title"].strip().lower()
+    # Rows that predate this tracking keep "" - unknown, but old - so the board
+    # never badges the whole backlog as new on the first run.
     prev_seen = {seen_key(j): j.get("first_seen", "")
                  for j in prev_payload.get("jobs", [])}
     for r in rows:

@@ -24,15 +24,15 @@
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Research Jobs Board">
   <meta property="og:title" content="Soon to be unemployed? Absolutely Fucked?">
-  <meta property="og:description" content="I hope this might help a smidge. 629 open research roles, already filtered, from 76 employer job feeds across 27 universities and 20 metros.">
+  <meta property="og:description" content="I hope this might help a smidge. 614 open research roles, already filtered, from 76 employer job feeds across 27 universities and 19 metros.">
   <meta property="og:url" content="https://bridget-jobs.vercel.app/">
   <meta property="og:image" content="https://bridget-jobs.vercel.app/og.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="Soon to be unemployed? Absolutely Fucked? 629 open roles, 76 employers, 27 universities, 20 metros.">
+  <meta property="og:image:alt" content="Soon to be unemployed? Absolutely Fucked? 614 open roles, 76 employers, 27 universities, 19 metros.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Soon to be unemployed? Absolutely Fucked?">
-  <meta name="twitter:description" content="I hope this might help a smidge. 629 open research roles, already filtered.">
+  <meta name="twitter:description" content="I hope this might help a smidge. 614 open research roles, already filtered.">
   <meta name="twitter:image" content="https://bridget-jobs.vercel.app/og.png">
 
   <style>
@@ -403,7 +403,22 @@
 
     /* ---------- job board ---------- */
 
+    /* The board is a list beside a preview pane, which needs more room than the
+       reading column the rest of the page uses. The widening happens on .wrap
+       so the tab strip lines up with the board underneath it; everything that
+       is prose stays pinned to its old width. Because .wrap is centred either
+       way, the header and hero do not shift when the tab changes. */
+    body.wide .wrap { max-width: 1220px; }
+    header.top, .hero, #view-guide { max-width: 900px; margin-left: auto; margin-right: auto; }
+
     .board-controls { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-bottom: 8px; }
+
+    .board-split {
+      display: grid;
+      grid-template-columns: minmax(320px, 420px) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
 
     input.search {
       font: inherit; font-size: 15px; flex: 1 1 260px; min-width: 0;
@@ -428,17 +443,22 @@
       border-radius: var(--radius); padding: 14px 16px; margin-bottom: 10px;
       box-shadow: var(--shadow); transition: .14s;
     }
-    .job:hover { border-color: var(--accent); border-left-color: var(--accent); transform: translateY(-1px); }
+    .job:hover { border-color: var(--accent); border-left-color: var(--accent); }
     .job[data-score="2"] { border-left-color: var(--t1); }
     .job[hidden] { display: none; }
+    /* the previewed card, so the pane on the right always has an anchor */
+    .job.sel { border-color: var(--accent); border-left-color: var(--accent); background: var(--accent-soft); }
 
-    .job-top { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; margin-bottom: 4px; }
-    .job-title { font-size: 16.5px; font-weight: 600; letter-spacing: -.01em; }
-    .job-emp { font-size: 14px; color: var(--accent); font-weight: 600; }
-    .job-meta { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); }
+    /* Cards sit in a ~400px column, so the title gets its own line rather than
+       sharing one with the employer the way a full-width row could. */
+    .job-top { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 2px; }
+    .job-title { font-size: 15px; font-weight: 600; letter-spacing: -.01em; line-height: 1.35; }
+    .job-sub { display: flex; gap: 6px; flex-wrap: wrap; align-items: baseline; font-size: 13px; color: var(--muted); margin-bottom: 7px; }
+    .job-emp { color: var(--accent); font-weight: 600; }
+    .job-meta { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; font-size: 12.5px; color: var(--muted); }
     .dot { opacity: .5; }
 
-    .job-age { margin-left: auto; white-space: nowrap; }
+    .job-age { margin-left: auto; white-space: nowrap; font-size: 12px; color: var(--muted); padding-top: 3px; }
 
     .pill {
       font-size: 10.5px; font-weight: 700; letter-spacing: .05em; text-transform: uppercase;
@@ -473,6 +493,61 @@
     .job.applied { opacity: .55; }
     .job.applied .job-title { text-decoration: line-through; }
     .job.user-hidden { opacity: .55; border-style: dashed; }
+
+    /* ---------- preview pane ---------- */
+
+    /* Sticky rather than independently scrolled: the list scrolls with the
+       page as it always has, and the preview stays put beside it. */
+    .detail {
+      position: sticky;
+      top: 12px;
+      max-height: calc(100vh - 24px);
+      overflow-y: auto;
+      overscroll-behavior: contain;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 22px 24px 26px;
+    }
+
+    .detail-empty { color: var(--muted); font-style: italic; text-align: center; padding: 70px 20px; margin: 0; }
+    .detail-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+    .detail h3 { font-size: 21px; line-height: 1.25; letter-spacing: -.02em; margin: 0 0 4px; }
+    .detail-emp { margin: 0; color: var(--accent); font-weight: 600; font-size: 15px; }
+    .detail-meta { display: flex; gap: 7px; flex-wrap: wrap; align-items: center; font-size: 13px; color: var(--muted); margin: 10px 0 0; }
+
+    a.apply {
+      display: block; text-align: center; margin-top: 18px;
+      background: var(--accent); color: #fff; text-decoration: none;
+      font-weight: 600; font-size: 15px; padding: 11px 16px; border-radius: 8px;
+      transition: .14s;
+    }
+    a.apply:hover { filter: brightness(1.1); }
+
+    .detail-acts { display: flex; gap: 8px; margin-top: 9px; }
+    .detail-acts button.act { flex: 1; padding: 7px 10px; font-size: 12.5px; border-radius: 8px; }
+    .detail-acts button.act.on {
+      background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600;
+    }
+
+    .detail-desc {
+      margin-top: 20px; padding-top: 18px; border-top: 1px solid var(--border);
+      font-size: 14.5px; line-height: 1.6; white-space: pre-wrap; overflow-wrap: anywhere;
+    }
+    .detail-note { color: var(--muted); font-size: 13.5px; font-style: italic; }
+    .detail-more { display: block; margin-top: 14px; font-size: 13px; color: var(--muted); }
+
+    @media (prefers-color-scheme: dark) {
+      a.apply, .detail-acts button.act.on { color: #10231e; }
+    }
+
+    /* Below this the pane has nowhere to go, so the board falls back to the
+       plain list it was before and cards open their posting directly. */
+    @media (max-width: 900px) {
+      .board-split { grid-template-columns: 1fr; }
+      .detail { display: none; }
+    }
 
     .manual-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px; }
 
@@ -547,8 +622,15 @@
       </div>
       <p class="meta-line" id="boardmeta">Loading…</p>
 
-      <div id="joblist"></div>
-      <p class="empty" id="jobempty">No roles match that filter.</p>
+      <div class="board-split">
+        <div>
+          <div id="joblist"></div>
+          <p class="empty" id="jobempty">No roles match that filter.</p>
+        </div>
+        <aside class="detail" id="jobdetail" aria-label="Job preview">
+          <p class="detail-empty">Pick a role on the left to read it here.</p>
+        </aside>
+      </div>
 
       <section id="manual" style="margin-top:44px">
         <h2>Not covered above</h2>
@@ -1159,7 +1241,7 @@
     /* ---------------- tabs ---------------- */
     (function () {
       var tabs = [
-        { btn: document.getElementById('tab-jobs'), view: document.getElementById('view-jobs') },
+        { btn: document.getElementById('tab-jobs'), view: document.getElementById('view-jobs'), wide: true },
         { btn: document.getElementById('tab-guide'), view: document.getElementById('view-guide') }
       ];
       tabs.forEach(function (t) {
@@ -1169,9 +1251,13 @@
             o.btn.setAttribute('aria-selected', String(on));
             o.view.hidden = !on;
           });
+          // Only the board needs the extra width for its preview pane; the
+          // guide is prose and stays in the narrower reading column.
+          document.body.classList.toggle('wide', !!t.wide);
           window.scrollTo({ top: 0, behavior: 'smooth' });
         });
       });
+      document.body.classList.add('wide');   // the board is the landing tab
     })();
 
     /* ---------------- job board ---------------- */
@@ -1196,9 +1282,14 @@
       // remote/intl flags, and the dropdown is built from a facet with counts.
 
       var list = document.getElementById('joblist');
+      var detail = document.getElementById('jobdetail');
       var meta = document.getElementById('boardmeta');
       var empty = document.getElementById('jobempty');
       var qbox = document.getElementById('q');
+      // Under this width the pane is display:none, so a click has to fall
+      // through to the card's own link instead of previewing nothing.
+      var narrow = window.matchMedia('(max-width: 900px)');
+      var byKey = {}, selKey = null, shownKey = null, shownMark = null;
       var jobs = [], view = [],
         f = { lane: 'all', strong: false, remote: false, fresh: false,
               loc: 'all', q: '', sort: 'match', showHidden: false };
@@ -1278,26 +1369,81 @@
             ' data-metros="' + esc((j.metros || []).join(' ')) + '"' +
             ' data-t="' + esc(((j.title || '') + ' ' + (j.employer || '') + ' ' + (j.location || '')).toLowerCase()) + '">' +
             '<div class="job-top"><span class="job-title">' + esc(j.title) + '</span>' +
-            '<span class="job-emp">' + esc(j.employer) + '</span>' +
-            (j.count > 1 ? '<span class="job-meta"><span>' + j.count + ' openings</span></span>' : '') +
-            '<span class="job-acts">' +
-            '<button class="act act-applied" data-act="applied">Applied</button>' +
-            '<button class="act act-hide" data-act="hidden">Hide</button>' +
-            '</span></div>' +
+            (age ? '<span class="job-age" title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
+            '</div>' +
+            '<div class="job-sub"><span class="job-emp">' + esc(j.employer) + '</span>' +
+            '<span class="dot">·</span><span>' + esc(j.location || 'Location not listed') + '</span>' +
+            (j.count > 1 ? '<span class="dot">·</span><span>' + j.count + ' openings</span>' : '') +
+            '</div>' +
             '<div class="job-meta">' +
             (j._new ? '<span class="pill p-new">New</span>' : '') +
             '<span class="pill ' + (j.score === 2 ? 'p-strong">Strong match' : 'p-maybe">Worth a look') + '</span>' +
             (remote ? '<span class="pill p-remote">Remote</span>' : '') +
-            '<span>Lane ' + lane + '</span><span class="dot">·</span>' +
-            '<span>' + esc(j.location || 'Location not listed') + '</span>' +
-            (age ? '<span class="job-age" title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
-            '</div></a>';
+            '<span>Lane ' + lane + '</span>' +
+            '<span class="job-acts">' +
+            '<button class="act act-applied" data-act="applied">Applied</button>' +
+            '<button class="act act-hide" data-act="hidden">Hide</button>' +
+            '</span></div></a>';
         }).join('');
         paint();
       }
 
+      // The preview pane. Everything it shows already lives in jobs.json, so
+      // opening a role costs no request; "desc" is there for the feeds that
+      // publish a body (see enrich_descriptions in sweep.py) and empty for the
+      // scraped ones, which get an honest note instead of a blank panel.
+      function renderDetail() {
+        var j = selKey ? byKey[selKey] : null;
+        if (!j) {
+          if (shownKey === null) return;
+          detail.innerHTML = '<p class="detail-empty">Pick a role on the left to read it here.</p>';
+          shownKey = null;
+          return;
+        }
+        var mark = marks[selKey] || '';
+        // paint() runs on every keystroke; rebuilding an unchanged pane would
+        // only throw away the reader's scroll position and text selection.
+        if (shownKey === selKey && shownMark === mark) return;
+        var age = ageOf(j);
+        var bits = (j._new ? '<span class="pill p-new">New</span>' : '') +
+          '<span class="pill ' + (j.score === 2 ? 'p-strong">Strong match' : 'p-maybe">Worth a look') + '</span>' +
+          (j.remote ? '<span class="pill p-remote">Remote</span>' : '');
+        detail.innerHTML =
+          '<div class="detail-pills">' + bits + '</div>' +
+          '<h3>' + esc(j.title) + '</h3>' +
+          '<p class="detail-emp">' + esc(j.employer) + '</p>' +
+          '<div class="detail-meta"><span>' + esc(j.location || 'Location not listed') + '</span>' +
+          '<span class="dot">·</span><span>Lane ' + laneOf(j) + '</span>' +
+          (j.count > 1 ? '<span class="dot">·</span><span>' + j.count + ' openings</span>' : '') +
+          (age ? '<span class="dot">·</span><span title="' + esc(age.tip) + '">' + age.label + '</span>' : '') +
+          '</div>' +
+          '<a class="apply" href="' + esc(j.url) + '" target="_blank" rel="noopener">Open the posting &#8599;</a>' +
+          '<div class="detail-acts">' +
+          '<button class="act' + (mark === 'applied' ? ' on' : '') + '" data-act="applied">' +
+          (mark === 'applied' ? 'Applied &#10003;' : 'Mark applied') + '</button>' +
+          '<button class="act' + (mark === 'hidden' ? ' on' : '') + '" data-act="hidden">' +
+          (mark === 'hidden' ? 'Hidden' : 'Hide') + '</button></div>' +
+          (j.stale ? '<p class="detail-note">This employer’s feed failed on the last sweep, so this row is ' +
+            'carried over from an earlier one and may already have closed.</p>' : '') +
+          '<div class="detail-desc">' +
+          (j.desc ? esc(j.desc) +
+            // sweep.py caps the text and marks the cut with an ellipsis, so
+            // the "there is more" line only appears when there actually is.
+            (/…$/.test(j.desc)
+              ? '<span class="detail-more">Trimmed for the preview. Open the posting for the rest.</span>'
+              : '')
+            : '<span class="detail-note">This employer’s feed does not publish a description, ' +
+              'only the title and location. Open the posting to read it.</span>') +
+          '</div>';
+        // Only reset the scroll when the pane actually changed role, so a
+        // mark toggle does not throw away where she was reading.
+        if (shownKey !== selKey) detail.scrollTop = 0;
+        shownKey = selKey;
+        shownMark = mark;
+      }
+
       function paint() {
-        var shown = 0, hiddenAway = 0;
+        var shown = 0, hiddenAway = 0, visible = [], selAt = -1;
         Array.prototype.forEach.call(list.children, function (el) {
           var mark = marks[el.dataset.key];
           el.classList.toggle('applied', mark === 'applied');
@@ -1317,7 +1463,29 @@
           }
           el.hidden = !ok;
           if (ok && mark !== 'hidden') shown++;
+          if (ok) visible.push(el);
+          if (el.dataset.key === selKey) selAt = +el.dataset.i;
         });
+
+        // Keep the pane pointed at something. When the previewed role is
+        // filtered or hidden away, move to the next one still on screen rather
+        // than jumping back to the top of the list.
+        if (!narrow.matches) {
+          var stillThere = visible.some(function (el) { return el.dataset.key === selKey; });
+          if (!stillThere) {
+            var next = null;
+            for (var k = 0; k < visible.length; k++) {
+              if (+visible[k].dataset.i > selAt) { next = visible[k]; break; }
+            }
+            if (!next) next = visible[visible.length - 1] || null;
+            selKey = next ? next.dataset.key : null;
+          }
+          Array.prototype.forEach.call(list.children, function (el) {
+            el.classList.toggle('sel', el.dataset.key === selKey);
+          });
+          renderDetail();
+        }
+
         empty.style.display = (shown || (f.showHidden && hiddenAway)) ? 'none' : 'block';
         document.getElementById('tabcount').textContent = '(' + shown + ')';
         var hbtn = document.getElementById('showHidden');
@@ -1363,20 +1531,64 @@
       var sortSel = document.getElementById('sort');
       sortSel.addEventListener('change', function () { f.sort = sortSel.value; applySort(); });
 
+      function toggleMark(key, act) {
+        if (marks[key] === act) delete marks[key];
+        else marks[key] = act;
+        saveMarks();
+        paint();
+      }
+
       // The card itself is a link, so the mark buttons live inside it and have
       // to swallow the click. Clicking a mark again clears it; marking a job
       // applied replaces hidden and vice versa.
       list.addEventListener('click', function (e) {
         var btn = e.target.closest ? e.target.closest('button[data-act]') : null;
-        if (!btn) return;
+        if (btn) {
+          e.preventDefault();
+          e.stopPropagation();
+          toggleMark(btn.closest('.job').dataset.key, btn.dataset.act);
+          return;
+        }
+        // A plain left-click previews the role in the pane instead of leaving
+        // the page. Modified clicks still open the posting in a new tab, and
+        // so does any click on the narrow layout, which has no pane to fill.
+        if (narrow.matches || e.button !== 0 ||
+            e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+        var card = e.target.closest ? e.target.closest('.job') : null;
+        if (!card) return;
         e.preventDefault();
-        e.stopPropagation();
-        var key = btn.closest('.job').dataset.key, act = btn.dataset.act;
-        if (marks[key] === act) delete marks[key];
-        else marks[key] = act;
-        saveMarks();
+        selKey = card.dataset.key;
         paint();
       });
+
+      detail.addEventListener('click', function (e) {
+        var btn = e.target.closest ? e.target.closest('button[data-act]') : null;
+        if (btn && selKey) toggleMark(selKey, btn.dataset.act);
+      });
+
+      // Arrow keys walk the list, so she can skim the previews without
+      // reaching for the mouse. Ignored while typing in the search box.
+      document.addEventListener('keydown', function (e) {
+        if (narrow.matches || document.getElementById('view-jobs').hidden) return;
+        if (e.key !== 'ArrowDown' && e.key !== 'ArrowUp') return;
+        if (e.metaKey || e.ctrlKey || e.altKey) return;
+        var tag = (e.target.tagName || '').toLowerCase();
+        if (tag === 'input' || tag === 'select' || tag === 'textarea') return;
+        var vis = Array.prototype.filter.call(list.children, function (el) { return !el.hidden; });
+        if (!vis.length) return;
+        e.preventDefault();
+        var at = -1;
+        for (var i = 0; i < vis.length; i++) if (vis[i].dataset.key === selKey) at = i;
+        var to = Math.min(vis.length - 1, Math.max(0, at + (e.key === 'ArrowDown' ? 1 : -1)));
+        selKey = vis[to].dataset.key;
+        paint();
+        vis[to].scrollIntoView({ block: 'nearest' });
+      });
+
+      // Crossing the pane's breakpoint changes whether there is anything to
+      // select, so re-run the pass that decides.
+      if (narrow.addEventListener) narrow.addEventListener('change', paint);
+      else if (narrow.addListener) narrow.addListener(paint);
 
       var hiddenBtn = document.getElementById('showHidden');
       hiddenBtn.addEventListener('click', function () {
@@ -1403,6 +1615,9 @@
             // first_seen tracking.
             var newTs = j._seenTs != null ? j._seenTs : j._ts;
             j._new = newTs != null && !j._approx && (Date.now() - newTs) <= 7 * 864e5;
+            // The preview pane looks the job up by the same employer+title key
+            // the cards and the marks use; grouping in sweep.py makes it unique.
+            byKey[jobKey(j)] = j;
           });
 
           // Hero counts come from the same feed, so the headline can never
