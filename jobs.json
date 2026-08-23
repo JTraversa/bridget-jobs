@@ -1,5 +1,5 @@
 {
- "generated": "2026-08-22 11:22 UTC",
+ "generated": "2026-08-23 11:23 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -29,7 +29,7 @@
   {
    "code": "RDU",
    "label": "Research Triangle NC",
-   "n": 35
+   "n": 34
   },
   {
    "code": "NYC",
@@ -44,11 +44,6 @@
   {
    "code": "DEN",
    "label": "Denver / Boulder",
-   "n": 8
-  },
-  {
-   "code": "PIT",
-   "label": "Pittsburgh",
    "n": 8
   },
   {
@@ -117,7 +112,7 @@
    "n": 12
   }
  ],
- "openings": 626,
+ "openings": 615,
  "universities": 27,
  "swept": 76,
  "targets": 88,
@@ -163,8 +158,8 @@
    "portal": "https://ssrs.com/careers/  (jobs listed on the page linking to ourcareerpages.com, but link text is just Apply Now - titles are unextractable, so the page is watched for changes)",
    "watch": {
     "url": "https://ssrs.com/careers/",
-    "hash": "b5afa276e2fd537c",
-    "last_changed": "2026-08-22"
+    "hash": "f6b94dcdcd913599",
+    "last_changed": "2026-08-23"
    }
   },
   {
@@ -399,7 +394,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/John-Carter-Brown-Library/Digital-Research-Associate_REQ210740",
    "count": 1,
    "first_seen": ""
@@ -456,85 +451,9 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/164-Angell-Street/Senior-Research-Associate_REQ210729",
    "count": 3,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Associate - School of Computer Science - CBD",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 8 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate---School-of-Computer-Science---CBD_2024954",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Associate - School of Computer Science - S3D",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate---School-of-Computer-Science---S3D_2024695",
-   "count": 2,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Associate II - Robotics Institute",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 10 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate-II---Robotics-Institute_2024594",
-   "count": 2,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Associate III - Robotics Institute",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 26 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Associate-III---Robotics-Institute_2024910",
-   "count": 1,
    "first_seen": ""
   },
   {
@@ -741,7 +660,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Clinical-Research-Associate_JR26584",
    "count": 2,
    "first_seen": ""
@@ -760,7 +679,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Coordinator_JR26559",
    "count": 2,
    "first_seen": ""
@@ -779,7 +698,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Coordinator-1_JR26620",
    "count": 2,
    "first_seen": ""
@@ -798,7 +717,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Main-Campus/Research-Associate--Department-of-Psychology---Georgetown-University-College-of-Arts---Sciences---Part-Time_JR26971",
    "count": 1,
    "first_seen": ""
@@ -817,7 +736,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/125-E-St-NW-7th-Floor/Temporary-Qualitative-Research-Associate--Evidence-for-Justice-Lab---McCourt-School-of-Public-Policy---Georgetown-University_JR26909",
    "count": 1,
    "first_seen": ""
@@ -874,7 +793,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/On-Call-Research-Associate_R2602075",
    "count": 1,
    "first_seen": ""
@@ -893,7 +812,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Associate--Social-Marketing_R2602853",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -923,7 +842,7 @@
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Staff User Researcher - Consumer",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
+   "location": "United States - Remote +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -932,9 +851,9 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": true,
-   "posted": "2026-08-19T09:32:27-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8141483",
+   "intl": false,
+   "posted": "2026-08-19T09:32:26-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8141481",
    "count": 2,
    "first_seen": ""
   },
@@ -1431,7 +1350,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mandaluyong-City-Ortigas-Center/Research-Associate_R102199",
    "count": 3,
    "first_seen": "2026-08-22"
@@ -1722,7 +1641,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal/job/Washington-DC-Pew-Research-Center/Research-Associate--Race---Ethnicity_R003246",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -1999,25 +1918,6 @@
    "score": 2,
    "employer": "UNC Chapel Hill",
    "branch": "university",
-   "title": "Legal Research Associate",
-   "location": "Chapel Hill, NC",
-   "states": [
-    "NC"
-   ],
-   "metros": [
-    "RDU"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "2026-08-17",
-   "url": "https://unc.peopleadmin.com/postings/324032",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "UNC Chapel Hill",
-   "branch": "university",
    "title": "Research Analyst",
    "location": "Chapel Hill, NC",
    "states": [
@@ -2161,7 +2061,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2_R100099479",
    "count": 15,
    "first_seen": ""
@@ -2180,7 +2080,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2---CRANE-Lab_R100097925",
    "count": 1,
    "first_seen": ""
@@ -2313,7 +2213,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/ECHO-Research-Associate-2_R100096493",
    "count": 1,
    "first_seen": ""
@@ -2351,7 +2251,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/RESEARCH-ASSOCIATE-1-Myeloma_R100097305-1",
    "count": 1,
    "first_seen": ""
@@ -2370,7 +2270,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-1_R100099171",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -2389,7 +2289,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-2_R100095476",
    "count": 1,
    "first_seen": ""
@@ -2408,7 +2308,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-2--Division-of-Infectious-Diseases_R100099568-1",
    "count": 1,
    "first_seen": ""
@@ -2427,7 +2327,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1_R100098768",
    "count": 7,
    "first_seen": ""
@@ -2484,7 +2384,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1----Pediatrics-_R100100208-1",
    "count": 1,
    "first_seen": ""
@@ -2560,7 +2460,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1-Full-Time---Ophthalmology--Miami--FL-_R100099725",
    "count": 1,
    "first_seen": ""
@@ -2579,7 +2479,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1-Full-Time-Bascom-Palmer-Eye-Institute-Miami--FL_R100095423",
    "count": 1,
    "first_seen": ""
@@ -2598,7 +2498,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-1--GAB_R100100199",
    "count": 1,
    "first_seen": ""
@@ -2636,7 +2536,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 29 Days Ago",
+   "posted": "Posted 30 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1_R100095489-1",
    "count": 1,
    "first_seen": ""
@@ -2655,7 +2555,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-3--SOM--A-_R100098462",
    "count": 3,
    "first_seen": ""
@@ -2693,7 +2593,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1---Biochem-and-Molecular-Biology-_R100093836",
    "count": 1,
    "first_seen": ""
@@ -2712,7 +2612,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2_R100086050",
    "count": 5,
    "first_seen": ""
@@ -2750,7 +2650,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM_R100093866",
    "count": 1,
    "first_seen": ""
@@ -2788,7 +2688,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--Petrucelli-Lab_R100093936",
    "count": 1,
    "first_seen": ""
@@ -2807,7 +2707,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-3_R100099561",
    "count": 3,
    "first_seen": ""
@@ -2826,7 +2726,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2---Full-Time---Bascom-Palmer-Eye-Institute-Miami--FL_R100096362",
    "count": 1,
    "first_seen": ""
@@ -2845,7 +2745,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-I_R100099719",
    "count": 1,
    "first_seen": ""
@@ -2902,7 +2802,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate---Coral-Reproduction_R100099364",
    "count": 1,
    "first_seen": ""
@@ -2921,7 +2821,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-1_R100099787",
    "count": 1,
    "first_seen": ""
@@ -2940,7 +2840,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-1_R100096648",
    "count": 2,
    "first_seen": ""
@@ -2978,7 +2878,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-2_R100094529",
    "count": 1,
    "first_seen": ""
@@ -2997,7 +2897,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-3_R100099055",
    "count": 1,
    "first_seen": ""
@@ -3016,7 +2916,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 29 Days Ago",
+   "posted": "Posted 30 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-3---Full-Time-Bascom-Palmer-Eye-Institute--Miami--FL-_R100099134-1",
    "count": 1,
    "first_seen": ""
@@ -3111,7 +3011,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A_JR00117715-1",
    "count": 1,
    "first_seen": ""
@@ -3149,7 +3049,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A-B_JR00124575-1",
    "count": 3,
    "first_seen": ""
@@ -3206,7 +3106,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy-and-Perinatal-Research-Center-_JR00123522-1",
    "count": 1,
    "first_seen": ""
@@ -3244,7 +3144,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-B_JR00123913-1",
    "count": 2,
    "first_seen": ""
@@ -3301,7 +3201,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stellar-Chance-F3/Clinical-Research-Coordinator-C_JR00125717-1",
    "count": 3,
    "first_seen": ""
@@ -3320,7 +3220,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-C--OBGYN---Pregnancy-and-Perinatal-Research-Center-_JR00124683",
    "count": 1,
    "first_seen": ""
@@ -3339,7 +3239,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Program-Manager_JR00123419",
    "count": 1,
    "first_seen": ""
@@ -3377,7 +3277,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Dinan-Hall/Research-Analyst--Wharton-Leadership-Pillar_JR00125317-1",
    "count": 1,
    "first_seen": ""
@@ -3472,7 +3372,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://williammary.wd12.myworkdayjobs.com/WM/job/Posting-Location---William--Mary/Prospect-Research-Analyst_JR101968",
    "count": 1,
    "first_seen": ""
@@ -4119,7 +4019,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://american.wd1.myworkdayjobs.com/AU/job/Main-Campus-Washington-DC/Graduate-Research-Assistant--Student-_R4750",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -4138,7 +4038,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://brandeis.wd5.myworkdayjobs.com/Jobs/job/Brandeis---Waltham-Campus/Research-Specialist-Cohen-Center_R0010687-1",
    "count": 1,
    "first_seen": ""
@@ -4176,7 +4076,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager---Insights---Analytics--ERM-_R248272-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4214,7 +4114,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager--Marketing---Best-Customer---Field-Assessment--COBT_R248415-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4233,7 +4133,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Manager--Public-Affairs_R248485-2",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4290,7 +4190,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Riverwoods-IL/Senior-Associate--Quantitative-Analyst---Model-Risk-Office_R249475-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4309,7 +4209,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Business-Analyst---Insights---Analytics--ERM-_R248206-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4328,7 +4228,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Nottingham--Eng/Insights-and-Outcomes-Specialist_R246077-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -4347,7 +4247,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Manager--Quantitative-Analysis---Model-Risk-Office_R249476-1",
    "count": 2,
    "first_seen": "2026-08-21"
@@ -4366,86 +4266,10 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/Richmond-VA/Sr-Risk-Associate---Modeling-and-Advanced-Data-Insights_R247090-1",
    "count": 1,
    "first_seen": "2026-08-21"
-  },
-  {
-   "score": 1,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Assistant - Robotics Institute",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 10 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant---Robotics-Institute_2024585",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Assistant - Tepper School of Business",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant_2024536",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Assistant \u2013 Health and Human Performance Lab - Department of Psychology, Dietrich College",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 23 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Project-Manager---Health-and-Human-Performance-Lab---Department-of-Psychology--Dietrich-College_2024890",
-   "count": 1,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Carnegie Mellon",
-   "branch": "university",
-   "title": "Research Assistant \u2013 Thiessen Lab \u2013 Dietrich College",
-   "location": "Pittsburgh, PA",
-   "states": [
-    "PA"
-   ],
-   "metros": [
-    "PIT"
-   ],
-   "remote": false,
-   "intl": false,
-   "posted": "Posted 4 Days Ago",
-   "url": "https://cmu.wd5.myworkdayjobs.com/CMU/job/Pittsburgh-PA/Research-Assistant---Thiessen-Lab---Dietrich-College_2025002-1",
-   "count": 1,
-   "first_seen": ""
   },
   {
    "score": 1,
@@ -4480,7 +4304,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://clemson.wd12.myworkdayjobs.com/Clemson_Careers/job/-/Phlebotomy-Lab-Coordinator_JR-10333-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -4594,7 +4418,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Lab-Manager_JR26725",
    "count": 1,
    "first_seen": ""
@@ -4613,7 +4437,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pre-Clinical-Science-Ground-Floor/Research-Assistant-2_JR27038",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -4727,7 +4551,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Seeley-G-Mudd-Building-College-of-Medicine/Research-Assistant-1_JR108511",
    "count": 1,
    "first_seen": ""
@@ -4765,7 +4589,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Bilingual-Survey-Interviewer--English-Spanish-_R2602657",
    "count": 1,
    "first_seen": ""
@@ -4784,7 +4608,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Lead-Quantitative-and-Qualitative-Researcher--Remote_R2602676",
    "count": 1,
    "first_seen": ""
@@ -4803,7 +4627,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Specialist--Physical-Activity--Future-Opportunity-_R2601951",
    "count": 1,
    "first_seen": ""
@@ -4822,7 +4646,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Research-Specialist--Social-Marketing_R2602854",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -4841,7 +4665,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Brussels-Belgium/Senior-Consultant-in-research--analysis-and-evaluation--gender-equality_R2601073",
    "count": 1,
    "first_seen": ""
@@ -4860,7 +4684,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/Senior-Economic-Mobility-Research-Specialist_R2602781",
    "count": 1,
    "first_seen": ""
@@ -4870,7 +4694,7 @@
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Insights Lead, Instacart Business",
-   "location": "United States - Remote +1 more",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -4879,9 +4703,9 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": false,
+   "intl": true,
    "posted": "2026-08-07T18:32:55-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8115834",
+   "url": "https://instacart.careers/job/?gh_jid=8115836",
    "count": 2,
    "first_seen": ""
   },
@@ -5625,7 +5449,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 15 Days Ago",
+   "posted": "Posted 16 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mumbai-The-ORB-Building/Account-Manager---Qualitative-Research---Mumbai_R101948",
    "count": 2,
    "first_seen": "2026-08-22"
@@ -5644,7 +5468,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 9 Days Ago",
+   "posted": "Posted 10 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Mandaluyong-City-Ortigas-Center/Associate-Research-Manager_R102311-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -5663,7 +5487,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bogot-Edificio-Insignia/Qualitative-Account-Manager_R102132",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -5682,7 +5506,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 25 Days Ago",
+   "posted": "Posted 26 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Ho-Chi-Minh-City-Vo-Van-Tan-Street/Research-Manager_R101387-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -5701,7 +5525,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 15 Days Ago",
+   "posted": "Posted 16 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bangalore-Prestige-Technology-Park/Senior-Research-Manager_R102203-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -5720,7 +5544,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 8 Days Ago",
+   "posted": "Posted 9 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Bangkok-Rajanakarn-Building/Research-Manager---Insights_R100065-4",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -7053,7 +6877,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Data-Specialist_R100096346",
    "count": 8,
    "first_seen": "2026-08-22"
@@ -7091,7 +6915,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Hialeah-FL/Clinical-Research-Project-Manager---Hybrid_R100099421-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -7129,7 +6953,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-1_R100092666",
    "count": 3,
    "first_seen": ""
@@ -7205,7 +7029,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-3_R100089693",
    "count": 1,
    "first_seen": ""
@@ -7224,7 +7048,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 16 Days Ago",
+   "posted": "Posted 17 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Core-Facility-Research-Specialist-3--Cancer-Modeling-_R100098016",
    "count": 1,
    "first_seen": ""
@@ -7319,7 +7143,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 2 Days Ago",
+   "posted": "Posted 3 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1--A-_R100099329",
    "count": 2,
    "first_seen": ""
@@ -7509,7 +7333,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 23 Days Ago",
+   "posted": "Posted 24 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Assistant-A-B_JR00123918-1",
    "count": 1,
    "first_seen": ""
@@ -7547,7 +7371,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/AnatomyChemistry-Building/Clinical-Research-Project-Manager-A_JR00124333-1",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -7566,7 +7390,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Project-Manager-B_JR00124079-1",
    "count": 2,
    "first_seen": "2026-08-22"
@@ -7585,7 +7409,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Perelman-Center-FL3West/Clinical-Research-Project-Manager-B--Department-of-Obstetrics-and-Gynecology-_JR00123514",
    "count": 1,
    "first_seen": "2026-08-22"
@@ -7661,7 +7485,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Dinan-Hall---4th-Floor/Pre-Doctoral-Research-Specialist--Real-Estate-Center-_JR00124462-1",
    "count": 1,
    "first_seen": ""
@@ -7699,7 +7523,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 15 Days Ago",
+   "posted": "Posted 16 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Manager-D---Rodent-Metabolic-Phenotyping-Core_JR00123153-1",
    "count": 1,
    "first_seen": ""
@@ -7718,7 +7542,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Levy-Ctr-for-Oral-Health-Rsrch/Research-Specialist_JR00123916",
    "count": 3,
    "first_seen": ""
@@ -7737,7 +7561,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A_JR00123473-1",
    "count": 18,
    "first_seen": ""
@@ -7832,7 +7656,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Vet-School-Biomedical-Sciences/Research-Specialist-A-Part-Time_JR00124062-1",
    "count": 1,
    "first_seen": ""
@@ -7851,7 +7675,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 15 Days Ago",
+   "posted": "Posted 16 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Stellar-Chance-F9/Research-Specialist-A-B_JR00124659-1",
    "count": 5,
    "first_seen": ""
@@ -7946,7 +7770,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 30 Days Ago",
+   "posted": "Posted 30+ Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-B-C_JR00123438",
    "count": 2,
    "first_seen": ""
@@ -7984,7 +7808,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-B-C-D_JR00124498",
    "count": 1,
    "first_seen": ""
@@ -8060,7 +7884,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard---8th-Floor/Temporary-Research-Assistant_JR00125547-1",
    "count": 2,
    "first_seen": ""
@@ -8193,7 +8017,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant--Housing-and-Communities-Division-_R-801650",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -8212,7 +8036,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted 17 Days Ago",
+   "posted": "Posted 18 Days Ago",
    "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant--Justice-Policy-Center-_R-801653-1",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -8231,7 +8055,7 @@
    ],
    "remote": false,
    "intl": false,
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant---Quantitative--Health--Income--and-Benefits-Policy-Division-_R-801655",
    "count": 1,
    "first_seen": "2026-08-21"
@@ -8250,7 +8074,7 @@
    ],
    "remote": false,
    "intl": true,
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://usertesting.wd12.myworkdayjobs.com/UserTesting/job/United-Kingdom/Insights-Partner--French-Speaking-_R-101226",
    "count": 1,
    "first_seen": "2026-08-21"
