@@ -30,6 +30,17 @@ Arrow keys walk the list, so a whole filtered set can be skimmed without the
 mouse. Ctrl-click, middle-click and "open in new tab" still work, because the
 card is a real link underneath.
 
+**The pane scrolls inside itself.** `fitPane()` sizes it to the gap between its
+own top and the bottom of the window on every scroll and resize, so a posting
+that runs past the fold becomes the pane's own scrollbar rather than a reason
+to scroll the page. A CSS `max-height` alone cannot do this: `100vh` is only
+the right answer once the pane has stuck to the top, and before that it leaves
+the box hanging below the fold with nothing to overflow. `overscroll-behavior:
+contain` stops a flick that hits the bottom of the pane from carrying on into
+the page. The one place it gives up is a short window at the very top of the
+page, where the board starts ~740px down and there is no height that fits; it
+clamps to 320px there and comes right as soon as anything scrolls.
+
 Below 900px there is nowhere to put a pane, so the board falls back to the plain
 list it was before and cards open their posting directly.
 

@@ -506,8 +506,12 @@
 
     /* ---------- preview pane ---------- */
 
-    /* Sticky rather than independently scrolled: the list scrolls with the
-       page as it always has, and the preview stays put beside it. */
+    /* The list scrolls with the page as it always has; the preview stays put
+       beside it and scrolls inside itself. The max-height here is only the
+       pre-script default - fitPane() replaces it with the space actually left
+       below the pane, because this value is right only once the pane has
+       stuck to the top. overscroll-behavior stops a flick that reaches the
+       bottom of the pane from carrying on into the page. */
     .detail {
       position: sticky;
       top: 12px;
@@ -1645,10 +1649,41 @@
         vis[to].scrollIntoView({ block: 'nearest' });
       });
 
+      // The pane is a reading surface, not a column of page: size it to the
+      // space left between its own top and the bottom of the window, so a
+      // posting that runs past the fold scrolls inside the pane instead of
+      // making her scroll the whole page to reach the end of it. Once the
+      // pane has stuck, its top is the sticky offset and this settles at
+      // full window height.
+      var PANE_GAP = 12, PANE_MIN = 320, fitQueued = false;
+      function fitPane() {
+        fitQueued = false;
+        if (narrow.matches) { detail.style.maxHeight = ''; return; }
+        // Hidden behind the guide tab: its box reads as zero, which would
+        // bake a nonsense height in for when the board comes back.
+        if (!detail.offsetParent) return;
+        var top = detail.getBoundingClientRect().top;
+        detail.style.maxHeight =
+          Math.max(PANE_MIN, window.innerHeight - top - PANE_GAP) + 'px';
+      }
+      // Reading the box and writing the style in the same frame, so a scroll
+      // cannot turn into a layout thrash on a 400-card list.
+      function queueFitPane() {
+        if (fitQueued) return;
+        fitQueued = true;
+        requestAnimationFrame(fitPane);
+      }
+      window.addEventListener('scroll', queueFitPane, { passive: true });
+      window.addEventListener('resize', queueFitPane);
+      // Coming back from the guide tab lays the pane out again, and returning
+      // to a page already at the top fires no scroll event to catch it.
+      document.getElementById('tab-jobs').addEventListener('click', queueFitPane);
+
       // Crossing the pane's breakpoint changes whether there is anything to
       // select, so re-run the pass that decides.
-      if (narrow.addEventListener) narrow.addEventListener('change', paint);
-      else if (narrow.addListener) narrow.addListener(paint);
+      function onBreakpoint() { paint(); fitPane(); }
+      if (narrow.addEventListener) narrow.addEventListener('change', onBreakpoint);
+      else if (narrow.addListener) narrow.addListener(onBreakpoint);
 
       var hiddenBtn = document.getElementById('showHidden');
       hiddenBtn.addEventListener('click', function () {
@@ -1729,6 +1764,7 @@
           f.pay = paySel.value;
           f.q = qbox.value.trim().toLowerCase();
           applySort();
+          fitPane();
         })
         .catch(function (e) {
           meta.textContent = '';
