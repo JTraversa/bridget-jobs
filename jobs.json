@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02 20:47 UTC",
+ "generated": "2026-11-03 18:23 UTC",
  "locations": [
   {
    "code": "REMOTE",
@@ -14,12 +14,12 @@
   {
    "code": "PHL",
    "label": "Philadelphia area",
-   "n": 71
+   "n": 72
   },
   {
    "code": "BAL",
    "label": "Baltimore",
-   "n": 56
+   "n": 54
   },
   {
    "code": "DC",
@@ -34,22 +34,22 @@
   {
    "code": "RDU",
    "label": "Research Triangle NC",
-   "n": 32
+   "n": 33
   },
   {
    "code": "SEA",
    "label": "Seattle",
-   "n": 19
-  },
-  {
-   "code": "SFO",
-   "label": "SF Bay Area",
-   "n": 10
+   "n": 20
   },
   {
    "code": "BOS",
    "label": "Boston area",
-   "n": 7
+   "n": 9
+  },
+  {
+   "code": "SFO",
+   "label": "SF Bay Area",
+   "n": 9
   },
   {
    "code": "CAE",
@@ -104,7 +104,7 @@
   {
    "code": "USOTHER",
    "label": "Elsewhere in the US",
-   "n": 56
+   "n": 58
   },
   {
    "code": "INTL",
@@ -112,7 +112,7 @@
    "n": 6
   }
  ],
- "openings": 648,
+ "openings": 655,
  "universities": 27,
  "swept": 76,
  "targets": 88,
@@ -178,8 +178,8 @@
    "portal": "https://irrationallabs.com/our-team/careers/  (no ATS; the page is watched for changes)",
    "watch": {
     "url": "https://irrationallabs.com/our-team/careers/",
-    "hash": "47d7b30c6de82f1d",
-    "last_changed": "2026-11-02"
+    "hash": "769a209f53cf5a7e",
+    "last_changed": "2026-11-03"
    }
   },
   {
@@ -367,6 +367,33 @@
    "score": 2,
    "employer": "Amazon",
    "branch": "uxr",
+   "title": "UX Researcher II - AMZ27151.2",
+   "location": "Sunnyvale, California, USA",
+   "states": [
+    "CA"
+   ],
+   "metros": [
+    "SFO"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "mid",
+   "posted": "2026-10-29",
+   "url": "https://www.amazon.jobs/en/jobs/10592726/ux-researcher-ii-amz27151-2",
+   "desc": "Employer: Amazon.com Services LLC\nPosition: UX Researcher II - AMZ27151.2\nLocation: Sunnyvale, CA\n\nMultiple Positions Available:\n\n1. Build a research road-map; communicate and refresh on regular basis\nto ensure relevancy\n2. Conduct lab-based user testing, remote testing, paper prototype\ntesting, iterative prototype testing, concept evaluation, field research,\nand/or survey design.\n3. Generate tools and frameworks such as archetypes/personas, user\njourneys, design principles, and templates to support design partners\n4. Conduct research utilizing focus groups, interviews, online surveys,\ndigital diaries, moderated/unmoderated online panels, and/or\ncustomer panels\n5. Create and optimize mechanisms that generate and track actionable\ncustomer insights to improve our products and services.\n6. Domestic or international travel up to 10% to perform role\nresponsibilities may be required\n\n(40 hours / week, 8:00am-5:00pm, Salary Range $143100 - $193600)\n\nAmazon.com is an Equal Opportunity \u2013 Affirmative Action Employer \u2013 Minority / Female / Disability / Veteran / Gender Identity / Sexual Orientation\n\n#0000\n\nBasic qualifications\n\nMaster\u2019s degree or foreign equivalent degree in Human-Computer Interaction, Psychology, Anthropology, Technology Innovation, or a related field and 3 years of experience in the job offered or a related occupation\u2026",
+   "pay": {
+    "min": 143100,
+    "max": 193600,
+    "period": "year",
+    "label": "$143k - $194k"
+   },
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 2,
+   "employer": "Amazon",
+   "branch": "uxr",
    "title": "UX Researcher, AWS Experience Analytics (EXA)",
    "location": "Arlington, Virginia, USA",
    "states": [
@@ -458,7 +485,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://brandeis.wd5.myworkdayjobs.com/Jobs/job/Brandeis---Waltham-Campus/Research-Associate-I_R0013820-1",
    "desc": "Brandeis University seeks to hire a Research Associate I who will contribute substantively to several major community-based projects at the Institute of Behavioral Health (IBH). This person will work closely with the principal investigator (Traci Green).\n\nThe Research Associate I will add to the research team's capacity to create reproducible research results through project and budget oversight, meticulous documentation of data files, data processes, and interrelationships of multiple complex data sources. This person will support a wide range of research efforts that include quantitative and qualitative analysis, primary data collection, community engaged research, engaging appropriate stakeholders and resources; leading strong internal and external team communications; drafting progress reports and other public-facing materials; overseeing IRB communications; and tracking project budgets.\n\nThis is a full-time grant funded position. The hiring range is $51,300 - $65,000.\n\nJob Duties:\n\n- Prepare or assist with presentations for conferences, local government, and community partner meetings; prepare or assist with preparation of manuscripts and other project materials. 10%\n- Oversee and coordinate project activities, review budgets and staffing, communicate with Institutional Review Board (IRB) 25%\n- Responsible for research deliverables including quantitative and qualitative analysis. 10%\n- Curate datasets and create communication tools for accessing datasets. 15%\n- Participate in study data collection efforts. 20%\u2026",
    "pay": null,
@@ -480,7 +507,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/155-South-Main-Street/Mental-Health-Counselor--Social-Worker-Research-Associate_REQ207288",
    "desc": "Job Description:\n\nThe Mental Health Counselor/ Social Worker Research Associate within the School of Public Health will report directly to the Principal Investigator within the Hassenfeld Institute. This position will work on the school screening project, Mood Check, traveling to schools in Rhode Island and Massachusetts to conduct educational sessions with students, conduct follow-up assessments with adolescents who report symptoms of depression, and connect with caregivers and school personnel to provide feedback regarding adolescents\u2019 depression risk. The Mood Check clinicians do not offer counseling services beyond the interaction during the screening.\n\nThis position is a part-time job working up to 15 hours per week. The incumbent will conduct research screening and clinical assessments, follow-up interviews, and motivational interviews in English and Spanish with study participants and with their parents/guardians in English and Spanish. This position will work primarily on a district- and foundation-funded school screening program. This position is responsible for supporting student populations within school districts that are primarily Spanish-speaking. The successful candidate must demonstrate the ability to ensure culturally and linguistically appropriate engagement with students, families, and school personnel to meet the program's research and clinical objectives.\n\nThe Mental Health Counselor/ Social Worker Research Associate will be required to be licensed in Rhode Island (with a willingness to apply for Mass. licensure upon request)\u2026",
    "pay": null,
@@ -687,6 +714,50 @@
   },
   {
    "score": 2,
+   "employer": "Frederick National Laboratory",
+   "branch": "clinical-regops",
+   "title": "Lab Animal Research Associate II, Non-Human Primates (req4730)",
+   "location": "Frederick, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "mid",
+   "posted": "",
+   "url": "https://leidosbiomed.csodfed.com/ux/ats/careersite/4/home/requisition/4730?c=leidosbiomed",
+   "desc": "",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 2,
+   "employer": "Frederick National Laboratory",
+   "branch": "clinical-regops",
+   "title": "Research Associate II, Single Cell and Spatial Core (req4736)",
+   "location": "Frederick, MD",
+   "states": [
+    "MD"
+   ],
+   "metros": [
+    "USOTHER"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "mid",
+   "posted": "",
+   "url": "https://leidosbiomed.csodfed.com/ux/ats/careersite/4/home/requisition/4736?c=leidosbiomed",
+   "desc": "",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 2,
    "employer": "Gallup",
    "branch": "applied-research",
    "title": "Survey Research Project Coordinator",
@@ -722,7 +793,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Clinical-Research-Associate_JR25746-1",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThe Clinical Research Coordinator I (CRCI) is responsible for managing and coordinating 7 out of approximately 55 ongoing clinical trials, Phases I-IV, in the Dept. of Neurology, primarily in the in the disease states of neuroimmunology and neuromuscular conditions. Coordination and management of such studies is both a dynamic and demanding responsibility that requires refined technical, organization, interpersonal, and coordination skills. The CRCI is responsible for learning the schedule of assessments for each trial, and for coordinating each visit, which involves extensive preparatory work/pre-visit planning described in the \u201cResponsibilities\u201d section. At the time of the visit, the CRCI is responsible for conducting the entire study visit for each patient, ensuring that the protocol is followed, which requires an in-depth understanding of the intricacies of each individual protocol and patient needs.\n\u2026",
    "pay": {
@@ -749,7 +820,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pasquerilla-Healthcare-Center-1st-Floor/Clinical-Research-Coordinator_JR26932",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThe Research Coordinator for the Clinical Research Unit (CRU) at Georgetown University will support clinical research nurses in the care of research and standard of care patients and provide services as a certified DXA technician/coordinator as well. This role is integral to the team effort that provides comprehensive care for clinical trials supported by the CRU. The incumbent will engage in coordination of quality improvement measures as needed and will provide clinical and laboratory support for off-site visits. These functions are performed in accordance with all applicable laws and regulations and Georgetown University Medical Center\u2019s philosophy, policies, procedures, and standards.\n\nDuties include but are not limited to:\n\n- Assist nurses with clinical research and standard of care tasks.\n- Take vital signs, perform ECGs, and phlebotomy.\n- Pick up and deliver drugs from Research and Main Pharmacy.\n- Transport subjects.\n\u2026",
    "pay": {
@@ -776,7 +847,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Pre-Clinical-Science-Lower-Level/Clinical-Research-Coordinator-2_JR27759",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nServes as Clinical Research Coordinator 2 for the Cellular Therapy clinical trials conducted through the Lombardi Clinical Trials Office (Lombardi CTO) of the Lombardi Comprehensive Cancer Center at Georgetown University.\n\nAdditional duties include, but are not limited to:\n\n- Serving as Cellular Therapy champion\n- liaise with Lombardi CTO, MedStar Health, and GUMC Departments, regarding the status of studies in the start-up process to support timely activation of new Cellular Therapy trials and provide regular updates for activated trials\n- Establish and maintain regular meeting cadence for Cellular Therapy clinical trials\n- Collaborate with Cellular Therapy Co-Leads to create, establish, and distribute meeting agendas and document/distribute minutes and actions items from each meeting\n- Schedule in-service training for appropriate staff assigned on clinical trials\n\n- Responsible for overall coordination of assigned clinical trials throughout the trial lifecycle.\u2026",
    "pay": {
@@ -841,6 +912,28 @@
    },
    "count": 1,
    "first_seen": "2026-09-04"
+  },
+  {
+   "score": 2,
+   "employer": "Harvard University",
+   "branch": "university",
+   "title": "Senior Research Associate, Avoiding Great Power War Project",
+   "location": "Cambridge, MA",
+   "states": [
+    "MA"
+   ],
+   "metros": [
+    "BOS"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "senior",
+   "posted": "",
+   "url": "https://careers.harvard.edu/job/senior-research-associate-avoiding-great-power-war-project-in-cambridge-ma-united-states-jid-2248",
+   "desc": "",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
   },
   {
    "score": 2,
@@ -911,7 +1004,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Washington-DC/Senior-Research-Analyst_R2603569",
    "desc": "ICF is hiring a Senior Research Analyst to perform a critical role within the Office Child Labor, Forced Labor and Human Trafficking (OCFT) of the International Labor Affairs Bureau (ILAB) at the U.S. Department of Labor. ILAB increases American job and wage growth by combating foreign labor abuses and unfair trade practices in global supply chains that undermine U.S. prosperity and security. The position requires the ability to provide expert advice to ILAB regarding opportunities in global commerce to create and enforce labor standards for trade agreements to combat child labor, forced labor, and human trafficking in global supply chains that undermine the American economy and security.\n\nThe Senior Research Analyst is a mid-level, non-supervisory position responsible for conducting complex, high-impact research in support of organizational priorities, statutory requirements, and congressionally mandated reporting. Working with a high degree of independence and analytical judgment, the analyst proactively identifies and executes research opportunities, evaluates complex qualitative and quantitative information, and develops findings and recommendations for senior leadership and other stakeholders. The position provides ILAB with expert research on governments\u2019 efforts to eliminate exploitative labor from supply chains and the worst forms of child labor. The position also provides\u2014in conjunction and under the supervision of OCFT leadership\u2014mentorship, review, and guidance to junior analysts\u2026",
    "pay": {
@@ -938,7 +1031,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Reston-VA/UX-Researcher_R2603464-1",
    "desc": "Please note: This role is contingent upon a contract award. While it is not an immediate opening, we are actively conducting interviews and extending offers in anticipation of the award.\n\nThe Work\n\nAt ICF our Digital Modernization Division is an information technology and management consulting organization that delivers integrated, strategic solutions to federal clients. We bring expertise in cloud, cybersecurity, enterprise architecture, data modernization, and digital transformation to support mission-critical government programs.\n\nJoin a team accelerating the modernization of a large federal agency's enterprise data and analytics ecosystem. This cloud-based platform provides data storage, analytics, governance, and AI/ML capabilities that enable thousands of users to transform data into actionable insights. As demand continues to grow, the team is focused on migrating legacy workloads, streamlining onboarding and support, expanding platform capabilities, and helping organizations across the enterprise adopt modern data and AI solutions at scale.\n\nWe seek a talented human-centered UX Researcher to help ensure services and customer experiences are grounded in a deep understanding of user needs, behaviors, and challenges. Applying human-centered design and evidence-based research practices, this role conducts and synthesizes qualitative and quantitative research to uncover insights, reduce customer friction, validate design decisions, and inform product, service, and operational improvements\u2026",
    "pay": {
@@ -955,7 +1048,7 @@
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Senior Manager, Marketing Decision Science",
-   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
+   "location": "United States - Remote +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -964,16 +1057,16 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": true,
+   "intl": false,
    "level": "senior",
-   "posted": "2026-09-28T12:40:26-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8237127",
+   "posted": "2026-09-28T12:40:24-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8237126",
    "desc": "We're transforming the grocery industry\n\nAt Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe and flexible earnings opportunities to Instacart Personal Shoppers.\n\nInstacart has become a lifeline for millions of people, and we\u2019re building the team to help push our shopping cart forward. If you\u2019re ready to do the best work of your life, come join our table.\n\nInstacart is a Flex First team\n\nThere\u2019s no one-size fits all approach to how we do our best work. Our employees have the flexibility to choose where they do their best work\u2014whether it\u2019s from home, an office, or your favorite coffee shop\u2014while staying connected and building community through regular in-person events. Learn more about our flexible approach to where we work.\n\nOverview\n\nThe Marketing Data Science & Analytics (MDSA) team is Instacart's analytical engine for Paid Media, SEO, and Retailer Marketing \u2014 partnering with channel leaders, Finance, and senior marketing leadership to ensure every investment dollar is guided by rigorous, causal measurement\u2026",
    "pay": {
-    "min": 198000,
-    "max": 209000,
+    "min": 242000,
+    "max": 255500,
     "period": "year",
-    "label": "$198k - $209k"
+    "label": "$242k - $256k"
    },
    "count": 2,
    "first_seen": "2026-09-28"
@@ -2115,7 +2208,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal/job/Washington-DC-Pew-Research-Center/Research-Associate--US-Demography--Race---Ethnicity_R003304",
    "desc": "Organization Overview\n\nPew Research Center is a nonpartisan fact tank that informs the public about the issues, attitudes and trends shaping America and the world. It conducts public opinion polling, demographic research, media content analysis and other empirical social science research in the areas of race and ethnicity; U.S. politics and policy views; media and journalism; internet and technology; science and society; religion and public life; global attitudes and U.S. social and demographic trends. Pew Research Center does not take policy positions. It is a subsidiary of The Pew Charitable Trusts. The Center\u2019s work is carried out by a staff of about 180.\n\nPosition Summary\n\nThe Center is seeking a Research Associate with expertise in U.S. demography and immigration to study the nation\u2019s changing population, with particular attention to immigration and race and ethnicity. The Research Associate will play a central role in our team\u2019s demographic research particularly on immigration, analyzing both secondary data and Center surveys, identifying compelling findings, and communicating results to journalists, policymakers, researchers and the broader public. The position requires strong project management skills, with a track record of managing complex workflows, working on multiple projects simultaneously, and keeping projects on track in a fast-paced, detail-oriented environment. This position reports to the Associate Director of Race and Ethnicity Research.\n\nPrimary Responsibilities\n\n- Develop research questions: Identify important and timely research questions on U.S\u2026",
    "pay": null,
@@ -2151,21 +2244,21 @@
    "employer": "Prolific",
    "branch": "research-tooling",
    "title": "Participant Recruitment Partner/Sourcer",
-   "location": "Mexico ( remote) +1 more",
+   "location": "United States +1 more",
    "states": [
-    "REMOTE",
-    "OTHER"
+    "OTHER",
+    "REMOTE"
    ],
    "metros": [
-    "REMOTE",
-    "USOTHER"
+    "USOTHER",
+    "REMOTE"
    ],
    "remote": true,
-   "intl": true,
+   "intl": false,
    "level": "",
-   "posted": "2026-01-22T04:14:59-05:00",
-   "url": "https://job-boards.eu.greenhouse.io/prolific/jobs/4764165101",
-   "desc": "Participant Recruitment Partner/Sourcer\n\n3 month FTC with the opportunity to extend - Open to candidates based in US/Mexico\n\nCompensation - Base Salary + monthly performance bonus potential based on performance\n\nNB - these roles are high priority - therefore we are prioritisitng candidates who can commence employment in the next 2 weeks\n\nTeam: Human Data\n\nProlific\n\nProlific is not just another player in the AI space \u2013 we are the architects of the human data infrastructure that's reshaping the landscape of AI development. In a world where foundational AI technologies are increasingly commoditized, it's the quality and diversity of human-generated data that truly differentiates products and models.\n\nThe role\n\nAs a Participant Recruitment Partner, you will play a pivotal role in continuing the growth of Prolific's specialised participant pools. You\u2019ll act as a key enabler for the evergreen expansion of our expert network, as well as working closely with delivery teams to support targeted participant-resourcing based on our customers needs.This role demands a hands-on approach to high volume participant identification, attraction, and engagement, as well as cross-functional collaboration to meet the demands of both internal stakeholders and external clients\n\nWhat you\u2019ll be doing in the role\n\n- Drive the identification, attraction, and engagement of top-tier, highly qualified specialist participants, building and maintaining Prolific\u2019s world-class participant pool.\n\u2026",
+   "posted": "2026-01-22T04:00:27-05:00",
+   "url": "https://job-boards.eu.greenhouse.io/prolific/jobs/4764119101",
+   "desc": "Participant Recruitment Partner/Sourcer\n\n3 month FTC with the opportunity to extend\u2014Open to candidates based in US/Mexico only\n\nBase Salary + monthly performance bonus potential based on performance\n\nNB - these roles are high priority; therefore, we are prioritizing candidates who can commence employment in the next 2 weeks\n\nProlific\n\nProlific is not just another player in the AI space \u2013 we are the architects of the human data infrastructure that's reshaping the landscape of AI development. In a world where foundational AI technologies are increasingly commoditized, it's the quality and diversity of human-generated data that truly differentiates products and models.\n\nThe role\n\nAs a Participant Recruitment Partner, you will play a pivotal role in continuing the growth of Prolific's specialized participant pools. You\u2019ll act as a key enabler for the evergreen expansion of our expert network, as well as working closely with delivery teams to support targeted participant resourcing based on our customers' needs. This role demands a hands-on approach to high-volume participant identification, attraction, and engagement, as well as cross-functional collaboration to meet the demands of both internal stakeholders and external clients\n\nWhat you\u2019ll be doing in the role\n\n- Drive the identification, attraction, and engagement of top-tier, highly qualified specialist participants, building and maintaining Prolific's world-class participant pool.\n\u2026",
    "pay": null,
    "count": 2,
    "first_seen": ""
@@ -2657,7 +2750,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-1--Population-Sciences-_R100102143",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC has an exciting opportunity for a Full-Time Clinical Research Coordinator 1 to work at UHealth in Miami, Florida.\n\nCORE JOB SUMMARY\n\nThe Clinical Research Coordinator 1 serves as an entry-level clinical research professional that has a foundation in clinical research through assigned responsibilities in data management or implementing clinical research protocols. The incumbent is responsible for simple clinical research protocols and timelines.\n\nCORE JOB FUNCTIONS\n\n1. Performs chart review/pre-screening activities for study participant eligibility and coordination of simple clinical research protocols. Maintains enrollment procedures according to the protocol.\n\n2. Coordinates routine activities of clinical studies including data collection and maintenance, planning study timelines, schedules appointments and study visits, meeting scheduling, and project evaluation.\n\n3. Performs moderate to complex research tests/ experiments and adapts procedures for quality improvement under supervision.\n\n4. Understands and follows technical instructions for operating clinical research equipment, problem solves when operational failures occur.\n\n5. Assists in observing and informing the PI/supervisor of adverse events, including those reported by study participants.\n\n6\u2026",
    "pay": null,
@@ -2723,7 +2816,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Palm-Beach-Gardens-FL/Clinical-Research-Coordinator---Ophthalmology-Full-Time-Bascom-Palmer-Eye-InstitutePalm-Beach-Gardens--FL_R100101823",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, Bascom Palmer Eye Institute, has an exciting full time opportunity for a Clinical Research Coordinator 1 in Miami, Florida.\n\nThe Clinical Research Coordinator 1 serves as an entry-level clinical research professional that has a foundation in clinical research through assigned responsibilities in data management or implementing clinical research protocols. The incumbent is responsible for simple clinical research protocols and timelines.\n\nCORE JOB FUNCTIONS\n\n- Performs chart review/pre-screening activities for study participant eligibility and coordination of simple clinical research protocols.\n- Maintains enrollment procedures according to the protocol.\n- Coordinates routine activities of clinical studies including data collection and maintenance, planning study timelines, schedules appointments and study visits, meeting scheduling, and project evaluation.\n- Performs moderate to complex research tests/ experiments and adapts procedures for quality improvement under supervision.\n- Understands and follows technical instructions for operating clinical research equipment, problem solves when operational failures occur.\n- Assists in observing and informing the PI/supervisor of adverse events, including those reported by study participants.\u2026",
    "pay": null,
@@ -2789,7 +2882,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 14 Days Ago",
+   "posted": "Posted 15 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2--Full-Time----Ophthalmology--BPEI---Miami--FL_R100096969",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Bascom Palmer Eye Institute is currently seeking a full time Clinical Research Coordinator 2 to work at the McKnight Vision Research Center in Miami.\n\nThe Clinical Research Coordinator 2 serves as a mid-level clinical research professional that assists in the planning, coordinating, implementing, monitoring, and evaluating of specific clinical research studies. This role assists in the day-to-day operations of clinical research protocol implementation and carries out study coordination duties from protocol initiation to study close-out according to regulatory/sponsor guidelines. The incumbent works closely with study team members and other staff/faculty/study sites to ensure study participant safety and adherence to approved protocols, help with study-related administrative tasks, facilitate across-the-board flow of information, and coordinate study activities and personnel.\n\nCORE JOB FUNCTIONS\n\n- Assists in participant recruitment and retention activities and assists in screening potential study participants\n\n- for eligibility.\n\n- Performs study procedures, routine tests, data collection/recording, and daily operations of moderate risk\n\n- clinical research protocols.\n\n- Collects, processes, packs, and ships specimens according to protocol, applicable standards and regulations.\n\u2026",
    "pay": null,
@@ -2811,7 +2904,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Coordinator-2--Genitourinary--GU-_R100102334",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC has an exciting opportunity for a Full-Time Clinical Research Coordinator 2 to work at UHealth in Miami, Florida.\n\nCORE JOB SUMMARY\n\nThe Clinical Research Coordinator 2 serves as a mid-level clinical research professional that assists in the planning, coordinating, implementing, monitoring, and evaluating of specific clinical research studies. This role assists in the day-to-day operations of clinical research protocol implementation and carries out study coordination duties from protocol initiation to study close-out according to regulatory/sponsor guidelines. The incumbent works closely with study team members and other staff/faculty/study sites to ensure study participant safety and adherence to approved protocols, help with study-related administrative tasks, facilitate across-the-board flow of information, and coordinate study activities and personnel.\n\nCORE JOB FUNCTIONS\n\n1. Assists in participant recruitment and retention activities and assists in screening potential study participants for eligibility.\n\n2. Performs study procedures, routine tests, data collection/recording, and daily operations of moderate risk clinical research protocols.\n\n3\u2026",
    "pay": null,
@@ -2877,7 +2970,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Participant-Specialist_R100100550",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of Psychiatry has an exciting opportunity for a full time Clinical Research Participant Specialist to work in Miami, FL.\n\nThe Clinical Research Participant Specialist assists in community outreach, recruitment, and enrollment of participants for clinical studies/trials. Moreover, the Clinical Research Participant Specialist schedules assessments, completes clinical intakes and assessments, conducts in-person and telephone interviews, and markets clinical studies/trials.\n\nCore Responsibilities:\n\n- Assists with the design and implementation of overall recruiting strategy for clinical studies/trials.\n- Sources and recruits study participants by using databases, social media, hospitals, mental health clinics, shelter programs, etc.\n- Prescreens and evaluates candidates for study participation.\n- Provides analytical and well-documented recruiting reports to leadership.\n- Acts as a point of contact and builds influential client relationships during prescreen process.\n- Markets clinical trials to community and participates in community outreach events to promote study awareness.\n- Schedules and conducts marketing presentations to various referral sources.\u2026",
    "pay": null,
@@ -2965,7 +3058,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-1_R100102166",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe department of Medicine has an exciting opportunity for a full-time Research Analyst to work onsite on the UHealth campus. The Research Analyst 1 (A) prepares data, conducts statistical analysis, and summarizes results for a variety of research projects.\n\nCORE JOB FUNCTIONS\n\n- Analyzes data and interprets research findings.\n- Identifies appropriate data sources to conduct and execute analyses.\n- Verifies accuracy and internal consistency of reports, including required state and federal reports.\n- Ensures proper technical documentation and preparation of tabular and written reports and gives oral presentations.\n- Completes surveys and reports, discipline-specific accreditation, and admission and grant proposals.\n- Provides feedback and assistance on honing conclusions and recommendations into actionable findings.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nThis list of duties and responsibilities is not intended to be all-inclusive and may be expanded to include other duties or responsibilities as necessary.\n\nCORE QUALIFICATIONS\n\n- Bachelor\u2019s Degree in relevant field\n- Minimum 1 year of relevant experience\n\nKnowledge, Skills and Attitudes:\n\n- Skill in collecting, organizing, and analyzing data.\u2026",
    "pay": null,
@@ -2987,7 +3080,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-2--Division-of-Infectious-Diseases_R100099568-1",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of Medicine has an exciting opportunity for a full-time Research Analyst 2 to work at the UHealth campus.\n\nCore Job Summary:\n\nThe Research Analyst 2 prepares data, conducts statistical analysis, and summarizes results for a variety of research projects.\n\nCore Responsibilities:\n\n- Analyzes data and interprets research findings.\n\n- Identifies appropriate data sources to conduct and execute analyses.\n\n- Verifies accuracy and internal consistency of reports, including required state and federal reports.\n\n- Ensures proper technical documentation and preparation of tabular and written reports and gives oral presentations.\n\n- Completes surveys and reports, discipline-specific accreditation, and admission and grant proposals.\n\n- Provides feedback and assistance on honing conclusions and recommendations into actionable findings.\n\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions:\n\n- Experience working with data collection tools (Qualtrics, REDCap), including survey and project design.\n\n- Working knowledge of a programming language (Python, R)\n\n- Understanding of data management best practices (data dictionaries, codebooks, version control)\n\u2026",
    "pay": null,
@@ -3009,7 +3102,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 14 Days Ago",
+   "posted": "Posted 15 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Analyst-3_R100101969",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department Obstetrician & Gynecologist (OBGYN) has an exciting opportunity for a full-time Research Analyst 3 to work in Miami, FL. The Research Analyst 3 prepares high-level data, conducts complex statistical analysis, and summarizes results for a variety of research projects. The Research Analyst 3 supervises evaluation projects and junior staff members to ensure all department activities are in compliance with applicable guidelines and regulations.\n\nCORE JOB FUNCTIONS\n\n- Analyzes data and interprets research findings.\n- Identifies appropriate data sources to conduct and execute analyses.\n- Summarizes and explains research findings and their implications.\n- Verifies accuracy and internal consistency of reports, including required state and federal reports.\n- Ensures proper technical documentation and preparation of tabular and written reports and gives oral presentations.\n- Completes surveys and reports, discipline-specific accreditation, and admission and grant proposals.\n- Provides feedback and assistance on honing conclusions and recommendations into actionable findings.\n- Suggests solutions to problems related to data management and statistical analysis.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\u2026",
    "pay": null,
@@ -3031,7 +3124,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate---Temporary--Psychology-_R100102546",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, College of Arts and Sciences, has an exciting opportunity for a temporary part time Research Associate 1 to work in Coral Gables, FL.\n\nThe Research Associate 1, supports research activities for the assigned division by conducting laboratory experiments on assigned research projects. Moreover, the incumbent operates with the goal of advancing his/her expertise through continued education, training, and research.\n\nCore responsibilities:\n\n- Understands and interprets research protocols and procedures.\n- Participates in the publication of significant results.\n- Maintains an overview of relevant research findings.\n- Ensures all research is undertaken according to good research practice.\n- Keeps abreast of current publications relative to methods, techniques, and developments within the area of research.\n- Collects, prepares, analyzes, dissects, and evaluates specimens or tissue cultures.\n- Operates and maintains laboratory equipment.\n- Performs a variety of routine assays, tests, and studies.\n- Performs calculations to complete research test results, collects data, and performs statistical analysis of laboratory results.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\u2026",
    "pay": null,
@@ -3057,7 +3150,7 @@
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1_R100098768",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department Dermatology has an exciting opportunity for a full-time Research Associate 1, to work in Miami, FL. The Research Associate 1, SOM supports research activities for the assigned division by conducting laboratory experiments on assigned research projects. Moreover, the incumbent operates with the goal of advancing his/her expertise through continued education, training, and research.\n\nCORE JOB FUNCTIONS\n\n- Understands and interprets research protocols and procedures.\n\n- Participates in the publication of significant results.\n\n- Maintains an overview of relevant research findings.\n\n- Ensures all research is undertaken according to good research practice.\n\n- Keeps abreast of current publications relative to methods, techniques, and developments within the area of research.\n\n- Collects, prepares, analyzes, dissects, and evaluates specimens or tissue cultures.\n\n- Operates and maintains laboratory equipment.\n\n- Performs a variety of routine assays, tests, and studies.\n\n- Performs calculations to complete research test results, collects data, and performs statistical analysis of laboratory results.\n\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions\n\u2026",
    "pay": null,
-   "count": 11,
+   "count": 12,
    "first_seen": ""
   },
   {
@@ -3075,7 +3168,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 27 Days Ago",
+   "posted": "Posted 28 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1---Ophthalmology--Miami--FL-_R100101583",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, Bascom Palmer Eye Institute, has an exciting full time opportunity for a Research Associate 1 in Miami, Florida.\nThe Research Associate 1, SOM supports research activities for the assigned division by conducting laboratory experiments on assigned research projects. Moreover, the incumbent operates with the goal of advancing his/her expertise through continued education, training, and research.\n\nCORE JOB FUNCTIONS\n*Understands and interprets research protocols and procedures.\n*Participates in the publication of significant results.\n*Maintains an overview of relevant research findings.\n*Ensures all research is undertaken according to good research practice.\n*Keeps abreast of current publications relative to methods, techniques, and developments within the area of research.\n*Collects, prepares, analyzes, dissects, and evaluates specimens or tissue cultures.\n*Operates and maintains laboratory equipment.\n*Performs a variety of routine assays, tests, and studies.\n*Performs calculations to complete research test results, collects data, and performs statistical analysis of laboratory results.\n*Adheres to University and unit-level policies and procedures and safeguards University assets.\n\u2026",
    "pay": null,
@@ -3141,7 +3234,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1-Temporary-Bascom-Palmer-Eye-Institute-Miami--FL_R100102242",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, Bascom Palmer Eye Institute, has an exciting opportunity for a Temporary Research Associate 1, SOM in Miami, Florida\n\nThe Research Associate 1, SOM supports research activities for the assigned division by conducting laboratory experiments on assigned research projects. Moreover, the incumbent operates with the goal of advancing his/her expertise through continued education, training, and research.\n\nCORE JOB FUNCTIONS\n* Understands and interprets research protocols and procedures.\n* Participates in the publication of significant results.\n* Maintains an overview of relevant research findings.\n* Ensures all research is undertaken according to good research practice.\n* Keeps abreast of current publications relative to methods, techniques, and developments within the area of research.\n* Collects, prepares, analyzes, dissects, and evaluates specimens or tissue cultures.\n* Operates and maintains laboratory equipment.\n* Performs a variety of routine assays, tests, and studies.\n* Performs calculations to complete research test results, collects data, and performs statistical analysis of laboratory results.\n* Adheres to University and unit-level policies and procedures and safeguards University assets.\n\u2026",
    "pay": null,
@@ -3163,7 +3256,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-1--SOM_R100101843-1",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe department of Neurology has an exciting opportunity for a full-time Research Associate 1, SOM to work onsite on the UHealth campus. The Research Associate 1, SOM supports research activities for the assigned division by conducting laboratory experiments on assigned research projects. Moreover, the incumbent operates with the goal of advancing his/her expertise through continued education, training, and research.\n\nCORE JOB FUNCTIONS\n\n- Understands and interprets research protocols and procedures.\n\n- Participates in the publication of significant results.\n\n- Maintains an overview of relevant research findings.\n\n- Ensures all research is undertaken according to good research practice.\n\n- Keeps abreast of current publications relative to methods, techniques, and developments within the area of research.\n\n- Collects, prepares, analyzes, dissects, and evaluates specimens or tissue cultures.\n\n- Operates and maintains laboratory equipment.\n\n- Performs a variety of routine assays, tests, and studies.\n\n- Performs calculations to complete research test results, collects data, and performs statistical analysis of laboratory results.\n\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions\n\u2026",
    "pay": null,
@@ -3229,7 +3322,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Associate-2---Biology_R100102466",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, College of Arts and Sciences, has an exciting opportunity for a full time Research Associate 2 to work in Coral Gables, FL.\n\nThe Research Associate 2, GAB contributes to the University\u2019s research activities under the supervision of senior staff. Moreover, the incumbent understands, interprets, and complies with research policies and protocols.\n\nCore responsibilities:\n\n- Performs specialized and complex experiments.\n- Participates in the publication of significant research results.\n- Advances expertise through education, training, and research.\n- Writes extramural proposals to gain support when appropriate.\n- Collects, prepares, analyzes, dissects, and evaluates specimens and tissue cultures.\n- Weighs and anesthetizes laboratory animals for experiments.\n- Operates sensitive and highly complex laboratory equipment.\n- Performs calculations to complete research test results.\n- Performs photography and dark room processing.\n- Participates in training sessions and workshops.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions:\n\n- Advances the Aims of Firefighter Cancer Initiative grants\n- Contributes to basic and applied research activities by collecting and analyzing data, maintaining databases, etc.\u2026",
    "pay": null,
@@ -3295,7 +3388,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM_R100102127",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC has an exciting opportunity for a Full-Time Research Associate 2 to work at UHealth in Miami, Florida.\n\nCORE JOB SUMMARY\n\nThe Research Associate 2 contributes to the University\u2019s research activities under the supervision of senior staff. Moreover, the incumbent understands, interprets, and complies with research policies and protocols.\n\nCORE JOB FUNCTIONS\n\n- Performs specialized and complex experiments/studies.\n- Participates in the publication of significant research results.\n- Advances expertise through education, training, and research.\n- Writes extramural grants/proposals to gain support when appropriate.\n- Collects, prepares, analyzes, dissects, and evaluates specimens and tissue cultures.\n- Weighs and anesthetizes laboratory animals for experiments.\n- Operates sensitive and highly complex laboratory equipment.\n- Performs calculations to complete research test results.\n- Performs photography and dark room processing.\n- Participates in training sessions and workshops.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nThis list of duties and responsibilities is not intended to be all-inclusive and may be expanded to include other duties or responsibilities as necessary.\n\nCORE QUALIFICATIONS\n\u2026",
    "pay": null,
@@ -3317,7 +3410,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM--A-_R100101774",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of Medicine has an exciting opportunity for a full time Research Associate 2 to work in the UHealth Campus\n\nCore Summary\nThe Research Associate 2, SOM contributes to the University\u2019s research activities under the supervision of senior staff. Moreover, the incumbent understands, interprets, and complies with research policies and protocols.\n\nCore Responsibilities\n1.Performs specialized and complex experiments/studies.\n2. Participates in the publication of significant research results.\n3. Advances expertise through education, training, and research.\n4. Writes extramural grants/proposals to gain support when appropriate.\n5. Collects, prepares, analyzes, dissects, and evaluates specimens and tissue cultures.\n6. Weighs and anesthetizes laboratory animals for experiments.\n7. Operates sensitive and highly complex laboratory equipment.\n8. Performs calculations to complete research test results.\n9. Performs photography and dark room processing.\n10. Participates in training sessions and workshops.\n11. Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nThis list of duties and responsibilities is not intended to be all-inclusive and may be expanded to include other duties or responsibilities as necessary.\n\nCore Qualifications\u2026",
    "pay": null,
@@ -3339,7 +3432,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Associate-2--SOM---Infectious-Diseases_R100091663",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe department of Medicine, division of Infectious Diseases, has an exciting opportunity for a full-time Research Associate 2 to work on the UHealth campus. The Research Associate 2, SOM contributes to the University\u2019s research activities under the supervision of senior staff. Moreover, the incumbent understands, interprets, and complies with research policies and protocols.\n\nCORE JOB FUNCTIONS\n\n- Performs specialized and complex experiments/studies.\n- Participates in the publication of significant research results.\n- Advances expertise through education, training, and research.\n- Writes extramural grants/proposals to gain support when appropriate.\n- Collects, prepares, analyzes, dissects, and evaluates specimens and tissue cultures.\n- Weighs and anesthetizes laboratory animals for experiments.\n- Operates sensitive and highly complex laboratory equipment.\n- Performs calculations to complete research test results.\n- Performs photography and dark room processing.\n- Participates in training sessions and workshops.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions\n\u2026",
    "pay": null,
@@ -3449,7 +3542,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Coordinator---SONHS_R100102487-1",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Research Coordinator will support research activities under the direction of a principal investigator (Audrey Harkness, PhD) and a designee of the principal investigator (Jorge Limia, lab manager). Dr. Harkness leads the REACH (Research Engagement and Community Health) Equity Team which focuses on using implementation and behavioral science to address HIV, behavioral health (mental health/substance use), and healthcare disparities.\n\nThe position is full-time and in-person at the School of Nursing and Health Studies at the Coral Gables campus of the University of Miami.\n\nCORE JOB FUNCTIONS\n\n1. Researches, collects, analyzes, and synthesizes data and maintains databases/research files.\n\n2. Conducts quality assurance checks and reports on the status of research activities.\n\n3. Organizes and coordinates community working group meetings for protocol activities.\n\n4. Serves as a point of contact for community partners and participants.\n\n5. Reviews study progress, identifies areas of opportunity, and recommends solutions.\n\n6. Prepares and updates study research procedure protocols.\n\n7. Contributes to the publication and presentation of significant results and writes and edits material for publications and presentations.\n\n8. Identifies, reports, and helps problem solve protocol deviations.\n\n9\u2026",
    "pay": null,
@@ -3515,7 +3608,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted Today",
+   "posted": "Posted Yesterday",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate---Coral-Reproduction_R100099364",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Coral Reef Futures Lab at the Rosenstiel School of Marine, Atmospheric and Earth Science at the University of Miami is a leading research group focused on coral reef science and restoration. We are seeking a highly motivated Senior Research Associate to lead coral reproduction activities within a growing, land-based coral facility and to support a dynamic portfolio of research and restoration projects. This role combines scientific leadership, experimental design, and program management, with direct responsibility for staff supervision and mentorship across multiple ongoing initiatives in coral reproduction and early life history.\n\nKey Responsibilities\n\n- Lead coral spawning and reproduction efforts at the lab\u2019s land-based facility, including coordination of spawning events, fertilization, larval rearing, settlement, and post\u2011settlement survival.\n- Coordinate spawning and reproduction activities with multiple institutional partners and collaborators.\n- Directly manage at least two Research Associates, including day\u2011to\u2011day oversight, training, and performance support.\n- Work closely with graduate students, postdocs, and other team members on experimental design, data collection, and analysis related to coral reproduction, larval biology, and early life history.\u2026",
    "pay": null,
@@ -3543,28 +3636,6 @@
    "pay": null,
    "count": 1,
    "first_seen": ""
-  },
-  {
-   "score": 2,
-   "employer": "University of Miami",
-   "branch": "university",
-   "title": "Sr. Research Associate 1 - Ophthalmology",
-   "location": "Miami, FL",
-   "states": [
-    "FL"
-   ],
-   "metros": [
-    "MIA"
-   ],
-   "remote": false,
-   "intl": false,
-   "level": "senior",
-   "posted": "Posted 30+ Days Ago",
-   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-1---Ophthalmology_R100101145",
-   "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, Bascom Palmer Eye Institute, has an exciting full time opportunity for a Senior Research Associate 1 in Miami, Florida.\nThe Senior Research Associate 1 (second level research position, track one) supports research activities under the direction of a principle investigator, program director or designee of the principle investigator or program director.\n\n\u2022 Contributes to basic and applied research activities by collecting and analyzing data, maintaining databases etc...\n\n\u2022 Understands and interprets research protocols and procedures\n\n\u2022 Participates in the publication of significant results, to include authorship of scientific monographs\n\n\u2022 Advances expertise through continued education, training and/or research.\n\n\u2022 Maintains an overview of relevant research findings.\n\n\u2022 Ensures all research is undertaken according to good research practice and guidance.\n\nThe Senior Research Associate 1, SOM provides laboratory-based support for the University\u2019s research activities by tackling the more specialized and complex projects and experiments. Additionally, the incumbent leverages expertise in training and mentoring department staff, students, and less experienced research associates.\n\nCORE JOB FUNCTIONS\n*Collects, analyzes, and presents research data.\u2026",
-   "pay": null,
-   "count": 1,
-   "first_seen": "2026-10-01"
   },
   {
    "score": 2,
@@ -3603,7 +3674,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 28 Days Ago",
+   "posted": "Posted 29 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-3--SOM--A--Full-Time-Bascom-Eye-Institute-Miami--FL--Palmer-Eye_R100100459",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nSr. Research Associate 1\n\nThe University of Miami/UHealth Department of Ophthalmology has an exciting opportunity for a Full Time, Sr. Research Associate 1 to work in Miami.\n\nCore Job Summary:\n\nThe Sr. Research Associate 1, SOM provides laboratory-based support for the University\u2019s research activities by tackling the more specialized and complex projects and experiments. Additionally, the incumbent leverages expertise in training and mentoring department staff, students, and less experienced research associates.\n\nCore Responsibilities:\n\n- Collects, analyzes, and presents research data.\n- Monitors and maintains relevant research databases to ensure accurate data entries.\n- Understands and interprets research protocols and procedures.\n- Participates in the publication of significant results to include authorship of scientific monographs.\n- Advances expertise through continued education, training, and research.\n- Maintains current knowledge of relevant developments in the field.\n- Ensures all research is undertaken according to good research practice.\n- Warrants that department activities comply with applicable guidelines and regulations.\n- Adheres to University and unit-level policies and procedures and safeguards University assets\n\u2026",
    "pay": null,
@@ -3647,7 +3718,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 21 Days Ago",
+   "posted": "Posted 22 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Sr-Research-Associate-2---Full-Time-Ophthalmology--Miami--FL-_R100101817",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami, Bascom Palmer Eye Institute, has an exciting full time opportunity for a Senior Research Associate 2 in Miami, Florida. The Senior Research Associate 2, SOM ensures that the operations of the assigned laboratory are efficient and in compliance with applicable guidelines and regulations. Moreover, this employee engages in complex and specialized research activities in furtherance of the University\u2019s research goals and objectives.\n\nCORE JOB FUNCTIONS\n\n- Contributes to basic and applied research activities by collecting and analyzing data and maintaining databases.\n- Understands and interprets research protocols and procedures.\n- Participates in the publication of significant results.\n- Advances expertise through continued education, training, and research.\n- Maintains an overview of relevant research findings.\n- Ensures all research is undertaken according to good research practice.\n- Stays abreast of developments in the field which may impact department functions.\n- Provides guidance, mentorship, and oversight to junior research staff and students.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\u2026",
    "pay": null,
@@ -3669,7 +3740,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3535-Market/Clinical-Research-Coordinator_JR00128940-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator\n\nJob Profile Title\n\nClinical Research Coordinator A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -3723,7 +3794,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A_JR00129499-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator A\n\nJob Profile Title\n\nClinical Research Coordinator A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -3804,7 +3875,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted Today",
+   "posted": "Posted Yesterday",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-A-B_JR00129278-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator A/B\n\nJob Profile Title\n\nClinical Research Coordinator A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -3858,7 +3929,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP---Silverstein---Floor-2/Clinical-Research-Coordinator-A-B--OBGYN---Pregnancy---Perinatal-Research-Center-_JR00129383",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator A/B (OBGYN - Pregnancy & Perinatal Research Center)\n\nJob Profile Title\n\nClinical Research Coordinator A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -3939,7 +4010,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard---8th-Floor/Clinical-Research-Coordinator-B_JR00129774-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator B\n\nJob Profile Title\n\nClinical Research Coordinator B\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -3993,7 +4064,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Coordinator-C_JR00129782-2",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Coordinator C\n\nJob Profile Title\n\nClinical Research Coordinator C\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -4047,7 +4118,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Presbyterian-Med-Ctr-FL7/Community-Engagement-Research-Coordinator--CRC-C-_JR00127890-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nCommunity Engagement Research Coordinator (CRC-C)\n\nJob Profile Title\n\nClinical Research Coordinator C\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -4477,6 +4548,28 @@
    "score": 1,
    "employer": "Amazon",
    "branch": "uxr",
+   "title": "Manager, Program Management , Relay Marketing - Relay Product Insights",
+   "location": "Bellevue, Washington, USA",
+   "states": [
+    "WA"
+   ],
+   "metros": [
+    "SEA"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "senior",
+   "posted": "2026-10-28",
+   "url": "https://www.amazon.jobs/en/jobs/10591595/manager-program-management-relay-marketing-relay-product-insights",
+   "desc": "At Amazon, our vision is to become the most customer-centric company on earth. Achieving this goal requires ensuring we continue to work with carriers who are good actors and share this same vision. A key way we do this is through knowing and verifying our carriers, their business, and other relevant information.\n\nThe Relay Product Insights in Relay Product and Tech (RPI) team is looking for a Manager, Program Management to join the team. Our team leverages Pendo, a 3P tool, to increase visibility of Carrier, Driver and Operator behavior on product, as well as enhance user experience and drive product adoption through various features including in-app communications, engagement analytics, user sentiment collection and guided workflows. RPI enables stakeholder teams to leverage Pendo functionality without extensive learning curves, allowing tech teams to focus on their core mission of building features, products, and programs.\n\nKey job responsibilities\n\u2022 Create strategy, vision and determines Pendo requirements for the various team initiatives.\n\u2022 Act as the functional Pendo SME and is responsible for assisting with application onboarding and feature socialization across stakeholder teams.\n\u2022 Collaborate and participate in Pendo's design partner programs, betas and providing Amazon feedback on feature iterations to ensure they meet Amazon's requirements.\n\u2022 Manage the team of Digital Content Leads, who act as Centre of Excellence to deliver Pendo capabilities and Operations across.\u2026",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 1,
+   "employer": "Amazon",
+   "branch": "uxr",
    "title": "Manager, Robotics Data Collection Ops, Frontier AI & Robotics (FAR)",
    "location": "San Francisco, California, USA",
    "states": [
@@ -4554,8 +4647,8 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "2026-09-23",
-   "url": "https://www.amazon.jobs/en/jobs/10558301/performance-ops-specialist-ii-delivery-feedback-and-insights",
+   "posted": "2026-09-24",
+   "url": "https://www.amazon.jobs/en/jobs/10559303/performance-ops-specialist-ii-delivery-feedback-and-insights",
    "desc": "The NA Delivery Service Partner (DSP) Performance Org exists to drive accountability, quality, and safety across Amazon's last mile delivery network. Our mission is to ensure that our Delivery Service Partners consistently raise the bar on customer experience and delivery quality, while actively protecting the health of the network and mitigating risk to Amazon and the communities we serve.\n\nThe DFI Performance Ops team serves as the operational backbone for multiple high-impact programs across the Delivery Service Partner and Last Mile organization. We provide these programs with operational support, including case management, high-judgment investigations, data analysis, and process improvement.\n\nAs a Performance Ops Specialist II, you will be an individual contributor operating at the intersection of operations, investigations, and cross-functional partnerships. In this role, you will conduct complex, high-judgment investigations and data-driven research that directly inform consequential decisions affecting DSPs and DSP drivers across the network. You will identify systemic process gaps, contribute to SOP development/refinement, and collaborate with Operations and Program Managers to implement scalable, lasting solutions. This requirements of this role demand the ability to manage ambiguity with confidence, balance competing priorities with sound judgment, and operate with a high degree of ownership \u2014 making it an ideal opportunity for someone who thrives in a fast-paced, high-stakes environment where their work has direct and visible impact.\n\nKey job responsibilities\u2026",
    "pay": null,
    "count": 4,
@@ -4626,28 +4719,6 @@
    "pay": null,
    "count": 1,
    "first_seen": "2026-08-21"
-  },
-  {
-   "score": 1,
-   "employer": "Amazon",
-   "branch": "uxr",
-   "title": "Robotics Data Collection Tech Lead, Frontier AI & Robotics (FAR)",
-   "location": "San Francisco, California, USA",
-   "states": [
-    "CA"
-   ],
-   "metros": [
-    "SFO"
-   ],
-   "remote": false,
-   "intl": false,
-   "level": "senior",
-   "posted": "2026-10-29",
-   "url": "https://www.amazon.jobs/en/jobs/10592596/robotics-data-collection-tech-lead-frontier-ai-robotics-far",
-   "desc": "Are you interested in solving the most critical operations problem behind cutting-edge robotics development? Interested in fast dynamic environment? Amazon's Frontier AI & Robotics (FAR) team is building advanced robotic systems through frontier foundation models, and high-quality data collection is a core input to that research.\n\nKey job responsibilities\nOwn the technical execution and continuous improvement of early-stage data collection for advanced robotics. Partner with researchers to translate research objectives into reliable collection workflows, improve data quality, and shorten policy training iteration cycles. Work independently within agreed priorities, providing hands-on technical guidance to data collectors and coordinating execution across research, engineering, and operations.\n\nIn this role, you will\n- Own end to end collection iterations for assigned research tasks, from requirements and station readiness through pilot data collection, quality review, and delivery of training-ready data. Coordinate dependencies and resolve blockers to meet agreed quality and turnaround goals.\n\n- Partner with researchers to develop and refine SOPs, translating task objectives, failure modes, and evaluation feedback into clear collection instructions and acceptance criteria. Maintain version control and ensure collectors adopt changes consistently.\n\n- Serve as the technical subject matter expert for assigned data collection workflows, equipment, and tools\u2026",
-   "pay": null,
-   "count": 1,
-   "first_seen": "2026-10-31"
   },
   {
    "score": 1,
@@ -4758,28 +4829,6 @@
    "pay": null,
    "count": 1,
    "first_seen": "2026-10-15"
-  },
-  {
-   "score": 1,
-   "employer": "Amazon",
-   "branch": "uxr",
-   "title": "Senior Robotics Data Collection Tech Lead, Frontier AI & Robotics (FAR)",
-   "location": "San Francisco, California, USA",
-   "states": [
-    "CA"
-   ],
-   "metros": [
-    "SFO"
-   ],
-   "remote": false,
-   "intl": false,
-   "level": "senior",
-   "posted": "2026-10-29",
-   "url": "https://www.amazon.jobs/en/jobs/10591987/senior-robotics-data-collection-tech-lead-frontier-ai-robotics-far",
-   "desc": "Are you interested in solving the most critical operations problem behind cutting-edge robotics development? Interested in fast dynamic environment? Amazon's Frontier AI & Robotics (FAR) team is building advanced robotic systems through frontier foundation models, and high-quality data collection is a core input to that research.\n\nKey job responsibilities\nOwn the technical execution and continuous improvement of early-stage data collection for advanced robotics. Partner with researchers to translate research objectives into reliable collection workflows, improve data quality, and shorten policy training iteration cycles. Work independently within agreed priorities, providing hands-on technical guidance to data collectors and coordinating execution across research, engineering, and operations.\n\nIn this role, you will\n- Own end-to-end collection iterations for assigned research tasks, from requirements and station readiness through pilot collection, quality review, and delivery of training-ready data. Coordinate dependencies and resolve blockers to meet agreed quality and turnaround goals.\n- Partner with researchers to develop and refine SOPs, translating task objectives, failure modes, and evaluation feedback into clear collection instructions and acceptance criteria. Maintain version control and ensure collectors adopt changes consistently.\n- Serve as the technical subject matter expert for assigned collection workflows, equipment, and tools\u2026",
-   "pay": null,
-   "count": 1,
-   "first_seen": "2026-10-31"
   },
   {
    "score": 1,
@@ -5142,7 +5191,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/121-South-Main-Street/Bilingual-Research-Assistant_REQ211624",
    "desc": "Job Description:\n\nPosition Purpose:\n\nThis position provides bilingual research support for a physical activity research study. The Bilingual Research Assistant is responsible for recruiting and communicating with participants; scheduling, preparing for, conducting, and documenting study visits; collecting and entering study data; monitoring participant completion of study activities; processing participant payments; and translating study materials between English and Spanish. The position requires careful adherence to research protocols, consistent follow-through, timely communication, and accurate documentation.\n\nThis position requires regular onsite work at Brown University. The work schedule varies according to participant availability and includes substantial evening hours and regularly scheduled Saturday hours. Candidates must be able to maintain this schedule consistently. This position requires travel to research and community sites.\n\nThis is a fixed term position with an end date of 7/31/27 and may be extended based upon available funding.\n\nAll offers of employment are contingent upon a criminal background check and education verification that are satisfactory to Brown University.\n\nJob Qualifications and Competencies\n\nEducation and Experience\n\n- Bachelor\u2019s Degree in psychology, public health preferred and 1 to 2 years of experience or equivalent combination of education and experience.\n\u2026",
    "pay": null,
@@ -5164,7 +5213,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://brown.wd5.myworkdayjobs.com/staff-careers-brown/job/155-South-Main-Street/Research-Assistant_REQ211823",
    "desc": "Job Description:\n\nThe School of Engineering at Brown University has a new and exciting opportunity to hire a Research Assistant.\n\nThe Research assistant will support the Health Innovation Technology Sandbox (HITS) in the Brown University School of Engineering. The incumbent will work on the design, fabrication, and testing of wearable health monitoring sensors, including those using photoplethysmography (PPG), kinematic sensors, and AI enhanced sensors. Daily tasks include: performing optical experiments, electronics development, signal processing, data analysis, presenting results regularly at lab meetings and working jointly with other lab members on development of an equitable pulse oximeter. Position will also assist with on-going clinical studies.\n\nThis is a full-time, fixed term position for one year, but is eligible for extension with secured external funding.\n\nBrown University provides equal opportunity and prohibits discrimination, harassment and retaliation based upon a person\u2019s race, color, religion, sex, age, national or ethnic origin, disability, veteran status, sexual orientation, gender identity, gender expression, or any other characteristic protected under applicable law, in the administration of its policies, programs, and activities. The University recognizes and rewards individuals on the basis of qualifications and performance.\n\nThe successful candidate, as a minimum, should have the following background:\n\nEducation and Experience\n\u2026",
    "pay": null,
@@ -5208,7 +5257,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Associate--Process-Management---Associate-Insights---Connections---Retail-Bank_R1004707-2",
    "desc": "Associate, Process Management \u2013 Associate Insights & Connections | Retail Bank\n\nAs an Associate on the Associate Insights & Connections (AIC) team, you will play an important role in strengthening the feedback infrastructure that connects frontline associates with business leaders across Capital One\u2019s Branch and Caf\u00e9 network.\n\nThe AIC team creates opportunities for associates to share their experiences, elevate ideas, and influence improvements to the processes, tools, and programs that shape their work. Through structured feedback channels, connection forums, and frontline engagement, we help ensure associate perspectives inform business decisions and continuous improvement.\n\nIn this role, you will support the execution and ongoing optimization of key feedback and engagement processes, including Branch and Caf\u00e9 Connection Panels, START testing, and frontline visit coordination. You will manage essential operational activities, facilitate meaningful conversations, maintain organized documentation, and identify opportunities to improve how our team works.\n\nThe ideal candidate is an organized, curious, and proactive problem solver who enjoys working with people, brings structure to complex processes, and is excited to leverage technology and artificial intelligence (AI) to improve efficiency and effectiveness.\n\nYou will work closely with AIC\u2019s feedback project manager and collaborate with cross functional partners to ensure our feedback channels operate consistently, efficiently, and with a strong focus on the associate experience.\n\nGeneral Responsibilities:\n\u2026",
    "pay": null,
@@ -5230,7 +5279,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 24 Days Ago",
+   "posted": "Posted 25 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Business-Manager---Talent--Development--and-Org-Insights-Intelligence-Analyst_R1003445",
    "desc": "Business Manager - Talent, Development, and Org Insights Intelligence Analyst\n\nAs a Business Analysis Manager at Capital One, you will apply your strategic and analytical skills to major company challenges. You'll team with world-class professionals to develop and test strategies that ultimately impact the bottom line. And you will do it all in a collaborative environment that values your insight, encourages you to take on new responsibility, promotes continuous learning, and rewards innovation.\n\nTeam Details:\n\nDo you want your analysis to shape how a Fortune 100 company develops its people? Talent Development and Org Insights (TDOI) builds the platform and experiences that empower every associate to discover their unique path and unlock their full potential. You'll join TDOI Intelligence \u2014 the analytical engine behind three connected experiences: Performance Assessment, Associate Growth, and Organizational Planning. Our charter is to develop data-driven insights that illuminate the path to high-impact performance and growth, and to turn complex talent and organizational data into decisions leaders can act on. This is not reporting for its own sake \u2014 the questions we frame and the patterns we surface directly shape the product agenda, defining what we build next for associates, people leaders, and organizational leaders across Capital One.\n\nGeneral Responsibilities:\n\u2026",
    "pay": null,
@@ -5296,7 +5345,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://capitalone.wd12.myworkdayjobs.com/Capital_One/job/McLean-VA/Senior-Manager--Quantitative-Analysis---Model-Risk-Office_R1002862-2",
    "desc": "Senior Manager, Quantitative Analysis - Model Risk Office\n\nAt Capital One data is at the center of everything we do. As a startup, we disrupted the credit card industry by individually personalizing every credit card offer using statistical modeling and the relational database, cutting edge technology in 1988! Fast-forward a few years, and this little innovation and our passion for data has skyrocketed us to a Fortune 200 company and a leader in the world of data-driven decision-making.\n\nAs a Quantitative Senior Manager at Capital One, you\u2019ll be part of a team that\u2019s leading the next wave of disruption at a whole new scale, using the latest in cloud computing and machine learning technologies and operating across billions of customer records to unlock the big opportunities that help everyday people save money, time and agony in their financial lives.\n\nAs part of the Model Risk function, you will partner with high-performing model development teams and model risk teams responsible for advance Capital One\u2019s Loan Loss Forecasting and Allowance for Credit Losses (ACL) framework.\n\nResponsibilities and Skills:\n- Remain on the leading edge of analytical technology with a passion for the newest and most innovative tools.\n- Develop alternative model approaches to assess model design and advance future capabilities.\n- Understand relevant business processes and portfolios associated with model use.\n- Understand technical issues in econometric, statistical, and machine learning modeling and apply these skills toward developing models and assessing model risks and opportunities.\n\u2026",
    "pay": null,
@@ -5411,7 +5460,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://clemson.wd12.myworkdayjobs.com/Clemson_Careers/job/CLEMSON-SC/Research-Specialist_JR-10955",
    "desc": "JOB SUMMARY:\n\nProvide technical expertise by rearing insects (e.g., Lepidoptera) and assisting with imaging and computer analyses and preparation of manuscripts and other research presentations to contribute to the NSF-supported project entitled \" Hydraulics of Insect Antennae Enabling Actuation and Control\". Other duties as assigned.\n\nJOB DUTIES:\n\n70% - Rear species of insects for research, including preparation of diet.\n\n20% - Provide computer expertise in imaging and analysis of research.\n\n10% - Contribute to preparation of manuscripts and other research presentations.\n\nJOB CODE:\n\nED55\n\nEMPLOYEE TYPE:\n\nTime-Limited (TLP) Staff\n\nMinimum Requirements:\n\nA high school diploma and work experience in a clinical or research setting.\n\nRESPONSIBILITIES:\n\nJOB KNOWLEDGE\n\nFirm working knowledge of concepts, practices and procedures and ability to use in varied situations.\n\nSUPERVISORY RESPONSIBILITIES\n\nNot responsible for supervising employees.\n\nBUDGETARY RESPONSIBILITIES\n\nNo fiscal responsibility for the department's budget.\n\nPHYSICAL REQUIREMENTS:\n\nPerceive, observe, clarity of vision: 100%\nExtends hands or arms in any direction: 80%\nRecognize or inspect visually: 100%\nCommunicate, converse, give direction, express oneself: 50%\nPosition self to accomplish task (i.e. stoop, kneel, crawl): 10%\nWalk or move about: 50%\nSit (stationary position) for prolonged period: 50%\nStand for Prolonged Period: 50%\n\nWORKING CONDITIONS:\n\nNone: %\n\nWORK SCHEDULE:\n\nStandard Hours:\n\n15\n\nCOMPENSATION INFORMATION:\n\nExpected Salary Range\n\u2026",
    "pay": null,
@@ -5814,7 +5863,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Research-Assistant_JR27965",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThe Research Assistant, Center for Health Equity \u2013 Georgetown University, provides assistance for faculty and learner research projects and supports research infrastructure and capacity building activities in the Center for Health Equity and for the Department of Family Medicine. Research Assistant will serve as the primary project manager for multiple on-going research projects in all phases of development and implementation, including supervision of work-study students and medical school, graduate and undergraduate student interns. Additionally, the position will contribute to research design, IRB applications and processing, data analysis, and dissemination of study results\u2026",
    "pay": {
@@ -5841,7 +5890,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 14 Days Ago",
+   "posted": "Posted 15 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Research-Specialist-II_JR27907",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThis position relates to project management and implementation of several awarded grants pertaining to cancer survivorship, health equity, translational genomics, and cancer disparities research. Overall, all research projects are related to reducing symptom burden in cancer survivors, and addressing cancer prevention and control in socio-economically disadvantaged populations, racial/ethnic subgroups, and other groups that bear disproportionate cancer burden in the US. Exemplar activities include the completion of general research related tasks such preparation of IRB documents, recruiting, consenting and interviewing participants, developing intervention materials, data collection surveys and interviews, data entry, qualitative and quantitative data coding and analysis, writing reports, assisting with grant writing, assisting with manuscripts writing, coordinating trainings, communicating with study sites.\n\nWork Interactions\n\u2026",
    "pay": {
@@ -5868,7 +5917,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Medical-Center/Senior-Research-Assistant_JR27811-1",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThe Senior Research Assistant will be a part of the Huntington\u2019s Disease Care Education and Research Center (HD CERC) to assist with clinical trial implementation and clinic scheduling and operations. The position will work independently to implement and run day to day operations for clinical trials in the Huntington\u2019s Center. In addition, the position will require administrative work for the Director of the Center, Clinical Trials Director, and Outreach Coordinator, including independent work with confidential patient files.\n\nWork Interactions\n\nIn addition to reporting to the Clinical Trials Director, the position will work closely with the Research Manager. The candidate will work closely with the Clinical Research Unit (CRU) and other university departments (e.g. MRI, ophthalmology) to ensure protocols are understood and visits there are conducted properly\u2026",
    "pay": {
@@ -5895,7 +5944,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://georgetown.wd1.myworkdayjobs.com/Georgetown_Admin_Careers/job/Law-Center/Sovereign-Debt-Forum-Research-Assistant_JR27009",
    "desc": "Georgetown University comprises two unique campuses in the nation\u2019s capital. With the Hilltop Campus located in the heart of the historic Georgetown neighborhood, and the Capitol Campus, just minutes from the U.S. Capitol and U.S. Supreme Court, Georgetown University offers rigorous academic programs, a global perspective, and unparalleled opportunities to engage with Washington, D.C. Our community is a close-knit group of remarkable individuals driven by intellectual inquiry, a commitment to social justice, and a shared dedication to making a difference in the world.\n\nRequirements\n\nJob Overview\n\nThe Sovereign Debt Forum\u2019s #PublicDebtIsPublic initiative (#PDIP) is dedicated to the principle that public debt must be robustly accountable to the public. This means that information on government borrowing and lending\u2014including sovereign debt contracts, legal and institutional frameworks\u2014and capacity development tools should all be readily available and free to the public. To advance this principle, the #PDIP initiative aims to shift debt transparency norms and practices to create a presumption in favor of public disclosure of both legal and financial terms of public debt in a format that is publicly accessible, intelligible, and comparable.\n\u2026",
    "pay": {
@@ -6024,6 +6073,28 @@
   },
   {
    "score": 1,
+   "employer": "Harvard University",
+   "branch": "university",
+   "title": "Research Assistant III- Technology Development",
+   "location": "Cambridge, MA",
+   "states": [
+    "MA"
+   ],
+   "metros": [
+    "BOS"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "senior",
+   "posted": "",
+   "url": "https://careers.harvard.edu/job/research-assistant-iii-technology-development-in-boston-ma-united-states-jid-2448",
+   "desc": "",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 1,
    "employer": "Howard University",
    "branch": "university",
    "title": "Prospect Research Specialist",
@@ -6118,7 +6189,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://howard.wd1.myworkdayjobs.com/HU/job/Washington-DC/Study-Coordinator_JR108754-1",
    "desc": "The Talent Acquisition department hires qualified candidates to fill positions which contribute to the overall strategic success of Howard University. Hiring staff \u201cfor fit\u201d makes significant contributions to Howard University\u2019s overall mission.\n\nAt Howard University, we prioritize well-being and professional growth.\n\nHere is what we offer:\n\n- Health & Wellness: Comprehensive medical, dental, and vision insurance, plus mental health support\n- Work-Life Balance: PTO, paid holidays, flexible work arrangements\n- Financial Wellness: Competitive salary, 403(b) with company match\n- Professional Development: Ongoing training, tuition reimbursement, and career advancement paths\n- Additional Perks: Wellness programs, commuter benefits, and a vibrant company culture\n\nJoin Howard University and thrive with us!\n\nhttps://hr.howard.edu/benefits-wellness\n\nJOB PURPOSE:\nTo coordinate study participants in the Clinical Trials Unit. Execute tasks as required by the study\nprotocols.\n\nSUPERVISORY AUTHORITY:\nInvolves no responsibility or authority for the direction of others.\n\nNATURE AND SCOPE:\nInteracts with physicians, immediate staff members, research participants, and the general public.\n\nPRINCIPAL ACCOUNTABILITIES:\n\n- Maintain familiarity with the protocol. Evaluate study candidates for eligibility into the study.\n- Meet with the patient\u2019s caretaker to review the details of study enrollment.\n- Assure that informed consent has been obtained from the patient\u2019s legal guardian and consent from the patient when applicable prior to the initiation of research-related activities.\u2026",
    "pay": {
@@ -6167,7 +6238,7 @@
    "remote": false,
    "intl": false,
    "level": "",
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://icf.wd5.myworkdayjobs.com/ICFExternal_Career_Site/job/Raleigh-NC/Survey-Interviewer_R2603525",
    "desc": "Job Description\n\nICF is hiring flexible On-Call REMOTE Survey Research interviewers! The work supports vital health-focused surveys for our Federal and global health agencies. As a Survey Researcher at ICF, you\u2019ll help collect data via specific telephone questions; the collected data is used to identify risks and monitor trends that allow our clients deliver targeted effective health policy interventions. Do you have great telephone communication skills, computer entry, time management and organization skills? If so, this might be the next role you are looking for-apply today.\n\nThis role is fully remote and On-Call, approximately 20 - 29 hours each week. Hours of work can vary and the ICF Recruiter will provide schedule options.\n\nWatch the video below for a preview of this role:\n\nJob Preview: Survey Interviewers at ICF - ICF (wistia.com)\n\nJob Description:\n\n- Deliver scripted multiple-choice questions over the telephone and accurately record responses often using a computer-aided telephone interviewing (CATI) system. We will train you on delivering the script and how to enter the responses.\n\n- During each survey interview, we\u2019ll ask you to positively engage with members of the public and remain neutral and unbiased regarding their responses.\n\n- Continue to build skills by learning from colleagues and your Team Lead who are there to support your progress and project goals. Our goal is to develop highly trained and motivated team members who can enjoy dynamic and rewarding work experience.\n\n- Must be able to sit for long periods of time.\n\nRequired Qualifications:\n\u2026",
    "pay": {
@@ -6239,7 +6310,7 @@
    "employer": "Instacart",
    "branch": "uxr",
    "title": "Senior Financial Insights Analyst",
-   "location": "United States - Remote +1 more",
+   "location": "Canada - Remote (ON, AB, BC, or NS Only) +1 more",
    "states": [
     "REMOTE",
     "OR"
@@ -6248,16 +6319,16 @@
     "REMOTE"
    ],
    "remote": true,
-   "intl": false,
+   "intl": true,
    "level": "senior",
-   "posted": "2026-10-14T17:53:44-04:00",
-   "url": "https://instacart.careers/job/?gh_jid=8282526",
+   "posted": "2026-10-14T17:53:46-04:00",
+   "url": "https://instacart.careers/job/?gh_jid=8282591",
    "desc": "We're transforming the grocery industry\n\nAt Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work to deliver an essential service that customers rely on to get their groceries and household goods, while also offering safe and flexible earnings opportunities to Instacart Personal Shoppers.\n\nInstacart has become a lifeline for millions of people, and we\u2019re building the team to help push our shopping cart forward. If you\u2019re ready to do the best work of your life, come join our table.\n\nInstacart is a Flex First team\n\nThere\u2019s no one-size fits all approach to how we do our best work. Our employees have the flexibility to choose where they do their best work\u2014whether it\u2019s from home, an office, or your favorite coffee shop\u2014while staying connected and building community through regular in-person events. Learn more about our flexible approach to where we work.\n\nWhy this role is on the menu\n\nThe Senior Financial Insights Analyst sits at the center of Instacart's Finance organization, with a mandate to identify and close areas of P&L leakage through rigorous financial and transactional data analysis and compelling narratives that drive action.\n\nThe team works through invoice challenges with retailers and serves as experts in the broader Instacart financial ecosystem\u2026",
    "pay": {
-    "min": 152000,
-    "max": 160500,
+    "min": 126000,
+    "max": 133000,
     "period": "year",
-    "label": "$152k - $160k"
+    "label": "$126k - $133k"
    },
    "count": 2,
    "first_seen": "2026-10-15"
@@ -6531,33 +6602,6 @@
     "label": "$17.20 - $30.30/hr"
    },
    "count": 2,
-   "first_seen": ""
-  },
-  {
-   "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Research Assistant (Health Policy and Management)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "level": "entry",
-   "posted": "2026-07-22",
-   "url": "https://hiring.jhu.edu/careers/job/1133914421467",
-   "desc": "We are seeking a Research Assistant who will oversee data collection, data organization, and/or data management or similar functions/tasks for research study(ies) in support of a PI or a research team. The Johns Hopkins Smoke Alarm Project is seeking a reliable and detail-oriented Research Assistant to support project coordination, partner outreach, and smoke alarm logistics.\n\nSpecific Duties & Responsibilities\n\n- Run routine and ad hoc reports.\n- Use standard tools and computer programs to review data.\n- Assist with data cleaning measures to ensure accuracy of data and preparation of tables.\n- Lead basic activities such as data collection and data entry.\n- May lead specific tasks and develop processes to ensure study activities occur effectively and efficiently.\n- May conduct literature searches to support faculty in research efforts.\n- May design and format papers/publications.\n- May assist PIs in writing summaries of papers for release as policy briefs or other channels.\n- Other duties as assigned.\n\nIn addition to the duties described above\n\n- Schedule and coordinate meetings with national and local partners.\n- Order, track, and manage inventory of smoke alarms.\n- Assist with outreach to current and prospective partners.\n- Participate in meetings with partners and support follow-up communications.\n- Maintain accurate records and documentation related to project activities.\n\nMinimum Qualifications\n\n- Bachelor's Degree in a related field.\u2026",
-   "pay": {
-    "min": 36712,
-    "max": 64584,
-    "period": "hour",
-    "label": "$17.65 - $31.05/hr"
-   },
-   "count": 1,
    "first_seen": ""
   },
   {
@@ -6980,8 +7024,8 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "2026-09-09",
-   "url": "https://hiring.jhu.edu/careers/job/1133915693470",
+   "posted": "2026-11-03",
+   "url": "https://hiring.jhu.edu/careers/job/1133916596306",
    "desc": "We are seeking a Research Specialist who will perform a range of assays and experiments specific to an area of research, requiring a good understanding of the work of the laboratory. Makes contributions to various aspects of research efforts. Performs routine troubleshooting and helps with training and orientation of others working in the laboratory.\n\nSpecific Duties & Responsibilities\n\n- Plan and run experiments after discussion with investigators.\n- Work may include making protocol modifications within the parameters set by investigator.\n- Utilize specialized knowledge to interpret results, e.g. read controls, and evaluate results.\n- Use scientific knowledge and lab experience to evaluate whether component parts of experiments are working as expected.\n- Train/orient learners and new staff in the laboratory.\n- Assist in development of new techniques and instruments.\n- Become familiar with published research methods related to current experimental work by investigating published protocols and discussing them with more senior laboratory staff and/or faculty investigators.\n- Process analyzed data into figures for scientific publications.\n- May order equipment and supplies, and interface with vendors.\n- May facilitate problem solving for entry-level lab members with research assays.\n- May participate in protocol development, efficiency, and productivity.\n- May contribute to writing manuscripts and grants by writing methodology sections.\n- Other duties as assigned.\n\nMinimum Qualifications\n\n- Bachelor's Degree in Biology, Chemistry or related field.\u2026",
    "pay": {
     "min": 36483,
@@ -6989,7 +7033,7 @@
     "period": "hour",
     "label": "$17.54 - $30.65/hr"
    },
-   "count": 1,
+   "count": 2,
    "first_seen": "2026-09-10"
   },
   {
@@ -7156,33 +7200,6 @@
   },
   {
    "score": 1,
-   "employer": "Johns Hopkins University",
-   "branch": "university",
-   "title": "Sr. Research Specialist (Pathology)",
-   "location": "Baltimore, MD, United States",
-   "states": [
-    "MD"
-   ],
-   "metros": [
-    "BAL"
-   ],
-   "remote": false,
-   "intl": false,
-   "level": "senior",
-   "posted": "2026-07-22",
-   "url": "https://hiring.jhu.edu/careers/job/1133914493358",
-   "desc": "We are seeking a Sr. Research Specialist who will make intellectual contributions to the scientific research interests of the laboratory. In collaboration with a PI, makes decisions that may alter research objectives and direction. Performs a range of sophisticated assays. Contributes to writing peer-reviewed manuscripts and funding proposals.\n\nSpecific Duties & Responsibilities\n\n- Develop, design and manage substantial research projects, and coordinate their own objectives.\n- Perform sophisticated data analysis utilizing an extensive knowledge base and experience with varied methods. In a clinical laboratory, perform and develop clinical validation protocols.\n- Act as a consultant to refine or adapt methodologies to fit research objectives.\n- Collaborate in the development of new technologies, protocols, and uses of equipment.\n- Contribute original thoughts, hypotheses, and analysis to write reports, abstracts, and manuscripts.\n- Function scientifically in the laboratory comparably to a post-doctoral fellow.\n- Independently perform assays specific to the laboratory interests.\n- May provide oversight and direction to staff, including interviews, recommendations for hiring and evaluation of performance.\n- Enhance problem solving through interactions and discussions with collaborators or senior researchers at meetings and/or professional presentations.\n- Make decisions regarding laboratory projects that may require assessment, revision of objectives, or altering scientific direction.\n- Consider resources and laboratory priorities when making decisions.\u2026",
-   "pay": {
-    "min": 48000,
-    "max": 84100,
-    "period": "year",
-    "label": "$48k - $84k"
-   },
-   "count": 1,
-   "first_seen": "2026-10-31"
-  },
-  {
-   "score": 1,
    "employer": "Kantar",
    "branch": "applied-research",
    "title": "Research Manager",
@@ -7198,7 +7215,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 20 Days Ago",
+   "posted": "Posted 21 Days Ago",
    "url": "https://kantar.wd3.myworkdayjobs.com/KANTAR/job/Prague-Strossmayerovo-namesti/Research-Manager_R102688-2",
    "desc": "We go beyond the obvious, using intelligence, passion and creativity to inspire new thinking and shape the world we live in.\n\nTo start a career that is out of the ordinary, please apply...\n\nJob Details\n\nWe go beyond the obvious, using intelligence, passion and creativity to inspire new thinking and shape the world we live in.\n\nTo start a career that is out of the ordinary, please apply...\n\nJob Details\n\nRESEARCH MANAGER\n\nHo Chi Minh City, Vietnam\n\nWe\u2019re the world\u2019s leading data, insights, and consulting company; we shape the brands of tomorrow by better understanding people everywhere.\n\nJob Goals\n\nAccount Management\n\n- Attends to clients\u2019 research needs independently with minimal supervision from Director / Business Unit Head\n- (BUH).\n- Recommends appropriate research projects/programs based on client\u2019s informational needs/problems.\n- Prepares proposals and cost estimates for projects using innovative, customized research methodologies and\n- business solutions.\n- Costs out each study and establishes appropriate operating budgets and timetables for each phase of the\n- project.\n- Oversees proposals and cost estimates for projects delegated to junior team members.\n- Meets with clients and/or supervises junior team members\u2019 meeting with clients to discuss details of proposed\n- projects.\n- Provides feedback to clients on the progress of projects.\n- Ensures profit objectives of projects under his/her responsibility.\n- Networks and develops close relationships with set of clients.\n- Assists in championing at least one Kantar packaged products.\n- Project Management\u2026",
    "pay": null,
@@ -8082,7 +8099,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://pewtrusts.wd5.myworkdayjobs.com/CenterExternal/job/Washington-DC-Pew-Research-Center/Research-Assistant--Global-Attitudes_R003309",
    "desc": "Organization Overview\n\nPew Research Center is a nonpartisan fact tank that informs the public about the issues, attitudes and trends shaping America and the world. It conducts public opinion polling, demographic research, media content analysis and other empirical social science research in the areas of U.S. politics and policy views; news habits and media; internet and technology; religion; race and ethnicity; international affairs; social, demographic and economic trends; science; research methodology and data science; and immigration and migration. Pew Research does not take policy positions. It is a subsidiary of The Pew Charitable Trusts. Pew Research Center\u2019s work is carried out by a staff of about 187.\n\nPosition Overview\n\nPew Research Center has an immediate need for a Research Assistant to support its global research agenda. The Research Assistant will be part of the Global Attitudes research team, which conducts worldwide public opinion surveys on major international issues such as attitudes toward the U.S. and American foreign policy, views of China, global economic attitudes, multilateralism, and democracy, as well as how people view conditions in their countries and their own lives. Ideal candidates will have a bachelor\u2019s degree with a concentration in political science, economics, international affairs, statistics, or a similar field of social science. This position will report to the Associate Director of Global Attitudes research.\n\nPrimary Responsibilities\n\u2026",
    "pay": null,
@@ -8445,6 +8462,28 @@
    "score": 1,
    "employer": "UNC Chapel Hill",
    "branch": "university",
+   "title": "Data-Driven EnviroLab Temporary Research Specialist/Data Analyst",
+   "location": "Chapel Hill, NC",
+   "states": [
+    "NC"
+   ],
+   "metros": [
+    "RDU"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "mid",
+   "posted": "2026-11-03",
+   "url": "https://unc.peopleadmin.com/postings/328046",
+   "desc": "This position may be eligible for a hybrid work arrangement that may include a partially remote work location, consistent with System Office policy. UNC Chapel Hill employees are generally required to reside within a reasonable commuting distance of their assigned duty station.\n\nThe Data-Driven EnviroLab (DDL) at UNC-Chapel Hill seeks a Research Specialist with a data science focus to support interdisciplinary research on environmental, climate, energy, and sustainability issues. The position will work across projects that use large and heterogeneous datasets to understand environmental and policy challenges, develop reproducible analytical workflows, and translate research findings into accessible tools and outputs for researchers, policymakers, and the public.\n\nThis Data Scientist/Research Specialist position is intended for recent BS/BA or Master's graduates and early-career professionals interested in strengthening their applied research skills, including those considering doctoral study. The candidate will use R and/or Python to collect, clean, integrate, manage, and analyze data from multiple sources; apply quantitative, statistical, and, where relevant, geospatial methods; and contribute to data products, visualizations, and research outputs.\n\nWorking with an interdisciplinary team spanning data science/statistics, computer science, climate policy, law, and social science, the candidate may contribute to projects that:\n\u2026",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 1,
+   "employer": "UNC Chapel Hill",
+   "branch": "university",
    "title": "Research Assistant",
    "location": "Chapel Hill, NC",
    "states": [
@@ -8555,7 +8594,7 @@
    "score": 1,
    "employer": "UNC Chapel Hill",
    "branch": "university",
-   "title": "Social/Clinical Research Assistant",
+   "title": "Social/Clinical Research Specialist",
    "location": "Chapel Hill, NC",
    "states": [
     "NC"
@@ -8565,13 +8604,13 @@
    ],
    "remote": false,
    "intl": false,
-   "level": "entry",
-   "posted": "2026-10-27",
-   "url": "https://unc.peopleadmin.com/postings/327721",
-   "desc": "This position will serve as an Assistant Clinical Research Coordinator within the Department of Radiology, Epidemiology Research Team (ERT) Lung Cancer Screening Group. The Research Assistant assists with the execution of study protocols, including screening and recruiting study participants, conducting study visits, and collecting, entering, and reviewing study data.\n\nPrimary Responsibility: Completing electronic health record abstraction from collaborating facilities in an efficient, effective, and timely manner.\n\nAdditional tasks and project activities may include:\n\n- Documenting study-related processes and procedures including development of SOPs as needed\n- Developing and implementing quality control and quality assurance procedures for data collection tasks\n- Generating reports and critically evaluating data for quality purposes\n- Documenting and reporting data issues to the supervisor in a timely manner\n- Developing and implementing corrective action plans for data issues in a timely manner\n- Performing literature reviews and searches\n- Communicating with team members and collaborating facilities in a professional, efficient, effective, and timely manner at all times\n- Participating and presenting in study team and Epidemiology Research Team meetings",
+   "level": "mid",
+   "posted": "2026-11-03",
+   "url": "https://unc.peopleadmin.com/postings/328081",
+   "desc": "This position will serve as a Clinical Research Coordinator within the Critical Care and Trauma Research Unit in the Department of Surgery . The Clinical Research Coordinator is responsible for the planning, organization, and conduct of multiple clinical research study protocols, including consenting, independently collecting and recording data, project administration and clinical trial assessments with appropriate follow-up, and communication with various stakeholders.\n\nThe Clinical Research Coordinator must ensure all trial activities strictly follow the study protocol, regulatory requirements, and Good Clinical Practice (GCP) guidelines, maintain meticulous study documents, including regulatory binders, to ensure they are complete, accurate, and up-to-date, and report any adverse events or other significant occurrences to the appropriate parties. In addition, the Clinical Research Coordinator will specialize in extracorporeal purification device trials, wound healing trials, and/or pharmacokinetic/pharmacodynamic clinical trials.",
    "pay": null,
    "count": 1,
-   "first_seen": "2026-10-28"
+   "first_seen": "2026-11-03"
   },
   {
    "score": 1,
@@ -8592,7 +8631,7 @@
    "url": "https://unc.peopleadmin.com/postings/327520",
    "desc": "This position will serve as a Senior Clinical Research Participant Coordinator within the Lineberger Comprehensive Cancer Center's Cellular Therapy Program. The Cellular Therapy Program is one of the select few academic centers in the United States with the scientific, technical, and clinical capabilities to identify new tumor targets, develop, and infuse novel CAR-T therapy. The Senior Clinical Research Participant Coordinator has a full knowledge of research and is responsible for independently planning, organizing, and evaluating clinical research participant management and data collection for a variety of complex clinical research protocols, including leading efforts in evaluating and modifying data collection and recruitment methods, liaising between study staff, participants, and clinical staff, and data collection. The Senior Clinical Research Participant Coordinator facilitates the integration of research activities into the clinical care environment, conveying information to a variety of individuals and groups while instructing and educating clinical staff and providers.",
    "pay": null,
-   "count": 4,
+   "count": 3,
    "first_seen": "2026-09-29"
   },
   {
@@ -8675,6 +8714,28 @@
    "score": 1,
    "employer": "University of Miami",
    "branch": "university",
+   "title": "Advanced Practice Provider Clinical Research - Hematology/ Lymphoma Medicine - Full Time",
+   "location": "Miami, FL",
+   "states": [
+    "FL"
+   ],
+   "metros": [
+    "MIA"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "",
+   "posted": "Posted Yesterday",
+   "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Advanced-Practice-Provider---Hematology-Medicine---Full-Time_R100102656",
+   "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Advanced Practice Provider - Clinical Research provides clinical care to patients participating in clinical trials, independently and in collaboration with physician investigators. The Advanced Practice Provider - Clinical Research supports patient screening, enrollment, treatment, and ongoing study participation while ensuring high-quality, protocol-compliant care. The role contributes to the design, implementation, conduct, and evaluation of Phase I\u2013III, investigator-initiated, and industry-sponsored clinical research studies.\n\n- Conducts and documents study-specific assessments, physical examinations, and health histories in accordance with clinical trial protocols.\n- Evaluates research participants to determine study eligibility, treatment response, toxicity management, and ongoing protocol participation independently.\n- Orders, performs, and interprets protocol-required diagnostic and therapeutic tests in collaboration with the research team and principal investigator.\n- Prescribes and manages study-related and supportive care interventions consistent with protocol requirements, scope of practice, and participant needs.\n- Monitors participant safety, identifies adverse events, and implements appropriate interventions to maintain physiologic stability and protocol compliance\u2026",
+   "pay": null,
+   "count": 1,
+   "first_seen": "2026-11-03"
+  },
+  {
+   "score": 1,
+   "employer": "University of Miami",
+   "branch": "university",
    "title": "Clinical Documentation Specialist 1",
    "location": "Hialeah, FL",
    "states": [
@@ -8708,7 +8769,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 26 Days Ago",
+   "posted": "Posted 27 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Data-Specialist_R100101532",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nClinical Research Data Specialist\n\nThe University of Miami/UHealth department of SCCC has an exciting opportunity for a Hybrid Full Time Clinical Research Data Specialist to work in Miami, FL. The Clinical Research Data Specialist assists in creating, updating, and maintaining research charts and case report forms, including regulatory related issues, in accordance with department standard operating procedures, under the supervision of the Principal Investigator (PI) and supervisor. The Clinical Research Data Specialist is responsible for the compilation, registration and submission of data, monitoring compliance with the protocol, adherence to SOPs, and all applicable regulations and guidelines.\n\n- Extracts clinical data and research data from electronic medical records and other sources and enters this data in the clinical paper-based or electronic data capture system for each assigned study.\n- Manages a workload of studies commensurate to level of experience\n- Answers data clarifications (i.e., data queries) for each study.\n- Schedules and meets with study monitors and assures patient cases are ready for each monitor visit and items are addressed after each monitoring visit.\n- Develops source data worksheets specific to each assigned study.\u2026",
    "pay": null,
@@ -8774,7 +8835,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Trials-Activation-Analyst-2_R100100931",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Department of Clinical Trials Budgeting & Activation, is seeking a full-time Clinical Trials Activation Analyst 2 to work hybrid at Don Soffer Clinical Research Center in Miami, Florida.\n\nCORE JOB SUMMARY\n\nThe Clinical Trials Activation Analyst 2 (Medicare Billing Coding & Financial) works independently to review financial provisions of sponsored clinical research agreements and proposals and negotiate budgets and financial terms in adherence to sponsoring entity, federal, state and University of Miami requirements. Under general supervision, the Clinical Trials Activation Analyst 2 is responsible for providing institutional-level sponsored research administration services to a portfolio of academic departments and research units among the Miller School of Medicine, including communications with extramural entities, with the focus on securing fiscally sound and compliant financial provisions for clinical research and clinical trials.\n\nCORE JOB FUNCTIONS\n\n1. Reviews, analyzes, negotiates and endorses financial provisions of various clinical research agreements,\n\nproposals and awards to ensure use of the correct and compliant processes, and meeting funding requirements,\n\nfocusing on University policies, Uniform Guidance and applicable federal and state rules and regulations.\n\n2\u2026",
    "pay": null,
@@ -8796,7 +8857,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Trials-Activation-Analyst-3_R100100940",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Department of Clinical Trials Budgeting & Activation is seeking a full-time Clinical Trials Activation Analyst 3 to work hybrid at Don Soffer Clinical Research Center in Miami, Florida.\n\nCORE JOB SUMMARY\nThe Clinical Trials Activation Analyst 3 works independently to review financial provisions of complex sponsored clinical research agreements and proposals and negotiate budgets and financial terms in adherence to sponsoring agency, federal, state and University of Miami requirements. Under minimal supervision, the Clinical Trials Activation Analyst 3 is responsible for providing enhanced inter-departmental and institutional-level sponsored research administration services to various academic departments and research units among the Miller School of Medicine, including extensive communications with extramural entities, with the focus on securing fiscally sound and compliant financial provisions for complex clinical research and clinical trials. Moreover, the Clinical Trials Activation Analyst 3 participates in development of efficient work processes, support documents, templates and other tools to facilitate research budget development and negotiations.\n\nCORE JOB FUNCTIONS\n\n1\u2026",
    "pay": null,
@@ -8928,7 +8989,7 @@
    "remote": false,
    "intl": false,
    "level": "",
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Courier---Clinical-Research-Lab_R100102308",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC CRS has an exciting opportunity for a Full-Time Clinical Research Lab Courier to work at UHealth in Miami, Florida.\n\nThe Clinical Research Laboratory Services Courier delivers various kinds of documents, packages, and messages between offices or departments. This position also travels to off-site locations when necessary to complete assigned deliveries.\n\nCORE JOB SUMMARY\n\nThe Courier delivers various kinds of documents, packages, and messages between offices or departments. This position also travels to off-site locations when necessary to complete assigned deliveries.\n\nCORE JOB FUNCTIONS\n\n- Delivers documents, packages and/or messages to their destination.\n- Receives documents, materials, and information requiring delivery.\n- Maintains confidentiality at all times during the course of delivery and thereafter.\n- Plans and follows the most efficient routes for delivering goods.\n- Sorts items for delivery, according to delivery route.\n- Obtains signatures for pertinent information, upon delivery.\n- Maintains records of items received and delivered, as well as the recipient.\n- Remains accessible at all times via telephone, email or pager.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\u2026",
    "pay": null,
@@ -8950,7 +9011,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 18 Days Ago",
+   "posted": "Posted 19 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Manager--Clinical-Trial-Activation_R100100930",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe Department of Clinical Trials Budgeting & Activation is seeking a full-time Manager, Clinical Trials Activation to work hybrid at Don Soffer Clinical Research Center in Miami, Florida.\n\nCORE JOB SUMMARY\nThe Manager, Clinical Trials Activation leads a defined team and handles the day-to-day activities of an assigned portfolio, such as the review of the financial provisions of moderately complex research agreements, grant applications and awards, and the development and negotiation of research budgets in adherence to sponsoring agency, federal, state and University of Miami requirements, ensuring all documentation complies with the University policies and other applicable rules and regulations. Working within established work processes, policies and procedures, the Manager meaningfully contributes to the ongoing processes improvement and assists with drafting support documents, templates and other tools to facilitate research budgets development and secure fiscally sound and compliant financial provisions for research agreements.\n\nCORE JOB FUNCTIONS\n\n1. Leads assigned team members, providing day-to-day leadership, mentorship, oversight and guidance.\n\n2. Participates in recruiting and onboarding; trains, mentors and supervises staff. Prepares performance reports.\n\n3\u2026",
    "pay": null,
@@ -8972,7 +9033,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 19 Days Ago",
+   "posted": "Posted 20 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Project-Manager--Clinical-Research_R100099146",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC has an exciting opportunity for a Full-Time Project Manager, Clinical Research - Regulatory to work at the UHealth campus in Miami, Fl.\n\nCORE SUMMARY\n\nThe Project Manager, Clinical Research, oversees the planning and management of clinical trials and research projects that support the overall mission of the University. The Project Manager, Clinical Research, manages the execution of regulatory-related decisions/strategies; and coordinates central resource services for principal investigators and other relevant team members. The incumbent promotes clinical research by providing quality services related to research reviews, advanced assessments, research program management and educational functions, and by applying a solution-based, collaborative approach with the goal of continuous quality.\n\nCORE RESPONSIBILITIES\n\n1. Defines the scope of projects in conjunction with leadership and discusses the objectives and measures upon which the project will be evaluated at its completion.\n\n2. Determines the resources required to complete each project and establishes and records comprehensive project plans and timelines, which identify and sequences the activities needed to successfully complete projects.\n\n3\u2026",
    "pay": null,
@@ -9064,7 +9125,7 @@
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-1--A-_R100099329",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nResearch Assistant 1\n\nThe University of Miami/UHealth Department of Surgery has an exciting opportunity for a Part-Time Research Assistant 1 to work in Miami.\n\nCore Job Summary:\n\nThe Research Assistant 1 contributes to research investigators by providing research and experimentation support while following established protocols. The Research Assistant 1 performs a clerical role to ensure the smooth operations of office facilities.\n\nCore Responsibilities:\n\n- Sets up and operates various scientific apparatus and makes minor repairs.\n\n- Prepares correspondence and answers phones.\n\n- Formulates and maintains bibliographies and completes applications and forms.\n\n- Orders laboratory supplies and maintains culture media reagents.\n\n- Reviews and edits various materials for publication and prepares publication schedules.\n\n- Maintains appropriate logs, records, and study notebooks.\n\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions:\n\n- Assist with ongoing NIH-funded research projects investigating the role of the gut\u2013brain axis in opioid-associated comorbidities, including pain, neuroinflammation, and microbiome dysbiosis.\n\u2026",
    "pay": null,
-   "count": 2,
+   "count": 3,
    "first_seen": ""
   },
   {
@@ -9126,7 +9187,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Coral-Gables-FL/Research-Assistant-1-for-Reach-Study_R100102105",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nCORE JOB SUMMARY\nThe Research Assistant 1 contributes to research investigators by providing research and experimentation support while following established protocols. The Research Assistant 1 performs a clerical role to ensure the smooth operations of office facilities.\n\nCORE JOB FUNCTIONS\n1. Sets up and operates various scientific apparatus and makes minor repairs.\n2. Prepares correspondence and answers phones.\n3. Formulates and maintains bibliographies and completes applications and forms.\n4. Orders laboratory supplies and maintains culture media reagents.\n5. Reviews and edits various materials for publication and prepares publication schedules.\n6. Maintains appropriate logs, records, and study notebooks.\n7. Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nThis list of duties and responsibilities is not intended to be all-inclusive and may be expanded to include other duties or responsibilities as necessary.\n\nCORE QUALIFICATIONS\nEducation:\nHigh School Diploma or equivalent/relevant experience, certification or license\n\nExperience:\nMinimum 1 year of relevant experience required\n\nCertification and Licensing:\nRefer to department description for applicable certification requirements\n\nKnowledge, Skills and Abilities:\n\u2026",
    "pay": null,
@@ -9170,7 +9231,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 27 Days Ago",
+   "posted": "Posted 28 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Research-Assistant-3_R100101517-1",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of Public Health has an exciting opportunity for a full time Research Assistant 3 to work in Miami, FL.\n\nThe Research Assistant 3 explores innovations to research and strives to improve implementation and family outcomes. The Research Assistant 3 ensures compliance with University policies, rules, and regulations to meet federal, state, and local standards pertaining to safety and ethics.\n\nCore responsibilities:\n\n- Plans and implements research experiments, according to research protocols, to assure high-quality scientific results in support of applicable project goals.\n- Participates in assessing the feasibility of implementing innovations.\n- Assesses data trends and develops reports and presentations.\n- Supports the initiation of new research by reviewing and synthesizing literature.\n- Oversees inventory of supplies and equipment and places orders in a timely fashion.\n- Assists in the preparation of scientific papers, reports, and manuscripts.\n- Adheres to University and unit-level policies and procedures and safeguards University assets.\n\nDepartment Specific Functions:\n\n- Seeking a Research Assistant with a background in clinical research. Responsibilities include patient screening and enrollment, data management, and implementation of research protocols\u2026",
    "pay": null,
@@ -9214,7 +9275,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 3 Days Ago",
+   "posted": "Posted 4 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Supervisor--Clinical-Research_R100102519",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami/UHealth Department of SCCC CRS has an exciting opportunity for a Full-Time Supervisor, Clinical Research to work at UHealth in Miami, Florida.\n\nCORE SUMMARY\n\nThe Supervisor, Clinical Research is responsible for independently overseeing the coordination and conduct of complex clinical trials. Acting as a subject matter expert and team leader, this individual plays a key role in clinical study execution, program and operations management, staff development, and regulatory compliance. The position supports cross functional research efforts and ensures adherence to Good Clinical Practice and institutional guidelines.\n\nCORE JOB FUNCTIONS\n\n- Provides guidance, direction, and mentorship to other CRCs. Serving as a resource for the team on compliant conduct of trials.\n- Serves as the primary contact for all levels of staff regarding clinical research protocol matters as they relate to the service and protocol databases. This includes a review of standards with staff, identification of deficits, and participating in resolving issues.\u2026",
    "pay": null,
@@ -9236,7 +9297,7 @@
    "remote": false,
    "intl": false,
    "level": "",
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://umiami.wd1.myworkdayjobs.com/UMCareerStaff/job/Miami-FL/Clinical-Research-Regulatory-Openings-SCCC_R100062688",
    "desc": "Current Employees:\n\nIf you are a current Staff, Faculty or Temporary employee at the University of Miami, please click here to log in to Workday to use the internal application process. To learn how to apply for a faculty or staff position, please review this tip sheet .\n\nThe University of Miami Sylvester Comprehensive Cancer Center (SCCC) is significantly expanding its Clinical Research Services (CRS) department and is hiring for multiple clinical research and regulatory professional positions. CRS is Sylvester\u2019s centralized clinical trial office, supporting cutting edge Phase 1-3 oncology clinical trials for its catchment area. We provide administrative, regulatory, clinical, laboratory, quality, and training services to investigators at the medical campus in Miami, Florida and at 7 satellite locations. We are the only NCI-designated cancer center in South Florida.\n\nCurrent Vacancies:\n\nClinical Research Coordinator 1\n\nBachelor\u2019s degree in Science, Public Health, or related field\n\n1 year of Clinical Research experience is required\n\nClinical Research Coordinator 2\n\nBachelor\u2019s degree in Science, Public Health, or related field\n\n2 years of Clinical Research experience is required\n\nClinical Research Coordinator 3\n\nBachelor\u2019s degree in Science, Public Health or related field\n\nCCRP or ACRP certification is required\n\n4 years of Clinical Research experience is required\n\nRegulatory Analyst\n\nBachelor\u2019s degree in Regulatory Affairs or related field\n\n1 Year of Regulatory experience is required\n\nSr. Regulatory Analyst\n\nBachelor\u2019s degree in Regulatory Affairs or related field\n\u2026",
    "pay": null,
@@ -9339,7 +9400,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 12 Days Ago",
+   "posted": "Posted 13 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Blockley-Hall/Clinical-Research-Project-Manager-A_JR00129317-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Project Manager A\n\nJob Profile Title\n\nClinical Research Project Manager A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -9393,7 +9454,7 @@
    "remote": false,
    "intl": false,
    "level": "senior",
-   "posted": "Posted 5 Days Ago",
+   "posted": "Posted 6 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Pennsylvania-Hospital/Clinical-Research-Project-Manager-B-C_JR00127853-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Project Manager B/C\n\nJob Profile Title\n\nClinical Research Project Manager B\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -9431,6 +9492,33 @@
    },
    "count": 1,
    "first_seen": "2026-10-01"
+  },
+  {
+   "score": 1,
+   "employer": "University of Pennsylvania",
+   "branch": "university",
+   "title": "Clinical Research Project Manager C",
+   "location": "Philadelphia, PA",
+   "states": [
+    "PA"
+   ],
+   "metros": [
+    "PHL"
+   ],
+   "remote": false,
+   "intl": false,
+   "level": "senior",
+   "posted": "Posted Today",
+   "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Clinical-Research-Project-Manager-C_JR00129420-1",
+   "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nClinical Research Project Manager C\n\nJob Profile Title\n\nClinical Research Project Manager C\n\nJob Description Summary\n\u2026",
+   "pay": {
+    "min": 91066,
+    "max": 106940,
+    "period": "year",
+    "label": "$91k - $107k"
+   },
+   "count": 1,
+   "first_seen": "2026-11-03"
   },
   {
    "score": 1,
@@ -9663,7 +9751,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 11 Days Ago",
+   "posted": "Posted 12 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Civic-Center-Boulevard/Research-Lab-Technician-B--Unit-for-Experimental-Psychiatry-_JR00129183-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Lab Technician B (Unit for Experimental Psychiatry)\n\nJob Profile Title\n\nTechnician, Research Laboratory B\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -9717,7 +9805,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A_JR00129540-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist A\n\nJob Profile Title\n\nResearch Specialist A\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -9726,7 +9814,7 @@
     "period": "year",
     "label": "$45k - $50k"
    },
-   "count": 13,
+   "count": 12,
    "first_seen": ""
   },
   {
@@ -9798,7 +9886,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-A-B_JR00129566-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist A/B\n\nJob Profile Title\n\nResearch Specialist A\n\nJob Description Summary\n\nResearch Specialist A\u2026",
    "pay": {
@@ -9852,7 +9940,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Research-Specialist-B_JR00129647-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist B\n\nJob Profile Title\n\nResearch Specialist B\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -9915,7 +10003,7 @@
     "period": "year",
     "label": "$59k - $68k"
    },
-   "count": 2,
+   "count": 3,
    "first_seen": ""
   },
   {
@@ -9960,7 +10048,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Biomedical-Research-Building-2/Research-Specialist-C-or-D_JR00129626-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist C or D\n\nJob Profile Title\n\nResearch Specialist C\n\nJob Description Summary\n\u2026",
    "pay": null,
@@ -9982,7 +10070,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 6 Days Ago",
+   "posted": "Posted 7 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3600-Market-Street/Research-Specialist-C--The-Water-Center_JR00129583",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist C, The Water Center\n\nJob Profile Title\n\nResearch Specialist C\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -10009,7 +10097,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 14 Days Ago",
+   "posted": "Posted 15 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/Smilow-Center-for-Translational/Research-Specialist-C_JR00124502",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist C/D\n\nJob Profile Title\n\nResearch Specialist C\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -10036,7 +10124,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 7 Days Ago",
+   "posted": "Posted 8 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/HUP/Research-Specialist-D_JR00129492-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers in 2023.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nThe University offers a competitive benefits package that includes excellent healthcare and tuition benefits for employees and their families, generous retirement benefits, a wide variety of professional development opportunities, supportive work and family benefits, a wealth of health and wellness programs and resources, and much more.\n\nPosted Job Title\n\nResearch Specialist D\n\nJob Profile Title\n\nResearch Specialist D\n\nJob Description Summary\n\u2026",
    "pay": {
@@ -10063,7 +10151,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 10 Days Ago",
+   "posted": "Posted 11 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/AnatomyChemistry-Building---4th-Floor/Temp---Research-Assistant_JR00129560-1",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been consistently ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nPosted Job Title\n\nTemp - Research Assistant\n\nJob Profile Title\n\nTemporary Employee - Non-Exempt\n\nJob Description Summary\n\nResearch assistant, helping with data clean up and organization tasks\n\nJob Description\n\nTemporary Employee - Non-Exempt\n\nJob Location - City, State\n\nPhiladelphia, Pennsylvania\n\nDepartment / School\n\nPerelman School of Medicine\n\nPay Range\n\u2026",
    "pay": {
@@ -10090,7 +10178,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted 4 Days Ago",
+   "posted": "Posted 5 Days Ago",
    "url": "https://upenn.wd1.myworkdayjobs.com/careers-at-penn/job/3535-Market/Temporary-Co-Op-Worker---Research-Assistant_JR00129760",
    "desc": "University Overview\n\nThe University of Pennsylvania, the largest private employer in Philadelphia, is a world-renowned leader in education, research, and innovation. This historic, Ivy League school consistently ranks among the top 10 universities in the annual U.S. News & World Report survey. Penn has 12 highly-regarded schools that provide opportunities for undergraduate, graduate and continuing education, all influenced by Penn\u2019s distinctive interdisciplinary approach to scholarship and learning. As an employer Penn has been consistently ranked nationally on many occasions with the most recent award from Forbes who named Penn one of America\u2019s Best Large Employers.\n\nPenn offers a unique working environment within the city of Philadelphia. The University is situated on a beautiful urban campus, with easy access to a range of educational, cultural, and recreational activities. With its historical significance and landmarks, lively cultural offerings, and wide variety of atmospheres, Philadelphia is the perfect place to call home for work and play.\n\nPosted Job Title\n\nTemporary Co-Op Worker - Research Assistant\n\nJob Profile Title\n\nTemporary Employee - Co-op Worker\n\nJob Description Summary\n\nTemporary Employee - Co-op Worker\nAssist with recruitment for an industry-sponsored clinical trial in the Mood and Anxiety Section of the Department of Psychiatry. 10 hr/wk\n\nJob Description\n\nTemporary Employee - Co-op Worker\n\nAssist with recruitment for an industry-sponsored clinical trial in the Mood and Anxiety Section of the Department of Psychiatry. 10 hr/wk\n\nJob Location - City, State\u2026",
    "pay": {
@@ -10117,11 +10205,11 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "2025-10-14",
-   "url": "https://uscjobs.sc.edu/postings/196337",
-   "desc": "The successful candidate will work to investigate how genetic and environmental factors (e.g. early life stress) contribute to brain development and neurodevelopmental disorders, such as autism spectrum disorder.\n\nThe Research Assistant will also provide day-to-day research support to graduate students and postdoctoral fellows, including data entry, preprocessing, and literature review. In addition, the position involves overseeing essential administrative tasks to ensure smooth lab operations, such as scheduling participants, organizing documentation, and maintaining communications within the research team.",
+   "posted": "2026-11-03",
+   "url": "https://uscjobs.sc.edu/postings/215558",
+   "desc": "This position contributes to conducting research on age-related symptoms experienced by mothers who are carriers of the FMR1 premutation and have a child with fragile X syndrome. The research assistant will work with the faculty principal investigator and grant staff to contribute to a longitudinal NIH-funded research study by conducting assessments, managing data, organizing findings, and preparing reports.",
    "pay": null,
-   "count": 2,
+   "count": 3,
    "first_seen": ""
   },
   {
@@ -10249,7 +10337,7 @@
    "remote": false,
    "intl": false,
    "level": "entry",
-   "posted": "Posted Yesterday",
+   "posted": "Posted 2 Days Ago",
    "url": "https://urban.wd115.myworkdayjobs.com/Urban-Careers/job/The-Urban-Institute-DC/Research-Assistant---Quantitative--Health--Income--and-Benefits-Policy-Division-_R-801655",
    "desc": "About Urban Institute:\n\nThe Urban Institute is a research-to-impact institution founded on one simple idea: To improve lives and strengthen communities, we need practices and policies that work. From advancing well-being to fostering shared prosperity, leaders across sectors are working every day to create brighter futures for all people and communities. For more than 50 years, Urban has delivered evidence and solutions that drive meaningful change, and this remains our charge today.\n\nOur Mission\n\nTo drive impact by equipping changemakers with evidence and solutions.\n\nOur Values\n\nCollaboration, Fairness Inclusivity, Independence, and Integrity\n\nFor more information on the Urban Institute, please visit https://www.urban.org .\n\nThe Opportunity:\n\nThe Health, Income, and Benefits Policy Division at the Urban Institute provides research, evaluation, and technical assistance on the implementation of health, income, and benefits-related policies at the federal, state, and local levels. Researchers assess the impact of these policies on various stakeholders and communities and seek to understand how policies can better meet their needs.\n\nThe Health Care Coverage, Costs, and Access practice area is looking for a quantitative Research Assistant with strong coding and analytic problem-solving skills to support senior researchers on projects related to private health insurance reforms, Medicare and Medicaid programs and payment policy, maternal and child health, rate regulation policies, and efforts to improve access and quality of care.\n\nWhat You\u2019 ll Do:\n\u2026",
    "pay": null,
@@ -10733,7 +10821,7 @@
    "remote": false,
    "intl": false,
    "level": "mid",
-   "posted": "Posted 13 Days Ago",
+   "posted": "Posted 14 Days Ago",
    "url": "https://williammary.wd12.myworkdayjobs.com/WM/job/Posting-Location---VIMS-Gloucester/Research-Specialist-Fisheries-Monitoring-and-Analytical-Support_JR102168",
    "desc": "Job Requisition:\n\nJR102168 Research Specialist Fisheries Monitoring and Analytical Support (Open)\n\nJob Posting Title:\n\nResearch Specialist Fisheries Monitoring and Analytical Support\n\nDepartment:\n\nCC00497 VIMS1 | RADV | Natural Resources\n\nJob Family:\n\nStaff - Lab & Research Support\n\nWorker Sub-Type:\n\nFixed Term (requires end date - benefited) (Fixed Term)\n\nJob Requisition Primary Location:\n\nNunnally Hall/Fisheries Science\n\nPrimary Job Posting Location:\n\nPosting Location - VIMS Gloucester\n\nJob Description Summary:\n\nSchool Mission Statement\nThe Virginia Institute of Marine Science (VIMS) has a three-part mission of research, education, and advisory service. Our over-arching goals are to:\n\u2022 Make seminal advances in understanding marine systems through research and discovery.\n\u2022 Translate research findings into practical solutions to complex issues of societal importance.\n\u2022 Provide new generations of researchers, educators, problem solvers, and managers with a coastal and marine sciences education of unsurpassed quality.\n\nUnit Mission Statement\nThe Recruitment Surveys Program at the Virginia Institute of Marine Science (VIMS) contributes to the understanding of recruitment processes of estuarine and marine fishes of the mid-Atlantic region through the collection of fisheries data using standardize surveys in support of research, education, and resource management.\n\nJob Description:\n\nPosition Summary\n\nThe Research Specialist I provides necessary support and expertise for estuarine fish surveys\u2026",
    "pay": {
